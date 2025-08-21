@@ -286,6 +286,20 @@ h1 a{
     font-size: larger;
     padding-bottom: 7vw;
 }
+.postblack{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(0, 0, 0, 0.68);
+    color: wheat;
+    font-size: larger;
+    margin-top: 12vw;
+}
+.postblack p{
+    background-color: black;
+    color: white;
+    padding: 1vw;
+    border-radius: 1vw;
+}
 .post2{
     border-radius: 1ch;
     padding: 3vw;
