@@ -1736,6 +1736,7 @@ footer{
 
   .blur-text:hover {
     filter: blur(0);
+    cursor: none;
   }
 .xpp{
     /* background-color: blue; */
