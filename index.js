@@ -260,7 +260,9 @@ const smartSongs = [
     { title: "Dead Internet Theory", file: "deadInternet.mp3" },
     { title: "King of Greed",       file: "GreedyKing.mp3" },
     { title: "God's Street Park",   file: "GodStreetPark.mp3" },
-    { title: "Cold Soul",           file: "coldSoul.mp3" }
+    { title: "Cold Soul",           file: "coldSoul.mp3" },
+    { title: "Madly",           file: "Madly.mp3" },
+
   ];
 
   // 2) runtime state
