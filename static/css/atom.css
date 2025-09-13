@@ -14,6 +14,13 @@ ul{
     border-radius: 1ch;
     padding: 2vw;
 }
+.mage p{
+    /* background-color: rgba(0, 145, 255, 0.767); */
+    background-color: rgba(0, 145, 255, 0.767);
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+}
 .post11advanced{
     border-radius: 1ch;
     padding: 3vw;
