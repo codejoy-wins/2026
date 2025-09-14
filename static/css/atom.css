@@ -955,6 +955,11 @@ audio{
     padding-right: 1vw;
     opacity: .4;
 }
+.picmorefloat{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+}
 .picfloat2{
     float: left;
     max-width: 100%;
