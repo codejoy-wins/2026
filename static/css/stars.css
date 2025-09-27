@@ -10,6 +10,9 @@ ul{
     border-radius: 1.3vw;
     padding: .4vw;
 }
+audio{
+    opacity: .5;
+}
 .lucifer li{
     text-align: right;
 }
