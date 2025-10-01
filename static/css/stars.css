@@ -16,7 +16,9 @@ audio{
 .lucifer li{
     text-align: right;
 }
-
+.magic{
+    color: wheat;
+}
 .kanye{
     color: gold;
     font-weight: bold;
