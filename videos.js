@@ -319,7 +319,7 @@ function coding(){
         Eye in the Sky
     </h1>
     <div class="vid2">
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/IlekIrw4T44?si=Uf23u0CEuhLLBJk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/hUpVV6DTUiI?si=Ivgvrz6N6JvXdnoZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
 
