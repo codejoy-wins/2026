@@ -1,3 +1,5 @@
+const videoId = "f96Ta8fbQQo?si=Czbbg_MhDlvdVKKQ";
+
 // contact me for many more secret videos than the ones hidden here
 {/* <div class="video">
     <h1>There's Something About the Government</h1>
@@ -5,6 +7,7 @@
     <iframe width="100%" height="315" src="https://www.youtube.com/embed/RawvPDY19Oo?si=XKP_2p4yThNANrgj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     </div> */}
+
 function truth(){
     console.log("truth");
     document.getElementById("title").innerHTML=`
@@ -319,7 +322,7 @@ function coding(){
         Eye in the Sky
     </h1>
     <div class="vid2">
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/oIBtQTP0aq4?si=mUwkbmoV2qU729gU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
 
