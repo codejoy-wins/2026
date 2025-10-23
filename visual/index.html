@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visual — Vision Board</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">△</span>
+      <h1>Visual <small>— your cohesive vision board</small></h1>
+    </div>
+
+    <div class="controls">
+      <label class="btn">
+        📷 Add Photo
+        <input type="file" id="fileInput" accept="image/*" multiple hidden />
+      </label>
+
+      <button id="addUrlBtn" class="btn">🔗 Add via URL</button>
+
+      <div class="field">
+        <input id="affirmInput" placeholder="Add an affirmation… (e.g., 'Ship my solo game ✨')" />
+        <button id="addAffirmBtn" class="btn btn-light">➕</button>
+      </div>
+
+      <div class="field">
+        <input id="searchInput" placeholder="Search tags/captions…" />
+      </div>
+
+      <select id="filterSelect" class="pill">
+        <option value="">All</option>
+        <option>Game Dev</option>
+        <option>Legal</option>
+        <option>Lifestyle</option>
+        <option>Wealth</option>
+        <option>Health</option>
+      </select>
+
+      <div class="segmented">
+        <button data-mode="grid" class="seg active">🧱 Grid</button>
+        <button data-mode="focus" class="seg">🎯 Focus</button>
+        <button data-mode="slideshow" class="seg">🎞️ Slide</button>
+      </div>
+
+      <button id="shuffleBtn" class="btn">🔀 Shuffle</button>
+
+      <div class="menu">
+        <button id="exportBtn" class="btn btn-light">⤴️ Export</button>
+        <label class="btn btn-light">
+          ⤵️ Import
+          <input type="file" id="importInput" accept="application/json" hidden />
+        </label>
+        <button id="clearBtn" class="btn danger">🗑️ Clear</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Affirmations -->
+    <section id="affirmations" class="affirmations" aria-label="Affirmations"></section>
+
+    <!-- Drop zone -->
+    <section id="dropzone" class="dropzone" aria-label="Drop images here">
+      <p>Drag & drop images here or use “Add Photo / Add via URL” ↑</p>
+      <p class="hint">Tips: tag images like <em>Game Dev</em>, <em>Legal</em>, <em>Lifestyle</em> to organize your vision 🌱</p>
+    </section>
+
+    <!-- Grid -->
+    <section id="grid" class="grid" aria-live="polite"></section>
+  </main>
+
+  <!-- Focus Modal -->
+  <dialog id="focusModal">
+    <div class="focus-wrap">
+      <button id="closeFocus" class="icon-btn" title="Close (Esc)">✖</button>
+      <button id="prevBtn" class="icon-btn nav left" title="Prev (←)">◀</button>
+
+      <figure id="focusFigure">
+        <img id="focusImg" alt="" />
+        <figcaption id="focusCaption"></figcaption>
+
+        <!-- shows tags + notes in modal -->
+        <div id="focusTags" class="tags"></div>
+        <p id="focusNotes" class="notes"></p>
+      </figure>
+
+      <button id="nextBtn" class="icon-btn nav right" title="Next (→)">▶</button>
+
+      <div class="focus-tools">
+        <button id="toggleFavBtn" class="btn">⭐ Favorite</button>
+        <button id="editBtn" class="btn">✏️ Edit</button>
+        <button id="playBtn" class="btn">▶ Play</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Edit Modal -->
+  <dialog id="editModal">
+    <form id="editForm" method="dialog" class="edit-form">
+      <h3>Edit item</h3>
+      <label>Caption
+        <input name="title" />
+      </label>
+      <label>Tags (comma-separated)
+        <input name="tags" placeholder="Game Dev, Legal" />
+      </label>
+      <label>Notes
+        <textarea name="notes" rows="4" placeholder="Why this matters…"></textarea>
+      </label>
+      <menu>
+        <button value="cancel" class="btn btn-light">Cancel</button>
+        <button value="save" class="btn">Save</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <!-- Add via URL prompt -->
+  <dialog id="urlModal">
+    <form id="urlForm" method="dialog" class="edit-form">
+      <h3>Add image by URL</h3>
+      <label>Image URL
+        <input name="url" placeholder="https://…" />
+      </label>
+      <label>Caption
+        <input name="title" placeholder="e.g., Dream Car" />
+      </label>
+      <label>Tags (comma-separated)
+        <input name="tags" placeholder="Lifestyle, Wealth" />
+      </label>
+      <menu>
+        <button value="cancel" class="btn btn-light">Cancel</button>
+        <button value="add" class="btn">Add</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="./visual.js" type="module"></script>
+</body>
+</html>
