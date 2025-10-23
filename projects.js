@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
          date:"2019",
          },
          { title: "Unreal Cloudland", 
-        description: "I'm learning Unreal Engine 5.3 with my new Macbook Pro M3", 
+        description: "I'm learning Unreal Engine 5.3 with my new Macbook Pro M3.  Check maxjann.com/unreal for my latest project, an RTS game.", 
         imageUrl: "static/img/elamcloud.png",
         linkURL: "",
         videoembed:"https://www.youtube.com/embed/IJySvOjJwqI?si=67r2SfNbG8auAmmF",
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
      },
 
      { title: "Unreal Tournament Shock Rifle", 
-        description: "I am using Unreal Engine 5.5 to reimagine the shock rifle from Unreal Tournament 2004.  I just added a lightmass effect to the shock combo explosion and I'm having so much fun with it!", 
+        description: "I am using Unreal Engine 5.5 to reimagine the shock rifle from Unreal Tournament 2004.  I just added a lightmass effect to the shock combo explosion and I'm having so much fun with it! Check maxjann.com/unreal for my latest project, an RTS game.", 
         imageUrl: "static/img/madjoy.png",
         linkURL: "",
         videoembed:"https://www.youtube.com/embed/G1wV5d4H7eI?si=n4Wb4LUkVUWsjrwq",
