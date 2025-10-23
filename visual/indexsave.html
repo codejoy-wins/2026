@@ -48,9 +48,9 @@
       <button id="shuffleBtn" class="btn">🔀 Shuffle</button>
 
       <div class="menu">
-        <button id="exportBtn" class="btn btn-light">⤴️ Export</button>
+        <button id="exportBtn" class="btn btn-light">⤴️ Save</button>
         <label class="btn btn-light">
-          ⤵️ Import
+          ⤵️ Load
           <input type="file" id="importInput" accept="application/json" hidden />
         </label>
         <button id="clearBtn" class="btn danger">🗑️ Clear</button>
@@ -77,11 +77,18 @@
     <div class="focus-wrap">
       <button id="closeFocus" class="icon-btn" title="Close (Esc)">✖</button>
       <button id="prevBtn" class="icon-btn nav left" title="Prev (←)">◀</button>
+
       <figure id="focusFigure">
         <img id="focusImg" alt="" />
         <figcaption id="focusCaption"></figcaption>
+
+        <!-- shows tags + notes in modal -->
+        <div id="focusTags" class="tags"></div>
+        <p id="focusNotes" class="notes"></p>
       </figure>
+
       <button id="nextBtn" class="icon-btn nav right" title="Next (→)">▶</button>
+
       <div class="focus-tools">
         <button id="toggleFavBtn" class="btn">⭐ Favorite</button>
         <button id="editBtn" class="btn">✏️ Edit</button>
@@ -109,8 +116,6 @@
       </menu>
     </form>
   </dialog>
-
-  <!-- <img src="../static/img/DBS.jpeg" alt="dbs"> -->
 
   <!-- Add via URL prompt -->
   <dialog id="urlModal">
