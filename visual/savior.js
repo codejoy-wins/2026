@@ -364,24 +364,6 @@ async function addFiles(files){
 }
 
 /* ---------- Helpers ---------- */
-/* ---------- Add item from URL ---------- */
-function addItem({src, title="", tags=[]}){
-  const tarot = pickTarot();
-  const item = {
-    id: crypto.randomUUID(),
-    src,
-    title,
-    tags,
-    notes: "",
-    favorite: false,
-    tarot,
-    dateAdded: Date.now()
-  };
-  state.items.unshift(item);
-  saveState();
-  renderGrid();
-}
-
 function pickTarot(){ return TAROT_DECK[Math.floor(Math.random()*TAROT_DECK.length)]; }
 
 async function fileToCompressedDataURL(file,{maxW=1600,maxH=1600,quality=0.85}={}){
