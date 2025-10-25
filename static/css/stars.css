@@ -29,6 +29,28 @@ audio{
     border-radius: 1vw;
     color: black;
 }
+.postdare{
+    border-radius: 1ch;
+    padding: 2vw;
+    /* background-color: rgba(55, 83, 211, 0.680); */
+    /* background-color: rgba(11, 26, 95, 0.68); */
+    /* background-color: rgba(4, 13, 53, 0.68); */
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 2vw;
+
+
+    color: white;
+    font-size: larger;
+}
+.postdare p{
+    /* background-color: rgba(47, 5, 47, 0.8); */
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    background-color: silver;
+    padding: 1vw;
+    border-radius: 1vw;
+    /* color: silver; */
+    color: black;
+}
 .magic{
     color: cyan;
 }
@@ -165,7 +187,7 @@ html, body{
     padding: 1vw;
 }
 #nav{
-    background-color: rgba(55, 83, 211, 0.680);
+    /* background-color: rgba(55, 83, 211, 0.680); */
     width: 100%;
     text-align: center;
 }
@@ -1037,7 +1059,7 @@ body{
     }
     /* background-color: rgba(101, 255, 11, 0.5); lime green neon  */
     .post3{
-        background-color:rgba(8, 12, 80, 0.856);
+        /* background-color:rgba(8, 12, 80, 0.856); */
     }
 }
 .reflect{
