@@ -29,6 +29,24 @@ audio{
     border-radius: 1vw;
     color: black;
 }
+.la{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(55, 83, 211, 0.680); */
+    color: white;
+    font-size: larger;
+}
+.la p{
+    /* background-color: rgba(250, 189, 250, 0.8); */
+    background-color: rgba(34, 1, 34, 0.8);
+
+    padding: 1vw;
+    border-radius: 1vw;
+    /* color: black; */
+    /* color: wheat; */
+    color: whitesmoke;
+
+}
 .postdare{
     border-radius: 1ch;
     padding: 2vw;
