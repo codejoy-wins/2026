@@ -10,6 +10,32 @@ ul{
     border-radius: 1.3vw;
     padding: .4vw;
 }
+.war p{
+    color: black;
+    /* background-color: rgba(243, 234, 243, 0.746); */
+    /* background-color: rgba(243, 234, 243, 0.746); */
+
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.war{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(36, 10, 36, 0.582); */
+    color: black;
+    font-size: larger;
+    padding-bottom: 6vw;
+}
+.war h2, h3{
+    color: purple;
+}
+#maximal{
+    background-color: rgba(245, 222, 179, 0.6);
+    border-radius: 1vw;
+    margin: 1vw;
+    padding: 1vw;
+    line-height:5ch;
+}
 #switch{
     color: white;
 }
