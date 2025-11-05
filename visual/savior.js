@@ -291,11 +291,23 @@ function cardTemplate(it,i){
       </div>
     </div>`;
 
-  const back=`
-    <div class="card-back">
+    // choose gold or purple
+  const backImg = Math.random() < 0.5 
+    ? "/static/img/cywiz.png"
+    : "/static/img/cywiz-purple.png";
+
+  const back = `
+    <div class="card-back" style="background-image: url('${backImg}')">
       <h3 class="tarot-name">${tarot.name}</h3>
       <p class="tarot-meaning">${tarot.meaning}</p>
     </div>`;
+
+
+  // const back=`
+  //   <div class="card-back">
+  //     <h3 class="tarot-name">${tarot.name}</h3>
+  //     <p class="tarot-meaning">${tarot.meaning}</p>
+  //   </div>`;
 
   return `<article class="card" data-index="${i}">
     <div class="card-inner">${front}${back}</div>
@@ -364,6 +376,24 @@ async function addFiles(files){
 }
 
 /* ---------- Helpers ---------- */
+/* ---------- Add item from URL ---------- */
+function addItem({src, title="", tags=[]}){
+  const tarot = pickTarot();
+  const item = {
+    id: crypto.randomUUID(),
+    src,
+    title,
+    tags,
+    notes: "",
+    favorite: false,
+    tarot,
+    dateAdded: Date.now()
+  };
+  state.items.unshift(item);
+  saveState();
+  renderGrid();
+}
+
 function pickTarot(){ return TAROT_DECK[Math.floor(Math.random()*TAROT_DECK.length)]; }
 
 async function fileToCompressedDataURL(file,{maxW=1600,maxH=1600,quality=0.85}={}){

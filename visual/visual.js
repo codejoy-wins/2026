@@ -71,6 +71,33 @@ const TAROT_DECK = [
   { name: "Nine of Swords", meaning: "Release worry; dawn follows the night." },
   { name: "Ace of Cups", meaning: "New emotional beginnings overflow." },
   { name: "Ten of Pentacles", meaning: "Legacy and prosperity are building." },
+  { name: "Ace of Stars", meaning: "A cosmic spark ignites — the universe answers your signal." },
+  { name: "Knight of Stars", meaning: "A bold leap into the unknown unlocks improbable luck." },
+  { name: "The Architect", meaning: "Build not just things — build worlds. Vision becomes structure." },
+  { name: "Queen of Circuits", meaning: "Your intuition merges with logic; genius flows effortlessly." },
+  { name: "King of Circuits", meaning: "You command complexity with calm precision." },
+  { name: "Page of Data", meaning: "A new idea arrives disguised as curiosity. Follow it." },
+  { name: "The Algorithm", meaning: "Patterns reveal themselves — the truth is in the iteration." },
+  { name: "Seven of Light", meaning: "Your inner clarity dissolves confusion and fear." },
+  { name: "Four of Shadow", meaning: "Face the hidden self — power returns when nothing is denied." },
+  { name: "The Nexus", meaning: "All your paths converge. A major connection forms." },
+  { name: "Two of Ether", meaning: "Invisible forces work in your favor — trust your timing." },
+  { name: "Nine of Clockwork", meaning: "Every small action accumulates; momentum becomes destiny." },
+  { name: "Ten of Circuits", meaning: "Completion of a long build — systems are stable and strong." },
+  { name: "The Prototype", meaning: "Create a rough version now — perfection comes later." },
+  { name: "The Dreamweaver", meaning: "Your imagination is a portal; reality begins with imagery." },
+  { name: "Ace of Ether", meaning: "A silent shift changes everything — inspiration arrives sudden and clean." },
+  { name: "The Glitch", meaning: "A disruption reveals a new path you couldn't see before." },
+  { name: "Six of Stars", meaning: "Your talent becomes visible — recognition follows creation." },
+  { name: "Eight of Data", meaning: "Study, iteration, and practice combine into mastery." },
+  { name: "Queen of Shadows", meaning: "You transform pain into wisdom and power." },
+  { name: "The Beacon", meaning: "Someone — or something — is guiding you subtly toward success." },
+  { name: "Five of Clockwork", meaning: "Not everything needs force; sometimes the mechanism fixes itself." },
+  { name: "The Spark", meaning: "Your idea is valid — act now, momentum is in your favor." },
+  { name: "Knight of Ether", meaning: "Move lightly, adapt quickly — flexibility wins the day." },
+  { name: "The Oracle of Code", meaning: "The answer is already within the system — inspect the details." },
+  { name: "The Celestial Gate", meaning: "A threshold approaches — crossing it changes who you are." },
+
 ];
 
 /* ---------- Seed (first run) ---------- */
@@ -291,11 +318,23 @@ function cardTemplate(it,i){
       </div>
     </div>`;
 
-  const back=`
-    <div class="card-back">
+    // choose gold or purple
+  const backImg = Math.random() < 0.5 
+    ? "/static/img/cywiz.png"
+    : "/static/img/cywiz-purple.png";
+
+  const back = `
+    <div class="card-back" style="background-image: url('${backImg}')">
       <h3 class="tarot-name">${tarot.name}</h3>
       <p class="tarot-meaning">${tarot.meaning}</p>
     </div>`;
+
+
+  // const back=`
+  //   <div class="card-back">
+  //     <h3 class="tarot-name">${tarot.name}</h3>
+  //     <p class="tarot-meaning">${tarot.meaning}</p>
+  //   </div>`;
 
   return `<article class="card" data-index="${i}">
     <div class="card-inner">${front}${back}</div>

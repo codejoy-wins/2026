@@ -150,7 +150,7 @@ main{ width:min(1200px, 100% - 2rem); margin:1rem auto 4rem; }
 .badge { display: none !important; }
 
 /* Back side */
-.card-back{
+.card-backolder{
   transform: rotateY(180deg);
 
   /* layered bg: dark gradient overlay + your cyber wizard image */
@@ -167,6 +167,21 @@ main{ width:min(1200px, 100% - 2rem); margin:1rem auto 4rem; }
   /* gold-ish palette + readability */
   color: #f5e7b8;               /* warm parchment text */
 }
+
+.card-back {
+  transform: rotateY(180deg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
 
 .card-back h3{
   margin:0 0 .5rem;

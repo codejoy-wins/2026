@@ -8,6 +8,7 @@
   --accent-2:#c084fc;
   --danger:#ef4444;
   --ring: 0 0 0 2px rgba(125,211,252,.4);
+  --gold: #f5c84b;
 }
 .pic{
   max-width: 100%;
@@ -141,12 +142,15 @@ main{ width:min(1200px, 100% - 2rem); margin:1rem auto 4rem; }
 }
 .icon-btn.on{ border-color:#3b2c66; background:linear-gradient(180deg, #1a1130, #0f0b1e); color:#f6e3ff; }
 
-.badge{
+/* .badge{
   position:absolute; left:.5rem; top:.5rem; font-size:.8rem; z-index:2;
   padding:.2rem .45rem; border-radius:999px; background:#0e1b1a; border:1px solid #24423b; color:#c9ffee;
-}
+} */
+ /* remove old '⭐ Favorite' badge */
+.badge { display: none !important; }
+
 /* Back side */
-.card-back{
+.card-backolder{
   transform: rotateY(180deg);
 
   /* layered bg: dark gradient overlay + your cyber wizard image */
@@ -163,6 +167,21 @@ main{ width:min(1200px, 100% - 2rem); margin:1rem auto 4rem; }
   /* gold-ish palette + readability */
   color: #f5e7b8;               /* warm parchment text */
 }
+
+.card-back {
+  transform: rotateY(180deg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
 
 .card-back h3{
   margin:0 0 .5rem;
@@ -233,3 +252,26 @@ dialog{ border:none; padding:0; background:transparent; }
   .card{ height: 290px; } /* slightly shorter on mobile */
   .card-front img{ height: 62%; }
 }
+
+/* favorite star icon */
+.icon-btn.fav {
+  min-width: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1;
+  color: #b5bfd3;                 /* outline (☆) color */
+  border-color: #2b344a;
+}
+.icon-btn.fav.on {
+  color: var(--gold);              /* filled (★) color */
+  border-color: #3a2b08;
+  background: linear-gradient(180deg, #221b07, #171103);
+}
+
+/* slightly tighter icon row so it fits on small cards */
+.tools { gap: .35rem; }
+@media (max-width:700px){
+  .tools { top:.3rem; right:.3rem; }
+}
+
+#toggleFavBtn { font-size: 1.1rem; padding: .35rem .55rem; }

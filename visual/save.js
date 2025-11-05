@@ -1,4 +1,5 @@
 // visual.js — Vision Board + Tarot Deck (fixed card height + flip + compression)
+// Favorite UX: outline ☆ ↔ filled ★, no badge bubble
 const LS_KEY = "visualBoard.v2";
 const AFFIRM_KEY = "visualBoard.v2.affirmations";
 
@@ -19,6 +20,7 @@ const els = {
   affirmInput: document.getElementById("affirmInput"),
   addAffirmBtn: document.getElementById("addAffirmBtn"),
   affirmations: document.getElementById("affirmations"),
+  // Focus modal
   focusModal: document.getElementById("focusModal"),
   closeFocus: document.getElementById("closeFocus"),
   prevBtn: document.getElementById("prevBtn"),
@@ -27,11 +29,12 @@ const els = {
   toggleFavBtn: document.getElementById("toggleFavBtn"),
   focusImg: document.getElementById("focusImg"),
   focusCaption: document.getElementById("focusCaption"),
-  editBtn: document.getElementById("editBtn"),
-  editModal: document.getElementById("editModal"),
-  editForm: document.getElementById("editForm"),
   focusTags: document.getElementById("focusTags"),
   focusNotes: document.getElementById("focusNotes"),
+  editBtn: document.getElementById("editBtn"),
+  // Edit modal
+  editModal: document.getElementById("editModal"),
+  editForm: document.getElementById("editForm"),
 };
 
 let state = loadState();
@@ -115,10 +118,10 @@ els.urlModal.addEventListener("close",()=>{
 });
 
 els.shuffleBtn.addEventListener("click",()=>{ shuffle(state.items); renderGrid(); saveState(); });
-// 🔧 Live search & tag filter fix
+
+// Live search & dropdown filter
 els.searchInput.addEventListener("input", () => renderGrid());
 els.filterSelect.addEventListener("change", () => renderGrid());
-
 
 els.exportBtn.addEventListener("click",()=>{
   const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
@@ -220,8 +223,10 @@ function renderGrid(){
     const passF=!filter||(it.tags||[]).map(t=>t.toLowerCase()).includes(filter);
     return passQ&&passF;
   });
+
   els.grid.innerHTML=items.map((it,i)=>cardTemplate(it,i)).join("");
 
+  // Wire card buttons + flip
   els.grid.querySelectorAll(".card").forEach(card=>{
     const idx=Number(card.dataset.index);
 
@@ -236,12 +241,26 @@ function renderGrid(){
       card.classList.toggle("flipped");
     });
 
+    // open focus
     card.querySelector(".open").addEventListener("click",()=>openFocus(items[idx].id));
-    card.querySelector(".fav").addEventListener("click",()=>{
+
+    // favorite toggle (no badge, star updates in-place)
+    const favBtn = card.querySelector(".fav");
+    favBtn.addEventListener("click",(e)=>{
+      e.stopPropagation();
       const real=state.items.find(x=>x.id===items[idx].id);
-      real.favorite=!real.favorite; saveState(); renderGrid();
+      if(!real) return;
+      real.favorite = !real.favorite;
+      favBtn.classList.toggle("on", real.favorite);
+      favBtn.setAttribute("aria-pressed", real.favorite);
+      favBtn.textContent = real.favorite ? "★" : "☆";
+      saveState();
     });
+
+    // edit
     card.querySelector(".edit").addEventListener("click",()=>openEditById(items[idx].id));
+
+    // delete
     card.querySelector(".del").addEventListener("click",()=>{
       if(!confirm("Remove this item?")) return;
       state.items=state.items.filter(x=>x.id!==items[idx].id);
@@ -251,17 +270,18 @@ function renderGrid(){
 }
 
 function cardTemplate(it,i){
-  const fav=it.favorite?"on":"";
+  const favOn = !!it.favorite;
+  const favClass = favOn ? "on" : "";
+  const favChar  = favOn ? "★" : "☆";
   const tags=(it.tags||[]).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join("");
   const tarot=it.tarot||pickTarot();
 
   const front=`
     <div class="card-front">
-      ${it.favorite?`<span class="badge">⭐ Favorite</span>`:""}
       <img src="${it.src}" alt="${escapeAttr(it.title||'Vision image')}" loading="lazy">
       <div class="tools">
         <button class="icon-btn open" title="Open">🔍</button>
-        <button class="icon-btn fav ${fav}" title="Favorite">⭐</button>
+        <button class="icon-btn fav ${favClass}" title="Toggle favorite" aria-pressed="${favOn}">${favChar}</button>
         <button class="icon-btn edit" title="Edit">✏️</button>
         <button class="icon-btn del" title="Delete">🗑️</button>
       </div>
@@ -293,7 +313,9 @@ function openFocusByIndex(idx){
   const item=state.items[cursorIndex];
   els.focusImg.src=item.src;
   els.focusCaption.textContent=item.title||"";
-  els.toggleFavBtn.classList.toggle("on",!!item.favorite);
+  els.toggleFavBtn.classList.toggle("on", !!item.favorite);
+  els.toggleFavBtn.setAttribute("aria-pressed", !!item.favorite);
+  els.toggleFavBtn.textContent = item.favorite ? "★" : "☆";
   if(els.focusTags) els.focusTags.innerHTML=(item.tags||[]).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join("");
   if(els.focusNotes) els.focusNotes.textContent=item.notes||"";
   if(!els.focusModal.open) els.focusModal.showModal();
@@ -303,14 +325,27 @@ function stepFocus(d){ const n=(cursorIndex+d+state.items.length)%state.items.le
 function play(){ playing=true; els.playBtn.textContent="⏸ Pause"; playTimer=setInterval(()=>stepFocus(1),2800); }
 function stopPlay(){ playing=false; els.playBtn.textContent="▶ Play"; if(playTimer) clearInterval(playTimer); playTimer=null; }
 function togglePlay(){ playing?stopPlay():play(); }
-function toggleFavorite(){ const it=currentItem(); if(!it)return; it.favorite=!it.favorite; els.toggleFavBtn.classList.toggle("on",it.favorite); saveState(); renderGrid(); }
-function openEdit(){ const it=currentItem(); if(!it)return;
+function toggleFavorite(){
+  const it=currentItem(); if(!it) return;
+  it.favorite=!it.favorite;
+  els.toggleFavBtn.classList.toggle("on", it.favorite);
+  els.toggleFavBtn.setAttribute("aria-pressed", it.favorite);
+  els.toggleFavBtn.textContent = it.favorite ? "★" : "☆";
+  saveState();
+  renderGrid(); // keep card stars in sync
+}
+function openEdit(){
+  const it=currentItem(); if(!it)return;
   els.editForm.elements.title.value=it.title||"";
   els.editForm.elements.tags.value=(it.tags||[]).join(", ");
   els.editForm.elements.notes.value=it.notes||"";
   els.editModal.returnValue=""; els.editModal.showModal();
 }
-function openEditById(id){ const idx=state.items.findIndex(x=>x.id===id); if(idx===-1)return; openFocusByIndex(idx); openEdit(); }
+function openEditById(id){
+  const idx=state.items.findIndex(x=>x.id===id);
+  if(idx===-1)return;
+  openFocusByIndex(idx); openEdit();
+}
 function currentItem(){ return state.items[cursorIndex]||null; }
 
 /* ---------- Add files (compression) ---------- */
@@ -329,6 +364,24 @@ async function addFiles(files){
 }
 
 /* ---------- Helpers ---------- */
+/* ---------- Add item from URL ---------- */
+function addItem({src, title="", tags=[]}){
+  const tarot = pickTarot();
+  const item = {
+    id: crypto.randomUUID(),
+    src,
+    title,
+    tags,
+    notes: "",
+    favorite: false,
+    tarot,
+    dateAdded: Date.now()
+  };
+  state.items.unshift(item);
+  saveState();
+  renderGrid();
+}
+
 function pickTarot(){ return TAROT_DECK[Math.floor(Math.random()*TAROT_DECK.length)]; }
 
 async function fileToCompressedDataURL(file,{maxW=1600,maxH=1600,quality=0.85}={}){
@@ -341,7 +394,14 @@ async function fileToCompressedDataURL(file,{maxW=1600,maxH=1600,quality=0.85}={
   const ctx=canvas.getContext("2d",{alpha:false});ctx.drawImage(img,0,0,tw,th);
   const dataUrl=canvas.toDataURL("image/jpeg",quality);img.close?.();return dataUrl;
 }
-function fileToDataURL(file){return new Promise((res,rej)=>{const r=new FileReader();r.onerror=()=>rej(new Error("read fail"));r.onload=()=>res(r.result);r.readAsDataURL(file);});}
+function fileToDataURL(file){
+  return new Promise((res,rej)=>{
+    const r=new FileReader();
+    r.onerror=()=>rej(new Error("read fail"));
+    r.onload=()=>res(r.result);
+    r.readAsDataURL(file);
+  });
+}
 function saveState(){ try{ localStorage.setItem(LS_KEY,JSON.stringify(state)); }catch(e){ console.warn("Save fail",e); } }
 function loadState(){ try{const raw=localStorage.getItem(LS_KEY); if(!raw) return {items:[]}; const parsed=JSON.parse(raw); return Array.isArray(parsed.items)?parsed:{items:[]}; }catch{ return {items:[]}; } }
 function loadAffirmations(){ try{ const raw=localStorage.getItem(AFFIRM_KEY); return raw?JSON.parse(raw):[]; }catch{ return []; } }
@@ -352,4 +412,4 @@ function escapeHTML(s){ return (s||"").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'
 function escapeAttr(s){ return escapeHTML(s).replace(/"/g,'&quot;'); }
 function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 
-console.info("✨ Tarot Vision Board loaded. Click a card to flip.");
+console.info("✨ Tarot Vision Board loaded. Favorites use ☆/★ and no bubble — click to toggle.");
