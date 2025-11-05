@@ -18,6 +18,9 @@ ul{
     padding: 1vw;
     border-radius: 1vw;
 }
+audio{
+    opacity: .45;
+}
 .war{
     border-radius: 1ch;
     padding: 3vw;
