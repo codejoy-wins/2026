@@ -8,7 +8,9 @@ ul{
     border-radius: 1.3vw;
     padding: .4vw;
 }
-
+audio{
+    opacity: .7;
+}
 .infinite{
     color: gold;
 }
