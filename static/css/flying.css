@@ -9,6 +9,9 @@ ul{
     padding: .4vw;
 }
 
+.infinite{
+    color: gold;
+}
 .kanye{
     color: gold;
     font-weight: bold;
@@ -1040,3 +1043,4 @@ img{
     padding: 1vw;
     border-radius: 1vw;
 }
+
