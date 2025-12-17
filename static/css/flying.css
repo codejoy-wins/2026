@@ -375,6 +375,23 @@ h1 a{
     padding: 1vw;
     border-radius: 1vw;
 }
+.atomic{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(221, 160, 221, 0.733); */
+    /* background-color: rgba(138, 91, 138, 0.582); */
+    /* background-color: rgba(246, 4, 4, 0.603); */
+    color: black;
+    font-size: larger;
+}
+.atomic p{
+    background-color: rgba(255, 255, 255, 0.795);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.atomic h2, h3{
+    color: black;
+}
 .post3{
     color: wheat;
     font-size: larger;
