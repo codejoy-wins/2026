@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         
          { title: "Mewthree",
-         description: "A single-page web application that uses artificial intelligence and a pokemon API to let you pick a team of any 6 pokemon and challenge Mewthree to a battle.  I actually just had to upgrade the AI model to gpt-4o because they discontinued 3.5 turbo so my app stopped working", 
+         description: "A single-page web application that uses artificial intelligence and a pokemon API to let you pick a team of any 6 pokemon and challenge Mewthree to a battle.  I actually just had to upgrade the AI model to gpt-4o because they discontinued 3.5 turbo so my app stopped working.  Now it's not working anymore because I ran out of credits and it costs $5 to add more.", 
          imageUrl: "static/img/mewthree.png",
          linkURL:"pokedex.html",
          videoembed:"",
