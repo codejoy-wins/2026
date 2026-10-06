@@ -476,7 +476,7 @@ h1 a{
 .gold{
     border-radius: 1ch;
     padding: 3vw;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.553);
     color: black;
     font-size: larger;
 }
@@ -502,12 +502,12 @@ background-color:goldenrod;
 }
 .gold p{
     /* background-color: rgba(255, 192, 203, 0.521); */
-    background-color: gold;
+    background-color: rgba(255, 217, 0, 0.646);
     padding: 1vw;
     border-radius: 1vw;
 }
 .blackgold p{
-    color: gold;
+    color: wheat;
     background-color: black;
     padding: 1vw;
     border-radius: 1vw;
