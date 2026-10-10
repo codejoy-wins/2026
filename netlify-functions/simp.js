@@ -1,53 +1,47 @@
-
 const OpenAI = require('openai');
-const crypto = require('crypto');
-// updated october 9th with newer api key
+
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
+    timeout: 20000,
+    maxRetries: 1,
 });
 
-exports.handler = async function (event, context) {
+exports.handler = async function (event) {
     if (event.httpMethod !== 'POST') {
         return {
             statusCode: 405,
-            body: JSON.stringify({ error: 'Method Not Allowed' }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                error: 'Method Not Allowed',
+            }),
         };
     }
 
     try {
-        // Diagnose which API key this environment is using.
-        // Never log the actual secret key.
-        const apiKey = process.env.OPENAI_API_KEY;
-
-        console.log('API key diagnostic:', {
-            exists: Boolean(apiKey),
-            prefix: apiKey ? apiKey.slice(0, 7) : null,
-            length: apiKey ? apiKey.length : 0,
-            fingerprint: apiKey
-                ? crypto.createHash('sha256')
-                    .update(apiKey)
-                    .digest('hex')
-                    .slice(0, 12)
-                : null,
-        });
-
-        if (!apiKey) {
-            throw new Error('OPENAI_API_KEY is missing in this environment.');
-        }
-
         const requestBody = JSON.parse(event.body || '{}');
         const team = requestBody.team;
 
-        if (!Array.isArray(team) || team.length === 0) {
+        if (
+            !Array.isArray(team) ||
+            team.length === 0 ||
+            !team.every((pokemon) => typeof pokemon === 'string')
+        ) {
             return {
                 statusCode: 400,
+                headers: {
+                    'Content-Type': 'application/json',
+                },
                 body: JSON.stringify({
-                    error: 'A Pokémon team is required.',
+                    error: 'A valid Pokémon team is required.',
                 }),
             };
         }
 
         const trainer = team.join(', ');
+
+        console.log(`Mewthree battle request: ${trainer}`);
 
         const completion = await openai.chat.completions.create({
             model: 'gpt-4o',
@@ -67,26 +61,26 @@ exports.handler = async function (event, context) {
             max_tokens: 333,
         });
 
-        console.log('OpenAI request succeeded:', {
-            model: completion.model,
-            finishReason: completion.choices[0]?.finish_reason,
-        });
+        const summary = completion.choices[0];
+        const responseText = summary?.message?.content;
+
+        // Log the generated text, even if the frontend has already timed out.
+        console.log('\n--- MEWTHREE RESPONSE ---\n');
+        console.log(responseText || '[No text returned]');
+        console.log('\n--- END MEWTHREE RESPONSE ---\n');
 
         return {
             statusCode: 200,
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                summary: completion.choices[0],
-            }),
+            body: JSON.stringify({ summary }),
         };
     } catch (error) {
-        console.error('Mewthree function error:', {
+        console.error('Mewthree API error:', {
             message: error.message,
             status: error.status,
             code: error.code,
-            type: error.type,
         });
 
         return {
