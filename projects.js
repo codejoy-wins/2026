@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
          },
 
          { title: "Prime Words", 
-            description: "(currently down for $ reasons) I built this app with the latest model from openAI, mini o3 high, that finally was able to solve my anagram intelligence test.  I used Node.js and Express and Heroku", 
+            description: "(currently down for $ reasons) I built this app with the latest model from openAI, mini o3 high, that finally was able to solve my anagram intelligence test.  I used Node.js and Express and Heroku.  Switched to Netlify for cost reasons, but now definitions are under construction", 
             imageUrl: "static/img/prime2.png",
-            linkURL: "https://primewords-1ad95f96dc03.herokuapp.com/",
+            linkURL: "https://primewords.netlify.app/",
             videoembed:"",
             date:"2025",
          },
