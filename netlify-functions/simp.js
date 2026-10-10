@@ -1,7 +1,7 @@
 
 const OpenAI = require('openai');
 const crypto = require('crypto');
-
+// updated october 9th with newer api key
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });

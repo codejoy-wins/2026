@@ -79,7 +79,7 @@ function simp(){
     .catch(error => {
         console.error('Error117', error);
         const element = document.getElementById('brick');
-        element.innerHTML = `<p> Max Jann needs to put $5 into his Open AI API account</p>`;
+        element.innerHTML = `<p> Chat GPT response timed out or ran out of tokens.  </p>`;
     });
 }
 document.addEventListener('DOMContentLoaded', function() {
