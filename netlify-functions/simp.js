@@ -1,32 +1,102 @@
+
 const OpenAI = require('openai');
-const openai = new OpenAI(process.env.OPENAI_API_KEY);
-console.log("simple");
-exports.handler = async function(event, context) {
+const crypto = require('crypto');
+
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+});
+
+exports.handler = async function (event, context) {
     if (event.httpMethod !== 'POST') {
         return {
             statusCode: 405,
-            body: "Method Not Allowed"
+            body: JSON.stringify({ error: 'Method Not Allowed' }),
         };
     }
-    const requestBody = JSON.parse(event.body);
-    const team = requestBody.team;
-    const trainer = team.join(', ');
-    const promptMessage = 
-        `Write a paragraph from your perspective describing the fight vs. ${trainer}`
-    ;
-    const completion = await openai.chat.completions.create({
-        model: "gpt-4o",  /// gpt-3.5-turbo -> gpt-4o
-        messages: [
-            { role: "system", content: "You are Mewthree, a new and evolved version of Mewtwo" },
-            { role: "user", content: promptMessage },
-        ],
-            temperature: 0.8, // Adjust as needed. .8 was working before
-            max_tokens: 333, // Adjust based on your needs. 220 never errors
+
+    try {
+        // Diagnose which API key this environment is using.
+        // Never log the actual secret key.
+        const apiKey = process.env.OPENAI_API_KEY;
+
+        console.log('API key diagnostic:', {
+            exists: Boolean(apiKey),
+            prefix: apiKey ? apiKey.slice(0, 7) : null,
+            length: apiKey ? apiKey.length : 0,
+            fingerprint: apiKey
+                ? crypto.createHash('sha256')
+                    .update(apiKey)
+                    .digest('hex')
+                    .slice(0, 12)
+                : null,
         });
-    console.log(completion.choices[0]);
-    const summary = completion.choices[0];
-    return {
-        statusCode: 200,
-        body: JSON.stringify({ summary })
-    };
+
+        if (!apiKey) {
+            throw new Error('OPENAI_API_KEY is missing in this environment.');
+        }
+
+        const requestBody = JSON.parse(event.body || '{}');
+        const team = requestBody.team;
+
+        if (!Array.isArray(team) || team.length === 0) {
+            return {
+                statusCode: 400,
+                body: JSON.stringify({
+                    error: 'A Pokémon team is required.',
+                }),
+            };
+        }
+
+        const trainer = team.join(', ');
+
+        const completion = await openai.chat.completions.create({
+            model: 'gpt-4o',
+            messages: [
+                {
+                    role: 'system',
+                    content:
+                        'You are Mewthree, a new and evolved version of Mewtwo.',
+                },
+                {
+                    role: 'user',
+                    content:
+                        `Write a paragraph from your perspective describing the fight vs. ${trainer}`,
+                },
+            ],
+            temperature: 0.8,
+            max_tokens: 333,
+        });
+
+        console.log('OpenAI request succeeded:', {
+            model: completion.model,
+            finishReason: completion.choices[0]?.finish_reason,
+        });
+
+        return {
+            statusCode: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                summary: completion.choices[0],
+            }),
+        };
+    } catch (error) {
+        console.error('Mewthree function error:', {
+            message: error.message,
+            status: error.status,
+            code: error.code,
+            type: error.type,
+        });
+
+        return {
+            statusCode: error.status === 401 ? 502 : 500,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                error: 'Mewthree could not generate a battle summary.',
+            }),
+        };
+    }
 };
