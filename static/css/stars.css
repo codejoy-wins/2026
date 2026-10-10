@@ -47,6 +47,9 @@ audio{
     color: whitesmoke;
 
 }
+.la a{
+    color: rgb(116, 238, 103);
+}
 .postdare{
     border-radius: 1ch;
     padding: 2vw;
