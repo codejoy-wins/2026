@@ -262,6 +262,8 @@ const smartSongs = [
     { title: "God's Street Park",   file: "GodStreetPark.mp3" },
     { title: "Cold Soul",           file: "coldSoul.mp3" },
     { title: "Madly",           file: "Madly.mp3" },
+    { title: "Join My F***ing Team",           file: "JMFT.mp3" },
+
 
   ];
 
