@@ -38,7 +38,6 @@ audio{
     color: black;
     background-color: rgba(243, 234, 243, 0.746);
     /* background-color: rgba(243, 234, 243, 0.746); */
-
     padding: 1vw;
     border-radius: 1vw;
 }
@@ -50,6 +49,7 @@ audio{
     color: black;
     font-size: larger;
     padding-bottom: 6vw;
+
 }
 .peace h2, h3{
     color: purple;
@@ -1000,6 +1000,13 @@ body{
     float: left;
     max-width: 100%;
     padding-right: 1vw;
+}
+
+.picfloatjester{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+    opacity: .7;
 }
 .picfloat2{
     float: left;
