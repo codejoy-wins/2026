@@ -3,6 +3,7 @@
 }
 #intro{
     display: block;
+    padding: 5vw;
 }
 #rez{
     display: block;
@@ -11,17 +12,8 @@
     display: none;
 }
 
-@media only screen and (max-device-width: 1117px) {
-    #rez{
-        display: none;
-    }
-    #rez2{
-        display: block;
-    }
-    #intro{
-        display: none;
-    }
-}
+
+
 .lynk{
     display: block;
 }
@@ -298,4 +290,29 @@ body{
 #chess{
     background-color: peachpuff;
     float: right;
+}
+
+
+/* 
+@media only screen and (max-device-width: 1117px) {
+    #rez{
+        display: none;
+    }
+    #rez2{
+        display: block;
+    }
+    #intro{
+        display: none;
+    }
+} */
+
+
+@media only screen and (max-device-width: 1117px) {
+    #rez{
+        max-width: 100%;
+
+    }
+    #intro{
+        display: none;
+    }
 }
