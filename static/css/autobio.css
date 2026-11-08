@@ -93,7 +93,7 @@ a:hover{
     color: gold;
 }
 
-@keyframes fireFlicker {
+/* @keyframes fireFlicker {
   0% {
     text-shadow: 0 0 2px #ff9d00, 0 0 4px #ff6a00, 0 0 6px #ff3c00, 0 0 8px #ff2200;
   }
@@ -103,11 +103,26 @@ a:hover{
   100% {
     text-shadow: 0 0 2px #ff9d00, 0 0 4px #ff6a00, 0 0 6px #ff3c00, 0 0 8px #ff2200;
   }
+} */
+
+@keyframes fireFlicker {
+  0% {
+    text-shadow: 0 0 2px #000000, 0 0 4px #000000, 0 0 6px #00000b, 0 0 8px #000000;
+    color: pink;
+  }
+  50% {
+    text-shadow: 0 0 3px #000000, 0 0 5px #00ccff, 0 0 7px #000000, 0 0 10px #ff1100;
+    color: black;
+  }
+  75% {
+    text-shadow: 0 0 2px #000000, 0 0 4px #ff0084, 0 0 6px #bf00ff, 0 0 8px #f6ff00;
+    color: gold;
+  }
 }
 
 .fire-text {
   font-family: 'Nunito', sans-serif;
-  font-size: 48px;
+  font-size: 72px;
   font-weight: 700;
   color: #fff5cc;
   animation: fireFlicker 1.5s infinite ease-in-out;
@@ -119,4 +134,7 @@ a:hover{
   display: inline-block;
   border-radius: 43px;
   
+}
+.disclaimer{
+  color: pink;
 }
