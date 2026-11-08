@@ -8,7 +8,9 @@ html, body{
     /* background-color: black; */
     text-align: center;
     /* background-image: url("../img/haloinfinite.jpg"); */
-    background-image: url("../img/RainbowAngel.png");
+    /* background-image: url("../img/RainbowAngel.png"); */
+    background-image: url("../img/Aletheon.png");
+
     background-size: contain;
     background-position: absolute;
     background-position-y:117px
@@ -16,7 +18,9 @@ html, body{
 #article{
     color: rgba(19, 24, 24, 0.897);
     padding: 1vw;
-    background-image: url("../img/RainbowAngel.png");
+    /* background-image: url("../img/RainbowAngel.png"); */
+    background-image: url("../img/rainbowwbc.png");
+
     background-size: contain;
     text-align: center;
 }
@@ -74,9 +78,22 @@ html, body{
     /* background-color: rgba(34, 46, 46, 0.767); */
     width: 100%;
 }
+@keyframes pika {
+    0%{
+        color: wheat;
+    }
+    50%{
+        color: white;
+    }
+    75%{
+        color: wheat;
+    }
+}
 a{
     text-decoration: none;
-    color: rgb(183, 183, 196);
+    /* color: rgb(183, 183, 196); */
+    color: rgb(0, 0, 23);
+    animation: pika infinite 3s;
     cursor: cell;
 }
 a:hover{
