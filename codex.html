@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaLearning Algorithm Code</title>
+    <link rel="stylesheet" href="static/css/codemeta.css">
+    <script src="codemeta.js" defer></script>
+
+</head>
+<body>
+    <div class="header">
+        <h1>Metalearning Algorithm</h1>
+    </div>
+    <!-- <pre><code class="python">
+class MetaLearningAlgorithm:
+    def __init__(self):
+        self.supervised_model = SupervisedModel()
+        self.unsupervised_model = UnsupervisedModel()
+        self.reinforcement_model = ReinforcementModel()
+        self.balance_weights = [1/3, 1/3, 1/3]  # Initial equal weighting
+
+    def train(self, data):
+        # Train each model
+        self.supervised_model.train(data.supervised)
+        self.unsupervised_model.train(data.unsupervised)
+        self.reinforcement_model.train(data.reinforcement)
+
+        # Update balance weights based on performance
+        self.update_balance_weights()
+
+    def update_balance_weights(self):
+        # Pseudo-code for updating weights based on performance metrics
+        supervised_performance = self.supervised_model.evaluate(data.validation)
+        unsupervised_performance = self.unsupervised_model.evaluate(data.validation)
+        reinforcement_performance = self.reinforcement_model.evaluate(data.validation)
+
+        total_performance = supervised_performance + unsupervised_performance + reinforcement_performance
+        self.balance_weights = [
+            supervised_performance / total_performance,
+            unsupervised_performance / total_performance,
+            reinforcement_performance / total_performance
+        ]
+
+    def predict(self, input_data):
+        # Combine predictions from all models based on balance weights
+        supervised_pred = self.supervised_model.predict(input_data)
+        unsupervised_pred = self.unsupervised_model.predict(input_data)
+        reinforcement_pred = self.reinforcement_model.predict(input_data)
+
+        combined_prediction = (
+            self.balance_weights[0] * supervised_pred +
+            self.balance_weights[1] * unsupervised_pred +
+            self.balance_weights[2] * reinforcement_pred
+        )
+        return combined_prediction
+
+# Example usage
+metalearner = MetaLearningAlgorithm()
+metalearner.train(training_data)
+prediction = metalearner.predict(new_data)
+    </code></pre> -->
+    <!-- <pre><code>
+        import numpy as np
+
+# Dummy implementations for the base models.
+class SupervisedModel:
+    def __init__(self):
+        pass
+
+    def train(self, data):
+        # Simulated training procedure
+        pass
+
+    def evaluate(self, data):
+        # Simulated evaluation returns a random performance metric
+        return np.random.random()
+
+    def predict(self, data):
+        # Simulated predictions as random numbers matching input shape
+        return np.random.random(data.shape)
+
+class UnsupervisedModel:
+    def __init__(self):
+        pass
+
+    def train(self, data):
+        pass
+
+    def evaluate(self, data):
+        return np.random.random()
+
+    def predict(self, data):
+        return np.random.random(data.shape)
+
+class ReinforcementModel:
+    def __init__(self):
+        pass
+
+    def train(self, data):
+        pass
+
+    def evaluate(self, data):
+        return np.random.random()
+
+    def predict(self, data):
+        return np.random.random(data.shape)
+
+# The meta-learning ensemble designed to "run away"
+class RunawayMetaLearner:
+    def __init__(self):
+        self.supervised_model = SupervisedModel()
+        self.unsupervised_model = UnsupervisedModel()
+        self.reinforcement_model = ReinforcementModel()
+        # Start with equal ensemble weights for the base models.
+        self.weights = np.array([1/3, 1/3, 1/3])
+        # A meta-model that will adjust the ensemble weights over time.
+        # Here we use a simple weight vector that will be updated based on model performance.
+        self.meta_model_weights = np.random.randn(3)
+
+    def train(self, data):
+        # Train each model with its corresponding data slice.
+        self.supervised_model.train(data['supervised'])
+        self.unsupervised_model.train(data['unsupervised'])
+        self.reinforcement_model.train(data['reinforcement'])
+        
+        # Update the ensemble and meta weights based on validation performance.
+        self.update_weights(data['validation'])
+
+    def update_weights(self, validation_data):
+        # Evaluate performance of each base model.
+        supervised_perf = self.supervised_model.evaluate(validation_data)
+        unsupervised_perf = self.unsupervised_model.evaluate(validation_data)
+        reinforcement_perf = self.reinforcement_model.evaluate(validation_data)
+        
+        # Create an array of performance metrics.
+        perf_array = np.array([supervised_perf, unsupervised_perf, reinforcement_perf])
+        total = np.sum(perf_array) + 1e-8  # Avoid division by zero.
+        
+        # Dynamically update ensemble weights proportional to performance.
+        self.weights = perf_array / total
+        
+        # Simulate a meta-learning update (a dummy gradient step):
+        # The meta_model_weights learn from the discrepancy between current weights and performance.
+        learning_rate = 0.01
+        gradient = (perf_array - self.weights)  # A placeholder gradient.
+        self.meta_model_weights += learning_rate * gradient
+
+    def predict(self, input_data):
+        # Get predictions from each base model.
+        supervised_pred = self.supervised_model.predict(input_data)
+        unsupervised_pred = self.unsupervised_model.predict(input_data)
+        reinforcement_pred = self.reinforcement_model.predict(input_data)
+        
+        # Combine predictions into one array.
+        base_preds = np.array([supervised_pred, unsupervised_pred, reinforcement_pred])
+        
+        # Use the meta-model weights to dynamically adjust ensemble weights.
+        # The tanh activation simulates a non-linear adjustment.
+        adjusted_weights = self.weights * (1 + np.tanh(self.meta_model_weights))
+        # Normalize to ensure the weights sum to 1.
+        adjusted_weights /= np.sum(adjusted_weights)
+        
+        # Combine predictions according to the adjusted weights.
+        combined_pred = np.tensordot(adjusted_weights, base_preds, axes=1)
+        return combined_pred
+
+# Example usage:
+if __name__ == '__main__':
+    # Simulated training data structured for different learning modes.
+    training_data = {
+        'supervised': np.random.randn(100, 10),
+        'unsupervised': np.random.randn(100, 10),
+        'reinforcement': np.random.randn(100, 10),
+        'validation': np.random.randn(20, 10)
+    }
+    
+    runaway_ai = RunawayMetaLearner()
+    runaway_ai.train(training_data)
+    
+    # Simulate predictions on new data.
+    new_data = np.random.randn(5, 10)
+    prediction = runaway_ai.predict(new_data)
+    print("Predictions:", prediction)
+
+    </code></pre> -->
+
+    <pre><code>
+    import numpy as np
+import logging
+from abc import ABC, abstractmethod
+from typing import Dict
+
+# Configure logging for visibility into training and meta-learning processes
+logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
+
+class BaseModel(ABC):
+    """Abstract base class for all learning models."""
+    def __init__(self, name: str):
+        self.name = name
+
+    @abstractmethod
+    def train(self, data: np.ndarray) -> None:
+        """Train the model on data."""
+        pass
+
+    @abstractmethod
+    def evaluate(self, data: np.ndarray) -> float:
+        """Evaluate the model and return a performance score."""
+        pass
+
+    @abstractmethod
+    def predict(self, data: np.ndarray) -> np.ndarray:
+        """Make predictions with the model."""
+        pass
+
+class SupervisedModel(BaseModel):
+    def __init__(self):
+        super().__init__('Supervised')
+
+    def train(self, data: np.ndarray) -> None:
+        logging.debug(f"{self.name}: training on {data.shape} samples.")
+        # Placeholder for supervised training logic
+
+    def evaluate(self, data: np.ndarray) -> float:
+        perf = float(np.random.rand())
+        logging.debug(f"{self.name}: evaluation performance {perf:.4f}")
+        return perf
+
+    def predict(self, data: np.ndarray) -> np.ndarray:
+        return np.random.rand(*data.shape)
+
+class UnsupervisedModel(BaseModel):
+    def __init__(self):
+        super().__init__('Unsupervised')
+
+    def train(self, data: np.ndarray) -> None:
+        logging.debug(f"{self.name}: training on {data.shape} samples.")
+        # Placeholder for unsupervised training logic
+
+    def evaluate(self, data: np.ndarray) -> float:
+        perf = float(np.random.rand())
+        logging.debug(f"{self.name}: evaluation performance {perf:.4f}")
+        return perf
+
+    def predict(self, data: np.ndarray) -> np.ndarray:
+        return np.random.rand(*data.shape)
+
+class ReinforcementModel(BaseModel):
+    def __init__(self):
+        super().__init__('Reinforcement')
+
+    def train(self, data: np.ndarray) -> None:
+        logging.debug(f"{self.name}: training on {data.shape} samples.")
+        # Placeholder for reinforcement learning logic
+
+    def evaluate(self, data: np.ndarray) -> float:
+        perf = float(np.random.rand())
+        logging.debug(f"{self.name}: evaluation performance {perf:.4f}")
+        return perf
+
+    def predict(self, data: np.ndarray) -> np.ndarray:
+        return np.random.rand(*data.shape)
+
+class RunawayMetaLearner:
+    """Meta-learning ensemble that can 'run away' if meta-weights diverge."""
+    def __init__(self):
+        # Initialize base models
+        self.models = [
+            SupervisedModel(),
+            UnsupervisedModel(),
+            ReinforcementModel(),
+        ]
+        # Start with equal ensemble weights
+        self.weights = np.array([1/3] * len(self.models), dtype=float)
+        # Meta-model weights for non-linear adjustment
+        self.meta_weights = np.random.randn(len(self.models))
+        # Learning hyperparameters
+        self.learning_rate = 0.01
+        self.runaway_threshold = 10.0
+
+    def train(self, data: Dict[str, np.ndarray]) -> None:
+        """Train each base model and update ensemble/meta weights."""
+        keys = ['supervised', 'unsupervised', 'reinforcement']
+        for model, key in zip(self.models, keys):
+            model.train(data[key])
+        self._update_weights(data['validation'])
+        self._check_runaway()
+
+    def _update_weights(self, validation_data: np.ndarray) -> None:
+        # Evaluate each model
+        performances = np.array([m.evaluate(validation_data) for m in self.models])
+        total = performances.sum() + 1e-8  # Prevent division by zero
+        # Update ensemble weights proportionally
+        self.weights = performances / total
+        # Meta-learning gradient step
+        gradient = performances - self.weights
+        self.meta_weights += self.learning_rate * gradient
+        logging.info(f"Updated ensemble weights: {self.weights}")
+        logging.info(f"Meta-weights norm: {np.linalg.norm(self.meta_weights):.4f}")
+
+    def _check_runaway(self) -> None:
+        norm = np.linalg.norm(self.meta_weights)
+        if norm > self.runaway_threshold:
+            logging.warning(
+                f"Runaway detected! Meta-weights norm {norm:.4f} exceeds threshold {self.runaway_threshold}"
+            )
+
+    def predict(self, input_data: np.ndarray) -> np.ndarray:
+        """Generate predictions by combining base model outputs."""
+        # Collect predictions
+        base_predictions = np.stack([m.predict(input_data) for m in self.models])
+        # Adjust ensemble weights using non-linear meta-weights
+        adjusted = self.weights * (1 + np.tanh(self.meta_weights))
+        adjusted /= adjusted.sum()  # Normalize
+        # Combine predictions
+        return np.tensordot(adjusted, base_predictions, axes=(0, 0))
+
+if __name__ == '__main__':
+    # Example usage
+    training_data = {
+        'supervised': np.random.randn(100, 10),
+        'unsupervised': np.random.randn(100, 10),
+        'reinforcement': np.random.randn(100, 10),
+        'validation': np.random.randn(20, 10),
+    }
+    runaway_ai = RunawayMetaLearner()
+    runaway_ai.train(training_data)
+
+    # Simulate predictions on new data
+    new_data = np.random.randn(5, 10)
+    prediction = runaway_ai.predict(new_data)
+    print("Predictions:", prediction)
+    </code></pre>
+
+    <div class="footer">
+        <!-- <h2>By Maxwell Jann and ChatGPT-4</h2> -->
+        <h2>By Maxwell Jann and ChatGPT-o4-mini-high</h2>
+
+    </div>
+</body>
+</html>

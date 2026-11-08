@@ -1,7 +1,6 @@
-// geting canvas by Boujjou Achraf
+// ********** Matrix Code Start **********
 var c = document.getElementById("c");
 var ctx = c.getContext("2d");
-// xp
 //toDataURL() canvas function almost works to make canvas a background
 // document.getElementById("new3").style.background = "url(" + canvas.toDataURL() + ")";
 
@@ -72,6 +71,9 @@ function draw()
 }
 
 setInterval(draw, 35);
+// ********** Matrix Code End **********
+
+// ********** Oracle Code Start **********
 
 // if user is on phone inject text " i see you're on your phone"
 // if user is not on phone inject text "thank you for using your computer"
@@ -105,7 +107,6 @@ deviceType();
 
 const helloWorld = () => {
     if(deviceType()=="desktop"){
-        console.log("I see you're on a desktop");
         document.getElementById("intro").innerHTML=`
             <p>
             <span id="goldfirst">W</span>elcome to Cloudland, I see you're on your computer.
@@ -115,27 +116,33 @@ const helloWorld = () => {
         <h3 class="insane">Fly through my  <a href="fly.html">interactive resume</a> </h3>
         
         `
+        document.getElementById("maxster").innerHTML=`
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/E7cUM2CbXBs?si=5nsYowj-xc3nzzDe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `
     }
     if(deviceType()=="tablet"){
-        console.log("I see you're on a tablet");
         document.getElementById("intro").innerHTML=`
             <p>
             <span id="goldfirst">W</span>elcome to Cloudland, I see you're on instagram.
             </p>
         `
+        document.getElementById("maxster").innerHTML=`
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/E7cUM2CbXBs?si=5nsYowj-xc3nzzDe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `
     }
     if(deviceType()=="mobile"){
-        console.log("I see you're on your phone");
         document.getElementById("intro").innerHTML=`
             <p>
             <span id="goldfirst">W</span>elcome to Cloudland, I see you're on your "cell" phone.
             </p>
         `
+        // document.getElementById("maxster").innerHTML=`
+        //     <iframe width="100%" height="315" src="https://www.youtube.com/embed/PLXK9t4X4Xg?si=bSVqwNMYdjr3FxUu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        // `
     }
     
 }
 helloWorld();
-
 
 const nextTime = () =>{
     let mytiming = new Date();
@@ -179,153 +186,218 @@ const nextTime = () =>{
     }
     
 }
-// const featurephotos=["teroh0","teroh1","teroh2","teroh3","teroh4","teroh5","teroh6"];
-
-// // choose random image and make that the main image
-
-// let currentri = "parallaxnew";
-
+nextTime();
+// ********** Oracle Code End **********
+// let tokens = 0;
+let token = 0;
 function craig(){
+    if(token>0){
+      window.open('https://youtu.be/2vSqYtBBLkI?si=6-opTOogbijZoPhf', '_blank');
+    }
     console.log("change for the good");
     let targetofteroh = document.getElementById("teroh");
     document.getElementById("teroh").classList.remove("parallaxnew");
     document.getElementById("teroh").classList.add("parallaxlight");
     document.getElementById("Elam").classList.remove("red");
     document.getElementById("Elam").classList.add("blue");
+    document.getElementById("outr").innerHTML=`
+    <div class="parallax5117"></div>
+    `;
     freezefire();
+    token++;
+    // tokens >= 1 ?     window.location.href = "https://youtu.be/2vSqYtBBLkI?si=SiOHSWyLQdlA7VG_": console.log('token low');
+    // tokens++;
+}
+function cyberelam(){
+    console.log("change for the good");
+    let targetofteroh = document.getElementById("teroh");
+    document.getElementById("teroh").classList.remove("parallaxnew");
+    document.getElementById("teroh").classList.add("parallaxlight");
+    document.getElementById("Elam").classList.remove("red");
+    document.getElementById("Elam").classList.add("blue");
+    document.getElementById("outr").innerHTML=`
+    <div class="parallax5117"></div>
+    `;
+    // freezefire();
 }
 
 
 // run craig again every 5 minutes?
 // AmorFati , iDecay, cellPHone2, sinNoMo have been removed due to not being good enough for a first impression
 
-let songz = [
-    `hates`,
-    `Lying`,
-    `cali`,
-    `Afterlie`,
-    `diamond`,
-    `addvicewithafriend`,
-    `addvicewithafriend`,
-    `addvicewithafriend`,
-    `AdoreYou`,
-    `only`,
-    `winter`,
-    `herestoyou`,
-    `fakebook`,
-    `RidingTooHigh`,
-    `KingOfParadise`,
-    `Fly2`,
-    `Alika`,
-    `WrongSideOfTheSea`,
-    `WrongSideOfTheSea`,
-    `Jfc`,
-    `notalone`,
-    `Alone2`,
-    `Alonev2`,
-    `Sudoku`,
-    `Fireg`,
-    `Bleeding`,
-    `bleedingoutpro`,
-    `SuperFireMedley`,
-    `Madly`,
-    `Madly`,
-    `sb`,
-    `Bleeding`,
-    `Bleeding`,
-    `Bleeding`,
+// ********** Album Code Start **********
 
-]
+const smartSongs = [
+    { title: "This Town Hates Me", file: "hates.mp3" },
+    { title: "Lying",               file: "Lying.mp3" },
+    { title: "California",          file: "cali.mp3" },
+    { title: "Afterli(f)e",         file: "Afterlie.mp3" },
+    { title: "Cold Diamond",        file: "diamond.mp3" },
+    { title: "Add Vice for a Friend", file: "addvicewithafriend.mp3" },
+    { title: "Adore you",           file: "AdoreYou.mp3" },
+    { title: "If Only",             file: "only.mp3" },
+    { title: "Beautiful Winter",    file: "winter.mp3" },
+    { title: "Here's to You",       file: "herestoyou.mp3" },
+    { title: "Fakebook",            file: "fakebook.mp3" },
+    { title: "Riding Too High",     file: "RidingTooHigh.mp3" },
+    { title: "King of Paradise",    file: "KingOfParadise.mp3" },
+    { title: "Fly",                 file: "Fly2.mp3" },
+    { title: "Alika and the Art of Zen Maintenance", file: "Alika.mp3" },
+    { title: "Wrong Side of the Sea", file: "WrongSideOfTheSea.mp3" },
+    { title: "Jesus Something Christ", file: "Jfc.mp3" },
+    { title: "Not Alone",           file: "notalone.mp3" },
+    { title: "Alone",               file: "Alone2.mp3" },
+    { title: "All Alone",           file: "Alonev2.mp3" },
+    { title: "Sudoku",              file: "Sudoku.mp3" },
+    { title: "Fire Girl",           file: "Fireg.mp3" },
+    { title: "Bleeding Out (extended version)", file: "bleedingoutpro.mp3" },
+    { title: "Seven Eleven 117",    file: "711117.mp3" },
+    { title: "Eternalized",         file: "Eternalized.mp3" },
+    { title: "Liquified",           file: "liquified.mp3" },
+    { title: "Roya Tha Destroya",   file: "royaThaDestroya.mp3" },
+    { title: "Lovely Rap",          file: "lovelyRap.mp3" },
+    { title: "Ruler",               file: "ruler.mp3" },
+    { title: "Dead Internet Theory", file: "deadInternet.mp3" },
+    { title: "King of Greed",       file: "GreedyKing.mp3" },
+    { title: "God's Street Park",   file: "GodStreetPark.mp3" },
+    { title: "Cold Soul",           file: "coldSoul.mp3" },
+    { title: "Madly",           file: "Madly.mp3" },
+    { title: "Join My F***ing Team",           file: "JMFT2.mp3" },
 
-let songs = [
-       `This Town Hates Me`,
-       `Lying`,
-       `California`,
-       `Afterli(f)e`,
-       `Cold Diamond`,
-       `Add Vice for a Friend`,
-       `Add Vice for a Friend`,
-       `Add Vice for a Friend`,
-       `Adore You`,
-       `If Only`,
-       `Beautiful Winter`,
-       `Here's to You`,
-       `Fakebook`,
-       `Riding Too High`,
-       `King of Paradise`,
-       `Fly`,
-       `Alika and the Art of Zen Maintanence`,
-       `Wrong Side of the Sea`,
-       `Wrong Side of the Sea`,
-       `JFC`,
-       `Not Alone`,
-       `Alone`,
-       `All Alone`,
-       `Sudoku`,
-       `Fire Girl`,
-       `Bleeding Out`,
-       `Bleeding Out (pro version)`,
-       `Super Fire Medley`,
-       `Madly`,
-       `Madly`,
-       `Santa Barbara`,
-       `Bleeding Out`,
-       `Bleeding Out`,
-       `Bleeding Out`,
 
-]
+  ];
 
-function randosong(){
-    let ra = Math.floor(Math.random()*songz.length);
-    let x = songz[ra];
-    let y = songs[ra];
-    console.log(`xxx is ${x}`);
-    
-    document.getElementById("introsong").innerHTML=`
-    <audio id="player" onended="randosong()" src="static/audio/${x}.mp3"></audio>
-    `
-    document.getElementById("descsong2").innerHTML=`
-    <p>${y}</p>
-    `
-    document.getElementById("treeternal").innerHTML=`
-        <img class="picalu" src="static/img/sensaplay.jpeg" alt="treeternal">
-    `
-}
+  // 2) runtime state
+  let playlist = [];
+  let history  = [];
+  let current  = null;
 
-nextTime();
+  // 3) DOM refs
+  const player   = document.getElementById("player");
+  const descEl   = document.getElementById("descsong2");
+  const playIcon = document.querySelector("#treeternal img");
+  const mainImg  = document.getElementById("main-img");
+  const bottomBtns = document.querySelectorAll(".bottom-btn");
 
-randosong();
-
-function freezefire(){
-    let targ = document.getElementById("player");
-    console.log("She can freeze fire from the Son");
-    console.log(`targ.paused is ${targ.paused}`);
-    if(targ.paused == true){
-        console.log("trying to play");
-        targ.play();
-        document.getElementById("treeternal").innerHTML=`
-        <img class="picalu" src="static/img/warright.jpeg" alt="warright">
-        `
+  // 4) Fisher–Yates shuffle
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
     }
-    else if(targ.paused == false){
-        console.log("trying to pause");
-        targ.pause();
-        document.getElementById("treeternal").innerHTML=`
-        <img class="picalu" src="static/img/sensaplay.jpeg" alt="treeternal">
-        `
-    }
-    console.log(`targ.paused is now ${targ.paused}`);
+    return a;
+  }
 
+  // 5) load `current` into the player + update title
+  function loadCurrent() {
+    player.src = `static/audio/${current.file}`;
+    descEl.textContent = current.title;
+    // reset the icon to “tree”
+    playIcon.src = "static/img/sensaplay.jpeg";
+  }
+
+  // helper to dump state
+// function dumpState(ctx) {
+//   console.group(`––– ${ctx} –––`);
+//   console.log("Full album:", smartSongs.map(s => s.title));
+//   console.log("Shuffled playlist:", playlist.map(s => s.title));
+//   console.log("History:", history.map(s => s.title));
+//   console.groupEnd();
+// }
+
+  // 6) initialize on page-load (no autoplay)
+  function startSession() {
+    playlist = shuffle(smartSongs);
+    history  = [];
+    current  = playlist.shift();
+    loadCurrent();
+    // dumpState("startSession");  // optional call for help
+  }
+
+  // 7) next track (reshuffle if needed)
+  function playNext() {
+    if (current) history.push(current);
+    if (!playlist.length) {
+      playlist = shuffle(smartSongs);
+      history  = [];
+      // console.log("➡️ playlist exhausted, reshuffling"); // optional console log
+    }
+    current = playlist.shift();
+    loadCurrent();
+    player.play();
+    // dumpState("playNext"); // optional
+  }
+
+  // 8) previous (or restart if none)
+  function playPrev() {
+    if (history.length) {
+      playlist.unshift(current);
+      current = history.pop();
+      loadCurrent();
+    }
+    player.play();
+    // dumpState("playPrev"); // optional
+  }
+
+  // 9) rewind + double click logic
+
+// restart current track
+function rewindSong() {
+  player.currentTime = 0;
+  player.play();
+  console.log("⏮️ single-click: restart current");
+  // dumpState("rewindSong");
 }
-function water(){
-    let targy = document.getElementById("player");
-    console.log("water rewind");
-    // document.getElementById("player").rewind();
-    console.log(`targy time is ${targy.currentTime}`);
-    targy.currentTime = 0;
+
+
+  let _clickTimer = null;
+function waterHandler() {
+  if (_clickTimer) {
+    // second click within 300ms → cancel restart, go to prev
+    clearTimeout(_clickTimer);
+    _clickTimer = null;
+    playPrev();
+  } else {
+    // first click → schedule a restart after 300ms
+    _clickTimer = setTimeout(() => {
+      rewindSong();
+      console.log("⏮️ single-click: restart current");
+      _clickTimer = null;
+      // dumpState("rewindSong");
+    }, 300);
+  }
 }
-function air(){
-    console.log("air fast forward");
-    randosong();
-    freezefire();
-}
+
+
+  // 10) toggle play/pause
+  function togglePlay() {
+    if (player.paused) player.play();
+    else               player.pause();
+  }
+
+  // 11) expose globals so your inline `onclick="…"` still works
+  window.water      = waterHandler;
+  window.freezefire = togglePlay;
+  window.air        = playNext;
+  
+
+  // 12) sync tree⇄fire on native events
+  player.addEventListener("play",  () => playIcon.src = "static/img/warright.jpeg");
+  player.addEventListener("pause", () => playIcon.src = "static/img/sensaplay.jpeg");
+  player.addEventListener("ended", playNext);
+
+  // 13) bottom-button behavior
+  bottomBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      mainImg.src = `static/img/${btn.dataset.image}`;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      player.play();
+    });
+  });
+
+  // 14) finally, kick it off
+  window.addEventListener("DOMContentLoaded", startSession);
+
+// ********** Album Code End **********
+

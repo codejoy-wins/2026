@@ -33,7 +33,9 @@ html, body{
     border-radius: 1vw;
     font-size: larger;
 }
-
+p a{
+    color: gold;
+}
 
 .option{
     display: inline-block;

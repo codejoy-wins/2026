@@ -1,342 +1,178 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MetaLearning Algorithm Code</title>
-    <link rel="stylesheet" href="static/css/codemeta.css">
-    <script src="codemeta.js" defer></script>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Protocol 10 · Learning to Learn</title><meta name="description" content="A working learning-strategy experiment inspired by Runaway AI. Train, compare, test, and inspect the source."><link rel="shortcut icon" type="image/png" href="/static/img/mj3.png"><style>
+:root{color-scheme:dark;--gold:#dfbd75;--muted:#a4b3ad;--line:#33413b}*{box-sizing:border-box}body{margin:0;background:#0b1411;color:#e8e9de;font:17px/1.65 Georgia,serif}main{max-width:1100px;margin:auto;padding:clamp(20px,5vw,60px)}nav{display:flex;gap:24px;flex-wrap:wrap;font:13px/1.6 monospace}a{color:var(--gold)}header{padding:64px 0 30px}.tag{font:12px/1.6 monospace;letter-spacing:.17em;color:var(--gold)}h1{font-weight:400;font-size:clamp(40px,7vw,76px);line-height:1.06;margin:18px 0}h2{font-weight:400;font-size:29px}p{max-width:760px}.lead{font-size:23px;color:#d6d9c6}.panel{border:1px solid var(--line);padding:clamp(18px,4vw,32px);margin:28px 0;background:#111e18;border-radius:8px}.controls{display:flex;gap:18px;align-items:end;flex-wrap:wrap}label{display:grid;gap:6px;font:14px/1.6 system-ui}button,select{font:15px system-ui;padding:12px 17px;border:1px solid #63715e;border-radius:4px;background:#182c22;color:#fff}button{cursor:pointer;background:var(--gold);color:#161d13;font-weight:700}button:disabled{opacity:.6;cursor:wait}a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible{outline:3px solid #eecf7e;outline-offset:5px}.hint{font:14px/1.65 system-ui;color:var(--muted)}.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}.metric{padding:18px;background:#0a1410;border:1px solid var(--line)}.metric span{display:block;font:12px/1.5 monospace;color:var(--muted)}.metric strong{font:26px/1.7 monospace;color:var(--gold)}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;font:14px/1.6 monospace}td,th{padding:10px;text-align:left;border-bottom:1px solid var(--line)}th{color:var(--gold)}pre{overflow:auto;max-width:100%;padding:22px;background:#060e0a;border:1px solid var(--line);font:13px/1.65 monospace;color:#bdd7be;tab-size:4}summary{cursor:pointer;color:var(--gold);font:16px/1.6 system-ui}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:18px}.paper{background:linear-gradient(115deg,#e9d9b1,#d7c296);color:#29251b;padding:26px;border-radius:4px}.paper p{margin:0}code{font-family:monospace}#status{min-height:1.7em}
+</style></head><body><main><nav aria-label="Main"><a href="https://www.maxjann.com/">Cloudland</a><a href="https://www.maxjann.com/runaway">Runaway AI</a><a href="runaway-revision.html">Read the screenplay</a><a href="#experiment">Run experiment</a><a href="#source">Inspect source</a></nav><header><div class="tag">ESOTECH / PROTOCOL 10 / FICTION MEETS EXPERIMENT</div><h1>Before intelligence.<br>A better way to learn.</h1><p class="lead">Craig Teroh compared his engineers’ learning strategies. You can run a small version of that idea here.</p><p>Train nine candidates. Select using validation examples. Then measure the winner on entirely new tasks. Every score below comes from actual predictions.</p></header>
+<section class="paper"><p><strong>The useful distinction:</strong> training learns an answer within a task. This experiment selects a learning strategy across tasks. It does not create the fictional Meta, consciousness, or general intelligence.</p></section>
+<section class="panel" id="experiment"><h2>The experiment</h2><div class="controls"><label>Development tasks<select id="development"><option value="linear">Straight lines</option><option value="quadratic" selected>Curves</option></select></label><label>Unseen test tasks<select id="evaluation"><option value="same" selected>Same family</option><option value="sine">Different family: sine waves</option></select></label><button id="run" type="button">Run Protocol 10</button></div><p class="hint">Each candidate gets 8 development tasks and 250 training steps per task. Select by validation error; test once on 12 fresh tasks. Fixed seeds make comparisons repeatable. Everything runs locally after you press Run.</p><p id="status" role="status" aria-live="polite">Ready. No models have been trained yet.</p><div id="results" hidden><div class="metrics"><div class="metric"><span>UNSEEN TEST ERROR · LOWER IS BETTER</span><strong id="testError"></strong></div><div class="metric"><span>TRAINING-MEAN BASELINE ERROR</span><strong id="baseline"></strong></div><div class="metric"><span>SELECTED POLYNOMIAL DEGREE</span><strong id="degree"></strong></div></div><p id="interpretation"></p><div class="scroll"><table><caption>Candidate ranking on development validation data</caption><thead><tr><th scope="col">Degree</th><th scope="col">Learning rate</th><th scope="col">Validation error</th></tr></thead><tbody id="ranking"></tbody></table></div></div></section>
+<section><h2>What should you notice?</h2><p><strong>Keep training and testing separate.</strong> A configuration that wins on familiar examples may fail on a new kind of problem. Try curves first, then switch only the unseen tasks to sine waves. The selected configuration will stay the same: the final test never chooses the winner.</p><p><strong>Do not confuse a score with a mind.</strong> These candidates learn polynomial coefficients using gradient descent. The outer loop compares degree and learning rate. This is a bounded hyperparameter search across tasks, not a new general-purpose learning algorithm.</p><p class="hint">The data is synthetic. Test examples and task seeds are held out, but all tasks share this generator’s assumptions. Repeatedly designing the experiment around the displayed test score would also turn that score into development feedback; a real study needs a final untouched evaluation.</p></section>
+<section id="source"><h2>Nothing hidden behind the result.</h2><details open><summary>Browser experiment · JavaScript source</summary><pre tabindex="0"><code id="jsSource"></code></pre></details><details><summary>Python companion · standalone standard-library version</summary><p class="hint">This companion uses its own seeded data generator and 300 training steps. Its numerical results differ from the browser experiment; it demonstrates the same train / select / unseen-test design.</p><pre tabindex="0"><code>&quot;&quot;&quot;Protocol 10: a small, reproducible learning-strategy selection experiment.
+Inspired by Maxwell Jann&#x27;s Runaway AI. Python 3; no dependencies.
+This is bounded model selection across tasks, not AGI or self-modifying AI.
+&quot;&quot;&quot;
+from dataclasses import dataclass
+from random import Random
+from statistics import mean
+import math
 
-</head>
-<body>
-    <div class="header">
-        <h1>Metalearning Algorithm</h1>
-    </div>
-    <!-- <pre><code class="python">
-class MetaLearningAlgorithm:
-    def __init__(self):
-        self.supervised_model = SupervisedModel()
-        self.unsupervised_model = UnsupervisedModel()
-        self.reinforcement_model = ReinforcementModel()
-        self.balance_weights = [1/3, 1/3, 1/3]  # Initial equal weighting
+@dataclass(frozen=True)
+class Strategy:
+    degree: int
+    rate: float
+    steps: int = 300
 
-    def train(self, data):
-        # Train each model
-        self.supervised_model.train(data.supervised)
-        self.unsupervised_model.train(data.unsupervised)
-        self.reinforcement_model.train(data.reinforcement)
+def task(seed):
+    &quot;&quot;&quot;Independent noisy quadratic tasks with disjoint train/validation/test samples.&quot;&quot;&quot;
+    rng = Random(seed)
+    coefficients = [rng.uniform(-2, 2) for _ in range(3)]
+    def sample(n):
+        rows = []
+        for _ in range(n):
+            x = rng.uniform(-1, 1)
+            y = sum(c * x**j for j, c in enumerate(coefficients)) + rng.gauss(0, 0.05)
+            rows.append((x, y))
+        return rows
+    return sample(32), sample(32), sample(128)
 
-        # Update balance weights based on performance
-        self.update_balance_weights()
+def predict(weights, x):
+    return sum(w * x**j for j, w in enumerate(weights))
 
-    def update_balance_weights(self):
-        # Pseudo-code for updating weights based on performance metrics
-        supervised_performance = self.supervised_model.evaluate(data.validation)
-        unsupervised_performance = self.unsupervised_model.evaluate(data.validation)
-        reinforcement_performance = self.reinforcement_model.evaluate(data.validation)
+def mse(weights, rows):
+    return mean((predict(weights, x) - y)**2 for x, y in rows)
 
-        total_performance = supervised_performance + unsupervised_performance + reinforcement_performance
-        self.balance_weights = [
-            supervised_performance / total_performance,
-            unsupervised_performance / total_performance,
-            reinforcement_performance / total_performance
-        ]
+def fit(strategy, rows):
+    weights = [0.0] * (strategy.degree + 1)
+    for _ in range(strategy.steps):
+        gradients = [0.0] * len(weights)
+        for x, y in rows:
+            error = predict(weights, x) - y
+            for j in range(len(weights)):
+                gradients[j] += 2 * error * x**j / len(rows)
+        weights = [w - strategy.rate * g for w, g in zip(weights, gradients)]
+        if not all(math.isfinite(w) for w in weights):
+            raise ValueError(&#x27;Numerical instability: this is a failed training run, not intelligence.&#x27;)
+    return weights
 
-    def predict(self, input_data):
-        # Combine predictions from all models based on balance weights
-        supervised_pred = self.supervised_model.predict(input_data)
-        unsupervised_pred = self.unsupervised_model.predict(input_data)
-        reinforcement_pred = self.reinforcement_model.predict(input_data)
+def select_strategy(tasks, candidates):
+    &quot;&quot;&quot;Select using validation data only; lower mean squared error is better.&quot;&quot;&quot;
+    scores = []
+    for strategy in candidates:
+        score = mean(mse(fit(strategy, train), validation)
+                     for train, validation, _ in tasks)
+        scores.append((score, strategy))
+    scores.sort(key=lambda item: item[0])
+    return scores[0][1], scores
 
-        combined_prediction = (
-            self.balance_weights[0] * supervised_pred +
-            self.balance_weights[1] * unsupervised_pred +
-            self.balance_weights[2] * reinforcement_pred
-        )
-        return combined_prediction
+def evaluate_unseen(strategy, seeds):
+    selected, baseline = [], []
+    for seed in seeds:
+        train, _, test = task(seed)
+        selected.append(mse(fit(strategy, train), test))
+        baseline.append(mse([mean(y for _, y in train)], test))
+    return mean(selected), mean(baseline)
 
-# Example usage
-metalearner = MetaLearningAlgorithm()
-metalearner.train(training_data)
-prediction = metalearner.predict(new_data)
-    </code></pre> -->
-    <!-- <pre><code>
-        import numpy as np
+def main():
+    # Fictional Protocol 10 pools evidence across engineers&#x27; experiments.
+    # Here, every candidate gets the same development tasks and training budget.
+    candidates = [Strategy(degree, rate) for degree in (1, 2, 3)
+                  for rate in (0.01, 0.05, 0.1)]
+    development_tasks = [task(seed) for seed in range(8)]
+    selected, scores = select_strategy(development_tasks, candidates)
+    print(&#x27;PROTOCOL 10 — candidate learning strategies&#x27;)
+    for score, strategy in scores:
+        print(f&#x27;{strategy}: validation MSE={score:.6f}&#x27;)
+    # Fresh task identities; no test result is used to select a strategy.
+    test_mse, baseline = evaluate_unseen(selected, range(1000, 1012))
+    print(f&#x27;\nSelected: {selected}&#x27;)
+    print(f&#x27;Unseen-task test MSE: {test_mse:.6f}&#x27;)
+    print(f&#x27;Train-mean baseline MSE: {baseline:.6f}&#x27;)
+    print(&#x27;Scope: noisy quadratic regression only. No evidence of general intelligence.&#x27;)
+    return selected, test_mse, baseline
 
-# Dummy implementations for the base models.
-class SupervisedModel:
-    def __init__(self):
-        pass
-
-    def train(self, data):
-        # Simulated training procedure
-        pass
-
-    def evaluate(self, data):
-        # Simulated evaluation returns a random performance metric
-        return np.random.random()
-
-    def predict(self, data):
-        # Simulated predictions as random numbers matching input shape
-        return np.random.random(data.shape)
-
-class UnsupervisedModel:
-    def __init__(self):
-        pass
-
-    def train(self, data):
-        pass
-
-    def evaluate(self, data):
-        return np.random.random()
-
-    def predict(self, data):
-        return np.random.random(data.shape)
-
-class ReinforcementModel:
-    def __init__(self):
-        pass
-
-    def train(self, data):
-        pass
-
-    def evaluate(self, data):
-        return np.random.random()
-
-    def predict(self, data):
-        return np.random.random(data.shape)
-
-# The meta-learning ensemble designed to "run away"
-class RunawayMetaLearner:
-    def __init__(self):
-        self.supervised_model = SupervisedModel()
-        self.unsupervised_model = UnsupervisedModel()
-        self.reinforcement_model = ReinforcementModel()
-        # Start with equal ensemble weights for the base models.
-        self.weights = np.array([1/3, 1/3, 1/3])
-        # A meta-model that will adjust the ensemble weights over time.
-        # Here we use a simple weight vector that will be updated based on model performance.
-        self.meta_model_weights = np.random.randn(3)
-
-    def train(self, data):
-        # Train each model with its corresponding data slice.
-        self.supervised_model.train(data['supervised'])
-        self.unsupervised_model.train(data['unsupervised'])
-        self.reinforcement_model.train(data['reinforcement'])
-        
-        # Update the ensemble and meta weights based on validation performance.
-        self.update_weights(data['validation'])
-
-    def update_weights(self, validation_data):
-        # Evaluate performance of each base model.
-        supervised_perf = self.supervised_model.evaluate(validation_data)
-        unsupervised_perf = self.unsupervised_model.evaluate(validation_data)
-        reinforcement_perf = self.reinforcement_model.evaluate(validation_data)
-        
-        # Create an array of performance metrics.
-        perf_array = np.array([supervised_perf, unsupervised_perf, reinforcement_perf])
-        total = np.sum(perf_array) + 1e-8  # Avoid division by zero.
-        
-        # Dynamically update ensemble weights proportional to performance.
-        self.weights = perf_array / total
-        
-        # Simulate a meta-learning update (a dummy gradient step):
-        # The meta_model_weights learn from the discrepancy between current weights and performance.
-        learning_rate = 0.01
-        gradient = (perf_array - self.weights)  # A placeholder gradient.
-        self.meta_model_weights += learning_rate * gradient
-
-    def predict(self, input_data):
-        # Get predictions from each base model.
-        supervised_pred = self.supervised_model.predict(input_data)
-        unsupervised_pred = self.unsupervised_model.predict(input_data)
-        reinforcement_pred = self.reinforcement_model.predict(input_data)
-        
-        # Combine predictions into one array.
-        base_preds = np.array([supervised_pred, unsupervised_pred, reinforcement_pred])
-        
-        # Use the meta-model weights to dynamically adjust ensemble weights.
-        # The tanh activation simulates a non-linear adjustment.
-        adjusted_weights = self.weights * (1 + np.tanh(self.meta_model_weights))
-        # Normalize to ensure the weights sum to 1.
-        adjusted_weights /= np.sum(adjusted_weights)
-        
-        # Combine predictions according to the adjusted weights.
-        combined_pred = np.tensordot(adjusted_weights, base_preds, axes=1)
-        return combined_pred
-
-# Example usage:
-if __name__ == '__main__':
-    # Simulated training data structured for different learning modes.
-    training_data = {
-        'supervised': np.random.randn(100, 10),
-        'unsupervised': np.random.randn(100, 10),
-        'reinforcement': np.random.randn(100, 10),
-        'validation': np.random.randn(20, 10)
+if __name__ == &#x27;__main__&#x27;:
+    main()
+</code></pre></details></section><footer><p>Story and concept: Maxwell Jann · Experiment and page draft developed with ChatGPT.</p><p class="hint">A fictional laboratory. A real, limited measurement.</p></footer></main>
+<script id="algorithm">
+function protocol10(developmentFamily, testFamily) {
+  function random(seed) {
+    let state = seed >>> 0;
+    return () => ((state = (1664525 * state + 1013904223) >>> 0) / 4294967296);
+  }
+  const mean = values => values.reduce((a, b) => a + b, 0) / values.length;
+  function task(seed, family) {
+    const rng = random(seed);
+    const a = rng() * 4 - 2, b = rng() * 4 - 2, c = rng() * 4 - 2;
+    function sample(n) {
+      return Array.from({length: n}, () => {
+        const x = rng() * 2 - 1;
+        const clean = family === 'linear' ? a + b*x
+          : family === 'quadratic' ? a + b*x + c*x*x
+          : a + b*Math.sin(4*x + c);
+        return [x, clean + (rng() - 0.5) * 0.1];
+      });
     }
-    
-    runaway_ai = RunawayMetaLearner()
-    runaway_ai.train(training_data)
-    
-    # Simulate predictions on new data.
-    new_data = np.random.randn(5, 10)
-    prediction = runaway_ai.predict(new_data)
-    print("Predictions:", prediction)
-
-    </code></pre> -->
-
-    <pre><code>
-    import numpy as np
-import logging
-from abc import ABC, abstractmethod
-from typing import Dict
-
-# Configure logging for visibility into training and meta-learning processes
-logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
-
-class BaseModel(ABC):
-    """Abstract base class for all learning models."""
-    def __init__(self, name: str):
-        self.name = name
-
-    @abstractmethod
-    def train(self, data: np.ndarray) -> None:
-        """Train the model on data."""
-        pass
-
-    @abstractmethod
-    def evaluate(self, data: np.ndarray) -> float:
-        """Evaluate the model and return a performance score."""
-        pass
-
-    @abstractmethod
-    def predict(self, data: np.ndarray) -> np.ndarray:
-        """Make predictions with the model."""
-        pass
-
-class SupervisedModel(BaseModel):
-    def __init__(self):
-        super().__init__('Supervised')
-
-    def train(self, data: np.ndarray) -> None:
-        logging.debug(f"{self.name}: training on {data.shape} samples.")
-        # Placeholder for supervised training logic
-
-    def evaluate(self, data: np.ndarray) -> float:
-        perf = float(np.random.rand())
-        logging.debug(f"{self.name}: evaluation performance {perf:.4f}")
-        return perf
-
-    def predict(self, data: np.ndarray) -> np.ndarray:
-        return np.random.rand(*data.shape)
-
-class UnsupervisedModel(BaseModel):
-    def __init__(self):
-        super().__init__('Unsupervised')
-
-    def train(self, data: np.ndarray) -> None:
-        logging.debug(f"{self.name}: training on {data.shape} samples.")
-        # Placeholder for unsupervised training logic
-
-    def evaluate(self, data: np.ndarray) -> float:
-        perf = float(np.random.rand())
-        logging.debug(f"{self.name}: evaluation performance {perf:.4f}")
-        return perf
-
-    def predict(self, data: np.ndarray) -> np.ndarray:
-        return np.random.rand(*data.shape)
-
-class ReinforcementModel(BaseModel):
-    def __init__(self):
-        super().__init__('Reinforcement')
-
-    def train(self, data: np.ndarray) -> None:
-        logging.debug(f"{self.name}: training on {data.shape} samples.")
-        # Placeholder for reinforcement learning logic
-
-    def evaluate(self, data: np.ndarray) -> float:
-        perf = float(np.random.rand())
-        logging.debug(f"{self.name}: evaluation performance {perf:.4f}")
-        return perf
-
-    def predict(self, data: np.ndarray) -> np.ndarray:
-        return np.random.rand(*data.shape)
-
-class RunawayMetaLearner:
-    """Meta-learning ensemble that can 'run away' if meta-weights diverge."""
-    def __init__(self):
-        # Initialize base models
-        self.models = [
-            SupervisedModel(),
-            UnsupervisedModel(),
-            ReinforcementModel(),
-        ]
-        # Start with equal ensemble weights
-        self.weights = np.array([1/3] * len(self.models), dtype=float)
-        # Meta-model weights for non-linear adjustment
-        self.meta_weights = np.random.randn(len(self.models))
-        # Learning hyperparameters
-        self.learning_rate = 0.01
-        self.runaway_threshold = 10.0
-
-    def train(self, data: Dict[str, np.ndarray]) -> None:
-        """Train each base model and update ensemble/meta weights."""
-        keys = ['supervised', 'unsupervised', 'reinforcement']
-        for model, key in zip(self.models, keys):
-            model.train(data[key])
-        self._update_weights(data['validation'])
-        self._check_runaway()
-
-    def _update_weights(self, validation_data: np.ndarray) -> None:
-        # Evaluate each model
-        performances = np.array([m.evaluate(validation_data) for m in self.models])
-        total = performances.sum() + 1e-8  # Prevent division by zero
-        # Update ensemble weights proportionally
-        self.weights = performances / total
-        # Meta-learning gradient step
-        gradient = performances - self.weights
-        self.meta_weights += self.learning_rate * gradient
-        logging.info(f"Updated ensemble weights: {self.weights}")
-        logging.info(f"Meta-weights norm: {np.linalg.norm(self.meta_weights):.4f}")
-
-    def _check_runaway(self) -> None:
-        norm = np.linalg.norm(self.meta_weights)
-        if norm > self.runaway_threshold:
-            logging.warning(
-                f"Runaway detected! Meta-weights norm {norm:.4f} exceeds threshold {self.runaway_threshold}"
-            )
-
-    def predict(self, input_data: np.ndarray) -> np.ndarray:
-        """Generate predictions by combining base model outputs."""
-        # Collect predictions
-        base_predictions = np.stack([m.predict(input_data) for m in self.models])
-        # Adjust ensemble weights using non-linear meta-weights
-        adjusted = self.weights * (1 + np.tanh(self.meta_weights))
-        adjusted /= adjusted.sum()  # Normalize
-        # Combine predictions
-        return np.tensordot(adjusted, base_predictions, axes=(0, 0))
-
-if __name__ == '__main__':
-    # Example usage
-    training_data = {
-        'supervised': np.random.randn(100, 10),
-        'unsupervised': np.random.randn(100, 10),
-        'reinforcement': np.random.randn(100, 10),
-        'validation': np.random.randn(20, 10),
+    return {train: sample(32), validation: sample(32), test: sample(128)};
+  }
+  const predict = (weights, x) => weights.reduce((y, w, j) => y + w*x**j, 0);
+  const mse = (weights, rows) => mean(rows.map(([x,y]) => (predict(weights,x)-y)**2));
+  function fit(candidate, rows) {
+    let weights = Array(candidate.degree + 1).fill(0);
+    for (let step = 0; step < 250; step++) {
+      const gradient = Array(weights.length).fill(0);
+      for (const [x, y] of rows) {
+        const error = predict(weights, x) - y;
+        for (let j = 0; j < weights.length; j++) gradient[j] += 2*error*x**j/rows.length;
+      }
+      weights = weights.map((w,j) => w - candidate.rate*gradient[j]);
+      if (!weights.every(Number.isFinite)) throw new Error('Training became numerically unstable.');
     }
-    runaway_ai = RunawayMetaLearner()
-    runaway_ai.train(training_data)
-
-    # Simulate predictions on new data
-    new_data = np.random.randn(5, 10)
-    prediction = runaway_ai.predict(new_data)
-    print("Predictions:", prediction)
-    </code></pre>
-
-    <div class="footer">
-        <!-- <h2>By Maxwell Jann and ChatGPT-4</h2> -->
-        <h2>By Maxwell Jann and ChatGPT-o4-mini-high</h2>
-
-    </div>
-</body>
-</html>
+    return weights;
+  }
+  const development = Array.from({length:8}, (_,i) => task(117 + i*7919, developmentFamily));
+  const ranking = [];
+  for (const degree of [1,2,3]) for (const rate of [0.01,0.05,0.1]) {
+    const candidate = {degree,rate};
+    const error = mean(development.map(t => mse(fit(candidate,t.train),t.validation)));
+    ranking.push({...candidate,error});
+  }
+  ranking.sort((a,b) => a.error-b.error);
+  const winner = ranking[0];
+  const selectedErrors = [], baselineErrors = [];
+  const family = testFamily === 'same' ? developmentFamily : testFamily;
+  for (let i=0; i<12; i++) {
+    const t = task(1000003 + i*7919, family);
+    selectedErrors.push(mse(fit(winner,t.train),t.test));
+    baselineErrors.push(mse([mean(t.train.map(row => row[1]))],t.test));
+  }
+  return {winner, ranking, test:mean(selectedErrors), baseline:mean(baselineErrors)};
+}
+</script>
+<script>
+document.getElementById('jsSource').textContent = document.getElementById('algorithm').textContent.trim();
+const run = document.getElementById('run');
+run.addEventListener('click', async () => {
+  run.disabled = true;
+  const status = document.getElementById('status');
+  const development = document.getElementById('development').value;
+  const evaluation = document.getElementById('evaluation').value;
+  status.textContent = 'Training candidates and evaluating new tasks…';
+  await new Promise(resolve => setTimeout(resolve, 30));
+  try {
+    const result = protocol10(development,evaluation);
+    for (const [id,value] of [['testError',result.test.toFixed(6)],['baseline',result.baseline.toFixed(6)],['degree',result.winner.degree]]) document.getElementById(id).textContent=value;
+    const rows = document.getElementById('ranking'); rows.replaceChildren();
+    for (const candidate of result.ranking) {
+      const row = document.createElement('tr');
+      for (const value of [candidate.degree,candidate.rate,candidate.error.toFixed(6)]) {
+        const cell = document.createElement('td'); cell.textContent=value; row.appendChild(cell);
+      }
+      rows.appendChild(row);
+    }
+    document.getElementById('interpretation').textContent = evaluation === 'same'
+      ? 'This tests transfer to new tasks from the same mathematical family. A good result here is evidence for that limited transfer only.'
+      : 'The winner was chosen on a different task family. Compare this error with the same-family run: more powerful-sounding labels do not guarantee transfer.';
+    document.getElementById('results').hidden=false;
+    status.textContent='Complete. Selected using validation data; final scores use unseen test tasks.';
+  } catch (error) {status.textContent=error.message;}
+  finally {run.disabled=false;}
+});
+</script></body></html>
