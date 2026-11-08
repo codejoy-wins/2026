@@ -370,26 +370,30 @@ dialog{
 /* ---------- FOCUS DIALOG ---------- */
 
 .focus-wrap{
-  position:relative;
-  width:min(1100px, 96vw);
-  margin:5vh auto;
-  background:#0b0f18;
-  color:var(--text);
-  border:1px solid #1e2536;
-  border-radius:16px;
-  overflow:hidden;
-  padding:1rem;
+  position: relative;
+  width: min(1100px, 96vw);
+  max-height: calc(100dvh - 2rem);
+  margin: 1rem auto;
+  background: #0b0f18;
+  border: 1px solid #1e2536;
+  border-radius: 16px;
+  overflow-y: auto;
+  padding: 1rem;
 }
 
 #focusFigure{
   margin:0;
 }
 
-#focusFigure img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:12px;
+#focusFigure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 60dvh;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 12px;
+  background: #080b12;
 }
 
 #focusCaption{
