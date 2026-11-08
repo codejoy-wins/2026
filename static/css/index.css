@@ -548,7 +548,9 @@ p a{
     /* background-image: url("../img/ElamForever.png"); */
     /* background-image: url("../img/ElamLight.png"); */
     /* background-image: url("../img/paris\ copy.png"); */
-    background-image: url("../img/cyberElam.jpg");
+    /* background-image: url("../img/cyberElam.jpg"); */
+    background-image: url("../img/cyberremaster.png");
+
 
 
 
@@ -577,7 +579,13 @@ p a{
     /* background-image: url("../img/GoldElam.jpg"); */
     /* background-image: url("../img/Emerald.png"); */
     /* background-image: url("../img/emwhirl.png"); */
-    background-image: url("../img/blendx.png");
+    /* background-image: url("../img/blendx.png"); */
+    /* background-image: url("../img/blendGemini.jpg"); */
+    /* background-image: url("../img/geminiWide.jpg"); */
+    background-image: url("../img/PanthosGemini.jpg");
+
+
+
     /* background-image: url("../img/dioxy.jpg"); */
 
 
@@ -2445,7 +2453,11 @@ div#tetrahedron > div.back {
         /* background-position: -200px; */
         background-position: -402px;
         /* background-image: url("../img/cloudland5.png"); */
-        background-image: url("../img/emwhirl.png");
+        /* background-image: url("../img/emwhirl.png"); */
+        /* background-image: url("../img/geminiGirl.jpg"); */
+        background-image: url("../img/GeminiGal.jpg");
+
+
 
         /* background-image: url("../img/promptos.png"); */
 
