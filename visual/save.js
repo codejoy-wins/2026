@@ -284,6 +284,12 @@ function renderGrid(){
       saveState();
     });
 
+    // Click caption to edit without flipping the card
+    card.querySelector(".caption-btn").addEventListener("click",(e)=>{
+      e.stopPropagation();
+      openEditById(items[idx].id);
+    });
+
     // edit
     card.querySelector(".edit").addEventListener("click",()=>openEditById(items[idx].id));
 
@@ -313,13 +319,17 @@ function cardTemplate(it,i){
         <button class="icon-btn del" title="Delete">🗑️</button>
       </div>
       <div class="meta">
-        <div class="caption">${escapeHTML(it.title||"Untitled")}</div>
+        <button type="button" class="caption caption-btn" title="Edit caption">
+          ${it.title?.trim()
+            ? escapeHTML(it.title)
+            : '<span class="caption-placeholder">✏️ Click to add caption</span>'}
+        </button>
         <div class="tags">${tags}</div>
       </div>
     </div>`;
 
     // choose gold or purple
-  const backImg = Math.random() < 0.5 
+  const backImg = Math.random() < 0.5
     ? "/static/img/cywiz.png"
     : "/static/img/cywiz-purple.png";
 
@@ -393,7 +403,7 @@ async function addFiles(files){
   for(const file of files){
     try{
       const src=await fileToCompressedDataURL(file,{maxW:1600,maxH:1600,quality:0.85});
-      const title=file.name.replace(/\.[^.]+$/,'');
+      const title="";
       const tarot=pickTarot();
       const item={id:crypto.randomUUID(),src,title,tags:[],notes:"",favorite:false,tarot,dateAdded:Date.now()};
       state.items.unshift(item); added.push(item);
@@ -447,7 +457,7 @@ function loadAffirmations(){ try{ const raw=localStorage.getItem(AFFIRM_KEY); re
 function saveAffirmations(list){ localStorage.setItem(AFFIRM_KEY,JSON.stringify(list)); }
 function parseTags(s){ return (s||"").split(",").map(t=>t.trim()).filter(Boolean).slice(0,8); }
 function clamp(n,a,b){ return Math.max(a,Math.min(b,n)); }
-function escapeHTML(s){ return (s||"").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function escapeHTML(s){ return (s||"").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c])); }
 function escapeAttr(s){ return escapeHTML(s).replace(/"/g,'&quot;'); }
 function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 

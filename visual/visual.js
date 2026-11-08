@@ -252,6 +252,20 @@ function renderGrid(){
   });
 
   els.grid.innerHTML=items.map((it,i)=>cardTemplate(it,i)).join("");
+  // Automatically detect portrait images
+els.grid.querySelectorAll(".card-front img").forEach(img => {
+  const checkOrientation = () => {
+    if (img.naturalHeight > img.naturalWidth) {
+      img.classList.add("portrait");
+    }
+  };
+
+  if (img.complete && img.naturalWidth > 0) {
+    checkOrientation();
+  } else {
+    img.addEventListener("load", checkOrientation, { once: true });
+  }
+});
 
   // Wire card buttons + flip
   els.grid.querySelectorAll(".card").forEach(card=>{
@@ -322,7 +336,7 @@ function cardTemplate(it,i){
         <button type="button" class="caption caption-btn" title="Edit caption">
           ${it.title?.trim()
             ? escapeHTML(it.title)
-            : '<span class="caption-placeholder">✏️ Click to add caption</span>'}
+            : '<span class="caption-placeholder">Add caption</span>'}
         </button>
         <div class="tags">${tags}</div>
       </div>
