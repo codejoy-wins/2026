@@ -1170,14 +1170,16 @@ ul a{
     color: whitesmoke;
 }
 .spxi{
-    color: forestgreen;
+    /* color: forestgreen; */
+    color: rgb(0, 55, 0);
+
     /* background-color: rgba(245, 245, 245, 0.777); */
-    background-color: rgba(245, 245, 245, 0.9);
+    background-color: rgba(245, 245, 245, 0.7);
 
 }
 .spxi:hover{
     color: white;
-    outline: red .2vw solid;
+    outline: rgb(9, 90, 16) .2vw solid;
     background-color: black
 }
 ul a:hover{
@@ -1505,10 +1507,13 @@ footer{
     min-height: 210px;
     max-height: 400px;
     /* background-image: url(../img/lightcom.png); */
-    background-image: url(../img/ElamForever.png);
+    /* background-image: url(../img/ElamForever.png); */
+    /* background-image: url(../img/rainbowwbc.png); */
+
     /* background-image: url(../img/automaticgun.jpg); */
 
     /* background-image: url(../img/EternalElam.png); */
+    background-image: url(../img/wbclaptop.png);
 
 
     background-size: contain;
@@ -1631,7 +1636,7 @@ footer{
 }
 .spotsubmain7{
     /* background-color: blue; */
-    background-image: url(../img/mad.jpg);
+    background-image: url(../img/firmamentality.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1907,7 +1912,7 @@ footer{
 .spotsubmain3888{
     /* background-color: blue; */
     /* background-image: url(../img/penthousebeach.jpg); */
-    background-image: url(../img/wbc.jpeg);
+    background-image: url(../img/wbcremoved.png);
 
     background-size: contain;
     background-repeat: no-repeat;
