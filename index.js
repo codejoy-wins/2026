@@ -219,6 +219,7 @@ function cyberelam(){
     <div class="parallax5117"></div>
     `;
     // freezefire();
+    
 }
 
 
@@ -233,7 +234,8 @@ const smartSongs = [
     { title: "California",          file: "cali.mp3" },
     { title: "Afterli(f)e",         file: "Afterlie.mp3" },
     { title: "Cold Diamond",        file: "diamond.mp3" },
-    { title: "Add Vice for a Friend", file: "addvicewithafriend.mp3" },
+    { title: "Add Vice for a Friend", file: "Add Vice for a Friend.mp3" },
+    { title: "Add Vice (with) a Friend", file: "addvicewithafriend.mp3" },
     { title: "Adore you",           file: "AdoreYou.mp3" },
     { title: "If Only",             file: "only.mp3" },
     { title: "Beautiful Winter",    file: "winter.mp3" },
