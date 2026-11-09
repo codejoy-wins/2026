@@ -293,7 +293,7 @@ body{
 }
 
 
-/* 
+
 @media only screen and (max-device-width: 1117px) {
     #rez{
         display: none;
@@ -304,9 +304,9 @@ body{
     #intro{
         display: none;
     }
-} */
+}
 
-
+/* 
 @media only screen and (max-device-width: 1117px) {
     #rez{
         max-width: 100%;
@@ -315,4 +315,4 @@ body{
     #intro{
         display: none;
     }
-}
+} */
