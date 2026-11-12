@@ -10,6 +10,10 @@ ul{
     border-radius: 1.3vw;
     padding: .4vw;
 }
+h2, h3{
+    color: wheat;
+    text-align: right;
+}
 .war p{
     color: black;
     /* background-color: rgba(243, 234, 243, 0.746); */
@@ -36,7 +40,7 @@ audio{
 
 .peace p{
     color: black;
-    background-color: rgba(243, 234, 243, 0.746);
+    background-color: rgba(243, 234, 243, 0.85);
     /* background-color: rgba(243, 234, 243, 0.746); */
     padding: 1vw;
     border-radius: 1vw;
@@ -50,6 +54,15 @@ audio{
     font-size: larger;
     padding-bottom: 6vw;
 
+}
+.peace a{
+    color: rgb(34, 0, 255);
+}
+.peace a:hover{
+    color: green;
+}
+.peace h2{
+    color: green;
 }
 .peace h2, h3{
     color: purple;
@@ -855,10 +868,7 @@ ul{
     padding: 1vw;
     border-radius: 1vw;
 }
-h2, h3{
-    color: wheat;
-    text-align: right;
-}
+
 h4{
     color: wheat;
 }
