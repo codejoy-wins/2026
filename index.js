@@ -265,6 +265,8 @@ const smartSongs = [
     { title: "Cold Soul",           file: "coldSoul.mp3" },
     { title: "Madly",           file: "Madly.mp3" },
     { title: "Join My F***ing Team",           file: "JMFT2.mp3" },
+    { title: "Mewthree Rap (Jeep Open Verse)",           file: "mewthreeRap1.m4a" },
+
 
 
   ];
