@@ -526,7 +526,9 @@ p a{
     font-style: italic;
 }
 .parallaxnew{
-    background-image: url("../img/ElamForever.png");
+    /* background-image: url("../img/ElamForever.png"); */
+    background-image: url("../img/ElamInfinity.png");
+
     /* background-image: url("../img/cyberElam.jpg"); */
 
     /* background-image: url("../img/paris\ copy.png"); */
@@ -548,8 +550,12 @@ p a{
     /* background-image: url("../img/ElamForever.png"); */
     /* background-image: url("../img/ElamLight.png"); */
     /* background-image: url("../img/paris\ copy.png"); */
-    /* background-image: url("../img/cyberElam.jpg"); */
-    background-image: url("../img/cyberremaster.png");
+    background-image: url("../img/cyberElam.jpg");
+    /* background-image: url("../img/cyberremaster.png"); */
+    /* background-image: url("../img/ElamInfinity.png"); */
+    /* background-image: url("../img/ElamInfinity.png"); */
+
+
 
 
 
