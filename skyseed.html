@@ -24,7 +24,9 @@
     aside { background:#172d26; color:#dbe6d3; padding:34px 24px; position:sticky; top:0; height:100vh; overflow:auto; }
     .brand { font:29px Georgia,serif; color:#f1f4df; line-height:1.15; }
     .brand span { display:block; font:10px system-ui; letter-spacing:3px; margin-top:10px; color:#b5c8b6; }
-    .mark { color:#c7dba7; font-size:30px; margin-bottom:15px; }
+    .home-link { display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:8px; margin-bottom:12px; }
+    .home-link:hover { background:#304b3d; }
+    .home-link img { width:40px; height:40px; object-fit:contain; }
     .nav-label,.eyebrow { text-transform:uppercase; letter-spacing:2px; font-size:10px; font-weight:700; }
     .nav-label { margin:35px 0 12px; color:#9cb2a2; }
     #categories button,.view { display:flex; width:100%; justify-content:space-between; gap:6px; text-align:left; border:0; border-radius:5px; background:transparent; color:#cfdbcd; padding:9px 10px; margin:2px 0; font-size:13px; }
@@ -96,7 +98,7 @@
     .archive-row strong { font-weight:500; } .archive-row small { color:var(--muted); }
     #storage { color:#975927; }
     @media(max-width:1000px) { .app { grid-template-columns:205px minmax(0,1fr); } aside { padding:25px 16px; } .cards { grid-template-columns:1fr; } .hero { grid-template-columns:1fr 90px; } .botanical { width:85px; } }
-    @media(max-width:680px) { .app { display:block; } aside { height:auto; position:static; padding:18px 20px; } .brand { font-size:24px; } .brand span,.mark,.side-note,aside .nav-label { display:none; } #categories { display:flex; overflow-x:auto; gap:5px; margin-top:12px; } #categories button { width:auto; white-space:nowrap; } aside .views { display:flex; margin-top:12px; } .view { width:auto; white-space:nowrap; font-size:11px; } main { padding:22px 18px 40px; } .hero { padding:28px 0; grid-template-columns:1fr; } .botanical { display:none; } .hero h1 { font-size:43px; } .topbar { align-items:flex-start; } .topbar .eyebrow { display:none; } .stats { grid-template-columns:repeat(4,1fr); } .stat strong { font-size:25px; } .stat span { font-size:9px; } .focus-strip { display:block; } .focus-strip strong { display:block; margin-bottom:5px; } .toolbar { grid-template-columns:1fr 1fr; } .toolbar input { grid-column:1/-1; } .form-grid { grid-template-columns:1fr; } .card summary { padding:18px; } .detail { padding:0 18px 18px; } }
+    @media(max-width:680px) { .app { display:block; } aside { height:auto; position:static; padding:18px 20px; } .brand { font-size:24px; } .brand-row { display:flex; align-items:center; gap:12px; } .home-link { margin-bottom:0; } .brand span,.side-note,aside .nav-label { display:none; } #categories { display:flex; overflow-x:auto; gap:5px; margin-top:12px; } #categories button { width:auto; white-space:nowrap; } aside .views { display:flex; margin-top:12px; } .view { width:auto; white-space:nowrap; font-size:11px; } main { padding:22px 18px 40px; } .hero { padding:28px 0; grid-template-columns:1fr; } .botanical { display:none; } .hero h1 { font-size:43px; } .topbar { align-items:flex-start; } .topbar .eyebrow { display:none; } .stats { grid-template-columns:repeat(4,1fr); } .stat strong { font-size:25px; } .stat span { font-size:9px; } .focus-strip { display:block; } .focus-strip strong { display:block; margin-bottom:5px; } .toolbar { grid-template-columns:1fr 1fr; } .toolbar input { grid-column:1/-1; } .form-grid { grid-template-columns:1fr; } .card summary { padding:18px; } .detail { padding:0 18px 18px; } }
     @media print { aside,.topbar,.toolbar,.actions,.focus-strip,#toast { display:none!important; } .app { display:block; } main { max-width:none; padding:0; } .cards { display:block; } .card { break-inside:avoid; margin:10px 0; } }
   
     /* Skyseed: opening a project gives it a little water and attention. */
@@ -247,8 +249,10 @@
 <body>
 <div class="app">
   <aside>
-    <div class="mark" aria-hidden="true">✳</div>
+    <div class="brand-row">
+      <a class="home-link" href="/index.html" title="Max Jann home"><img src="/static/img/mj3.png" alt="Max Jann home" width="40" height="40"></a>
     <div class="brand">Seed to Sky<span>MAX JANN · ITERATION GARDEN</span></div>
+    </div>
     <div class="nav-label">Your garden</div>
     <div class="views">
       <button class="view active" data-view="garden">All projects <span>↗</span></button>
