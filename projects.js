@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
          },
          { title: "Blog",
          description: "A dynamically styled blog that automatically displays all my blog posts from that month", 
-         imageUrl: "static/img/blogx.png",
+         imageUrl: "static/img/blogexamplenew.png",
          linkURL:"blog.html",
          videoembed:"",
          date:"2020+",
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
          { title: "DJ Aliens",
          description: "An iPod type App that simulates 2 Alien DJ's for you, a male and a female with different tastes.  I recently updated the girl dj image but I'm still not sold on it, it is different from the picture here.  I could make another version of this but it is tricky.  I think the next full version would have to allow user uploads of songs and sort them, but people don't really have music files anymore as much as stream them on spotify",
         //  imageUrl: "static/img/alienapp.png",
-         imageUrl: "static/img/alienz.png",
+         imageUrl: "static/img/djalienz3.png",
 
          linkURL:"alien.html",
          videoembed:"",
