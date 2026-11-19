@@ -1,54 +1,203 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos</title>
-    <link rel="stylesheet" href="static/css/videos.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="static/img/mj3.png"/>
-</head>
-<div id="nav">
-    <div class="option"><a href="alien.html">DJ Aliens</a></div>
-    <div class="option"><a href="blog.html">Blog</a></div>
-    <div class="option"><a href="story.html">Story</a></div>
-    <div class="option"><a href="chess.html">Chess</a></div>
-    <div class="option"><a href="web.html">Web Development</a></div>
-    <div class="option"><a href="contact.html">Contact</a></div>
-    <div class="option"><a href="welcome.html">Welcome</a></div>
-    <div class="option"><a href="music.html">Music</a></div>
-    <div class="option"><a href="education.html">Education</a></div>
-    <div class="option"><a href="poem.html">Poem</a></div>
-    <div class="option"><a href="home.html">Reviews</a></div>
-    <div class="option"><span class="current">Videos</span></div>
-    <div class="option"><a href="art.html">Art</a></div>
-    <div class="option"><a href="game.html">Games</a></div>
-</div>
-<body>
-    <div id="rapper7">
-        <div id="options">
-            <h3 onclick="truth()">Philosophy</h3>
-            <h3 onclick="cod()">Call of Duty</h3>
-            <h3 onclick="coding()">Coding</h3>
-            <h3 onclick="chess()">Chess</h3>
-            <h3 onclick="music()">Music</h3>
-        </div>
-        <div id="title" class="black">
-            <h1>Featured Video - Don't Look Up</h1>
-        </div>
-        <div id="picture">
-            <!-- <img src="./static/img/matrix.jpg" alt="matrix" class="pic2"> -->
-        </div>
-        <div id="article" class="black">
-                <div class="feature">
-                    <div class="vid2">
-                        <iframe width="50%" height="315" src="https://www.youtube.com/embed/0KEbzVr_Tl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-        </div>
-    </div>
-    <script src="videos.js"></script>
-</body>
-</html>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0c1019">
+<title>Videos · Maxwell Jann</title><link rel="icon" href="static/img/mj3.png">
+<style>
+:root{color-scheme:dark;--night:#0c1019;--ivory:#f4ebd5;--gold:#d8b882;--muted:#b6b9c3;--line:#c7c1b533;--serif:Georgia,'Times New Roman',serif}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 14% 13%,#202942,transparent 46rem),var(--night);color:var(--ivory);font:16px/1.5 system-ui,sans-serif}
+.wrap{width:min(1200px,92%);margin:auto}a,button,summary{font:inherit;color:inherit}a{text-underline-offset:4px}button,summary{cursor:pointer}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #ffe2a2;outline-offset:4px}
+header,footer,.heading,.dialog-head,.watchlinks{display:flex;justify-content:space-between;align-items:center;gap:14px}
+header{height:62px;border-bottom:1px solid var(--line)}.brand{display:flex;gap:9px;align-items:center;text-decoration:none;font-weight:640}.brand img{width:28px;height:28px;object-fit:contain}
+header details{position:relative}summary{padding:6px}.menu{position:absolute;right:0;top:100%;z-index:3;background:#182130;border:1px solid var(--line);padding:12px;width:190px;max-height:65vh;overflow:auto}.menu a{display:block;padding:4px 8px}
+.hero{margin:24px 0 30px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);position:relative;isolation:isolate;background:radial-gradient(ellipse at 15% 40%,#343146,#181d2b 60%,#111621);border:1px solid var(--line)}
+.hero::after{content:"";height:2px;position:absolute;inset:auto 0 -1px;background:linear-gradient(90deg,#cca284,#d8bd81,#77a791,#849fc8,#a390bc,#d8bd81);opacity:.85}
+.art{display:grid;place-items:center;min-width:0;padding:clamp(10px,1.7vw,24px);background:radial-gradient(ellipse,#484051 0%,transparent 71%)}.art img{width:100%;height:clamp(320px,36vw,450px);object-fit:contain;filter:drop-shadow(0 9px 19px #0006)}
+.copy{align-self:center;padding:clamp(20px,3vw,42px)}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:var(--serif);font-weight:400}.kicker{color:var(--gold);text-transform:uppercase;font-size:.68rem;font-weight:650;letter-spacing:.17em}
+h1{font-size:clamp(3.2rem,6.7vw,6.2rem);line-height:.95;letter-spacing:-.065em;margin:.15em 0 .26em}.epigraph{font:italic clamp(1.05rem,1.6vw,1.38rem)/1.35 var(--serif);color:#cdc8d3;max-width:24ch}
+.feature{display:inline-flex;align-items:center;gap:.6em;text-decoration:none;margin-top:24px;background:#e8d5ac;color:#171b25;border-radius:2px;padding:11px 16px;font-weight:630}
+.heading h2{font-size:clamp(1.9rem,3.5vw,3.1rem);letter-spacing:-.04em}.heading>a,footer,.meta{font-size:.86rem;color:var(--muted)}
+.picker{display:flex;overflow-x:auto;gap:1.5rem;scrollbar-width:thin;margin:10px 0 24px;border-block:1px solid var(--line);padding:3px}.picker a{white-space:nowrap;padding:10px 0;border-bottom:2px solid transparent;text-decoration:none;color:#c7c7d3}.picker a[aria-current],.picker a:hover{border-color:var(--gold);color:#f9db9f}
+.panel h3{font-size:1.65rem}.meta{margin:5px 0 12px}.list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}.list li{border-top:1px solid var(--line);padding:11px 0}.film{display:flex;align-items:center;gap:12px;text-decoration:none;min-height:40px}.film::before{content:'▶';font:11px system-ui;color:var(--gold);border:1px solid #897b6377;border-radius:50%;width:27px;height:27px;flex:none;display:grid;place-items:center}.film:hover{color:#f6d69d}.note{color:var(--muted);font-size:.9rem}.panel{margin-bottom:30px}footer{padding:18px 0 33px;border-top:1px solid var(--line)}
+dialog{background:#141c28;color:var(--ivory);border:1px solid #867864;width:min(900px,94vw);max-height:92dvh;padding:clamp(12px,2vw,24px);overflow:auto}dialog::backdrop{background:#050911ed}.dialog-head{margin-bottom:14px}.dialog-head h2{font-size:clamp(1.35rem,3vw,2rem)}.dialog-head button{background:none;border:1px solid var(--line);padding:6px 12px}.screens iframe{display:block;width:100%;aspect-ratio:16/9;background:#080a0d;border:0;margin-bottom:12px}.screens.pair iframe{max-height:32vh}.watchlinks{justify-content:flex-start;flex-wrap:wrap;color:var(--gold);font-size:.88rem}
+@media(max-width:680px){.wrap{width:94%}.hero{grid-template-columns:1fr;margin-top:14px}.art img{height:clamp(220px,36svh,330px)}.copy{padding:6px 20px 23px}.epigraph{max-width:100%}h1{font-size:3.3rem}.feature{margin-top:15px}.picker{gap:18px}.list{grid-template-columns:1fr}.heading{align-items:baseline}.heading>a{white-space:nowrap}}
+</style></head><body><div class="wrap">
+<header><a class="brand" href="index.html"><img src="static/img/mj3.png" alt="">Max Jann</a><details><summary>Site menu</summary><nav class="menu" aria-label="Site"><a href="alien.html">DJ Aliens</a>
+<a href="blog.html">Blog</a>
+<a href="story.html">Story</a>
+<a href="chess.html">Chess</a>
+<a href="web.html">Web Development</a>
+<a href="contact.html">Contact</a>
+<a href="welcome.html">Welcome</a>
+<a href="music.html">Music</a>
+<a href="education.html">Education</a>
+<a href="poem.html">Poem</a>
+<a href="home.html">Reviews</a>
+<a href="art.html">Art</a>
+<a href="game.html">Games</a></nav></details></header>
+<main><section class="hero"><a class="art" href="static/img/rainbowwbc.png" aria-label="Open the full Rainbow White Blood Cell artwork"><img src="static/img/rainbowwbc.png" fetchpriority="high" alt="Rainbow White Blood Cell artwork"></a><div class="copy"><p class="kicker">Codejoy</p><h1>Videos</h1><p class="epigraph">A white blood cell of God saving the world.</p><a class="feature" data-film="Everything You Know is Brown" data-embed="https://www.youtube.com/embed/Fzqplr2nZfc" href="https://www.youtube.com/watch?v=Fzqplr2nZfc">▶ Watch Everything You Know is Brown</a></div></section>
+<div class="heading"><h2>The archive</h2><a href="https://www.youtube.com/@Cloudland117">Codejoy on YouTube ↗</a></div>
+<nav class="picker" aria-label="Video categories"><a href="#philosophy">Philosophy</a>
+<a href="#call-of-duty">Call of Duty</a>
+<a href="#coding">Coding</a>
+<a href="#chess">Chess</a>
+<a href="#music">Music</a></nav>
+<section class="panel" id="philosophy"><h3>Philosophy</h3><p class="meta">The Universe is God Exploding Himself into Fragmented Consciousness</p><ul class="list">
+<li><a class="film" href="https://www.youtube.com/watch?v=TcdaIxlmBxE" data-film="Cyberprophet Chess" data-embed="https://www.youtube.com/embed/TcdaIxlmBxE?si=w0sejFy2S-xrCcRN">Cyberprophet Chess</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=Fzqplr2nZfc" data-film="Everything You Know is Brown" data-embed="https://www.youtube.com/embed/Fzqplr2nZfc">Everything You Know is Brown</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=RqDr8y6IPxk" data-film="Permanary" data-embed="https://www.youtube.com/embed/RqDr8y6IPxk?si=yI3M7M7L_fi9MRf6">Permanary</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=9_Th2qgs0OY" data-film="Reflector" data-embed="https://www.youtube.com/embed/9_Th2qgs0OY?si=OU_uBMOMtYIaJK7A">Reflector</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=GYeZDYJsoHc" data-film="When Lies become Truth" data-embed="https://www.youtube.com/embed/GYeZDYJsoHc?si=04nWdPrhS4QOVH1U">When Lies become Truth</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=JfvG5KfT16Q" data-film="Voidman" data-embed="https://www.youtube.com/embed/JfvG5KfT16Q?si=hB5_dFV0U3CSuv61">Voidman</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=YPdAfAQSCDc" data-film="False Idol of Certainty" data-embed="https://www.youtube.com/embed/YPdAfAQSCDc?si=ehCCSBbbfqI5HPFe">False Idol of Certainty</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=RawvPDY19Oo" data-film="There&#x27;s Something About the Government" data-embed="https://www.youtube.com/embed/RawvPDY19Oo?si=XKP_2p4yThNANrgj">There&#x27;s Something About the Government</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=_299d5ZaXXY" data-film="Dark Matter" data-embed="https://www.youtube.com/embed/_299d5ZaXXY?si=YoTHQWkskVFagfYD">Dark Matter</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=UsnSZ1DKJg8" data-film="When You Know Who You Are" data-embed="https://www.youtube.com/embed/UsnSZ1DKJg8?si=LDtT7OhFiaaeQtVg">When You Know Who You Are</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=oBqng6eTfMc" data-film="Superjuxtaposition of Nothing and Everything" data-embed="https://www.youtube.com/embed/oBqng6eTfMc?si=znWwFvLZsiXIJEn1">Superjuxtaposition of Nothing and Everything</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=2vSqYtBBLkI" data-film="Sermon on a Cloud" data-embed="https://www.youtube.com/embed/2vSqYtBBLkI?si=L3YYiIGpB9HbhuXE">Sermon on a Cloud</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=nncLReRR9Qk" data-film="BelieveInYou" data-embed="https://www.youtube.com/embed/nncLReRR9Qk">BelieveInYou</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=jG6kG1AByaA" data-film="White Rock" data-embed="https://www.youtube.com/embed/jG6kG1AByaA?si=7BoeRxo5qcr8E57t">White Rock</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=0KEbzVr_Tl8" data-film="Don&#x27;t Look Up" data-embed="https://www.youtube.com/embed/0KEbzVr_Tl8?si=Fv_5FexVUHrmIqPg">Don&#x27;t Look Up</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=zn2w0lxLwQI" data-film="Supermeta - Humanity needs to Save, not Pause A.I. Development" data-embed="https://www.youtube.com/embed/zn2w0lxLwQI?si=ZeerOOFjsVbS8AmP">Supermeta - Humanity needs to Save, not Pause A.I. Development</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=ojW9U9gowOg" data-film="A.I. Theory" data-embed="https://www.youtube.com/embed/ojW9U9gowOg">A.I. Theory</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=mVfZTr34RNQ" data-film="D.O.G" data-embed="https://www.youtube.com/embed/mVfZTr34RNQ?si=ML8-WaS79UogmfW1">D.O.G</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=ZCRNLG5dU7I" data-film="Angel Encounter at 7/11" data-embed="https://www.youtube.com/embed/ZCRNLG5dU7I?si=t-ffxri9pjQqacUW">Angel Encounter at 7/11</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=46mAAAHus5Y" data-film="Bhodisattva" data-embed="https://www.youtube.com/embed/46mAAAHus5Y?si=2r546H825e_81pNq">Bhodisattva</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=5b6Ufa0Spcs" data-film="A Brief History of Cloudland" data-embed="https://www.youtube.com/embed/5b6Ufa0Spcs?si=fgiPilMUyBs35xcC">A Brief History of Cloudland</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=zfe7qLo2zeA" data-film="Spectral Sim" data-embed="https://www.youtube.com/embed/zfe7qLo2zeA?si=nUviltlcy2HrGR6I">Spectral Sim</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=7sUQ1jxdWys" data-film="Mandela Effect" data-embed="https://www.youtube.com/embed/7sUQ1jxdWys">Mandela Effect</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=88nfdY4HujY" data-film="Church of Elam" data-embed="https://www.youtube.com/embed/88nfdY4HujY?si=YrXXzKpS9XnqybZV">Church of Elam</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=DvE7UZJLfeg" data-film="Truly Representative Democracy" data-embed="https://www.youtube.com/embed/DvE7UZJLfeg?si=W784wn83OJoLViBZ">Truly Representative Democracy</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=sCO2HK9dOyc" data-film="Death and Parallel Universes Theory" data-embed="https://www.youtube.com/embed/sCO2HK9dOyc?si=uS-I5jI12nti4HQG">Death and Parallel Universes Theory</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=qUaviwCHY2A" data-film="Elam sat in the Worshipful Master&#x27;s Seat at the Freemason Lodge" data-embed="https://www.youtube.com/embed/qUaviwCHY2A?si=AxJEqRZtriZe0Ch5">Elam sat in the Worshipful Master&#x27;s Seat at the Freemason Lodge</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=XsHZxnj3lxQ" data-film="kingslayer" data-embed="https://www.youtube.com/embed/XsHZxnj3lxQ?si=CE4J63kP-0ytsxrf">kingslayer</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=2JqHH2SGv4U" data-film="Is God Imaginary?" data-embed="https://www.youtube.com/embed/2JqHH2SGv4U?si=mnPat23z-jFnOEYB">Is God Imaginary?</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=sMycI3FgdkI" data-film="Thus Spoke Elam" data-embed="https://www.youtube.com/embed/sMycI3FgdkI?si=5N5cNu8_A5KpkYTz">Thus Spoke Elam</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=STT23GS7hcg" data-film="Beast" data-embed="https://www.youtube.com/embed/STT23GS7hcg?si=bDhn5qoozBaRyBjQ">Beast</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=YwBBK1TR7Ks" data-film="simulationExploration" data-embed="https://www.youtube.com/embed/YwBBK1TR7Ks?si=xzfC3nOYgfiiP9zS">simulationExploration</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=uEFSrZ4LYYg" data-film="Zeus - Ain&#x27;t No Such Thing as Half-way Truth" data-embed="https://www.youtube.com/embed/uEFSrZ4LYYg?si=qQpRpC5BboT8JKj5">Zeus - Ain&#x27;t No Such Thing as Half-way Truth</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=PaiUk_YebB4" data-film="LLP - Limited Liability Person" data-embed="https://www.youtube.com/embed/PaiUk_YebB4?si=1DDh-RvUSxc67VlR">LLP - Limited Liability Person</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=uDVjorcsDsU" data-film="Spaghetti Monster and CTMU" data-embed="https://www.youtube.com/embed/uDVjorcsDsU?si=t_l_E5LLPYO7c0O3">Spaghetti Monster and CTMU</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=2Yqm6PWnzSE" data-film="Turning30" data-embed="https://www.youtube.com/embed/2Yqm6PWnzSE?si=rgDuNoDZy5sWvNug">Turning30</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=RkReQyGDDn0" data-film="Coronavirus Dictatorship" data-embed="https://www.youtube.com/embed/RkReQyGDDn0?si=IDzWKrT8DKitG5zl">Coronavirus Dictatorship</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=d2A09iidkTs" data-film="whiteBloodCell" data-embed="https://www.youtube.com/embed/d2A09iidkTs?si=nEz1E8Xer5yrOWca">whiteBloodCell</a></li></ul><p class="note">Disclaimer: These videos are not necessarily reflective of my current state of mind.</p></section>
+<section class="panel" id="call-of-duty"><h3>Call of Duty</h3><ul class="list">
+<li><a class="film" href="https://www.youtube.com/watch?v=Qw9HJ47aQ5c" data-film="A Dark Diamond Death" data-embed="https://www.youtube.com/embed/Qw9HJ47aQ5c?si=DO9j1JuqQ5SaboJA">A Dark Diamond Death</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=O3zMPfRbizo" data-film="Speed Nuke" data-embed="https://www.youtube.com/embed/O3zMPfRbizo?si=3wHWVC1A75SH7BKq">Speed Nuke</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=VMAwrQp9-5k" data-film="I am the F****** King" data-embed="https://www.youtube.com/embed/VMAwrQp9-5k">I am the F****** King</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=64CbxyOds6s" data-film="Perfection" data-embed="https://www.youtube.com/embed/64CbxyOds6s">Perfection</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=fk9Z8YUlo_Q" data-film="Because I felt like IT" data-embed="https://www.youtube.com/embed/fk9Z8YUlo_Q">Because I felt like IT</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=J_kxAPWo6uQ" data-film="John Wick (listen to the song at the same time)" data-embed="https://www.youtube.com/embed/J_kxAPWo6uQ https://www.youtube.com/embed/1CurN2Fg-2E">John Wick (listen to the song at the same time)</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=ojKv0uJKgDg" data-film="Gladiator" data-embed="https://www.youtube.com/embed/ojKv0uJKgDg">Gladiator</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=FW40P9RYYu4" data-film="New Map New Guns New Mode Same Result" data-embed="https://www.youtube.com/embed/FW40P9RYYu4">New Map New Guns New Mode Same Result</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=gbBMwbPnLxY" data-film="Good For You" data-embed="https://www.youtube.com/embed/gbBMwbPnLxY">Good For You</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=uMdY8lS-_zY" data-film="The Joker" data-embed="https://www.youtube.com/embed/uMdY8lS-_zY">The Joker</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=sJdednLjpCI" data-film="Deadpool" data-embed="https://www.youtube.com/embed/sJdednLjpCI">Deadpool</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=Rf_PTEDcxp0" data-film="Sniper Sword + AR Shotty" data-embed="https://www.youtube.com/embed/Rf_PTEDcxp0">Sniper Sword + AR Shotty</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=Hwlcs0_EmiY" data-film="Survival of the Fittest" data-embed="https://www.youtube.com/embed/Hwlcs0_EmiY">Survival of the Fittest</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=NTTJL81zNOE" data-film="Killjoy Returns -Cold War PS4 Diamond Sniper Shotgun Gameplay" data-embed="https://www.youtube.com/embed/NTTJL81zNOE">Killjoy Returns -Cold War PS4 Diamond Sniper Shotgun Gameplay</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=bdzmfcdFGYc" data-film="No Montage Necessary" data-embed="https://www.youtube.com/embed/bdzmfcdFGYc">No Montage Necessary</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=yNC_tBaP1Ic" data-film="Montage v2" data-embed="https://www.youtube.com/embed/yNC_tBaP1Ic">Montage v2</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=YHPE0pegTWE" data-film="Meta Mr Beast" data-embed="https://www.youtube.com/embed/YHPE0pegTWE">Meta Mr Beast</a></li></ul></section>
+<section class="panel" id="coding"><h3>Coding</h3><ul class="list">
+<li><a class="film" href="https://www.youtube.com/watch?v=TcdaIxlmBxE" data-film="Cyberprophet Chess" data-embed="https://www.youtube.com/embed/TcdaIxlmBxE?si=w0sejFy2S-xrCcRN">Cyberprophet Chess</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=0MP8mCJ57Jw" data-film="Eye in the Sky" data-embed="https://www.youtube.com/embed/0MP8mCJ57Jw?si=Im5obFH3BSmZMXC9">Eye in the Sky</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=G1wV5d4H7eI" data-film="Shock Rifle (chain reaction explosions)" data-embed="https://www.youtube.com/embed/G1wV5d4H7eI?si=n4Wb4LUkVUWsjrwq">Shock Rifle (chain reaction explosions)</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=bCcFHQ6ANLk" data-film="$25,000 of Knowledge in 1 Hour" data-embed="https://www.youtube.com/embed/bCcFHQ6ANLk">$25,000 of Knowledge in 1 Hour</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=qEnke76S4pw" data-film="LuckyBid Demo" data-embed="https://www.youtube.com/embed/qEnke76S4pw">LuckyBid Demo</a><p class="note">Fullstack Web App with a Lottery system</p></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=E4eafeGKRVI" data-film="Fantasy Football Demo" data-embed="https://www.youtube.com/embed/E4eafeGKRVI">Fantasy Football Demo</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=-k9tnFUvF3A" data-film="BB-8 Game Demo" data-embed="https://www.youtube.com/embed/-k9tnFUvF3A">BB-8 Game Demo</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=7V38emTgPU8" data-film="Red Grass Island Demo" data-embed="https://www.youtube.com/embed/7V38emTgPU8">Red Grass Island Demo</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=0Lo2n8dznWY" data-film="Fantasy Football Website" data-embed="https://www.youtube.com/embed/0Lo2n8dznWY">Fantasy Football Website</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=cGj6XZNMmQc" data-film="Fakebook" data-embed="https://www.youtube.com/embed/cGj6XZNMmQc">Fakebook</a><p class="note">Facebook Clone with Database</p></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=pJ-CvVZ6r5c" data-film="Dall.E" data-embed="https://www.youtube.com/embed/pJ-CvVZ6r5c">Dall.E</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=oRG0B-bdz9U" data-film="Difference of Algorithms" data-embed="https://www.youtube.com/embed/oRG0B-bdz9U">Difference of Algorithms</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=rwTo5UwQtRY" data-film="Coding for Smarties" data-embed="https://www.youtube.com/embed/rwTo5UwQtRY">Coding for Smarties</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=WxT84mPO8Y8" data-film="Valid Parentheses" data-embed="https://www.youtube.com/embed/WxT84mPO8Y8">Valid Parentheses</a></li></ul></section>
+<section class="panel" id="chess"><h3>Chess</h3><ul class="list">
+<li><a class="film" href="https://www.youtube.com/watch?v=TcdaIxlmBxE" data-film="Cyberprophet Chess" data-embed="https://www.youtube.com/embed/TcdaIxlmBxE?si=w0sejFy2S-xrCcRN">Cyberprophet Chess</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=ItIQOybH5RA" data-film="Gladiator Chess" data-embed="https://www.youtube.com/embed/ItIQOybH5RA?si=EXCXG7PKYBI6L-FZ">Gladiator Chess</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=BZZlAmanEE8" data-film="Pro Chess Video" data-embed="https://www.youtube.com/embed/BZZlAmanEE8?si=tusfShGAGG0dgL46">Pro Chess Video</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=HDKOZBLCUQw" data-film="Puny Human Analysis" data-embed="https://www.youtube.com/embed/HDKOZBLCUQw?si=jYP9lTkojXCNqEDH">Puny Human Analysis</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=C_ynTig1PFo" data-film="Gothic Chess" data-embed="https://www.youtube.com/embed/C_ynTig1PFo">Gothic Chess</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=QYmFQY90ipc" data-film="$100 Million Dollar Lawsuit" data-embed="https://www.youtube.com/embed/QYmFQY90ipc">$100 Million Dollar Lawsuit</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=Lap_tlvoXI4" data-film="2093" data-embed="https://www.youtube.com/embed/Lap_tlvoXI4">2093</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=uD7EJ2s0TWw" data-film="I beat 2140 with black" data-embed="https://www.youtube.com/embed/uD7EJ2s0TWw">I beat 2140 with black</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=IUQG9tJDruA" data-film="Hans Cheating" data-embed="https://www.youtube.com/embed/IUQG9tJDruA">Hans Cheating</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=UGJnPUkbW_c" data-film="Morphy vs. Alpha Zero" data-embed="https://www.youtube.com/embed/UGJnPUkbW_c">Morphy vs. Alpha Zero</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=NXW_mP6ub-E" data-film="Dangerland" data-embed="https://www.youtube.com/embed/NXW_mP6ub-E">Dangerland</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=dcHK0S2Is9U" data-film="Chess recording 1" data-embed="https://www.youtube.com/embed/dcHK0S2Is9U">Chess recording 1</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=_2-rflzE24c" data-film="Chess recording 2" data-embed="https://www.youtube.com/embed/_2-rflzE24c">Chess recording 2</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=xmpReGiESws" data-film="Bday Chess" data-embed="https://www.youtube.com/embed/xmpReGiESws">Bday Chess</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=RA5kzejnads" data-film="Return to 2000" data-embed="https://www.youtube.com/embed/RA5kzejnads">Return to 2000</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=nzCmQFW9PxA" data-film="Fianchetto" data-embed="https://www.youtube.com/embed/nzCmQFW9PxA">Fianchetto</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=uyy5Ln6v1Co" data-film="Chess recording 3" data-embed="https://www.youtube.com/embed/uyy5Ln6v1Co">Chess recording 3</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=1SdyFFejT1c" data-film="Chess recording 4" data-embed="https://www.youtube.com/embed/1SdyFFejT1c">Chess recording 4</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=2PqM1niO488" data-film="Chess recording 5" data-embed="https://www.youtube.com/embed/2PqM1niO488">Chess recording 5</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=gL7uUjr1I28" data-film="Chess recording 6" data-embed="https://www.youtube.com/embed/gL7uUjr1I28">Chess recording 6</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=rBZYeXnCgPE" data-film="Chess recording 7" data-embed="https://www.youtube.com/embed/rBZYeXnCgPE">Chess recording 7</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=dqd2LsjI3a0" data-film="Chess recording 8" data-embed="https://www.youtube.com/embed/dqd2LsjI3a0">Chess recording 8</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=nzCmQFW9PxA" data-film="Chess recording 9" data-embed="https://www.youtube.com/embed/nzCmQFW9PxA">Chess recording 9</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=RA5kzejnads" data-film="Chess recording 10" data-embed="https://www.youtube.com/embed/RA5kzejnads">Chess recording 10</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=-EgcIITv-z8" data-film="Chess recording 11" data-embed="https://www.youtube.com/embed/-EgcIITv-z8">Chess recording 11</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=qAtzMLXskuU" data-film="Chess recording 12" data-embed="https://www.youtube.com/embed/qAtzMLXskuU">Chess recording 12</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=xmpReGiESws" data-film="Chess recording 13" data-embed="https://www.youtube.com/embed/xmpReGiESws">Chess recording 13</a></li></ul><p>More Chess on <a href="chess.html">maxjann.com/chess</a></p></section>
+<section class="panel" id="music"><h3>Music</h3><ul class="list">
+<li><a class="film" href="https://www.youtube.com/watch?v=LcNHS0NgJ7k" data-film="Forbidden Songs" data-embed="https://www.youtube.com/embed/LcNHS0NgJ7k?si=CphX0Zt7woZqe6Rc">Forbidden Songs</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=Hml9t1qRsoA" data-film="Lost Coastlines Cover" data-embed="https://www.youtube.com/embed/Hml9t1qRsoA">Lost Coastlines Cover</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=2JPFtOLKuSw" data-film="Wrong Side of the Sea" data-embed="https://www.youtube.com/embed/2JPFtOLKuSw">Wrong Side of the Sea</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=XTqgdDl2eMM" data-film="Alone" data-embed="https://www.youtube.com/embed/XTqgdDl2eMM">Alone</a></li>
+<li><a class="film" href="https://www.youtube.com/watch?v=h5lUxgrVRrE" data-film="Add Vice with a Friend" data-embed="https://www.youtube.com/embed/h5lUxgrVRrE">Add Vice with a Friend</a></li></ul><p>More Good Music on <a href="music.html">maxjann.com/music</a></p></section>
+</main><footer><a href="index.html">Back to homepage</a><a href="articles.html">Articles ↗</a></footer></div>
+<dialog id="theater" aria-labelledby="film-title"><div class="dialog-head"><h2 id="film-title"></h2><button id="close" autofocus>Close ×</button></div><div class="screens"></div><div class="watchlinks"></div></dialog>
+<script>
+// A category link matches a section ID, just as on the Articles page.
+const picker = document.querySelector('.picker');
+const panels = [...document.querySelectorAll('.panel')];
+function showCategory() {
+    const selected = panels.find(panel => '#' + panel.id === location.hash) || panels[0];
+    for (const panel of panels) panel.hidden = panel !== selected;
+    for (const link of picker.querySelectorAll('a')) {
+        if (link.hash === '#' + selected.id) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+    }
+    document.title = selected.querySelector('h3').textContent + ' · Videos · Maxwell Jann';
+}
+picker.addEventListener('click', event => {
+    const link = event.target.closest('a');
+    if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    if (location.hash !== link.hash) history.pushState(null, '', link.hash);
+    showCategory();
+});
+window.addEventListener('popstate',showCategory);
+window.addEventListener('hashchange',showCategory);
+showCategory();
+
+// Players exist only while the theater is open. Closing it stops playback.
+const theater = document.querySelector('#theater');
+const screens = theater.querySelector('.screens');
+const watchLinks = theater.querySelector('.watchlinks');
+document.addEventListener('click', event => {
+    const link = event.target.closest('a[data-embed]');
+    if (!link || !theater.showModal || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const urls = link.dataset.embed.split(' ');
+    theater.querySelector('h2').textContent = link.dataset.film;
+    screens.replaceChildren(); watchLinks.replaceChildren();
+    screens.classList.toggle('pair',urls.length > 1);
+    urls.forEach((url,index) => {
+        const frame = document.createElement('iframe');
+        frame.src=url; frame.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+        frame.allowFullscreen=true; frame.referrerPolicy='strict-origin-when-cross-origin';
+        frame.title=link.dataset.film + (urls.length>1?' · '+(index+1):'');
+        screens.append(frame);
+        const direct=document.createElement('a');
+        direct.href='https://www.youtube.com/watch?v='+new URL(url).pathname.split('/').pop();
+        direct.textContent=urls.length>1?'Watch video '+(index+1)+' on YouTube ↗':'Watch on YouTube ↗';
+        direct.target='_blank';direct.rel='noopener';watchLinks.append(direct);
+    });
+    theater.showModal();
+});
+document.querySelector('#close').onclick=()=>theater.close();
+theater.addEventListener('close',()=>screens.replaceChildren());
+</script></body></html>
