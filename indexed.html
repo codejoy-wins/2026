@@ -19,9 +19,65 @@
     <link
   rel="preload"
   as="image"
-  href="/static/img/ElamForever.png"
+  href="/static/img/ElamInfinity.png"
   fetchpriority="high"
 >
+
+<!-- Homepage refinement: scoped overrides; existing artwork and parallax stay intact. -->
+<style id="rainbow-refinement">
+  #banner { position: relative; z-index: 5; }
+  #banner button.burger {
+    appearance: none; border: 0; background: transparent;
+    padding: 0; margin: 0; width: 44px; height: 44px;
+    cursor: pointer; border-radius: 0; touch-action: manipulation;
+  }
+  #banner .burger .line {
+    display: block; width: 34px; height: 6px; margin: 5px;
+    background-color: navajowhite;
+  }
+  /* Each bar remains its own hover target, including when the menu is open. */
+  #banner .burger .line:hover { background-color: white; }
+  #banner .burger:focus-visible {
+    outline: 2px solid navajowhite; outline-offset: 4px; opacity: 1;
+  }
+  #rainbow-navigation { position: relative; z-index: 6; box-sizing: border-box; }
+  #rainbow-navigation li { margin: 0; padding: 0; }
+  #rainbow-navigation a {
+    display: block; box-sizing: border-box; padding: 10px 0;
+    min-height: 44px; line-height: 1.5; font-weight: 200;
+  }
+  #rainbow-navigation a:focus-visible {
+    outline: 1px solid navajowhite; outline-offset: 3px;
+  }
+  .blog-label { display: inline-grid; }
+  .blog-label > span { grid-area: 1 / 1; transition: opacity 180ms ease; }
+  .blog-secret { opacity: 0; }
+  .blog-portal:focus-visible .blog-default { opacity: 0; }
+  .blog-portal:focus-visible .blog-secret { opacity: 1; }
+  @media (hover: hover) {
+    .blog-portal:hover .blog-default { opacity: 0; }
+    .blog-portal:hover .blog-secret { opacity: 1; }
+  }
+  @media (max-width: 1117px) {
+    #banner { min-height: 50px; }
+    #banner #rainbow-navigation {
+      position: absolute; float: none;
+      top: 54px; right: 8px;
+      width: 176px; max-width: calc(100vw - 24px);
+      margin: 0; padding: 12px 20px;
+      max-height: calc(100vh - 80px);
+      max-height: calc(100dvh - 80px);
+      overflow-y: auto; overscroll-behavior: contain;
+      scrollbar-width: thin;
+      box-shadow: 0 12px 32px rgba(0,0,0,.3);
+    }
+    #rainbow-navigation a { padding: 10px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .blog-label > span { transition: none; }
+  }
+</style>
+
 </head>
 <body>
     <div id="rapper">
@@ -33,34 +89,25 @@
                 <a target="_blank" rel="noopener" onclick="cyberelam()" href="visual/index.html"><img class="tiny" src="static/img/one copy.png" alt="az"></a>
 
 
-                <div class="burger tiny right">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-            <ul class="nav-links super right">
-                <a target="_blank" href="blog.html"><li>Asha</li></a>
-                <a target="_blank" href="book.html"><li>Book</li></a>
-                <a target="_blank" href="contact.html"><li>Contact</li></a>
-                <a target="_blank" href="alien.html"><li>DJ Aliens</li></a>
-                <a target="_blank" href="education.html"><li>Education</li></a>
-                <a target="_blank" href="free.html"><li>Free Movies/TV</li></a>
-                <a target="_blank" href="games.html"><li>Games</li></a>
-                <a target="_blank" href="projects.html"><li>Projects</li></a>
-                <!-- <a target="_blank" href="articles.html"><li>Articles</li></a> -->
-                <a target="_blank" href="music.html"><li>Music</li></a>
-                <a target="_blank" href="videos.html"><li>Videos</li></a>
-                <a target="_blank" href="home.html"><li>Reviews</li></a>
-                <a target="_blank" href="story.html"><li>Stories</li></a>
-                <a target="_blank" href="chess.html"><li>Chess</li></a>
-                <a target="_blank" href="resume.html"><li>Resume</li></a>
-                <!-- <a target="_blank" href="art.html"><li>Art</li></a> -->
-                <a target="_blank" href="unreal/index.html"><li>Unreal</li></a>
-                <a target="_blank" href="https://primewords.netlify.app/"><li>PrimeWords</li></a>
-                <a target="_blank" href="skyseed.html"><li>SkySeed</li></a>
-
-
-
+                <button class="burger tiny right" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="rainbow-navigation">
+                    <span class="line" aria-hidden="true"></span>
+                    <span class="line" aria-hidden="true"></span>
+                    <span class="line" aria-hidden="true"></span>
+                </button>
+            <ul id="rainbow-navigation" class="nav-links super right" aria-label="Main navigation">
+                <li><a href="blog.html" target="_blank" rel="noopener" class="blog-portal" aria-label="Blog — Asha, the real truth"><span class="blog-label" aria-hidden="true"><span class="blog-default">Blog</span><span class="blog-secret">Asha</span></span></a></li>
+                <li><a href="projects.html" target="_blank" rel="noopener">Projects</a></li>
+                <li><a href="story.html" target="_blank" rel="noopener">Stories</a></li>
+                <li><a href="alien.html" target="_blank" rel="noopener">DJ Aliens</a></li>
+                <li><a href="chess.html" target="_blank" rel="noopener">Chess</a></li>
+                <li><a href="book.html" target="_blank" rel="noopener">Book</a></li>
+                <li><a href="articles.html" target="_blank" rel="noopener">Articles</a></li>
+                <li><a href="games.html" target="_blank" rel="noopener">Games</a></li>
+                <li><a href="skyseed.html" target="_blank" rel="noopener">SkySeed</a></li>
+                <li><a href="music.html" target="_blank" rel="noopener">Music</a></li>
+                <li><a href="art.html" target="_blank" rel="noopener">Art</a></li>
+                <li><a href="resume.html" target="_blank" rel="noopener">Resume</a></li>
+                <li><a href="contact.html" target="_blank" rel="noopener">Contact</a></li>
             </ul>
         </div>
         <div id="teroh" class="parallaxnew">
@@ -504,5 +551,35 @@
         </p>
     </div>
     <script src="index.js"></script>
+
+<script>
+// The original index.js owns click toggling; this adds keyboard/state support.
+(() => {
+  const toggle = document.querySelector('#banner .burger');
+  const menu = document.getElementById('rainbow-navigation');
+  if (!toggle || !menu) return;
+  const sync = () => {
+    const open = !menu.classList.contains('super');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  };
+  const close = () => {
+    menu.classList.add('super');
+    toggle.classList.remove('green');
+    sync();
+  };
+  new MutationObserver(sync).observe(menu, { attributes: true, attributeFilter: ['class'] });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !menu.classList.contains('super')) {
+      close(); toggle.focus();
+    }
+  });
+  document.addEventListener('click', event => {
+    if (!menu.contains(event.target) && !toggle.contains(event.target)) close();
+  });
+  sync();
+})();
+</script>
+
 </body>
 </html>

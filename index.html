@@ -78,6 +78,73 @@
   }
 </style>
 
+<style id="cyberscripture">
+/* The parchment contains the prose. Its following paragraphs sit on the night sky. */
+.white .texzt .innertextx {
+    --script-ink: #553710;
+    --script-lit: #70400a;
+    --script-glow: rgb(255 200 78 / 68%);
+}
+.white .texzt .innertextx ~ p {
+    --script-ink: #ebcf92;
+    --script-lit: #fff1ba;
+    --script-glow: rgb(255 191 67 / 62%);
+}
+.white .texzt :is(.innertextx p, .innertextx ~ p) a[href] {
+    /* Clear legacy link tiles while preserving the surrounding line's metrics. */
+    display: inline !important;
+    font: inherit !important;
+    color: var(--script-ink) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='92' height='5' viewBox='0 0 92 5'%3E%3Cpath d='M0 3L16 3 22 2 30 3 43 3 48 1.5 54 2.8 70 2.8 77 2 83 3 92 3' fill='none' stroke='%23ad8039' stroke-width='.85'/%3E%3Cpath d='M43 3l5-1.5 6 1.3m-6-1.3L50 .4' fill='none' stroke='%23f9ce68' stroke-width='.95'/%3E%3C/svg%3E") repeat-x left bottom / 5.75em 5px !important;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: color 160ms ease, text-shadow 160ms ease;
+    animation: scripture-breathe 5s ease-in-out infinite;
+}
+@keyframes scripture-breathe {
+    0%, 100% { text-shadow: 0 0 0 transparent; }
+    50% { text-shadow: 0 0 .12em var(--script-glow); }
+}
+@media (hover: hover) and (pointer: fine) {
+    .white .texzt :is(.innertextx p, .innertextx ~ p) a[href]:hover {
+        animation: none;
+        color: var(--script-lit) !important;
+        text-shadow: 0 0 .13em #ffdc84, 0 0 .36em var(--script-glow);
+        text-decoration: underline solid #ca922e 1px !important;
+        text-underline-offset: .16em;
+    }
+}
+.white .texzt :is(.innertextx p, .innertextx ~ p) a[href]:is(:active, :focus-visible) {
+    animation: none;
+    color: var(--script-lit) !important;
+    text-shadow: 0 0 .14em #ffdc84, 0 0 .36em var(--script-glow);
+}
+.white .texzt :is(.innertextx p, .innertextx ~ p) a[href]:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+    .white .texzt :is(.innertextx p, .innertextx ~ p) a[href] {
+        animation: none;
+        transition: none;
+    }
+}
+@media (forced-colors: active) {
+    .white .texzt :is(.innertextx p, .innertextx ~ p) a[href] {
+        color: LinkText !important;
+        background: none !important;
+        text-decoration: underline !important;
+        animation: none;
+    }
+}
+</style>
 </head>
 <body>
     <div id="rapper">
@@ -98,14 +165,12 @@
                 <li><a href="blog.html" target="_blank" rel="noopener" class="blog-portal" aria-label="Blog — Asha, the real truth"><span class="blog-label" aria-hidden="true"><span class="blog-default">Blog</span><span class="blog-secret">Asha</span></span></a></li>
                 <li><a href="projects.html" target="_blank" rel="noopener">Projects</a></li>
                 <li><a href="story.html" target="_blank" rel="noopener">Stories</a></li>
-                <li><a href="alien.html" target="_blank" rel="noopener">DJ Aliens</a></li>
+                <li><a href="music.html" target="_blank" rel="noopener">Music</a></li>
+                <li><a href="art.html" target="_blank" rel="noopener">Art</a></li>
                 <li><a href="chess.html" target="_blank" rel="noopener">Chess</a></li>
-                <li><a href="book.html" target="_blank" rel="noopener">Book</a></li>
                 <li><a href="articles.html" target="_blank" rel="noopener">Articles</a></li>
                 <li><a href="games.html" target="_blank" rel="noopener">Games</a></li>
                 <li><a href="skyseed.html" target="_blank" rel="noopener">SkySeed</a></li>
-                <li><a href="music.html" target="_blank" rel="noopener">Music</a></li>
-                <li><a href="art.html" target="_blank" rel="noopener">Art</a></li>
                 <li><a href="resume.html" target="_blank" rel="noopener">Resume</a></li>
                 <li><a href="contact.html" target="_blank" rel="noopener">Contact</a></li>
             </ul>
