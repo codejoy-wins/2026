@@ -3,7 +3,11 @@ html,body .ernie{
 }
 html,body .parallax5{
     background-color: black;
-}    .verse{
+}    
+html,body .parallax5117{
+    background-color: black;
+}    
+.verse{
     border: solid gold .2vw;
     padding: 1vw;
     margin: 1vw;
@@ -155,11 +159,6 @@ canvas {
 .picxxyy{
     max-width: 100%;
     text-align: center;
-    /* background-color: pink; */
-    /* background: linear-gradient(rgba(255, 192, 203, 0.761),rgba(0, 0, 255, 0.738),rgba(255, 166, 0, 0.819)); */
-    /* background: linear-gradient(rgba(255, 192, 203, 0.761),rgba(0, 0, 255, 0.738),rgba(255, 166, 0, 0.819)); */
-
-
     margin: 0;
 }
 .picxyx{
@@ -169,14 +168,13 @@ canvas {
     margin: 0;
 }
 .elam{
-    /* background-color: forestgreen; */
-    /* background: linear-gradient(green,violet,red); */
     background: linear-gradient(45deg, red, blue);
     color: white;
 }
 .elam:hover{
     color: gold;
 }
+
 .wbc{
     
     color: white;
@@ -187,18 +185,16 @@ canvas {
 .wbc:hover{
 
     border-radius: 100vw;
-    
     background-color: wheat;
     color: red;
 }
 .wbc2{
-    background-color: blue;
+    background-color: rgba(245, 222, 179, 0.538);
     color: azure;
 }
 .wbc2:hover{
     color: blue;
     background-color: azure;
-    border-radius: 100vw;
 }
 .bulba{
     /* background-color: forestgreen; */
@@ -234,6 +230,7 @@ color: black;
 .vidx{
     max-width: 100%;
     opacity: .7;
+    text-align: center;
 }
 #dishonest{
     color: red;
@@ -243,6 +240,7 @@ color: black;
 #dishonest:hover{
     color: rgb(118, 3, 233);
 }
+
 .right{
    float: right;
    opacity: .7;
@@ -528,7 +526,9 @@ p a{
     font-style: italic;
 }
 .parallaxnew{
-    background-image: url("../img/ElamForever.png");
+    /* background-image: url("../img/ElamForever.png"); */
+    background-image: url("../img/ElamInfinity.png");
+
     /* background-image: url("../img/cyberElam.jpg"); */
 
     /* background-image: url("../img/paris\ copy.png"); */
@@ -549,7 +549,15 @@ p a{
 .parallaxlight{
     /* background-image: url("../img/ElamForever.png"); */
     /* background-image: url("../img/ElamLight.png"); */
-    background-image: url("../img/paris\ copy.png");
+    /* background-image: url("../img/paris\ copy.png"); */
+    background-image: url("../img/cyberElam.jpg");
+    /* background-image: url("../img/cyberremaster.png"); */
+    /* background-image: url("../img/ElamInfinity.png"); */
+    /* background-image: url("../img/ElamInfinity.png"); */
+
+
+
+
 
 
     /* background-image: url("../img/thedarkness.jpg"); */
@@ -577,7 +585,13 @@ p a{
     /* background-image: url("../img/GoldElam.jpg"); */
     /* background-image: url("../img/Emerald.png"); */
     /* background-image: url("../img/emwhirl.png"); */
-    background-image: url("../img/blendx.png");
+    background-image: url("../img/Panthos\ at\ the\ Enchanted\ Cosmic\ Threshold.png");
+    /* background-image: url("../img/blendGemini.jpg"); */
+    /* background-image: url("../img/geminiWide.jpg"); */
+    /* background-image: url("../img/PanthosGemini.jpg"); */
+
+
+
     /* background-image: url("../img/dioxy.jpg"); */
 
 
@@ -665,7 +679,15 @@ p a{
     /* background-image: url("../img/godplustrim.png"); */
     /* background-image: url("../img/Warilla.jpg"); */
     /* background-image: url("../img/Iridielle.jpg"); */
-    background-image: url("../img/cyberElam.jpg");
+    /* background-image: url("../img/cyberElam.jpg"); */
+    /* background-image: url("../img/ce2.jpg"); */
+    /* background-image: url("../img/cy.jpg"); */
+    /* background-image: url("../img/mjnow.jpg"); */
+    background-image: url("../img/codejoy117.png");
+
+
+
+
 
 
 
@@ -700,7 +722,7 @@ a:hover{
 p a{
     text-decoration: none;
     color: black;
-    padding: 1.5vw;
+    padding: 1vw;
     border-radius: 1vw;
     background-color: rgba(240, 248, 255, 0.704);
 }
@@ -760,6 +782,33 @@ p a:hover{
     /* background-image: url("../img/angel.png"); */
     /* background-image: url("../img/Iridielle.jpg"); */
     background-image: url("../img/cyberElam.jpg");
+    /* background-image: url("../img/ce2.jpg"); */
+
+
+    /* background-image: url("../img/paris\ copy.png"); */
+
+
+    /* background-image: url("../img/elamef.png"); */
+
+
+
+
+    height: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.parallax5117{
+    /* background-image: url("../img/The_One_TradingCard\ copy\ 3.jpg"); */
+    /* background-image: url("../img/Avriel.jpeg"); */
+    /* background-image: url("../img/angel.png"); */
+    /* background-image: url("../img/Iridielle.jpg"); */
+    /* background-image: url("../img/cyberElam.jpg"); */
+    background-image: url("../img/skytemple.png");
+
+    /* background-image: url("../img/ce2.jpg"); */
+
 
     /* background-image: url("../img/paris\ copy.png"); */
 
@@ -787,6 +836,8 @@ p a:hover{
     /* background-image: url("../img/dja.png"); */
     /* background-image: url("../img/tr.jpg"); */
     background-image: url("../img/Iridielle.jpg");
+    /* background-image: url("../img/IridelleGemini.jpg"); */
+
 
 
     height: 100vw;
@@ -1135,14 +1186,16 @@ ul a{
     color: whitesmoke;
 }
 .spxi{
-    color: forestgreen;
+    /* color: forestgreen; */
+    color: rgb(0, 55, 0);
+
     /* background-color: rgba(245, 245, 245, 0.777); */
-    background-color: rgba(245, 245, 245, 0.9);
+    background-color: rgba(245, 245, 245, 0.7);
 
 }
 .spxi:hover{
     color: white;
-    outline: red .2vw solid;
+    outline: rgb(9, 90, 16) .2vw solid;
     background-color: black
 }
 ul a:hover{
@@ -1233,6 +1286,33 @@ h4{
         opacity: 1;
     }
 }
+@keyframes xray {
+    78%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 0;
+    }
+    81%{
+        opacity: 1;
+    }
+    82%{
+        opacity: 0;
+    }
+    83%{
+        opacity: 1;
+    }
+    84%{
+        opacity: 0;
+    }
+    85%{
+        opacity: 1;
+    }
+
+}
+#maxster{
+    max-width: 100%;
+}
 .red{
     /* border: 1vw solid red; */
     max-width: 100%;
@@ -1243,6 +1323,15 @@ h4{
     max-height: 400px;
     opacity: 1;
     animation: wbc 10s infinite;
+    border-bottom: 1ch solid black;
+    border-top: 1ch solid black;
+
+}
+.lapis{
+    max-width: 100%;
+    max-height: 400px;
+    /* opacity: 1; */
+    /* animation: xray 11s infinite; */
     border-bottom: 1ch solid black;
     border-top: 1ch solid black;
 
@@ -1421,7 +1510,9 @@ footer{
     max-height: 400px;
     /* background-image: url(../img/lightcom.png); */
     /* background-image: url(../img/vmanreal.png); */
-    background-image: url(../img/oig3.jpeg);
+    /* background-image: url(../img/oig3.jpeg); */
+    background-image: url(../img/aurorafilm.png);
+
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1432,10 +1523,13 @@ footer{
     min-height: 210px;
     max-height: 400px;
     /* background-image: url(../img/lightcom.png); */
-    background-image: url(../img/ElamForever.png);
+    /* background-image: url(../img/ElamForever.png); */
+    /* background-image: url(../img/rainbowwbc.png); */
+
     /* background-image: url(../img/automaticgun.jpg); */
 
     /* background-image: url(../img/EternalElam.png); */
+    background-image: url(../img/wbclaptop.png);
 
 
     background-size: contain;
@@ -1447,9 +1541,12 @@ footer{
     min-width: 220px;
     min-height: 210px;
     max-height: 400px;
+    max-width: 100%;
     /* background-image: url(../img/lightcom.png); */
     /* background-image: url(../img/Tigon.png); */
-    background-image: url(../img/craigteroh.png);
+    /* background-image: url(../img/craigteroh.png); */
+    background-image: url(../img/runaway-handoff.png);
+
 
 
     background-size: contain;
@@ -1555,7 +1652,7 @@ footer{
 }
 .spotsubmain7{
     /* background-color: blue; */
-    background-image: url(../img/mad.jpg);
+    background-image: url(../img/firmamentality.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1642,6 +1739,31 @@ footer{
     min-height: 210px;
     max-height: 590px;
 }
+.blurred-text {
+    color: transparent; /* Hides the original text color */
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Applies a text shadow with a blur radius */
+    background-color: rgba(215, 15, 49, 0.259);
+  }
+.blurred-text:hover{
+    color: white;
+    text-shadow: none;
+    background-color: rgba(215, 15, 49, 0.259);
+
+
+}
+
+.blur-text {
+    font-size: 2rem;
+    color: whitesmoke;
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+  }
+
+  .blur-text:hover {
+    filter: blur(0);
+    cursor: none;
+  }
 .xpp{
     /* background-color: blue; */
     background-image: url(../img/coldwar.jpg);
@@ -1692,15 +1814,7 @@ footer{
     max-width: 100%;
     max-height: 400px;
 }
-.blue{
-    max-width: 100%;
-    max-height: 400px;
-    opacity: 1;
-    animation: wbc 10s infinite;
-    border-bottom: 1ch solid black;
-    border-top: 1ch solid black;
 
-}
 .aqua{
     max-width: 100%;
     max-height: 400px;
@@ -1779,6 +1893,18 @@ footer{
     min-height: 210px;
     max-height: 400px;
 }
+.spotsubmainalpha{
+    display:inline-block;
+    /* border: .3vw solid gold; */
+    /* background-image: url(../img/GoldElam.jpg); */
+    /* background-image: url(../img/xray.png); */
+
+    background-position: center;
+    background-size: cover;
+    min-width: 290px;
+    min-height: 210px;
+    max-height: 400px;
+}
 
 .sss a{
     padding: 0;
@@ -1802,7 +1928,7 @@ footer{
 .spotsubmain3888{
     /* background-color: blue; */
     /* background-image: url(../img/penthousebeach.jpg); */
-    background-image: url(../img/wbc.jpeg);
+    background-image: url(../img/wbcremoved.png);
 
     background-size: contain;
     background-repeat: no-repeat;
@@ -2333,9 +2459,13 @@ div#tetrahedron > div.back {
         background-attachment: scroll;
         background-size: cover;
         /* background-position: -200px; */
-        background-position: -402px;
+        /* background-position: -402px; */
         /* background-image: url("../img/cloudland5.png"); */
-        background-image: url("../img/emwhirl.png");
+        /* background-image: url("../img/emwhirl.png"); */
+        /* background-image: url("../img/geminiGirl.jpg"); */
+        background-image: url("../img/Enchantress.png");
+
+
 
         /* background-image: url("../img/promptos.png"); */
 
@@ -2381,6 +2511,11 @@ div#tetrahedron > div.back {
         background-attachment: scroll;
       }
       .parallax5 {
+        background-attachment: scroll;
+        background-size: cover;
+        zoom:117%;
+      }
+      .parallax5117 {
         background-attachment: scroll;
         background-size: cover;
         zoom:117%;
@@ -2467,7 +2602,10 @@ div#tetrahedron > div.back {
 }
 .king a:hover{
     text-decoration: none;
-    background-color: rgb(238, 130, 238, .717);
+    /* background-color: rgb(238, 130, 238, .717); */
+    /* background-color: rgba(130, 238, 132, 0.717); */
+    background-color: rgba(130, 238, 132, 0.5);
+
     padding: none;
     color:wheat;
     margin: 0;
@@ -2488,6 +2626,7 @@ div#tetrahedron > div.back {
 }
 .innertextx p{
     color: black;
+    /* font-weight: 1000; */
 }
 .insane{
     color: wheat;

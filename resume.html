@@ -1,61 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link rel="stylesheet" href="static/css/resume.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/jpg" href="static/img/blueknight.png"/>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101917">
+  <meta name="description" content="Max Jann’s résumé. View or download the PDF, explore projects, and connect on GitHub.">
+  <title>Résumé · Max Jann</title>
+  <link rel="icon" type="image/png" href="static/img/mj3.png">
+  <style>
+    :root{--bg:#101917;--panel:#19251f;--ink:#f5f0e6;--muted:#b9c4bb;--gold:#dfc184;--line:#374b3e;--sans:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--serif:Georgia,'Times New Roman',serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans)}a{color:inherit;text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:5px}button{font:inherit;cursor:pointer}button:disabled{opacity:.45;cursor:default}button,a,summary{touch-action:manipulation}a:focus-visible,button:focus-visible,summary:focus-visible,.viewport:focus-visible{outline:3px solid var(--gold);outline-offset:4px}img{display:block;max-width:100%}[hidden]{display:none!important}.wrap{width:min(1160px,calc(100% - 56px));margin:auto}.skip{position:absolute;top:-100px;background:var(--gold);color:var(--bg);padding:12px;z-index:20}.skip:focus{top:8px}.site-header{border-bottom:1px solid var(--line)}.header-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:84px}.brand{display:flex;align-items:center;gap:12px;letter-spacing:.15em;font-size:11px;font-weight:700}.brand img{width:30px;height:30px;object-fit:contain}.nav{display:flex;gap:26px;align-items:center;font-size:13px;color:var(--muted)}.nav a{padding:12px 0}.nav a[aria-current]{color:var(--gold)}.eyebrow{font-size:11px;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--gold)}.intro{padding:64px 0 40px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}h1{font:clamp(50px,7vw,84px)/1.1 var(--serif);letter-spacing:-.045em;margin:12px 0 20px}.role{font:23px/1.5 var(--serif);margin:0 0 12px;color:#e0e7dc}.intro p:last-child{color:var(--muted);font-size:14px;margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:48px;padding:12px 20px;background:var(--gold);color:#142219;border:1px solid var(--gold);font-size:13px;font-weight:600}.button:hover{background:#efd5a2;text-decoration:none}.button.secondary{background:transparent;color:var(--gold)}.quick-links{display:flex;gap:25px;flex-wrap:wrap;padding:12px 0 26px;font-size:13px;color:var(--muted)}.quick-links a{min-height:44px;display:inline-flex;align-items:center}.viewer{border:1px solid var(--line);background:var(--panel)}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:16px 22px;border-bottom:1px solid var(--line)}.toolbar h2{font-size:14px;margin:0;font-weight:600}.toolbar small{color:var(--muted);font-size:11px}.controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.control{min-width:44px;min-height:44px;padding:8px 12px;background:#24372c;color:var(--ink);border:1px solid #4b6253;font-size:13px}.control:hover:not(:disabled){background:#36503e}.zoom-label{min-width:45px;font-size:12px;text-align:center;color:var(--muted)}.status{padding:14px 22px;color:var(--muted);font-size:13px;margin:0}.status.error{color:#f4d1aa}.viewport{overflow:auto;max-width:100%;padding:24px;background:#243129;overscroll-behavior-x:contain}.pages{display:flex;flex-direction:column;align-items:flex-start;gap:24px;width:max-content;min-width:100%}.pdf-page{margin:0 auto;max-width:none}.pdf-page canvas{display:block;background:white;box-shadow:0 5px 24px #0005}.pdf-page figcaption{font-size:11px;text-align:center;color:var(--muted);padding-top:9px}.text-view{background:#fbf9f2;color:#25332a;padding:28px;max-width:800px;margin:auto}.text-view section+section{border-top:1px solid #ddd;margin-top:30px}.text-view h3{font-size:15px}.text-view pre{font:16px/1.8 var(--sans);white-space:pre-wrap;overflow-wrap:anywhere}.viewer-note{font-size:12px;color:var(--muted);padding:15px 22px;margin:0;border-top:1px solid var(--line)}.viewer-note a{color:var(--gold);text-decoration:underline}.alternatives{margin:20px 0;color:var(--muted);font-size:13px}.alternatives summary{cursor:pointer;padding:12px 0}.alternatives iframe{width:100%;height:850px;border:1px solid var(--line);background:#fff}.alternatives p{margin:8px 0 18px}.closing{padding:36px 0;display:flex;justify-content:space-between;align-items:center;gap:25px}.closing h2{font:30px/1.25 var(--serif);margin:0 0 10px}.closing p{margin:0;color:var(--muted);font-size:14px}footer{padding:24px 0 32px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:800px){.intro{grid-template-columns:1fr;padding-top:40px;gap:24px}.closing{flex-direction:column;align-items:flex-start}.nav{gap:18px}}
+    @media(max-width:550px){.wrap{width:calc(100% - 28px)}.header-inner{flex-wrap:wrap;padding:16px 0;gap:10px}.nav{width:100%;justify-content:space-between;font-size:12px;gap:12px}.intro{padding-bottom:20px}.role{font-size:20px}.actions{width:100%}.actions .button{flex:1;padding:12px}.quick-links{gap:20px;padding-bottom:16px}.toolbar{padding:14px;gap:12px}.controls{gap:6px}.control{padding:8px 10px}.viewport{padding:10px}.status{padding:12px 14px}.text-view{padding:20px}.viewer-note{padding:14px}.alternatives iframe{height:70vh}.closing{padding:28px 0}}
+    @media print{body{background:white;color:black}.site-header,.intro,.quick-links,.toolbar,.status,.viewer-note,.alternatives,.closing,footer{display:none}.wrap{width:100%}.viewer{border:0}.viewport{padding:0;overflow:visible;background:white}.pages{width:100%;display:block}.pdf-page{break-after:page}.pdf-page:last-child{break-after:auto}.pdf-page canvas{width:100%!important;height:auto!important;box-shadow:none}.pdf-page figcaption{display:none}}
+  </style>
 </head>
-<div id="nav">
-    <div class="option"><a href="alien.html">DJ Aliens</a></div>
-    <div class="option"><a href="blog.html">Blog</a></div>
-    <div class="option"><a href="story.html">Story</a></div>
-    <div class="option"><a href="chess.html">Chess</a></div>
-
-    <div class="option"><span class="current">Resume</span></div>
-    <div class="option"><a href="web.html">Web Development</a></div>
-    <div class="option"><a href="dev.html">Dev Log</a></div>
-    <div class="option"><a href="shop.html">Shop</a></div>
-    <div class="option"><a href="welcome.html">Welcome</a></div>
-    <div class="option"><a href="music.html">Music</a></div>
-    <div class="option"><a href="education.html">Education</a></div>
-    <div class="option"><a href="poem.html">Poem</a></div>
-    <div class="option"><a href="home.html">Reviews</a></div>
-    <div class="option"><a href="videos.html">Videos</a></div>
-    <div class="option"><a href="art.html">Art</a></div>
-    <div class="option"><a href="game.html">Game Design</a></div>
-
-</div>
 <body>
-    
-    <div id="rapper">
-        <div id="intro">
-        <div class="life">
-            <a href="fly.html">Click Here to Fly through my interactive resume instead</a>
-        </div>
-        </div> 
-
-        <div id="rez">
-            <embed src="static/img/MaxJann2026.pdf" width="100%" height="1200px"/>
-        </div>
-        <div id="rez2">
-            <img class="pic" src="static/img/mjrezpic25.png" alt="jpgresume">
-        </div>
-    </div>
-    <p class="what">
-        <a class="git" href= "static/img/MaxJann2026.pdf" download>Download PDF</a>
-    </p>
-    <p class="what">
-        <a class="git" target="_blank" href="projects.html">my projects page</a>
-    </p>
-    <p class="what">
-        <a class="git" target="_blank" href="https://github.com/codejoy-wins">my github</a>
-    </p>
-    
-    <script src="resume.js"></script>
+<a class="skip" href="#main">Skip to résumé</a>
+<header class="site-header" id="top"><div class="wrap header-inner"><a class="brand" href="index.html"><img src="static/img/mj3.png" alt="" width="30" height="30">MAXWELL JANN</a><nav class="nav" aria-label="Main navigation"><a href="projects.html">Projects</a><a href="education.html">Education</a><a href="articles.html">Articles</a><a href="resume.html" aria-current="page">Résumé</a></nav></div></header>
+<main class="wrap" id="main">
+  <header class="intro"><div><span class="eyebrow">Résumé / Hutto, Texas</span><h1>Max Jann</h1><p class="role">Solo Developer &amp; Engineering Technician</p><p>Experience, education, and technical work—in one document.</p></div><div class="actions"><a class="button" href="static/img/MaxJann2026.pdf" download="Max-Jann-Resume.pdf">Download PDF <span aria-hidden="true">↓</span></a><a class="button secondary" href="static/img/MaxJann2026.pdf" target="_blank" rel="noopener noreferrer">Open PDF ↗</a></div></header>
+  <nav class="quick-links" aria-label="Professional links"><a href="projects.html">Projects ↗</a><a href="https://github.com/codejoy-wins" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:maxwellljann@gmail.com">Email me ↗</a><a href="fly.html">Interactive résumé ↗</a></nav>
+  <section class="viewer" aria-labelledby="viewer-title">
+    <div class="toolbar"><div><h2 id="viewer-title">Résumé preview</h2><small id="page-count">PDF document</small></div><div class="controls" role="group" aria-label="Résumé view controls"><button class="control" id="zoom-out" aria-label="Zoom out" disabled>−</button><output class="zoom-label" id="zoom-level" aria-label="Zoom level">100%</output><button class="control" id="zoom-in" aria-label="Zoom in" disabled>+</button><button class="control" id="fit" disabled>Fit width</button><button class="control" id="text-toggle" aria-pressed="false" disabled>Read as text</button></div></div>
+    <p class="status" id="status" role="status" aria-live="polite">Loading the résumé preview…</p>
+    <div class="viewport" id="viewport" tabindex="0" role="region" aria-label="PDF pages; scroll horizontally when zoomed in" hidden><div class="pages" id="pages"></div></div>
+    <div class="text-view" id="text-view" hidden></div>
+    <noscript><p class="status">To view the résumé without JavaScript, <a href="static/img/MaxJann2026.pdf">open the PDF</a> or use the download button above.</p></noscript>
+    <p class="viewer-note">Use + to enlarge the preview, or choose “Read as text.” You can always <a href="static/img/MaxJann2026.pdf" target="_blank" rel="noopener noreferrer">open the original PDF</a>. On phones that open it instead of downloading, use the viewer’s Save or Share menu.</p>
+  </section>
+  <details class="alternatives" id="native-viewer"><summary>Use your browser’s PDF viewer</summary><p>If your browser supports embedded PDFs, the original document appears here. Otherwise, <a href="static/img/MaxJann2026.pdf" target="_blank" rel="noopener noreferrer">open it in a new tab ↗</a>.</p><iframe title="Original Max Jann résumé PDF" data-src="static/img/MaxJann2026.pdf#view=FitH"></iframe></details>
+  <section class="closing"><div><h2>See the work behind the résumé.</h2><p>Explore my software, games, and ongoing projects.</p></div><div class="actions"><a class="button secondary" href="projects.html">Explore projects ↗</a><a class="button" href="static/img/MaxJann2026.pdf" download="Max-Jann-Resume.pdf">Download résumé ↓</a></div></section>
+</main>
+<footer><div class="wrap footer-inner"><a href="index.html">© 2026 Jann Software</a><a href="#top">Back to top ↑</a></div></footer>
+<script>
+(() => {
+  'use strict';
+  const status = document.getElementById('status');
+  const viewport = document.getElementById('viewport');
+  const pages = document.getElementById('pages');
+  const textView = document.getElementById('text-view');
+  const zoomIn = document.getElementById('zoom-in');
+  const zoomOut = document.getElementById('zoom-out');
+  const fit = document.getElementById('fit');
+  const textToggle = document.getElementById('text-toggle');
+  const level = document.getElementById('zoom-level');
+  let pdf, zoom = 1, rendering = false, pending = false, textMode = false, lastWidth = 0;
+  const pdfURL = new URL('static/img/MaxJann2026.pdf', document.baseURI).href;
+  const base = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@6.5.438/';
+  const native = document.getElementById('native-viewer');
+  native.addEventListener('toggle', () => {
+    const frame = native.querySelector('iframe');
+    if (native.open && !frame.hasAttribute('src')) frame.src = frame.dataset.src;
+  });
+  function message(text, error = false) {
+    status.textContent = text;
+    status.classList.toggle('error', error);
+  }
+  function controls() {
+    zoomIn.disabled = !pdf || textMode || zoom >= 2.5;
+    zoomOut.disabled = !pdf || textMode || zoom <= 0.75;
+    fit.disabled = !pdf || textMode;
+    level.textContent = Math.round(zoom * 100) + '%';
+  }
+  async function render() {
+    if (!pdf || textMode) return;
+    if (rendering) { pending = true; return; }
+    rendering = true;
+    try {
+      do {
+        pending = false;
+        const width = Math.max(100, viewport.clientWidth - parseFloat(getComputedStyle(viewport).paddingLeft) - parseFloat(getComputedStyle(viewport).paddingRight));
+        lastWidth = viewport.clientWidth;
+        const currentZoom = zoom;
+        const fragment = document.createDocumentFragment();
+        for (let i = 1; i <= pdf.numPages; i++) {
+          const page = await pdf.getPage(i);
+          const natural = page.getViewport({ scale: 1 });
+          const view = page.getViewport({ scale: Math.min(width, 950) / natural.width * currentZoom });
+          const ratio = Math.min(window.devicePixelRatio || 1, 2, 4096 / view.width, 4096 / view.height);
+          const canvas = document.createElement('canvas');
+          canvas.width = Math.ceil(view.width * ratio);
+          canvas.height = Math.ceil(view.height * ratio);
+          canvas.style.width = view.width + 'px';
+          canvas.style.height = view.height + 'px';
+          canvas.setAttribute('role', 'img');
+          canvas.setAttribute('aria-label', `Résumé page ${i} of ${pdf.numPages}. Use Read as text for accessible content.`);
+          await page.render({ canvasContext: canvas.getContext('2d'), viewport: view, transform: [ratio, 0, 0, ratio, 0, 0] }).promise;
+          const figure = document.createElement('figure');
+          figure.className = 'pdf-page';
+          const caption = document.createElement('figcaption');
+          caption.textContent = `Page ${i} of ${pdf.numPages}`;
+          figure.append(canvas, caption);
+          fragment.append(figure);
+        }
+        if (!pending) pages.replaceChildren(fragment);
+      } while (pending && !textMode);
+      if (!textMode) message('Preview ready. Zoom in for a closer look.');
+    } catch (error) {
+      message('The preview could not be displayed. Please use Open PDF or Download PDF above.', true);
+      console.error('Résumé preview:', error);
+    } finally { rendering = false; }
+  }
+  async function buildText() {
+    const fragment = document.createDocumentFragment();
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const content = await page.getTextContent();
+      const section = document.createElement('section');
+      const title = document.createElement('h3');
+      title.textContent = `Page ${i}`;
+      const text = document.createElement('pre');
+      text.textContent = content.items.map(item => typeof item.str === 'string' ? item.str + (item.hasEOL ? '\n' : ' ') : '').join('');
+      section.append(title, text);
+      fragment.append(section);
+    }
+    textView.replaceChildren(fragment);
+  }
+  zoomIn.addEventListener('click', () => { zoom = Math.min(2.5, zoom + .25); controls(); render(); });
+  zoomOut.addEventListener('click', () => { zoom = Math.max(.75, zoom - .25); controls(); render(); });
+  fit.addEventListener('click', () => { zoom = 1; controls(); render(); });
+  textToggle.addEventListener('click', () => {
+    textMode = !textMode;
+    textView.hidden = !textMode;
+    viewport.hidden = textMode;
+    textToggle.setAttribute('aria-pressed', String(textMode));
+    textToggle.textContent = textMode ? 'View PDF layout' : 'Read as text';
+    controls();
+    if (textMode) message('Text extracted from the PDF. The original PDF preserves its designed layout.');
+    else render();
+  });
+  let resizeTimer;
+  window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => {
+    if (!textMode && Math.abs(viewport.clientWidth - lastWidth) > 2) render();
+  }, 180); });
+  async function timed(promise, ms) {
+    let timer;
+    try { return await Promise.race([promise, new Promise((_, reject) => { timer = setTimeout(() => reject(new Error('Preview loading timed out')), ms); })]); }
+    finally { clearTimeout(timer); }
+  }
+  async function start() {
+    let task;
+    try {
+      const lib = await timed(import(base + 'legacy/build/pdf.min.mjs'), 20000);
+      lib.GlobalWorkerOptions.workerSrc = base + 'legacy/build/pdf.worker.min.mjs';
+      task = lib.getDocument({ url: pdfURL, isEvalSupported: false, cMapUrl: base + 'cmaps/', cMapPacked: true, standardFontDataUrl: base + 'standard_fonts/', wasmUrl: base + 'wasm/' });
+      pdf = await timed(task.promise, 25000);
+      document.getElementById('page-count').textContent = `${pdf.numPages} ${pdf.numPages === 1 ? 'page' : 'pages'} · PDF`;
+      viewport.hidden = false;
+      controls();
+      await render();
+      try { await buildText(); textToggle.disabled = false; }
+      catch (error) { console.warn('Text view unavailable:', error); }
+    } catch (error) {
+      if (task) task.destroy().catch(() => {});
+      message('The preview is unavailable in this browser or connection. Please use Open PDF or Download PDF above.', true);
+      console.error('Résumé loading:', error);
+    }
+  }
+  start();
+})();
+</script>
 </body>
 </html>

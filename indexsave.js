@@ -219,6 +219,7 @@ function cyberelam(){
     <div class="parallax5117"></div>
     `;
     // freezefire();
+    
 }
 
 
@@ -233,7 +234,8 @@ const smartSongs = [
     { title: "California",          file: "cali.mp3" },
     { title: "Afterli(f)e",         file: "Afterlie.mp3" },
     { title: "Cold Diamond",        file: "diamond.mp3" },
-    { title: "Add Vice for a Friend", file: "addvicewithafriend.mp3" },
+    { title: "Add Vice for a Friend", file: "Add Vice for a Friend.mp3" },
+    { title: "Add Vice (with) a Friend", file: "addvicewithafriend.mp3" },
     { title: "Adore you",           file: "AdoreYou.mp3" },
     { title: "If Only",             file: "only.mp3" },
     { title: "Beautiful Winter",    file: "winter.mp3" },
@@ -251,6 +253,7 @@ const smartSongs = [
     { title: "Sudoku",              file: "Sudoku.mp3" },
     { title: "Fire Girl",           file: "Fireg.mp3" },
     { title: "Bleeding Out (extended version)", file: "bleedingoutpro.mp3" },
+    { title: "Bleeding Out", file: "bleedingOut.mp3" },
     { title: "Seven Eleven 117",    file: "711117.mp3" },
     { title: "Eternalized",         file: "Eternalized.mp3" },
     { title: "Liquified",           file: "liquified.mp3" },
@@ -263,6 +266,8 @@ const smartSongs = [
     { title: "Cold Soul",           file: "coldSoul.mp3" },
     { title: "Madly",           file: "Madly.mp3" },
     { title: "Join My F***ing Team",           file: "JMFT2.mp3" },
+    { title: "Mewthree",           file: "mewthreeRap1.m4a" },
+    { title: "Lightyears",           file: "lightyears.mp3" },
 
 
   ];

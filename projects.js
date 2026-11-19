@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
          { title: "Mewthree",
          description: "A single-page web application that uses artificial intelligence and a pokemon API to let you pick a team of any 6 pokemon and challenge Mewthree to a battle.  Currently back online after buying more API tokens and switching model to 4o-mini. May add image generation next.", 
-         imageUrl: "static/img/mewthree.png",
+        //  imageUrl: "static/img/mewthree.png",
+         imageUrl: "static/img/Mewthree’s Psychic Battle Awakening copy.png",
          linkURL:"pokedex.html",
          videoembed:"",
          date:"2024+",
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
          },
          { title: "OneDate",
             description: "A single-page web application that uses artificial intelligence to generate a date for you in between you and your date's current location.  I could still improve this app because it doesn't actually find a location in between, it kind of does, as part of the prompt, but it's not actually using geolocation or anything like that.  Simply upgrading to 4o is already providing good results though", 
-            imageUrl: "static/img/1d.jpg",
+            imageUrl: "static/img/onedatev2.png",
             linkURL:"onedate.html",
             videoembed:"",
             date:"2024",
