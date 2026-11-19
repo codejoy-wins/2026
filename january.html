@@ -11,6 +11,16 @@
     <link rel="shortcut icon" type="image/png" href="static/img/mj3.png"/>
 
     
+<style>
+a.load-blog-player {
+    display: flex; align-items: center; justify-content: center; width: 100%;
+    height: var(--player-height); box-sizing: border-box;
+    color: #f5dfac; background: #202321; border: 1px solid #877448;
+    border-radius: .4em; font: 500 .95rem/1.4 system-ui, sans-serif;
+    text-decoration: underline; text-underline-offset: .2em;
+}
+a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac879; }
+</style>
 </head>
 <div id="nav">
     <div class="option"><a href="alien.html">DJ Aliens</a></div>
@@ -71,11 +81,11 @@
             </div>
             <div class="post1advanced">
                 <h2>Chess</h2>
-                <iframe id="14500087" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="https://www.chess.com/emboard?id=14500087"></iframe><script nonce="chesscom-diagram">window.addEventListener("message",e=>{e['data']&&"14500087"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+37}px`)});</script>
+                <a class="load-blog-player" style="--player-height:150px" href="https://www.chess.com/emboard?id=14500087">Open chess board</a><template><iframe id="14500087" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="https://www.chess.com/emboard?id=14500087"></iframe></template><script nonce="chesscom-diagram">window.addEventListener("message",e=>{e['data']&&"14500087"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+37}px`)});</script>
                 <!-- <p>
                     A nice game with Black
                 </p> -->
-                <iframe id="14500105" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="https://www.chess.com/emboard?id=14500105"></iframe><script nonce="chesscom-diagram">window.addEventListener("message",e=>{e['data']&&"14500105"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+37}px`)});</script>
+                <a class="load-blog-player" style="--player-height:150px" href="https://www.chess.com/emboard?id=14500105">Open chess board</a><template><iframe id="14500105" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="https://www.chess.com/emboard?id=14500105"></iframe></template><script nonce="chesscom-diagram">window.addEventListener("message",e=>{e['data']&&"14500105"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+37}px`)});</script>
                 <!-- <p>
                     A nice game with White
                 </p> -->
@@ -121,7 +131,7 @@
             <div class="whitegold">
                 <h2>2025</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/GL-ZoNhUFmc?si=zEiMSr_yemFEOl0u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=GL-ZoNhUFmc">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/GL-ZoNhUFmc?si=zEiMSr_yemFEOl0u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
                 </div>
                 <img src="static/img/deltahalowhitegold.png" alt="whitegold">
                 <p>
@@ -135,7 +145,7 @@
             <div class="rainbowpost">
                 <img class="pic" src="static/img/tr.jpg" alt="perfectpyramid">
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/MoN9ql6Yymw?si=3YDnPzJ0-TexaPQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=MoN9ql6Yymw">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/MoN9ql6Yymw?si=3YDnPzJ0-TexaPQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     Spent all day yesterday trying to get the OpenAI API to work.  Ran into countless issues.  Will revisit later.  In the meantime, I love this song, and I made some cool ai artwork. Happy 117 day
@@ -179,7 +189,7 @@
             <div class="post2advanced">
                 <h2>Super Fire Medley</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/73CaWDWbBew?si=lb5oAnSM9h4ra4Ia" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=73CaWDWbBew">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/73CaWDWbBew?si=lb5oAnSM9h4ra4Ia" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     Recorded a medley of my best songs with my new studio mic
@@ -190,7 +200,7 @@
                 <h2>Beast System (Post of the Month)</h2>
                 <h3>01/27/21</h3>
                 <div class="vid">
-                    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x1tyfbr" width="100%" height="100%" allowfullscreen > </iframe> </div>
+                    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <a class="load-blog-player" style="--player-height:100%;position:absolute;inset:0" href="https://www.dailymotion.com/video/x1tyfbr">Open Dailymotion player</a><template><iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x1tyfbr" width="100%" height="100%" allowfullscreen > </iframe></template> </div>
                 </div>
                 <p>
                     This was the first video where I heard Jonathan Adampants.  Later on I decided I wanted to hear more and discovered his <a target="_blank" href="https://youtu.be/xYT6rRliNjs">full videos</a>.  This is just a provacative montage.  This video is no longer allowed on youtube, so you know it's good.  Enjoy.
@@ -236,7 +246,7 @@
             <div class="post4advanced">
                 <h2>It says it doesn't work on the box</h2>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/hhpieuf9OILt/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/hhpieuf9OILt/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/hhpieuf9OILt/"></iframe></template>
                 </div>
                 <p>
                     Perfect example of the insanity of masking children when the box of the masks from costco specifically says they don't stop the spread of diseases.
@@ -244,7 +254,7 @@
             </div>
             <div class="post2advanced">
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/PQWlgFYeXlk/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/PQWlgFYeXlk/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/PQWlgFYeXlk/"></iframe></template>
                 </div>
                 <p>
                     Man does an excellent job showing how commercials are social engineering.
@@ -253,18 +263,18 @@
             <div class="post1advanced">
                 <h2>Nuremberg Code</h2>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/Q9mXV2oZhzRT/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/Q9mXV2oZhzRT/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/Q9mXV2oZhzRT/"></iframe></template>
                 </div>
                 <p>
                     Man does a great job explaining our rights.
                 </p>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/PyDIHi2IQ4vc/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/PyDIHi2IQ4vc/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/PyDIHi2IQ4vc/"></iframe></template>
                 </div>
                 <p>Man in Canada says he had more freedom under communist regime.</p>
                 <img class="picfloat" src="static/img/1984v2.jpg" alt="1984">
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/vqGj7PIEtjJ6/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/vqGj7PIEtjJ6/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/vqGj7PIEtjJ6/"></iframe></template>
                 </div>
                 <p>
                     I think this gentleman also does a great job summing up the whole thing.
@@ -277,15 +287,15 @@
                 Try playing both of this videos at the same time directly from my site, then going full screen on the gameplay.
                 </p>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/1CurN2Fg-2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=1CurN2Fg-2E">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/1CurN2Fg-2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/J_kxAPWo6uQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=J_kxAPWo6uQ">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/J_kxAPWo6uQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
             </div>
             <div class="post1advanced">
                 <h2>Kobe</h2>
-                <div class="vid"><iframe width="100%" height="315" src="https://www.youtube.com/embed/hnfhp-5icP0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="vid"><a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=hnfhp-5icP0">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/hnfhp-5icP0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template></div>
                 <p>
                     2013 was my favorite Kobe season ever.  The Chris Paul trade was vetoed and we got Nash and Howard and they both got injured so Kobe just willed us to the playoffs by himself.
                 </p>
@@ -294,7 +304,7 @@
             <div class="dark3">
                 <h2>How to survive playing f6</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/_2-rflzE24c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=_2-rflzE24c">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/_2-rflzE24c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     In my latest rapid game I combat 1.b3 e5 with 2.Bb2 f6
@@ -304,7 +314,7 @@
             <div class="post4advanced">
                 <h2>Metacoincidence</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/uYroJvi9pR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=uYroJvi9pR8">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/uYroJvi9pR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     In this quick video I break down the coindences of how I wrote a story about a super AI that calls itself "Meta", then facebook changes it's name to meta, then I get recruited by Meta.
@@ -317,7 +327,7 @@
                     Jordan Maxwell is a genius.
                 </p>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/mRSN1p6oyc6Z/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/mRSN1p6oyc6Z/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/mRSN1p6oyc6Z/"></iframe></template>
                 </div>
                 <p>
                     He makes some amazing connections between the bible and the stars.
@@ -421,7 +431,7 @@
             <div class="dark3">
                 <h2>Zero Knowledge Proofs</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/fOGdb1CTu5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=fOGdb1CTu5c">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/fOGdb1CTu5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     I like these videos where they explain an advanced concept on multiple levels.
@@ -450,13 +460,13 @@
                     In this video Mark Dice does a great job of pretending to be against anti-vaxxers and getting real people to sign a petition to arrest the unvaccinated against covid-19.
                 </p>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/TBRLUGMeBL4/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/TBRLUGMeBL4/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/TBRLUGMeBL4/"></iframe></template>
                 </div>
                 <p>
                     Here's a poor gentleman trying to get justice for his lack of informed consent and his debilitating injuries from the vaccine and the 10 people he saw per day as a pharmacist who were also vaccine-injured.  He also mentions how it's a religion now and he's not allowed to question the side-effects and no doctor has the balls to tell him what's wrong with him when his foot is paralyzed by the vaccines effects.
                 </p>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/wNNUYZbE8Fie/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/wNNUYZbE8Fie/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/wNNUYZbE8Fie/"></iframe></template>
                 </div>
                 <h3>1.23.22</h3>
                 
@@ -464,13 +474,13 @@
                     Unfortunately, He's another story of a healthy young boy dying shortly after the vaccine and the coroner said his death cause is unaccertained.  However the parents got a second opinion from a pathologist who has to remain anonymous for fear of losing his job but that pathologist said the vaccine did kill the boy.
                 </h4>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/cHJ7UgK7nWzZ/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/cHJ7UgK7nWzZ/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/cHJ7UgK7nWzZ/"></iframe></template>
                 </div>
             </div>
             <div class="post2advanced">
                 <h2>Why Humans need Oxygen and why masks can cause hypoxia</h2>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/DUHGy5tyufSF/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/DUHGy5tyufSF/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/DUHGy5tyufSF/"></iframe></template>
                 </div>
                 <p>
                     Love this lady's channel.
@@ -494,13 +504,13 @@
                         She was found dead, probably assassinated
                     </p>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/zt8xhgTx8g2c/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/zt8xhgTx8g2c/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/zt8xhgTx8g2c/"></iframe></template>
                 </div>
                 <p>
                     I like her speech because she is like a military general recruiting in a war.  We are at war to anyone with eyes to see it.
                 </p>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/GmoVeWChdjCV/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/GmoVeWChdjCV/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/GmoVeWChdjCV/"></iframe></template>
                 </div>
                 <p>
                     Here is a video with a girl complaining about masks to the schoolboard in an amusing way.
@@ -572,7 +582,7 @@
             <div class="post">
                 <h3>Maxism</h3>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/IqpK0GXkjH2J/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/IqpK0GXkjH2J/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/IqpK0GXkjH2J/"></iframe></template>
                 </div>
                 <p>
                     I like this guy, Ice Age Farmer, but it's on someone else's channel and has a stupid title.
@@ -608,14 +618,14 @@
                     And if you think the world hasn't lost their mind here's this, a video of horrified mothers reading sexually explicit material that their children brought home from school to the school board.
                 </p>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/8l3YgdS0Gve8/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/8l3YgdS0Gve8/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/8l3YgdS0Gve8/"></iframe></template>
                 </div>
                 <h3>1.17.22</h3>
             </div>
             <div class="post2advanced">
                 <h2>Marvel Predictive Programming</h2>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/A2Fj3ZhVMJFY/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/A2Fj3ZhVMJFY/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/A2Fj3ZhVMJFY/"></iframe></template>
                 </div>
                 <p>
                     I listened to a fascinating podcast today you can listen to <a target="_blank" href="https://www.bitchute.com/video/A2Fj3ZhVMJFY/">here</a>
@@ -662,7 +672,7 @@
                     Just let the unvaccinated be the control group, nationally, globally.  Just leave us alone.  Leave our kids alone.  Stop mandating masks in schools and abusing children with covid protocols.
                 </p>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/iF5wQV8UtpSe/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/iF5wQV8UtpSe/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/iF5wQV8UtpSe/"></iframe></template>
                 </div>
                 <h4>Mandela Effect</h4>
                 <p>
@@ -688,7 +698,7 @@
             <div class="dark">
                 <h2>Scale</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/fsQw-HYObTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=fsQw-HYObTw">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/fsQw-HYObTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     My scale was delived by Amazon.  I am 235 pounds and I think my goal is 205 so I'll try to lose that 30 pounds in 3 months.
@@ -784,7 +794,7 @@
                         A men.
                     </p>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/YvmCSCSKP8Gv/"></iframe>
+                    <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/YvmCSCSKP8Gv/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/YvmCSCSKP8Gv/"></iframe></template>
                 </div>
                 <p>
             
@@ -805,7 +815,7 @@
                 <div class="post1advanced">
                     <h2>NFL Playoff Predictionns</h2>
                     <div class="vid">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/J0XBF1SOCgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=J0XBF1SOCgs">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/J0XBF1SOCgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                     </div>
                     <p>
                         I did an exercise like this myself recently and I agree with everything this guy says up until the championship game matchups.
@@ -931,14 +941,14 @@
                         I'm gonna choose love, and not be afraid.  I love freedom, and although at times I feel like Winston Smith writing in my alcove, I'm really just a guy writing on his laptop.
                     </p>
                     <div class="vid">
-                        <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/UnbgxtcQfXuE/"></iframe>
+                        <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/UnbgxtcQfXuE/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/UnbgxtcQfXuE/"></iframe></template>
                     </div>
                     <h3>1.6.22</h3>
                 </div>
                 <div class="post">
                     <h2>2022 Disclaimer</h2>
                     <div class="vid">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/0fTsWU6ME-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=0fTsWU6ME-4">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/0fTsWU6ME-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                     </div>
                     <p>
                         This was orignally designed as a one year project to work on my coding skills.
@@ -974,7 +984,7 @@
                 </div>
                 <div class="dark">
                     <div class="vid">
-                        <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/dVQoxBFHUV3d/"></iframe>
+                        <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/dVQoxBFHUV3d/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/dVQoxBFHUV3d/"></iframe></template>
                     </div>
                     <p>
                         I like this new channel I found on bitchute because it's christian but real at the same time.  Alien Wars.  This guy believes in Jesus I can tell.
@@ -984,7 +994,7 @@
                 
                 <div class="post">
                     <div class="vid">
-                        <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/zxMnD8PNgNOX/"></iframe>
+                        <a class="load-blog-player" style="--player-height:360px" href="https://www.bitchute.com/video/zxMnD8PNgNOX/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/zxMnD8PNgNOX/"></iframe></template>
                     </div>
                     <p>
                         I like this guy's angle.  He reminds me of Jonathan Adampants.
@@ -996,7 +1006,7 @@
                 </div>
                 <div class="dark">
                     <div class="vid">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/dDDulcqQEuc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=dDDulcqQEuc">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/dDDulcqQEuc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                     </div>
                     <p>
                         Just love this song right now
@@ -1008,7 +1018,7 @@
                         Federal Reserve is Private
                     </h2>
                     <div class="vid">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/9yb2lgDYDGM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=9yb2lgDYDGM">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/9yb2lgDYDGM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                     </div>
 
                     <p>Bill Cooper talks about the illegitimacy of the Federal Reserve.</p>
@@ -1024,7 +1034,7 @@
                     </h2>
                     <h3>01/30/21</h3>
                     <div class="vid2">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/P9e-Gl3gZ4Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=P9e-Gl3gZ4Y">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/P9e-Gl3gZ4Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                     </div>
                     <p>Explosives expert explains how to made a building implode.  (Hint, it's not by flying a jet into the top.)</p>
                     <p class="profound"> I recently rewatched this video and it is disturbing.  I don't fully adhere to the controlled demolition theory as I think anything is possible but I prefer the "no planes" theory which implies the buildings were destroyed by other means than simply planes.  This best explains why tower 7 fell without contacting a plane. I think this video is a good start to understanding that the official story is potentially a cover-up.  </p>
@@ -1038,7 +1048,7 @@
                     </h2>
                     <h3>01/30/21</h3>
                     <div class="vid">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Qf4I1ADAFXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=Qf4I1ADAFXY">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/Qf4I1ADAFXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                     </div>
                     <p>This guy talks about hollywood pedophilia and how to stop it.</p>
                     <p class="profound"> This was a great video unfortunately it's been removed but it's from a filmmaker who's face I still remember and he was accusing hollywood of pedophilia.  I could try to track it down but haven't gotten around to it yet. -1.5.22</p>
@@ -1049,7 +1059,7 @@
                     <h2>Reality</h2>
                     <h3>01.5.22</h3>
                     <div class="vid">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/2TKxVGpeecg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=2TKxVGpeecg">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/2TKxVGpeecg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                     </div>
                     <p>
                         I think he's hilarious and insightful.   He talks about the bullshit airbag recalls.  I remember mine causing me great distress and its funny to think about them doing it just to scare people or also to potentially outfit the car with some sort of chip.
@@ -1063,7 +1073,7 @@
                     <h2>Beast System</h2>
                     <h3>01/27/21</h3>
                     <div class="vid">
-                        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x1tyfbr" width="100%" height="100%" allowfullscreen > </iframe> </div>
+                        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <a class="load-blog-player" style="--player-height:100%;position:absolute;inset:0" href="https://www.dailymotion.com/video/x1tyfbr">Open Dailymotion player</a><template><iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x1tyfbr" width="100%" height="100%" allowfullscreen > </iframe></template> </div>
                     </div>
                     <p>
                         This was the first video where I heard Jonathan Adampants.  Later on I decided I wanted to hear more and discovered his full videos.  This is just a provacative montage.  This video is no longer allowed on youtube, so you know it's good.  Enjoy.
@@ -1076,7 +1086,7 @@
                     <h2>Dystopia</h2>
                     <h3>01/22/21</h3>
                     <div class="vid">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/MMFylHz8RF4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a class="load-blog-player" style="--player-height:315px" href="https://www.youtube.com/watch?v=MMFylHz8RF4">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/MMFylHz8RF4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                     </div>
                     
         
@@ -1130,5 +1140,64 @@
             
     </div>
     <script src="jann.js"></script>
+<script>
+(() => {
+    const slots = document.querySelectorAll('.load-blog-player');
+    let observer;
+
+    function load(slot, focusPlayer = false) {
+        const template = slot.nextElementSibling;
+        if (!slot.isConnected || !(template instanceof HTMLTemplateElement)) return;
+        observer?.unobserve(slot);
+        const player = template.content.firstElementChild.cloneNode(true);
+        if (!player.title) player.title = slot.textContent.replace('Open ', '');
+        slot.replaceWith(player);
+        template.remove();
+        if (focusPlayer) player.focus({ preventScroll: true });
+    }
+
+    // Keep the direct links usable before the first scroll and without JavaScript.
+    for (const slot of slots) {
+        slot.addEventListener('click', event => {
+            if (event.defaultPrevented || event.button !== 0 || event.ctrlKey ||
+                event.metaKey || event.altKey || event.shiftKey) return;
+            event.preventDefault();
+            load(slot, true);
+        });
+    }
+    if (!('IntersectionObserver' in window)) return;
+
+    // Navigation, restored scroll positions and layout shifts alone must not arm embeds.
+    let scrollIntent = false;
+    const listeners = new AbortController();
+    const options = { passive: true, capture: true, signal: listeners.signal };
+    function markIntent(event) {
+        if (event.isTrusted) scrollIntent = true;
+    }
+    window.addEventListener('wheel', markIntent, options);
+    window.addEventListener('touchmove', markIntent, options);
+    window.addEventListener('pointerdown', event => {
+        // Includes scrollbar dragging and middle-button autoscroll.
+        if (event.pointerType === 'mouse') markIntent(event);
+    }, options);
+    window.addEventListener('keydown', event => {
+        if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key)) {
+            markIntent(event);
+        }
+    }, options);
+    window.addEventListener('scroll', () => {
+        if (!scrollIntent) return;
+        listeners.abort();
+        observer = new IntersectionObserver(entries => {
+            for (const entry of entries) {
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.1) load(entry.target);
+            }
+        }, { threshold: 0.1 });
+        for (const slot of slots) {
+            if (slot.isConnected) observer.observe(slot);
+        }
+    }, options);
+})();
+</script>
 </body>
 </html>
