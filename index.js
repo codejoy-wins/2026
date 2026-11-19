@@ -253,6 +253,7 @@ const smartSongs = [
     { title: "Sudoku",              file: "Sudoku.mp3" },
     { title: "Fire Girl",           file: "Fireg.mp3" },
     { title: "Bleeding Out (extended version)", file: "bleedingoutpro.mp3" },
+    { title: "Bleeding Out", file: "bleedingOut.mp3" },
     { title: "Seven Eleven 117",    file: "711117.mp3" },
     { title: "Eternalized",         file: "Eternalized.mp3" },
     { title: "Liquified",           file: "liquified.mp3" },
@@ -265,8 +266,8 @@ const smartSongs = [
     { title: "Cold Soul",           file: "coldSoul.mp3" },
     { title: "Madly",           file: "Madly.mp3" },
     { title: "Join My F***ing Team",           file: "JMFT2.mp3" },
-    { title: "Mewthree Rap (Jeep Open Verse)",           file: "mewthreeRap1.m4a" },
-
+    { title: "Mewthree",           file: "mewthreeRap1.m4a" },
+    { title: "Lightyears",           file: "lightyears.mp3" },
 
 
   ];

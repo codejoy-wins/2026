@@ -3,18 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hard Mode - Pilot Episode</title>
+  <meta name="description" content="Hard Mode — an Interbeautiful screenplay. Read Season 0, Episodes 0–2: The Ampule, The Man on the Stairs, and What Survives.">
+  <title>Hard Mode | Season 0 · Episodes 0–2</title>
   <link rel="stylesheet" href="static/css/hardmode.css">
-  <link rel="shortcut icon" type="image/png" href="static/img/mj3.png"/>
+  <link rel="icon" type="image/png" href="static/img/mj3.png">
+  <!-- Page-specific additions: no changes to static/css/hardmode.css required. -->
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Georgia, serif; line-height: 1.75; background: #fefefe; color: #222; margin: 0; padding: 2rem; }
+    main { max-width: 800px; margin: auto; }
+    h1, h2, h3 { color: #222; font-weight: bold; margin-top: 2rem; }
+    h1 { font-size: clamp(2.5rem, 8vw, 4rem); text-align: center; margin-bottom: .5rem; letter-spacing: .06em; }
+    h2 { font-size: clamp(1.55rem, 5vw, 1.8rem); text-align: center; line-height: 1.35; margin-bottom: 1.5rem; }
+    h3 { font-size: 1.15rem; border-bottom: 1px solid #aaa; padding-bottom: .4rem; line-height: 1.5; }
+    p { margin: 0 0 1rem; }
+    strong { font-weight: bold; color: #000; }
+    blockquote { margin: 1.5rem; padding-left: 1rem; border-left: 4px solid #999; font-style: italic; color: #555; }
+    a { color: #225b54; text-decoration: none; text-underline-offset: .2em; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 3px solid #8b3a50; outline-offset: 4px; border-radius: 3px; }
+    img { max-width: 100%; height: auto; }
+    .series-header { padding: 1rem 0 2rem; }
+    .series-subtitle { text-align: center; color: #555; font-size: 1rem; }
+    .episode-index { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin-top: 2rem; }
+    .episode-index a { display: flex; flex-direction: column; justify-content: center; gap: .35rem; padding: 1rem; border: 1px solid #d6dedb; border-radius: 8px; background: #f5f8f6; }
+    .episode-index a:hover { background: #eaf1ed; }
+    .episode-index span { font: 700 .75rem/1.5 system-ui, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #53665e; }
+    .episode { scroll-margin-top: 1rem; padding: 1rem 0 2rem; }
+    .episode + .episode { border-top: 2px solid #b5c4bc; margin-top: 2rem; }
+    .episode-art { display: block; width: 100%; height: auto; border-radius: 8px; margin: 1.5rem auto 2.5rem; }
+    .pilot-art { max-width: 720px; }
+    .rook-art { max-width: 460px; }
+    .dialogue { padding-left: 1.25rem; margin: 1.2rem 0; border-left: 2px solid #d5e0da; }
+    .dialogue > strong:first-child { font: 700 .85rem/1.7 system-ui, sans-serif; letter-spacing: .04em; color: #254b3d; }
+    .scene-break { border: 0; border-top: 1px solid #d8d8d8; max-width: 5rem; margin: 2.5rem auto; }
+    .episode-end { text-align: center; margin: 2.5rem 0 1rem; font-size: .9rem; letter-spacing: .08em; }
+    .episode-pagination { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; border-top: 1px solid #ddd; margin-top: 2rem; padding-top: 1rem; font: .9rem/1.5 system-ui, sans-serif; }
+    .episode-pagination a { display: inline-flex; align-items: center; min-height: 44px; }
+    #footer { text-align: center; color: #555; padding: 2rem 0 1rem; }
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      .episode-index { grid-template-columns: 1fr; gap: .5rem; }
+      .episode-index a { flex-direction: row; justify-content: flex-start; align-items: baseline; gap: 1rem; padding: .8rem 1rem; }
+      .episode-index span { flex-shrink: 0; }
+      .dialogue { padding-left: .85rem; }
+      blockquote { margin: 1.5rem .5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      body { padding: 0; color: #000; background: #fff; font-size: 11pt; }
+      .episode-index, .episode-pagination, #footer, .episode-art { display: none; }
+      .episode + .episode { break-before: page; border: 0; }
+      h2, h3 { break-after: avoid; }
+      .dialogue { break-inside: avoid; }
+    }
+  </style>
 </head>
 <body>
-  <main>
-    <h1><em>HARD MODE</em></h1>
-    <h2>Season 0, Episode 0: "The Ampule"</h2>
+  <main id="top">
+    <header class="series-header">
+      <h1><em>HARD MODE</em></h1>
+      <p class="series-subtitle">An Interbeautiful screenplay · Season 0</p>
+      <nav class="episode-index" id="episodes" aria-label="Choose an episode">
+        <a href="#episode-0"><span>Episode 0</span>The Ampule</a>
+        <a href="#episode-1"><span>Episode 1</span>The Man on the Stairs</a>
+        <a href="#episode-2"><span>Episode 2</span>What Survives</a>
+      </nav>
+    </header>
+<article class="episode" id="episode-0" aria-labelledby="episode-0-title"><h2 id="episode-0-title">Season 0, Episode 0: "The Ampule"</h2>
     <p><strong>Starring:</strong> Taron Egerton as Cael</p>
 
     <hr>
-    <img src="static/img/taron.jpg" alt="Taron">
+    <!-- <img src="static/img/taron.jpg" alt="Taron Egerton as Cael" class="episode-art pilot-art"> -->
+    <img src="static/img/HardMode.png" alt="Taron Egerton as Cael" class="episode-art pilot-art">
+
     <h3>COLD OPEN</h3>
     <p><strong>INT. MIAMI PENTHOUSE - NIGHT</strong><br>
     A neon-lit skyline glows through floor-to-ceiling windows. A luxurious party pulses with energy. CAEL (30s, charismatic, confident, effortlessly magnetic) glides through the space, drawing admiration without effort. Women flirt openly, men offer handshakes that linger just a moment too long.</p>
@@ -132,7 +195,7 @@
 <p>Cael is confused. She places a dossier before him.</p>
 
 <p><strong>MODEL (CONT’D)</strong> Your aptitude is astronomical. Innate capabilities others spend decades acquiring—you squander. Your life could uplift millions. But you’ve used it to benefit one.<br>
-<p>
+</p><p>
     Cael scoffs, ego bruised.
 </p>
 
@@ -150,7 +213,7 @@
 
 <strong>CAEL</strong> He sounds pathetic.<br><br>
 
-<strong>MODEL</strong> You'll earn the right to judge him—after you've been judged.  And just so we're clear, the only reason I'm here with you right now, instead of trying to comfort him myself, is because he wants it that way.</p>
+<strong>MODEL</strong> You'll earn the right to judge him—after you've been judged.  And just so we're clear, the only reason I'm here with you right now, instead of trying to comfort him myself, is because he wants it that way.
 
 <p>She slides an ampule across the table.</p>
 
@@ -170,7 +233,7 @@
 
 <p>Cael downs the ampule, MODEL rolls her eyes.<br>
 
-<p>Cael's eyes close slowly, heavily.</p>
+</p><p>Cael's eyes close slowly, heavily.</p>
 
 
     <hr>
@@ -196,9 +259,907 @@ Every attempt to regain control only increases his isolation and discomfort.</p>
     <p><strong>TEXT:</strong> "You are not lost. You are founder."</p>
 
     <p><strong>END OF EPISODE 0</strong></p>
+  <nav class="episode-pagination" aria-label="Navigation after Episode 0"><a href="#episodes">All episodes ↑</a><a href="#episode-1">Episode 1 →</a></nav></article>
+<article class="episode" id="episode-1" aria-labelledby="episode-1-title">
+<h2 id="episode-1-title">Season 0, Episode 1: “The Man on the Stairs”</h2>
+<img class="episode-art " src="static/img/MaraEpisode1.png" alt="Mara, with cranberry streaks and an emerald dress, holding a flashlight beside the hooded founder as he works on a basement fuse box." loading="lazy" decoding="async">
+<h3>INT. CAEL’S APARTMENT — 2:13 A.M.</h3>
+<p>There were three things in Cael’s refrigerator.</p>
+<p>Mustard. Champagne. An envelope.</p>
+<p>He remembered buying two of them.</p>
+<p>He stood barefoot in the cold light, considering whether someone had broken into his apartment or whether he had finally become the sort of man who refrigerated his mail.</p>
+<p>The envelope read:</p>
+<p><strong>YOUR NEIGHBOR RETURNED THIS.</strong></p>
+<p>Inside was four hundred dollars.</p>
+<p>He had slipped the money under Mrs. Vale’s door six hours earlier, tucked into a folded takeaway menu. No signature. No lecture about financial independence.</p>
+<p>Just enough to keep her electricity on.</p>
+<p>Beneath the cash was a note in cramped handwriting.</p>
+<p><em>Paid it yesterday. You looked tired when I saw you. Buy some actual food.</em></p>
+<p>Cael stared at it.</p>
+<p>Then he looked up at the ceiling.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Was that part of the fucking test?</p>
+<p>The refrigerator hummed.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Compelling rebuttal.</p>
+<p>Someone knocked.</p>
+<hr class="scene-break">
+<h3>INT. APARTMENT HALLWAY — CONTINUOUS</h3>
+<p>The woman from the bar stood outside holding a paper bag.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Do you have a name, or does that compromise national enlightenment?</p>
+<p class="dialogue"><strong>WOMAN</strong><br>
+Mara.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+A real one?</p>
+<p class="dialogue"><strong>MARA</strong><br>
+One I answer to.</p>
+<p>She offered him the bag.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+Food.</p>
+<p>He didn’t take it.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You people have somewhat damaged the restaurant experience for me.</p>
+<p>Mara lowered the bag.</p>
+<p>For the first time since he’d met her, she appeared to have no prepared response.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+I want to meet him.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+I know.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Tonight.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+He’s downstairs.</p>
+<p>Cael glanced past her toward the elevator.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Of course he is.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+It’s broken. Take the stairs.</p>
+<hr class="scene-break">
+<h3>INT. STAIRWELL — MOMENTS LATER</h3>
+<p>On the landing between the second and third floors, a man knelt beside a disassembled stairlift.</p>
+<p>A small flashlight was held between his teeth. His screwdriver kept slipping.</p>
+<p>No white suit. No guards. No enormous window overlooking a civilization he was disappointed in.</p>
+<p>Just a man in an old black sweater trying to retrieve a screw from beneath a rail.</p>
+<p>Cael stopped three steps above him.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Tell me you’re the maintenance guy.</p>
+<p>The man removed the flashlight.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Tonight’s going badly enough without adding fraud.</p>
+<p>Cael looked back at Mara.</p>
+<p>She remained at the top of the stairs.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+This is him?</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+You sound like you paid for better seats.</p>
+<p>Cael descended one step.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You froze my accounts.</p>
+<p>The founder set down the screwdriver.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You interfered with my company. You recruited my girlfriend. You put something in my head—or took something out—and then sent me inspirational fucking stationery.</p>
+<p>A door opened on the landing above.</p>
+<p class="dialogue"><strong>MRS. VALE</strong><br>
+Some of us are trying to sleep.</p>
+<p>Cael looked up.</p>
+<p>The founder looked up.</p>
+<p>Mara took one quiet step backward.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Sorry, Mrs. Vale.</p>
+<p class="dialogue"><strong>MRS. VALE</strong><br>
+And stop upsetting the repairman.</p>
+<p>Her door closed.</p>
+<p>Cael turned back.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You’re enjoying this.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Parts of it.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Stand up.</p>
+<p>The founder stood.</p>
+<p>He was less imposing upright.</p>
+<p>Somehow, this made Cael angrier.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+I had a speech prepared.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+You can still—</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Don’t be accommodating. It’s revolting.</p>
+<p>Silence settled between them.</p>
+<p>At last, the founder nodded.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+All right.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Were you going to apologize?</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Yes.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Before or after I became grateful?</p>
+<p>That landed.</p>
+<p>Mara watched the founder carefully.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Before, I hope.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You don’t get to count intentions. Not with me.</p>
+<hr class="scene-break">
+<h3>INT. STAIRWELL — LATER</h3>
+<p>Cael sat on the third step. The founder sat on the landing.</p>
+<p>Between them lay the opened stairlift motor.</p>
+<p>Mara had gone downstairs to get coffee, leaving the paper bag beside Cael.</p>
+<p>He hadn’t touched it.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+She told me I could manifest my desired reality.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Mara believes—</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+I’m asking you.</p>
+<p>The founder rubbed a black streak of grease off his thumb. It spread.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+I think you’re unusually good at making people participate in what you want.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+That’s called having a company.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Sometimes.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+And the rest? The universe arranging itself around me?</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+I don’t know.</p>
+<p>Cael laughed once.</p>
+<p>There was no amusement in it.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+That is a magnificent thing to say after the drugs.</p>
+<p>The founder looked down.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Yes.</p>
+<p>For a moment, Cael felt the peculiar disappointment of hitting a door that was already open.</p>
+<p>He had wanted a tyrant.</p>
+<p>A tyrant would have made the next part easy.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Do you actually think you’re better than me?</p>
+<p>The founder considered this long enough to irritate him.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+At some things.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+There he is.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+And I’ve now made it very difficult to find out which ones.</p>
+<p>Cael glanced at the broken machine.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+We can eliminate electrical engineering.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Mechanical fault.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Then we can eliminate that.</p>
+<p>From downstairs came the sound of Mara laughing.</p>
+<hr class="scene-break">
+<p>The founder reached for the motor housing.</p>
+<p>Cael put a foot on it.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+If I beat you, what happens?</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+At what?</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Your thing. Judgment. Leadership. Whatever competition you’ve built where the trophy is having to worry about everyone.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+What do you think should happen?</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You work for me.</p>
+<p>Mara reappeared below them.</p>
+<p>The founder didn’t look toward her.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Possibly.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Your people follow my instructions.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+They’d have to decide that themselves.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Convenient.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Would you prefer I owned them?</p>
+<p>Cael lifted his foot off the housing.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+I’d prefer a straight answer.</p>
+<p>The founder leaned back against the wall.</p>
+<p>For the first time, he looked tired enough to be the man Mara had described crying in bed.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+If you can do this better, I want to help you do it.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+And who decides whether I can?</p>
+<p>No answer.</p>
+<p>Cael smiled.</p>
+<p>There it was.</p>
+<p>The hidden room beneath the cathedral.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You.</p>
+<p>Mara handed the founder a coffee.</p>
+<p>He didn’t take it.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You select the candidates. Design the ordeal. Interpret the results. Then decide whether someone’s finally worthy of replacing you.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+There are independent—</p>
+<p>The founder raised his hand, then stopped himself and lowered it.</p>
+<p>Mara noticed.</p>
+<p>So did Cael.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Finish.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+There are independent reviewers.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Who selected them?</p>
+<p>Mara held both coffees.</p>
+<p>The stairwell light went out.</p>
+<p>Nobody moved.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Very theatrical.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Motion sensor.</p>
+<p>Cael waved one hand.</p>
+<p>The light returned.</p>
+<hr class="scene-break">
+<h3>INT. STAIRWELL — 3:06 A.M.</h3>
+<p>The terms were written on the back of Mrs. Vale’s takeaway menu.</p>
+<p>Cael insisted on writing them himself.</p>
+<p>No more chemicals.</p>
+<p>No contact with his girlfriend through the organization.</p>
+<p>His money returned.</p>
+<p>Access to records concerning his recruitment.</p>
+<p>The founder read the list.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Some records contain other people’s identities.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Redact the names. Leave what they did.</p>
+<p>Mara crouched beside them.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+I can start the release tonight.</p>
+<p>Cael looked at her.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You could have done that before?</p>
+<p class="dialogue"><strong>MARA</strong><br>
+I could have requested it.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+That isn’t what I asked.</p>
+<p>She absorbed this.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+Yes.</p>
+<p>Cael handed her the pen.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Then you sign too.</p>
+<p>She did.</p>
+<p>The founder signed beneath her.</p>
+<p>Cael studied the signatures.</p>
+<p>They looked disappointingly like ordinary signatures.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Anything else?</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Yes. The next test is mine.</p>
+<p>Mara’s expression tightened.</p>
+<p>The founder waited.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You don’t get to know when it starts.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+All right.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Or what I’m measuring.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+All right.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+And if you lose, I want everyone who’s been through your program to hear about it.</p>
+<p>The founder held out his hand for the pen.</p>
+<hr class="scene-break">
+<h3>INT. STAIRWELL — 3:24 A.M.</h3>
+<p>Cael was almost back at his apartment when the stairlift made a grinding noise.</p>
+<p>Then a sharp electrical click.</p>
+<p>Then the founder said something that did not belong in cyberscripture.</p>
+<p>Cael stopped.</p>
+<p>Looked at his door.</p>
+<p>Looked down the stairs.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Have you checked the track?</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Yes.</p>
+<p>A pause.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Have you checked it competently?</p>
+<hr class="scene-break">
+<p>Five minutes later, Cael lay on the landing with one arm under the rail.</p>
+<p>The founder held the flashlight.</p>
+<p>Mara stood over them reading a maintenance manual on her phone.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+It says not to operate with the protective housing—</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+We’re not operating it.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+I’m enjoying having instructions.</p>
+<p>Cael felt something wedged behind the lower wheel.</p>
+<p>He worked it loose.</p>
+<p>A small blue plastic knight emerged between his fingers.</p>
+<p>Everyone looked at it.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Please tell me this isn’t a metaphor.</p>
+<p>The founder started laughing.</p>
+<p>He tried to stop.</p>
+<p>Failed.</p>
+<p>Cael sat up, holding the chess piece like evidence.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You dismantled the motor.</p>
+<p>The founder nodded.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+For a horse.</p>
+<p>The founder covered his face.</p>
+<p>Mara sat down on the stairs.</p>
+<p>Soon she was laughing too.</p>
+<p>Cael tried to maintain his contempt.</p>
+<p>It survived almost four seconds.</p>
+<hr class="scene-break">
+<h3>INT. THIRD-FLOOR LANDING — 3:51 A.M.</h3>
+<p>Mrs. Vale rode the repaired stairlift up from the second floor wearing a dressing gown and the severe expression of a queen dissatisfied with her procession.</p>
+<p>The three of them watched.</p>
+<p>At the top, she pressed the stop button.</p>
+<p class="dialogue"><strong>MRS. VALE</strong><br>
+You woke me up to demonstrate that you’ve finished waking me up.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+We needed to test it under—</p>
+<p class="dialogue"><strong>MRS. VALE</strong><br>
+Choose your next word carefully.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Realistic operating conditions.</p>
+<p>She looked at Cael.</p>
+<p class="dialogue"><strong>MRS. VALE</strong><br>
+You should be in sales.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Recovering.</p>
+<p>She rose, took the blue knight from his hand, and inspected it.</p>
+<p class="dialogue"><strong>MRS. VALE</strong><br>
+My grandson’s.</p>
+<p>Cael glanced at the founder.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Is he with you as well?</p>
+<p class="dialogue"><strong>MRS. VALE</strong><br>
+He’s six.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+That wasn’t a no.</p>
+<p>She went into her apartment.</p>
+<p>A moment later, the door opened again.</p>
+<p class="dialogue"><strong>MRS. VALE</strong><br>
+There’s soup. If you’re all finished being strange.</p>
+<hr class="scene-break">
+<h3>INT. MRS. VALE’S KITCHEN — BEFORE DAWN</h3>
+<p>Her kitchen was too small for four people.</p>
+<p>The founder sat on a folding chair. Mara’s knees pressed against a cupboard. Cael ate soup from a bowl with a chipped blue rim.</p>
+<p>Nobody discussed the future of civilization.</p>
+<p>Mrs. Vale talked about a tree the council intended to remove.</p>
+<p>The founder began suggesting an appeal.</p>
+<p>Mara asked whether anyone had inspected the roots.</p>
+<p>Cael asked who owned the land.</p>
+<p>Mrs. Vale placed her spoon down.</p>
+<p class="dialogue"><strong>MRS. VALE</strong><br>
+I was going to say it’s a shame. My husband planted it.</p>
+<p>They fell quiet.</p>
+<p class="dialogue"><strong>MRS. VALE</strong><br>
+You can let me finish before saving it.</p>
+<p>Outside, the first delivery truck rattled along the street.</p>
+<p>Cael looked at the founder across the little table.</p>
+<p>Without the dossier, without the voice on the telephone, without Mara explaining what his suffering meant, he was simply a man being corrected by an elderly woman.</p>
+<p>He listened.</p>
+<p>Cael found that harder to dismiss than anything he had said.</p>
+<hr class="scene-break">
+<h3>INT. CAEL’S APARTMENT — DAWN</h3>
+<p>At his door, Mara handed him a receipt.</p>
+<p>The release request. A reference number. Her signature.</p>
+<p>Something he could check.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+You’ll have the first records tomorrow.</p>
+<p>He nodded.</p>
+<p>The founder waited beside the stairs.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+When should I expect your test?</p>
+<p>Cael considered him.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Go home.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+That’s it?</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+For tonight.</p>
+<p>The founder began to speak, then apparently thought better of it.</p>
+<p>He left.</p>
+<p>Mara followed.</p>
+<p>Cael locked his door.</p>
+<p>He put the agreement on his desk, beside the returned four hundred dollars.</p>
+<p>Then he opened a notebook.</p>
+<p>At the top of a clean page, he wrote:</p>
+<p><strong>TEST 1</strong></p>
+<p>Below it:</p>
+<p><em>Can he leave something unfinished in someone else’s hands?</em></p>
+<p>Cael listened to the footsteps descending.</p>
+<p>They paused on the landing.</p>
+<p>For a moment, he expected them to come back.</p>
+<p>Instead, the front door opened.</p>
+<p>And closed.</p>
+<p>Cael added one word.</p>
+<p><em>Apparently.</em></p>
+<p>He went to bed before he could turn it into praise.</p>
+<p>For the first time in weeks, there was nothing waiting under his pillow.</p>
+<p>He checked anyway.</p>
+<p><strong>CUT TO BLACK.</strong></p>
+<p class="episode-end"><strong>END OF EPISODE 1</strong></p>
+<nav class="episode-pagination" aria-label="Navigation after Episode 1"><a href="#episode-0">← Episode 0</a><a href="#episodes">All episodes ↑</a><a href="#episode-2">Episode 2 →</a></nav>
+</article>
+<article class="episode" id="episode-2" aria-labelledby="episode-2-title">
+<h2 id="episode-2-title">Season 0, Episode 2: “What Survives”</h2>
+<img class="episode-art rook-art" src="static/img/RookEpisode2.png" alt="Detective Inez Rook in a raincoat outside the library at night, ready to question Cael." loading="lazy" decoding="async">
+<h3>INT. INTERBEAUTIFUL — RECORDS ROOM — NIGHT</h3>
+<p>The founder had been reading about himself for forty-seven minutes.</p>
+<p>He wasn’t enjoying it.</p>
+<p>Across the table, Cael watched him turn another page.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Anything good?</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Apparently I dislike surprises.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Whoever wrote that must be having a wonderful evening.</p>
+<p>The room was below a closed public library. Exposed pipes. Filing cabinets. An expensive scanner sitting on a desk repaired with a cheap metal bracket.</p>
+<p>The founder tapped a paragraph.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+I don’t remember approving this.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+That seems to be a recurring management issue.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+I remember approving your account freeze. Six hours. Last Thursday. They told me the outbound transfer was going to a compromised recipient.</p>
+<p>Cael’s expression changed.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+It was.</p>
+<p>The founder looked up.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Compromised doesn’t mean optional.</p>
+<p>He placed his phone on the table.</p>
+<p>A photograph showed a long brick building beside the water.</p>
+<p>The next showed the same building without its roof.</p>
+<p>The third showed a yellow excavator standing where the entrance had been.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+The Calder. Recording rooms downstairs. Rehearsal space above. Forty-three tenants. My father wired the original mixing desk.</p>
+<p>The founder set down the report.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+The owner died. His son wanted it sold. I had a purchase agreement, a deadline, and enough money to meet it.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+And the transfer failed.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+At four fifty-eight.</p>
+<p>Silence.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Your people restored access at ten. The seller had already accepted a backup offer. They started demolition yesterday.</p>
+<p>The founder looked at the photographs again.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Was anyone inside?</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+No.</p>
+<p>A small release of breath.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You don’t get to be that relieved. Nobody dying isn’t the same as nothing happening.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+I know.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+There were marks on a doorframe. My height. Every summer until I was sixteen.</p>
+<p>The founder slid the report away.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+I’m sorry.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+I can afford another building.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Yes.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+So don’t offer me one.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+I won’t.</p>
+<p>Somewhere overhead, water moved through an old pipe.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+I kept thinking I’d buy it when I had enough. Then I had enough, and I kept making more.</p>
+<p>The founder waited.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+I was finally doing it.</p>
+<hr class="scene-break">
+<p>Mara entered carrying three visitor badges and a sealed document pouch.</p>
+<p>She saw the photographs.</p>
+<p>Stopped.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+Cael—</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Did you know?</p>
+<p class="dialogue"><strong>MARA</strong><br>
+I knew about the purchase. I was told the deadline had been extended.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+By whom?</p>
+<p>She opened the pouch.</p>
+<p>A single sheet came out.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+That’s what I came down to ask.</p>
+<p>It was the freeze authorization.</p>
+<p>Beneath the founder’s signature:</p>
+<p><strong>RECIPIENT EXPOSURE CONFIRMED. NO IRREVERSIBLE CONSEQUENCES ANTICIPATED.</strong></p>
+<p>Cael read it twice.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Well. Good anticipation.</p>
+<p>The founder stood.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+We need the original assessment.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+I’ve requested it.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Who wrote it?</p>
+<p class="dialogue"><strong>MARA</strong><br>
+The field is blank.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Of course it is.</p>
+<p>The founder’s gaze remained on the page.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+No. That field can’t be blank.</p>
+<hr class="scene-break">
+<h3>INT. RECORDS ROOM — LATER</h3>
+<p>Mara went upstairs to retrieve the access logs.</p>
+<p>Cael stayed seated.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+How much do you actually remember?</p>
+<p>The founder turned toward him immediately.</p>
+<p>Something in his face opened.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Good question.</p>
+<p>Cael blinked.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You look pleased.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+You’re asking how it works.</p>
+<p>The founder pulled his chair closer.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+I remember making the original recordings. Ali had the phone. I remember wanting the proposal evaluated. Later, there was an operational period. That’s where the gaps are.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You remember volunteering, but not everything you volunteered for.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Exactly.</p>
+<p>He said it with such sudden enthusiasm that Cael almost smiled.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+They brought me back in nineteen days ago. Since then I’ve been reading records, meeting people, checking what survived without me.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+And signing things.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Too quickly.</p>
+<p>Cael glanced at the authorization.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Why would you trust an organization you couldn’t remember?</p>
+<p>The founder leaned forward.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Yes. That’s the question.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+I’m accusing you.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+You’re also right.</p>
+<p>He took a pen and wrote on the report’s cover.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+What are you writing?</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Your question.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You could answer it.</p>
+<p>The pen stopped.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+I wanted it to have worked.</p>
+<p>For a while, neither spoke.</p>
+<p>Then Cael reached across the table and turned the report toward himself.</p>
+<hr class="scene-break">
+<h3>INT. LIBRARY — MAIN FLOOR — NIGHT</h3>
+<p>Mara found Cael beside an empty display case.</p>
+<p>Inside it, a faded card read:</p>
+<p><strong>PLEASE ASK FOR ASSISTANCE.</strong></p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Does he do that with everyone?</p>
+<p class="dialogue"><strong>MARA</strong><br>
+What?</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Look delighted when they find a hole in him.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+When it’s a real question.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+What’s a fake one?</p>
+<p class="dialogue"><strong>MARA</strong><br>
+You asked me at the bar whether I believed in love at first sight.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+A subject of continuing research.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+You were looking at your reflection behind my head.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Multidisciplinary research.</p>
+<p>She almost laughed.</p>
+<p>He noticed.</p>
+<p>Of course he noticed.</p>
+<p>He stepped closer, lowered his voice.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+There you are.</p>
+<p>Mara held his gaze.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+There I am what?</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Off duty.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+No.</p>
+<p>The word was gentle enough to stop him more effectively than a rebuke.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+You’re attractive. You know what your voice does. You know exactly how long to look at someone before looking away.</p>
+<p>Cael waited.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+I work in an industry full of beautiful people who make attention feel like a gift. You’re very good. You’re not a new species.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+That sounded rehearsed.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+I’ve had time.</p>
+<p>He stepped back.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+And him?</p>
+<p>Her eyes moved toward the basement door.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+I loved him before there was a place like this to stand in.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Past tense?</p>
+<p class="dialogue"><strong>MARA</strong><br>
+No.</p>
+<p>That answer cost her something. She let him see it.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+There were evenings he told me things he no longer remembers telling anyone. I remember them alone now.</p>
+<p>Cael’s expression softened.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+But I can’t make what we had into a debt he owes me.</p>
+<p>The basement door opened.</p>
+<p>The founder appeared carrying two folders.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Mara. I need you with Cael tomorrow.</p>
+<p>She went still.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+I was supposed to go through the recordings with you.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+I know.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+Someone else can take him.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Someone else can play me a recording. You know the people who handled his case.</p>
+<p>She looked down at the badges in her hand.</p>
+<p>Then nodded.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+All right.</p>
+<p>The founder hesitated.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Thank you.</p>
+<p>He returned downstairs.</p>
+<p>Cael watched her compose herself.</p>
+<p>For once, he didn’t try to help by being charming.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+I’m going with you because this matters. If you want to know whether there could ever be anything between us, stop performing interest in it. Find out whether you actually care.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+And if I do?</p>
+<p class="dialogue"><strong>MARA</strong><br>
+Then you’ll have something worth doing regardless of my answer.</p>
+<hr class="scene-break">
+<h3>INT. RECORDS ROOM — 11:42 P.M.</h3>
+<p>The founder had covered the table with documents.</p>
+<p>Cael stood beside him.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Who bought the Calder?</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+A company called North Quay Holdings.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Who owns that?</p>
+<p>The founder looked up, visibly energized.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Yes. Pull that thread.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You’re like this when someone asks where the bathroom is, aren’t you?</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Depends how long they’ve been afraid to ask.</p>
+<p>Cael took the laptop.</p>
+<p>For several minutes, the only sounds were typing and the founder opening drawers.</p>
+<p>Then Cael stopped.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Oh.</p>
+<p>He rotated the screen.</p>
+<p>An investment company. A list of directors.</p>
+<p>At the top:</p>
+<p><strong>ADRIAN VOSS.</strong></p>
+<p>The founder didn’t recognize the name.</p>
+<p>Cael did.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+He offered to buy my company twice.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+What does he do?</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Buys things people can’t afford to lose.</p>
+<p>Mara came down the stairs.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+Voss underwrites three of our regional facilities.</p>
+<p>The founder looked at her.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+Through intermediaries. It’s in the funding review.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Which review?</p>
+<p class="dialogue"><strong>MARA</strong><br>
+The one you haven’t reached yet.</p>
+<p>Cael laughed quietly.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+He’s paying for the filing cabinets you’re using to investigate him.</p>
+<hr class="scene-break">
+<p>The access log contained a timestamp.</p>
+<p>The risk assessment had been amended eleven minutes before the founder signed it.</p>
+<p>The earlier version contained a warning:</p>
+<p><strong>MISSED TRANSFER MAY TRIGGER PERMANENT LOSS OF PURCHASE RIGHTS.</strong></p>
+<p>Someone had removed it.</p>
+<p>In its place, the assurance that no irreversible consequences were anticipated.</p>
+<p>The founder read both versions.</p>
+<p>Then read them again.</p>
+<p>His excitement was gone.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Still pleased I asked?</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Yes.</p>
+<p>He looked at Cael.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Very.</p>
+<p>Mara’s phone vibrated.</p>
+<p>A message appeared from the upstairs desk.</p>
+<p><strong>DETECTIVE HERE FOR CAEL. SAYS HE CALLED SIX TIMES.</strong></p>
+<p>Cael closed his eyes.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Right. I reported you people.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Sensible.</p>
+<hr class="scene-break">
+<h3>INT. LIBRARY — ENTRANCE — MIDNIGHT</h3>
+<p>Detective Inez Rook wore a raincoat and the expression of someone who had already worked tomorrow’s hours.</p>
+<p class="dialogue"><strong>ROOK</strong><br>
+You told dispatch a private organization was interfering with your finances.</p>
+<p>Cael looked back.</p>
+<p>The founder stood several paces away, holding the original authorization.</p>
+<p>Mara was beside him.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Never mind. It’s—</p>
+<p>Rook took out a notebook.</p>
+<p class="dialogue"><strong>ROOK</strong><br>
+If the next word is “complicated,” I’m going to need you to appreciate how little that narrows my profession.</p>
+<p>Cael glanced at the founder.</p>
+<p>The founder said nothing.</p>
+<p>Didn’t rescue him. Didn’t signal.</p>
+<p>Cael turned back.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Never mind my explanation of who was behind it.</p>
+<p>He held out the two assessments.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+I still want you to look at what happened.</p>
+<p>Rook read.</p>
+<p>Then she looked at the founder.</p>
+<p class="dialogue"><strong>ROOK</strong><br>
+Your signature?</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Yes.</p>
+<p class="dialogue"><strong>ROOK</strong><br>
+And you’re giving me this voluntarily?</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Yes.</p>
+<p class="dialogue"><strong>ROOK</strong><br>
+That’ll save us an annoying conversation.</p>
+<p>She handed Cael a card.</p>
+<p class="dialogue"><strong>ROOK</strong><br>
+Keep the originals. Send me copies. And stop withdrawing complaints before I arrive. It makes the drive feel personal.</p>
+<hr class="scene-break">
+<h3>INT. RECORDS ROOM — AFTER MIDNIGHT</h3>
+<p>Cael’s phone rang.</p>
+<p>He looked at the name.</p>
+<p>Then put it on speaker.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Adrian.</p>
+<p class="dialogue"><strong>VOSS (PHONE)</strong><br>
+I heard about the Calder.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+You bought it.</p>
+<p class="dialogue"><strong>VOSS</strong><br>
+One of my companies did.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Did one of your companies know my transfer wouldn’t clear?</p>
+<p>A small silence.</p>
+<p class="dialogue"><strong>VOSS</strong><br>
+You’re upset. Understandably. Come see me tomorrow. We should discuss what you’re getting involved in.</p>
+<p>The founder pulled a blank sheet toward him.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Tell me now.</p>
+<p class="dialogue"><strong>VOSS</strong><br>
+They’ve built something remarkable. People who cooperate without needing credit. People willing to abandon profitable positions because someone has shown them a better use for their abilities.</p>
+<p>Voss sounded almost admiring.</p>
+<p class="dialogue"><strong>VOSS</strong><br>
+Do you understand what that workforce is worth?</p>
+<p>Mara’s jaw tightened.</p>
+<p>The founder wrote one word.</p>
+<p>Cael read it.</p>
+<p><strong>ASK.</strong></p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Worth to whom?</p>
+<p>The founder looked up at him.</p>
+<p>Despite everything, that sudden brightness returned.</p>
+<p class="dialogue"><strong>VOSS</strong><br>
+To whoever can give it direction.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+They have a mission.</p>
+<p class="dialogue"><strong>VOSS</strong><br>
+They have several buildings with leases.</p>
+<p>Nobody moved.</p>
+<p class="dialogue"><strong>VOSS</strong><br>
+Tomorrow. Ten o’clock. You still know how to recognize an opportunity, I hope.</p>
+<p>The call ended.</p>
+<p>For a moment, the room seemed smaller.</p>
+<p>Then Mara opened her laptop.</p>
+<p class="dialogue"><strong>MARA</strong><br>
+I’m checking every lease.</p>
+<p>The founder nodded.</p>
+<p>Cael remained beside the phone.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+I spent ten years wanting him to think I was worth buying.</p>
+<hr class="scene-break">
+<h3>INT. LIBRARY — BEFORE DAWN</h3>
+<p>They moved upstairs when the basement became too cold.</p>
+<p>Mara called the regional offices.</p>
+<p>The founder sorted copies for Rook.</p>
+<p>Cael began contacting the Calder’s former tenants.</p>
+<p>At the seventh call, someone answered.</p>
+<p>He stepped away.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Yeah. It’s me. Listen, I can’t get the building back.</p>
+<p>A pause.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+No. I’m not calling to explain why.</p>
+<p>He looked at the library’s unused meeting rooms.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+How many of you still need somewhere to work?</p>
+<p>Across the room, the founder watched him.</p>
+<p>Cael covered the phone.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Don’t look so fucking pleased. I haven’t asked permission yet.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+Neither have I.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+Who owns this place?</p>
+<p>The founder grinned.</p>
+<p>Cael pointed at him.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+It’s a practical question. Control yourself.</p>
+<hr class="scene-break">
+<p>By morning, they had three appointments, a list of threatened facilities, and seventeen people willing to help recover what remained of the Calder’s community.</p>
+<p>The building was gone.</p>
+<p>Cael didn’t forgive the founder.</p>
+<p>He did pull a chair up beside him.</p>
+<p class="dialogue"><strong>CAEL</strong><br>
+I don’t want a position where I have to wait for you to notice something’s wrong.</p>
+<p>The founder turned a fresh page.</p>
+<p class="dialogue"><strong>FOUNDER</strong><br>
+What do you need?</p>
+<p>Cael thought.</p>
+<p>A real thought, allowed to take its time.</p>
+<p>Then he began.</p>
+<hr class="scene-break">
+<h3>INT. VOSS’S OFFICE — MORNING</h3>
+<p>High above the river, Adrian Voss watched demolition footage on a silent screen.</p>
+<p>His assistant stood in the doorway.</p>
+<p class="dialogue"><strong>ASSISTANT</strong><br>
+Cael declined the meeting.</p>
+<p>Voss paused the video.</p>
+<p class="dialogue"><strong>VOSS</strong><br>
+Has he joined them?</p>
+<p class="dialogue"><strong>ASSISTANT</strong><br>
+We don’t know.</p>
+<p class="dialogue"><strong>VOSS</strong><br>
+Find out whether he’s asked for a title.</p>
+<p class="dialogue"><strong>ASSISTANT</strong><br>
+Why?</p>
+<p>Voss studied the frozen image of the excavator.</p>
+<p class="dialogue"><strong>VOSS</strong><br>
+If he wants a title, we can still afford him.</p>
+<p><strong>CUT TO BLACK.</strong></p>
+<p class="episode-end"><strong>END OF EPISODE 2</strong></p>
+<nav class="episode-pagination" aria-label="Navigation after Episode 2"><a href="#episode-1">← Episode 1</a><a href="#episodes">All episodes ↑</a></nav>
+</article>
   </main>
-  <div id="footer">
-        <a href="index.html">Jann Software 2026 &copy;</a>
-    </div>
+  <footer id="footer"><a href="index.html">Jann Software 2026 &copy;</a></footer>
 </body>
 </html>

@@ -346,6 +346,9 @@ h1 a{
     font-size: larger;
     padding-bottom: 7vw;
 }
+.post1advanced h3{
+    color:white;
+}
 .post111advanced{
     border-radius: 1ch;
     padding: 3vw;
