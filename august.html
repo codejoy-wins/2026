@@ -10,6 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="static/img/mj3.png"/>
 
+<style>
+.load-blog-player {
+    display: flex; align-items: center; justify-content: center; width: 100%;
+    height: var(--player-height); box-sizing: border-box;
+    color: #f5dfac; background: #202321; border: 1px solid #877448;
+    border-radius: .4em; font: 500 .95rem/1.4 system-ui, sans-serif;
+    text-decoration: underline; text-underline-offset: .2em;
+}
+.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac879; }
+</style>
 </head>
 <div id="nav">
     <div class="option"><a href="alien.html">DJ Aliens</a></div>
@@ -49,7 +59,7 @@
             <div class="god">
                 <h2>Eschuchar Musica</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/CXmOCB5GjZs?si=WqMxGVCf7s5FteUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/CXmOCB5GjZs?si=WqMxGVCf7s5FteUQ" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/CXmOCB5GjZs?si=WqMxGVCf7s5FteUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     Trying to rank up in chess and it's so hard!  I'm about 1900 right now.  High is 2134.  Trying to get an alltime high.
@@ -58,7 +68,7 @@
             <div class="god">
                 <h2>War on Who?</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/OZekBA9g40I?si=iikthSWtQCdqChVn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/OZekBA9g40I?si=iikthSWtQCdqChVn" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/OZekBA9g40I?si=iikthSWtQCdqChVn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     I'm not nearly as brash as this guy is but it's a valuable much-needed perspective when someone actually calls out the bullshit agenda in our entertainment.
@@ -75,7 +85,7 @@
                 <h2>Dark Spine</h2>
                 <div class="vid">
                     <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/WbvC1HiiMUY?si=f-R31IcT9UWiCK8j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/G1wV5d4H7eI?si=n4Wb4LUkVUWsjrwq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/G1wV5d4H7eI?si=n4Wb4LUkVUWsjrwq" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/G1wV5d4H7eI?si=n4Wb4LUkVUWsjrwq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     By the time you realize we're fighting, <span class="king">the knife's already in your neck.</span>
@@ -85,7 +95,7 @@
             </div>
             <div class="postblack">
                 <h2>Pivot</h2>
-                <audio controls src="static/audio/hometown.mp3"></audio>
+                <audio preload="none" controls src="static/audio/hometown.mp3"></audio>
                 <img class="picfloatmedium" src="static/img/iSky2.png" alt="IintheSky">
                 <p>
                     In a devastating display of stupidity, I just accidentally deleted my entire Unreal Engine Shock Rifle Project.
@@ -104,7 +114,18 @@
                 <p>
                     I also have some cool ideas for resource management with Dark Matter as the primary resource and dark matter converters to convert dark matter into the more niche resources, such as lava, you can otherwise harvest from the map more efficiently.
                 </p>
-                <div id="viper"></div>
+                
+    <div class="vid">
+    <a class="load-blog-player" href="https://www.youtube.com/embed/bxoy1Cd93fk?si=a9moFxHNZqSDpktc" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/bxoy1Cd93fk?si=a9moFxHNZqSDpktc"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe></template>
+    </div>
+    
                 <p>
                     These images are just GPT-5 concept images, but my actual game I spent about 10 hours yesterday preparing all of the data structures for.  As soon as I have something visually compelling, I'll share it with you.  Till next time, universe.
                 </p>
@@ -151,12 +172,12 @@
                 <p>
                     I pronounce it "Ec Nare a lot" which sounds like "I care a lot"
                 </p>
-                <audio controls src="static/audio/ifYou.mp3"></audio>
+                <audio preload="none" controls src="static/audio/ifYou.mp3"></audio>
                 <h3>8.2.22+</h3>
             </div>
             <div class="god">
                 <h2>Hip Hop Artificial Intelligence</h2>
-                <audio src="static/audio/EminemCrazy_ai.mp3" controls></audio>
+                <audio preload="none" src="static/audio/EminemCrazy_ai.mp3" controls></audio>
                 <p>
                     Shady in a time machine.
                 </p>
@@ -167,7 +188,7 @@
             <div class="purplenew">
                 <h2>Cancer Theory - Adampants </h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Qw9HJ47aQ5c?si=LNq8rdkfdtjveobZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/Qw9HJ47aQ5c?si=LNq8rdkfdtjveobZ" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/Qw9HJ47aQ5c?si=LNq8rdkfdtjveobZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
                     <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/Qw9HJ47aQ5c?si=DO9j1JuqQ5SaboJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
                 </div>
                 <!-- <div class="vid">
@@ -184,7 +205,7 @@
             <div class="dark3">
                 <h2>The Secret to Greatness (Post of the Month)</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/1RjRBb7gHeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/1RjRBb7gHeg" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/1RjRBb7gHeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                     <p>
                         "The secret to greatness is progress." - Ryan Holliday.  I love this little video by Ryan, a philosophy author, because one cannot be great without first making progress.  Therefore if I focus on progress, I don't have to worry about greatness.  It will just come.  Tom Brady is the epitome of progress.  He is great because he works hard and tries to get better every day.  Same with Kobe Bryant or any great athlete.  All great athletes are focused on their progress.  
@@ -199,7 +220,7 @@
                         Sometimes my blog posts are not very good or well thought out, like my last one, and sometimes I'm just writing to write, or sharing a clip I found, like this one, as if it's a facebook status. (I don't have facebook right now).  But, other times I really have something important to share, and it is carefully planned and just dying to come out of me into the world.  I hope you enjoy those types of posts when you explore my blog.  A couple that come to mind are "Luciferianism 101" where I break down what satanists actually believe philosophically, and "Second Grade" where I stop trying to convince the reader of conspiracies and instead move on to what it all means if you actually embrace it.
                     </p>
                     <div class="vid">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/0V_Pso2HM10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a class="load-blog-player" href="https://www.youtube.com/embed/0V_Pso2HM10" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/0V_Pso2HM10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                     </div>
                     <p>
                         This vide is so on point.  "If I wanted to follow the mob I wouldn't have become a philsopher"                    </p>
@@ -217,7 +238,7 @@
             <div class="post1advanced">
                 <h2>My Cod Commentary Meta Mr Beast Video</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/YHPE0pegTWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/YHPE0pegTWE" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/YHPE0pegTWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     Mr Beast used to have call of duty gameplay going while he talked about stuff in his videos and so I thought I'd try that out.
@@ -233,7 +254,7 @@
             <div class="post2">
                 <h2>MrBeast Savage Level 9000</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/pJSbLk-Iixc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/pJSbLk-Iixc" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/pJSbLk-Iixc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     Today I was studying Mr Beast's old youtube videos to see when they started to get good and this video was hilarious.
@@ -243,7 +264,7 @@
             <div class="post1advanced">
                 <h2>Chess</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/uD7EJ2s0TWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/uD7EJ2s0TWw" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/uD7EJ2s0TWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     I beat a 2140 with black.  My highest rated victory.
@@ -289,7 +310,7 @@
                     They wouldn't let me say "white blood cell" because "blood" is prohibited.
                 </p>
                 <div class="vidnormal">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/QAOfGCPSumU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/QAOfGCPSumU" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/QAOfGCPSumU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <h3>8.15.22</h3>
             </div>
@@ -335,7 +356,7 @@
                 <p>
                     "A blue Pikachu using thunderbolt"
                 </p>
-                <audio controls src="static/audio/AllForYou.mp3"></audio>
+                <audio preload="none" controls src="static/audio/AllForYou.mp3"></audio>
                 <h3>8.11.22</h3>
             </div>
             <div class="purplenew">
@@ -394,7 +415,7 @@
             <div class="post1advanced">
                 <h2>Algo Practice and Step 12</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/WxT84mPO8Y8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/WxT84mPO8Y8" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/WxT84mPO8Y8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>I try to explain how I solved my most recent algorithm.</p>
                 <p>
@@ -475,7 +496,7 @@
             <div class="post2">
                 <h2>You either get it or you don't</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/KKo7ppq-RK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/KKo7ppq-RK0" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/KKo7ppq-RK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                     <p>
                         I subscribed to this chick's channel because I once saw a video by her explaining the crisis of masculinity and I thought it was cool seeing a girl speak up in our defense.  
@@ -513,7 +534,7 @@
                     </p>
                     <h4>David Icke</h4>
                     <div class="vid">
-                        <div class="ifw-player" data-video-id="611ccee4967c1c5a869aae38"></div><script src="https://infowarsmedia.com/js/player.js" async></script>
+                        <button type="button" class="load-blog-player" style="--player-height:315px">Load video</button><template><div class="ifw-player" data-video-id="611ccee4967c1c5a869aae38"></div></template><template class="widget-script"><script src="https://infowarsmedia.com/js/player.js" async></script></template>
                     </div>
                     <p>
                         You may have forgotten about David Icke because he's been censored from facebook and youtube, or maybe you consider him a crackpot because he used to talk about Reptilians, but if you make it through the cheesy ad at the beginning of this video, you realize he is a modern day einstein.  His description of reality is breathtaking.  He makes perfect sense.  He's eloquent.  It's just a shame people put him into a box when he actually is such an articulate and brilliant guy.
@@ -628,7 +649,7 @@
                     If the vaccine was safe and effective they wouldn't need to say that every 5 seconds.
                 </p>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/ZSqOgDhinYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/ZSqOgDhinYI" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/ZSqOgDhinYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     Ask the league lawyer what he thinks but I think any law that makes distinctions between unvaccinated individuals and vaccinated individuals is a dangerous precident for discrimation.  It will lead to medical tyranny, where you have to "Take your joy" like in the brilliant indie game "We Happy Few"  You don't want to live in a world where you're ordered to take certain medicines.  That's a dictatorship.
@@ -638,7 +659,7 @@
             <div class="purplenew">
                 <h2>Little things</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Y8ZZS0qrVNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/Y8ZZS0qrVNw" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/Y8ZZS0qrVNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>Really like this short talk from Michael Phelps.  It never occurred to me that he wasn't just the best swimmer and won all the golds.  First he had to set out to accomplish something no one else would even try.</p>
                 <h3>08/16/2021</h3>
@@ -705,14 +726,14 @@
             </div>
             <div class="dark">
                 <h2>California</h2>
-                <iframe class="song" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1103910685&color=%238c9cb4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maxwelljann" title="Maxwell Jann" target="_blank" style="color: #cccccc; text-decoration: none;">Maxwell</a> · <a href="https://soundcloud.com/maxwelljann/california" title="California" target="_blank" style="color: #cccccc; text-decoration: none;">California</a></div>
+                <a class="load-blog-player" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1103910685&amp;color=%238c9cb4&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true" style="--player-height:300px">Open SoundCloud track</a><template><iframe class="song" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1103910685&color=%238c9cb4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></template><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maxwelljann" title="Maxwell Jann" target="_blank" style="color: #cccccc; text-decoration: none;">Maxwell</a> · <a href="https://soundcloud.com/maxwelljann/california" title="California" target="_blank" style="color: #cccccc; text-decoration: none;">California</a></div>
                 <p>New song I actually like</p>
                 <h3>08/10/2021</h3>
             </div>
             <div class="post1advanced">
                 <h2>Perfection</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/64CbxyOds6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/64CbxyOds6s" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/64CbxyOds6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>In my last post I blamed myself for the smell but it's clear now that it's some sort of dead animal inside of my bedroom wall.  I am going to use this experience to never take scent for granted again.  I have vowed to myself to keep my bedroom henceforth smelling like a paradise.  I slept on the couch last night and I have given up trying to spruce up the smell.  I need the apartment people to come in and fix it.  I'm basically living in the living room now, but the girls are out of town so it's not a big deal.</p>
                 <p>
@@ -725,7 +746,7 @@
             </div>
             <div class="post2advanced">
                 <h2>Smells like an Idiot</h2>
-                <iframe class="song" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1101051718&color=%238c9cb4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maxwelljann" title="Maxwell Jann" target="_blank" style="color: #cccccc; text-decoration: none;">Maxwell</a> · <a href="https://soundcloud.com/maxwelljann/idiot" title="Idiot" target="_blank" style="color: #cccccc; text-decoration: none;">Idiot</a></div>
+                <a class="load-blog-player" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1101051718&amp;color=%238c9cb4&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true" style="--player-height:300px">Open SoundCloud track</a><template><iframe class="song" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1101051718&color=%238c9cb4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></template><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maxwelljann" title="Maxwell Jann" target="_blank" style="color: #cccccc; text-decoration: none;">Maxwell</a> · <a href="https://soundcloud.com/maxwelljann/idiot" title="Idiot" target="_blank" style="color: #cccccc; text-decoration: none;">Idiot</a></div>
                 <p>
                     New song...  my room smells terrible and I'm trying to make it smell better.
                 </p>
@@ -752,7 +773,7 @@
             <div class="dark3">
                 <h2>Candace Owens is the shit</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/QBf3lwjqvgo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/QBf3lwjqvgo" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/QBf3lwjqvgo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>I really like Candace Owens because she makes sense and calls out the brainwashing in our society and schools.</p>
                 <h3>
@@ -762,7 +783,7 @@
             <div class="post1advanced">
                 <h2>Almost Pro</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/qAtzMLXskuU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/qAtzMLXskuU" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/qAtzMLXskuU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     I really enjoy winning in chess and winning in call of duty.  These activities are extremely engrossign and competitive but also easy to do, thanks to online gaming.  If I want to play some one in my level in chess in real life I need to drive to Old Agoura to play this Russian who is better than me, or I'd have to travel to a tournament of some kind.
@@ -774,7 +795,7 @@
                     I truly enjoy these 2 activities but I think I'd like to get good at something else.  I'm not actually the best ever in cod, I just had GOAT on my mind that day because of a Quantum of Conscience podcast I was listening to.
                 </p>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/LXmGCyHhO5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/LXmGCyHhO5E" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/LXmGCyHhO5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <h3>08/04/21</h3>
             </div>
@@ -833,7 +854,7 @@
             <div class="post1advanced">
                 <h2>Vaccine Treason</h2>
                 <div class="vid">
-                    <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/TZmPFzWEZSst/"></iframe>
+                    <a class="load-blog-player" href="https://www.bitchute.com/embed/TZmPFzWEZSst/" style="--player-height:360px">Open BitChute video</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/TZmPFzWEZSst/"></iframe></template>
                 </div>
                 <p>
                     I know of no reason why the vaccine treason should ever be forgot.
@@ -869,5 +890,71 @@
     </div>
     <script src="nerves.js"></script>
 
+<script>
+(() => {
+    const slots = document.querySelectorAll('.load-blog-player');
+    let observer;
+
+    function load(slot, focusPlayer = false) {
+        const template = slot.nextElementSibling;
+        if (!slot.isConnected || !(template instanceof HTMLTemplateElement)) return;
+        observer?.unobserve(slot);
+        const player = template.content.firstElementChild.cloneNode(true);
+        if (!player.title) player.title = slot.textContent.replace('Open ', '');
+        const widget = template.nextElementSibling;
+        slot.replaceWith(player);
+        if (widget?.matches('template.widget-script')) {
+            const script = document.createElement('script');
+            script.src = widget.content.firstElementChild.src;
+            script.async = true;
+            widget.replaceWith(script);
+        }
+        template.remove();
+        if (focusPlayer) player.focus({ preventScroll: true });
+    }
+
+    // Keep the direct links usable before the first scroll and without JavaScript.
+    for (const slot of slots) {
+        slot.addEventListener('click', event => {
+            if (event.defaultPrevented || event.button !== 0 || event.ctrlKey ||
+                event.metaKey || event.altKey || event.shiftKey) return;
+            event.preventDefault();
+            load(slot, true);
+        });
+    }
+    if (!('IntersectionObserver' in window)) return;
+
+    // Navigation, restored scroll positions and layout shifts alone must not arm embeds.
+    let scrollIntent = false;
+    const listeners = new AbortController();
+    const options = { passive: true, capture: true, signal: listeners.signal };
+    function markIntent(event) {
+        if (event.isTrusted) scrollIntent = true;
+    }
+    window.addEventListener('wheel', markIntent, options);
+    window.addEventListener('touchmove', markIntent, options);
+    window.addEventListener('pointerdown', event => {
+        // Includes scrollbar dragging and middle-button autoscroll.
+        if (event.pointerType === 'mouse') markIntent(event);
+    }, options);
+    window.addEventListener('keydown', event => {
+        if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key)) {
+            markIntent(event);
+        }
+    }, options);
+    window.addEventListener('scroll', () => {
+        if (!scrollIntent) return;
+        listeners.abort();
+        observer = new IntersectionObserver(entries => {
+            for (const entry of entries) {
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.1) load(entry.target);
+            }
+        }, { threshold: 0.1 });
+        for (const slot of slots) {
+            if (slot.isConnected) observer.observe(slot);
+        }
+    }, options);
+})();
+</script>
 </body>
 </html>

@@ -11,6 +11,16 @@
     <link rel="shortcut icon" type="image/png" href="static/img/mj3.png"/>
 
 
+<style>
+a.load-blog-player {
+    display: flex; align-items: center; justify-content: center; width: 100%;
+    height: var(--player-height); box-sizing: border-box;
+    color: #f5dfac; background: #202321; border: 1px solid #877448;
+    border-radius: .4em; font: 500 .95rem/1.4 system-ui, sans-serif;
+    text-decoration: underline; text-underline-offset: .2em;
+}
+a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac879; }
+</style>
 </head>
 <div id="nav">
     <div class="option"><a href="alien.html">DJ Aliens</a></div>
@@ -51,7 +61,7 @@
                 <h2>2026 Chess</h2>
                 <!-- <img class="pic" src="static/img/board.png" alt="icyboard"> -->
                 <div class="chess2">
-                    <iframe id="14853717" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="https://www.chess.com/emboard?id=14853717"></iframe><script nonce="chesscom-diagram">window.addEventListener("message",e=>{e['data']&&"14853717"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+37}px`)});</script>
+                    <a class="load-blog-player" href="https://www.chess.com/emboard?id=14853717" style="--player-height:150px">Open chess board</a><template><iframe id="14853717" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="https://www.chess.com/emboard?id=14853717"></iframe></template><script nonce="chesscom-diagram">window.addEventListener("message",e=>{e['data']&&"14853717"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+37}px`)});</script>
                 </div>
                 <p>
                     I like this chess game I played today to get back to 2000 practically.  
@@ -119,7 +129,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
             <div class="post2advanced">
                 <h2>The King of the Concrete Jungle</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/a5RUbAP3xlQ?si=1yIrY1BvjS5GbYj9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/a5RUbAP3xlQ?si=1yIrY1BvjS5GbYj9" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/a5RUbAP3xlQ?si=1yIrY1BvjS5GbYj9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
                 </div>
                 <img class="picfloatsmall" src="static/img/33maxwell.jpg" alt="max">
                 <p>
@@ -200,7 +210,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
                 <h2>Killjoy Returns!</h2>
                 <div class="vid">
                     <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/VsrbpvyTblA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/NTTJL81zNOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/NTTJL81zNOE" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/NTTJL81zNOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <h3>Diamond Shotty Sniper Gameplay - Cold War PS4</h3>
                 <p>Theater mode now allows me to upload to youtube directly</p>
@@ -210,7 +220,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
             <div class="post1advanced">
                 <h2>I can fly</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/XaOAznEXn08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/XaOAznEXn08" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/XaOAznEXn08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <h3>04/30/2021</h3>
             </div>
@@ -218,7 +228,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
                 <h2>Elam</h2>
                 <h3>04/30/2021</h3>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/-N4jf6rtyuw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/-N4jf6rtyuw" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/-N4jf6rtyuw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     Gnarles Barkley has a song called Crazy.  Almost everybody has heard it.  But there is a difference between hearing it, and living it.
@@ -246,7 +256,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
                     I called myself Elam, because I was in a state of rebellion.  I realized that the enemy of the state was man.  This evil society is deprived of real men.  It's been so stamped out of us we don't even know what a real man is anymore.  
                 </p>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/UzonUof2GQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/UzonUof2GQ4" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/UzonUof2GQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     Here is a video of a girl explaining the crisis of men today.  Testosterone and sperm counts are pathetic.  This girl is smart and I would say she has a clue, but any measurement of society without taking into account the grand conspiracy and false reality is incomplete, so I will assist her.
@@ -315,7 +325,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
             <div class="post1advanced">
                 <h2>Vous</h2>
                 <div class="vid">
-                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1038914098&color=%23edd714&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maxwelljann" title="Maxwell Jann" target="_blank" style="color: #cccccc; text-decoration: none;">Maxwell</a> · <a href="https://soundcloud.com/maxwelljann/vous" title="Vous" target="_blank" style="color: #cccccc; text-decoration: none;">Vous</a></div>
+                    <a class="load-blog-player" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1038914098&amp;color=%23edd714&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true" style="--player-height:300px">Open SoundCloud track</a><template><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1038914098&color=%23edd714&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></template><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maxwelljann" title="Maxwell Jann" target="_blank" style="color: #cccccc; text-decoration: none;">Maxwell</a> · <a href="https://soundcloud.com/maxwelljann/vous" title="Vous" target="_blank" style="color: #cccccc; text-decoration: none;">Vous</a></div>
                 </div>
                 <p>I took french so I could write songs in french and this is the result!</p>
                 <h3>04/29/2013</h3>
@@ -324,7 +334,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
             <div class="post2">
                 <h2>LLP Limited Liability Person</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/PaiUk_YebB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/PaiUk_YebB4" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/PaiUk_YebB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>In this 5 minute video, I discuss the implications of LLC's on spirituality</p>
                 <p>I turn it off by accident after 5 mintues, but I think I've made my point by then.</p>
@@ -343,7 +353,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
             <div class="dark3">
                 <h2>Coding for Smarties</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/rwTo5UwQtRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/rwTo5UwQtRY" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/rwTo5UwQtRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <h3>04/22/21</h3>
             </div>
@@ -364,7 +374,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
                     <img src="static/img/vanity.jpg" alt="vanity" class="pic">
                 </div>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/hCxcBQls_Uc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/hCxcBQls_Uc" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/hCxcBQls_Uc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     I first saw this video of a man passing the bar on my linkedIn Newsfeed on mute.  I liked it so much that I decided to repost it but I never actually listened to it until today.  The mother yells, "Hallelujah, thank you Jesus!" and I think that's really cool giving credit to God.
@@ -522,7 +532,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
                         Anyway, I heard an excellent presentation today the QOC (quatum of conscience) recommended.  I'll include it here:
                     </p>
                     <div class="vid">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/2szYLjPFYVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a class="load-blog-player" href="https://www.youtube.com/embed/2szYLjPFYVA" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/2szYLjPFYVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                     </div>
                     <p>
                         This video is similar to a blog post I already made about the narrow gate but he makes some astronomically brilliant parallels between faith in Jesus and faith in the Vaccine.
@@ -567,7 +577,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
                 <h2>Advanced Chess Lesson</h2>
                 <h3>04/18/2021</h3>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/dqd2LsjI3a0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/dqd2LsjI3a0" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/dqd2LsjI3a0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     In this video I analyze my most recent game on lichess.org against a 1900 player.
@@ -670,7 +680,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
                     Happy birthday to my sister, Melissa.  Today I proposed a new type of news feed with <a href="news.html">elamahpla.com/news</a> and I wrote a news story on vaccine passports.
                 </p>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/UGgvgKE0n8o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/UGgvgKE0n8o" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/UGgvgKE0n8o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     I'm really thrilled Russell Brand is making these videos and can see through the smokescreen so many are befuddled by.
@@ -716,7 +726,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
                 </p>
                 <h4>Will Smith</h4>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/EnUS1XFasWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/EnUS1XFasWc" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/EnUS1XFasWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     Will Smith has a great quote that if you decide what's going to happen the universe will get out of your way like a river going around a rock.
@@ -729,7 +739,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
             <div class="post2">
                 <h2>Lying</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/09c7REWe-rU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/09c7REWe-rU" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/09c7REWe-rU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>New Song!  I think it's one of my best ever.</p>
                 <h3>04/12/2013</h3>
@@ -738,7 +748,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
             <div class="post">
                 <h2>Spaghetti Monster and CTMU</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/uDVjorcsDsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/uDVjorcsDsU" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/uDVjorcsDsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>The philosophy of Censorship and the smartest man in the world </p>
                 <h3>04/10/2013</h3>
@@ -802,7 +812,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
             <div class="post">
                 <h2>Banned!!!</h2>
                     <div class="vidsuper">
-                        <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/KMS8oAgYBjrs/"></iframe>
+                        <a class="load-blog-player" href="https://www.bitchute.com/embed/KMS8oAgYBjrs/" style="--player-height:360px">Open BitChute video</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/KMS8oAgYBjrs/"></iframe></template>
                     </div>
                     <p>I had my video removed by youtube!!!!  I'm so honoured.  I'd like to thank the academy....  so here is a video of the video, I'm guessing my channel will soon be banned.  I defeated the Russian in chess by the way, and then I blew a winning endgame in the third game.</p>
                 <h3>04/06/21</h3>
@@ -831,7 +841,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
             <div class="dark">
                 <h2>Photoshop</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Eg7vEV5woSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/Eg7vEV5woSk" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/Eg7vEV5woSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                     <p>This music video is just a still image but animated.  It's so cool it's why I learned photoshop and I'd like to be able to do that for my own songs</p>
                 <h3>04/04/21</h3>
@@ -866,7 +876,7 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
             <div class="gold">
                 <h2>Pure Gold</h2>
                 <div class="vid">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/zxz0NtbUzCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/zxz0NtbUzCg" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/zxz0NtbUzCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
                     This video from Matt discusses Travelling to Hawaii during Covid and being forced to quarantine in a hotel room even when you're not sick.  
@@ -897,5 +907,64 @@ fxe5 g5 35. Qxg5+ Kf8 36. Qf6+ Rf7 37. Rd8+ Qxd8 38. Qxd8# 1-0
     </div>
     <script src="nerves.js"></script>
 
+<script>
+(() => {
+    const slots = document.querySelectorAll('.load-blog-player');
+    let observer;
+
+    function load(slot, focusPlayer = false) {
+        const template = slot.nextElementSibling;
+        if (!slot.isConnected || !(template instanceof HTMLTemplateElement)) return;
+        observer?.unobserve(slot);
+        const player = template.content.firstElementChild.cloneNode(true);
+        if (!player.title) player.title = slot.textContent.replace('Open ', '');
+        slot.replaceWith(player);
+        template.remove();
+        if (focusPlayer) player.focus({ preventScroll: true });
+    }
+
+    // Keep the direct links usable before the first scroll and without JavaScript.
+    for (const slot of slots) {
+        slot.addEventListener('click', event => {
+            if (event.defaultPrevented || event.button !== 0 || event.ctrlKey ||
+                event.metaKey || event.altKey || event.shiftKey) return;
+            event.preventDefault();
+            load(slot, true);
+        });
+    }
+    if (!('IntersectionObserver' in window)) return;
+
+    // Navigation, restored scroll positions and layout shifts alone must not arm embeds.
+    let scrollIntent = false;
+    const listeners = new AbortController();
+    const options = { passive: true, capture: true, signal: listeners.signal };
+    function markIntent(event) {
+        if (event.isTrusted) scrollIntent = true;
+    }
+    window.addEventListener('wheel', markIntent, options);
+    window.addEventListener('touchmove', markIntent, options);
+    window.addEventListener('pointerdown', event => {
+        // Includes scrollbar dragging and middle-button autoscroll.
+        if (event.pointerType === 'mouse') markIntent(event);
+    }, options);
+    window.addEventListener('keydown', event => {
+        if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key)) {
+            markIntent(event);
+        }
+    }, options);
+    window.addEventListener('scroll', () => {
+        if (!scrollIntent) return;
+        listeners.abort();
+        observer = new IntersectionObserver(entries => {
+            for (const entry of entries) {
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.1) load(entry.target);
+            }
+        }, { threshold: 0.1 });
+        for (const slot of slots) {
+            if (slot.isConnected) observer.observe(slot);
+        }
+    }, options);
+})();
+</script>
 </body>
 </html>
