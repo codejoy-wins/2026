@@ -79,69 +79,65 @@
 </style>
 
 <style id="cyberscripture">
-/* The parchment contains the prose. Its following paragraphs sit on the night sky. */
+/* Rich ink on parchment, luminous ink on the night sky. */
 .white .texzt .innertextx {
-    --script-ink: #553710;
-    --script-lit: #70400a;
-    --script-glow: rgb(255 200 78 / 68%);
+    --ink: #542465;
+    --spectrum: #95234a, #893e12, #326225, #00625e, #294b97, #762781;
+    --spark: #99375d;
 }
 .white .texzt .innertextx ~ p {
-    --script-ink: #ebcf92;
-    --script-lit: #fff1ba;
-    --script-glow: rgb(255 191 67 / 62%);
+    --ink: #ebcf92;
+    --spectrum: #ff95b1, #ffd488, #adf79c, #85f4ef, #a8beff, #dda6ff;
+    --spark: #fff5eb;
 }
 .white .texzt :is(.innertextx p, .innertextx ~ p) a[href] {
-    /* Clear legacy link tiles while preserving the surrounding line's metrics. */
     display: inline !important;
     font: inherit !important;
-    color: var(--script-ink) !important;
-    padding: 0 !important;
+    font-weight: 700 !important;
+    color: var(--ink) !important;
+    background: none !important;
     margin: 0 !important;
+    padding: 0 !important;
     border: 0 !important;
-    border-radius: 0 !important;
     box-shadow: none !important;
-    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='92' height='5' viewBox='0 0 92 5'%3E%3Cpath d='M0 3L16 3 22 2 30 3 43 3 48 1.5 54 2.8 70 2.8 77 2 83 3 92 3' fill='none' stroke='%23ad8039' stroke-width='.85'/%3E%3Cpath d='M43 3l5-1.5 6 1.3m-6-1.3L50 .4' fill='none' stroke='%23f9ce68' stroke-width='.95'/%3E%3C/svg%3E") repeat-x left bottom / 5.75em 5px !important;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+    border-radius: 0 !important;
     text-decoration: none !important;
-    cursor: pointer;
-    transition: color 160ms ease, text-shadow 160ms ease;
-    animation: scripture-breathe 5s ease-in-out infinite;
 }
-@keyframes scripture-breathe {
-    0%, 100% { text-shadow: 0 0 0 transparent; }
-    50% { text-shadow: 0 0 .12em var(--script-glow); }
-}
-@media (hover: hover) and (pointer: fine) {
-    .white .texzt :is(.innertextx p, .innertextx ~ p) a[href]:hover {
-        animation: none;
-        color: var(--script-lit) !important;
-        text-shadow: 0 0 .13em #ffdc84, 0 0 .36em var(--script-glow);
-        text-decoration: underline solid #ca922e 1px !important;
-        text-underline-offset: .16em;
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+    .white .texzt :is(.innertextx p, .innertextx ~ p) a[href] {
+        /* Two identical bands make the loop seamless. */
+        background-image: linear-gradient(90deg, var(--spectrum), var(--spark), var(--spectrum), var(--spark), var(--wave-start)) !important;
+        --wave-start: #95234a;
+        background-size: 200% 100% !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        color: transparent !important;
+        animation: scripture-rgb-wave 5.6s linear infinite;
     }
+    .white .texzt .innertextx ~ p a[href] { --wave-start: #ff95b1; }
+    .white .texzt p:nth-of-type(3n) a[href] { animation-delay: -1.8s; }
+    .white .texzt p:nth-of-type(3n + 1) a[href] { animation-delay: -3.7s; }
 }
-.white .texzt :is(.innertextx p, .innertextx ~ p) a[href]:is(:active, :focus-visible) {
-    animation: none;
-    color: var(--script-lit) !important;
-    text-shadow: 0 0 .14em #ffdc84, 0 0 .36em var(--script-glow);
+@keyframes scripture-rgb-wave {
+    from { background-position-x: 100%; }
+    to { background-position-x: 0%; }
+}
+.white .texzt :is(.innertextx p, .innertextx ~ p) a[href]:is(:hover, :active, :focus-visible) {
+    filter: drop-shadow(0 0 .12em var(--spark));
 }
 .white .texzt :is(.innertextx p, .innertextx ~ p) a[href]:focus-visible {
-    outline: 2px solid currentColor;
+    outline: 2px solid var(--ink);
     outline-offset: 2px;
 }
 @media (prefers-reduced-motion: reduce) {
-    .white .texzt :is(.innertextx p, .innertextx ~ p) a[href] {
-        animation: none;
-        transition: none;
-    }
+    .white .texzt :is(.innertextx p, .innertextx ~ p) a[href] { animation: none; }
 }
 @media (forced-colors: active) {
     .white .texzt :is(.innertextx p, .innertextx ~ p) a[href] {
-        color: LinkText !important;
         background: none !important;
-        text-decoration: underline !important;
+        color: LinkText !important;
         animation: none;
+        filter: none;
     }
 }
 </style>
@@ -153,7 +149,7 @@
         </div>
         <div id="banner">
 
-                <a target="_blank" rel="noopener" onclick="cyberelam()" href="visual/index.html"><img class="tiny" src="static/img/one copy.png" alt="az"></a>
+                <a target="_blank" rel="noopener" onclick="cyberelam()" href="projects.html"><img class="tiny" src="static/img/one copy.png" alt="az"></a>
 
 
                 <button class="burger tiny right" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="rainbow-navigation">
@@ -349,7 +345,7 @@
                 I've been recruited by Google, Amazon, and Meta as a software engineer, but after failing to secure an offer, I struggled with my mental health.  I have not given up on that dream, and I plan on mastering those types of technical interviews.  I had a job for 6 months as a junior software engineer intern, but it was temporary and part-time, and I'm ready for my next role as a Software Engineer or Developer.  My current role as an Engineering Tech should allow me the ability to do software development for myself with AI.
             </p>
             <p>
-                I'm a competitive chess player in the 99.8th percentile online, and I feel like in order to reach the next level I have to take better care of my physical body.  Some of my opinions are controversial, and my hope is that by providing the full context of who I am, you can see that I'm a multidimensional person.  I'm also intentionally hiding some of my best content in plain sight, only available for those who seek it for the right reasons.  This website is like a portal. &nbsp; Jump in. 
+                I'm a competitive chess player in the 99.8th percentile online, and I feel like in order to reach the next level I have to take better care of my physical body.  Some of my opinions are controversial, and my hope is that by providing the full context of who I am, you can see that I'm a multidimensional person.  I'm also intentionally hiding some of my best content in plain sight, only available for those who seek it for the right reasons.  This website is like a portal. &nbsp; <a target="_blank" href="projects.html">Jump in.</a>
             </p>
             </div>
             <p>
