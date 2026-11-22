@@ -162,3 +162,24 @@ h1{
     text-align: center;
     opacity: .4;
 }
+
+/* Mobile & Tablet Fixed Background Override */
+@media (max-width: 850px) {
+    body {
+        background-image: none !important;
+        background-color: #08182a !important;
+    }
+
+    body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100lvh;
+        background: #08182a url('../img/skytemple.png') center top / cover no-repeat;
+        z-index: -2;
+        pointer-events: none;
+        transform: translateZ(0);
+    }
+}
