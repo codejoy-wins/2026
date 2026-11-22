@@ -191,9 +191,7 @@ nextTime();
 // let tokens = 0;
 let token = 0;
 function craig(){
-    if(token>0){
-      window.open('https://youtu.be/2vSqYtBBLkI?si=6-opTOogbijZoPhf', '_blank');
-    }
+    
     console.log("change for the good");
     let targetofteroh = document.getElementById("teroh");
     document.getElementById("teroh").classList.remove("parallaxnew");
@@ -203,8 +201,18 @@ function craig(){
     document.getElementById("outr").innerHTML=`
     <div class="parallax5117"></div>
     `;
+    document.getElementById("changed").innerHTML=`
+      <img class="picnewest" src="static/img/darkcom.png" alt="femaledj">
+    `
     freezefire();
+    if(token>0){
+      document.getElementById("changed").innerHTML=`
+      <img class="picnewest" src="static/img/lightcom.png" alt="femaledj">
+      `
+      window.open('https://youtu.be/2vSqYtBBLkI?si=6-opTOogbijZoPhf', '_blank');
+    }
     token++;
+
     // tokens >= 1 ?     window.location.href = "https://youtu.be/2vSqYtBBLkI?si=SiOHSWyLQdlA7VG_": console.log('token low');
     // tokens++;
 }
