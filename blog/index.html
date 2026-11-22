@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Stars Aren't Real · Max Jann’s Blog</title>
+  <link rel="icon" href="/static/img/mj3.png">
+  <style>
+    :root { color-scheme: dark; background: #101917; color: #f4eddd; font: 100%/1.6 system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { max-width: 44rem; margin: auto; padding: clamp(1.25rem, 5vw, 3rem); }
+    a { color: inherit; text-underline-offset: .2em; }
+    a:hover, summary:hover { color: #efd299; }
+    :focus-visible { outline: 2px solid #efd299; outline-offset: 3px; }
+    header { border-bottom: 1px solid #455148; padding-bottom: 1rem; }
+    header a { color: #dec18c; }
+    h1 { font: normal clamp(2.5rem, 8vw, 4.5rem)/1.08 Georgia, serif; margin: .8em 0 .25em; }
+    #months { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr)); gap: .5rem; margin: 1.4rem 0 2rem; }
+    #months a { border: 1px solid #49574d; padding: .65rem .9rem; text-decoration: none; }
+    #months a:hover, #months a:focus-visible { border-color: #dec18c; background: #1a2923; }
+    details { margin-block: 1rem; }
+    summary { cursor: pointer; padding-block: .4rem; }
+    article { font: 1.15rem/1.65 Georgia, serif; }
+    footer { margin-top: 2rem; border-top: 1px solid #455148; }
+    footer nav { display: flex; flex-wrap: wrap; gap: .6rem 1rem; }
+  </style>
+</head>
+<body>
+  <header><a href="/">Max Jann</a></header>
+  <main>
+    <h1>The Stars Aren't Real</h1>
+    <p>Choose a month from the blog archive.</p>
+    <nav id="months" aria-label="Blog months">
+      <a href="/blog/january/">January</a>
+      <a href="/blog/february/">February</a>
+      <a href="/blog/march/">March</a>
+      <a href="/blog/april/">April</a>
+      <a href="/blog/may/">May</a>
+      <a href="/blog/june/">June</a>
+      <a href="/blog/july/">July</a>
+      <a href="/blog/august/">August</a>
+      <a href="/blog/september/">September</a>
+      <a href="/blog/october/">October</a>
+      <a href="/blog/november/">November</a>
+      <a href="/blog/december/">December</a>
+    </nav>
+    <script>
+      // The archive links are in calendar order. January is index 0.
+      const months = document.querySelectorAll('#months a');
+      const currentMonth = months[new Date().getMonth()];
+      window.location.replace(currentMonth.href + location.search + location.hash);
+    </script>
+    <details>
+      <summary>Guidelines · January 20, 2021</summary>
+      <article aria-label="Guidelines">
+      <p>I can&#x27;t go to the movies.</p>
+      <p>There is a sign posted outside the local movie theater.</p>
+      <p>It says, &quot;We are closed until local and state government guidelines allow us to reopen.&quot;</p>
+      <p>Translation: this private company would like to be open, but your governor has forbid us to be open.  He has taken away your right to go to the movies, and our right to provide them to you.</p>
+      <p>Guidelines.  They call them guidelines.  They are not.  They are dictates.  They are unlawful.  They are an infringement on our rights.</p>
+      <p>Now I went to the theater and saw Tenet the moment it opened.  There were ridiculous rules like wearing mask at all times and having employees get you drinks in a separate section, but it was still enjoyable, to be free.  Even that wasn&#x27;t good enough for them.  They had to shut it down for what?  For my safety?  Or for total control of what the population can or cannot do with their free will?</p>
+      <p>It is disgusting that these governors can prevent us from going to the movies in the name of public safety. It&#x27;s a joke.  It&#x27;s a scam.  It&#x27;s a lie. If they care about health then why are we able to buy alcohol and tobacco?</p>
+      <p>They only care about control.  Dominion.</p>
+      </article>
+    </details>
+  </main>
+  <footer>
+    <details>
+      <summary>Explore Max Jann’s site</summary>
+      <nav aria-label="Explore">
+        <a href="/alien.html">DJ Aliens</a>
+        <a href="/story.html">Story</a>
+        <a href="/chess.html">Chess</a>
+        <a href="/web.html">Web Development</a>
+        <a href="/comic.html">Articles</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/welcome.html">Welcome</a>
+        <a href="/music.html">Music</a>
+        <a href="/education.html">Education</a>
+        <a href="/poem.html">Poem</a>
+        <a href="/home.html">Reviews</a>
+        <a href="/videos.html">Videos</a>
+        <a href="/art.html">Art</a>
+        <a href="/game.html">Game Design</a>
+      </nav>
+    </details>
+  </footer>
+</body>
+</html>

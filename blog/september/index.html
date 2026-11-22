@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="neo">MJ</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/static/img/mj3.png"/>
+
+<style>
+/* September archive styles */
+*{
+    /* font-family: 'Spectral', serif; */
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+}
+ul{
+    background-color: rgba(0, 255, 255, 0.608);
+    border-radius: 1.3vw;
+    padding: .4vw;
+}
+.mage{
+    color: black;
+    background-color: rgba(0, 0, 0, 0.469);
+    border-radius: 1ch;
+    padding: 2vw;
+    font-weight: bolder;
+}
+.mage p{
+    /* background-color: rgba(0, 145, 255, 0.767); */
+    /* background-color: rgba(0, 145, 255, 0.767); */
+    /* background: linear-gradient(135deg, #e6f7ff, #dff4fa); */
+    /* background: linear-gradient(135deg, #b3e5fc, #e6f7ff); */
+    /* background: linear-gradient(135deg, #ecf74f, #ee1c1c); */
+    background: linear-gradient(77deg, whitesmoke 0%, silver 25%, rgba(255, 0, 0, 0.492) 50%,  gold 75%, blue 100%);
+    padding: 2vw;
+    /* padding-left: 1vw;
+    padding-right: 1vw; */
+    border-radius: 2vw;
+    margin:1vw;
+}
+.post11advanced{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(55, 83, 211, 0.680);
+    color: black;
+    font-size: larger;
+    padding-bottom: 7vw;
+}
+.kanye{
+    color: gold;
+    font-weight: bold;
+}
+.kanye:hover{
+    color: crimson;
+}
+#heading p{
+    color: gold;
+    display: inline-block;
+}
+.chess{
+    max-width: 100%;
+}
+@keyframes elam{
+    20%{
+        color: wheat;
+    }
+    40%{
+        color: black;
+    }
+    60%{
+        color: wheat;
+    }
+    80%{
+        color: silver;
+    }
+}
+.month{
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border-radius: 2vw;
+}
+.month:hover{
+    padding-left: 3vw;
+    padding-right: 3vw;
+    background-color: rgba(0, 0, 0, 0.192);
+    border-radius: 2vw;
+    animation: elam 3s infinite;
+}
+
+#heading a{
+    color: wheat;
+}
+#heading a:hover{
+    color: silver;
+}
+#heading .month{
+    color: black;
+    animation: elam 10s infinite;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.vid4{
+    max-width: 100%;
+    width: 600px;
+}
+.vid2{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+}
+.vid20{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+}
+.vid{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+    height: 315px;
+    float: left;
+    padding-right: 1vw;
+}
+.vidnormal{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+    height: 315px;
+    padding-right: 1vw;
+}
+.vidbit{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+    height: 315px;
+    float: left;
+    padding-right: 4vw;
+}
+.vidbitchute{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+    height: 315px;
+    display: inline-block;
+    padding-right: 4vw;
+}
+.vidright{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+    height: 315px;
+    float: right;
+    padding-left: 1vw;
+}
+#heading{
+    text-align: center;
+}
+#collage{
+    height: auto;
+    width: 100%;
+}
+#reviews h2{
+    text-align: center;
+}
+#rapper{
+    margin: 0 auto;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+}
+#rapper p{
+    background-color: rgba(240, 248, 255, 0.692);
+    padding: 1vw;
+}
+.option{
+    display: inline-block;
+    padding: 1vw;
+}
+#nav{
+    /* background-color: rgba(185, 55, 211, 0.68); */
+    /* background-color: black; */
+    /* background-color: gold; */
+    background: linear-gradient(135deg, black, rgba(255, 217, 0, 0.891),red,white,blue, black);
+
+    width: 100%;
+    text-align: center;
+}
+#nav:hover{
+    cursor: cell;
+}
+#nav2{
+    background-color: rgb(43, 226, 156, 0.363);
+    width: 100%;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+a:hover{
+    color: wheat;
+    font-weight: bold;
+    cursor: cell;
+}
+.current{
+    font-weight: bold;
+    color: silver;
+}
+#poem{
+    text-align: center;
+    font-size: larger;
+}
+.purple{
+    color: purple;
+}
+.purplespecial{
+    color: rgb(66, 7, 66);
+}
+.pic{
+    max-width: 100%;
+}
+.picsmall{
+    max-width: 100%;
+    max-height: 35vw;
+    float: inline-end;
+}
+.pic11{
+    max-width: 100%;
+    max-height: 400px;
+}
+.pic13{
+    max-width: 100%;
+    max-height: 400px;
+    float: left;
+    padding-right: 1vw;
+}
+.pic2{
+    max-width: 100%;
+    max-height: 600px;
+}
+.pic3{
+    max-width: 100%;
+    float: left;
+    padding-right: 1vw;
+}
+.wtf{
+    width:2000px;
+}
+h1 a{
+    color: purple;
+}
+#reviews a{
+    color: purple;
+}
+#reviews a:hover{
+    color: black;
+}
+
+.post{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(55, 83, 211, 0.680);
+    color: black;
+    font-size: larger;
+}
+
+.royal{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(104, 18, 82, 0.68);
+    color: black;
+    font-size: larger;
+}
+.royal p{
+    background-color: rgba(250, 189, 250, 0.621);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.post33{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(8, 250, 0, 0.68);
+    color: black;
+    font-size: larger;
+}
+.ital{
+    font-style: italic;
+}
+.post33 h2{
+    color: black;
+}
+.post33 h3{
+    color: black;
+}
+.post33 p{
+    color: black;
+    background-color: rgba(243, 234, 243, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.post1advanced{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(55, 83, 211, 0.680);
+    color: black;
+    font-size: larger;
+    padding-bottom: 7vw;
+}
+.post2{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(211, 17, 17, 0.507); */
+    background-color: rgba(211, 17, 17, 0.56);
+    color: black;
+    font-size: larger;
+}
+.post4{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(204, 199, 199, 0.56); */
+    background-color: rgba(92, 92, 92, 0.507);
+    color: black;
+    font-size: larger;
+}
+.whitepost h3{
+    color: rgb(29, 78, 120);
+}
+.whitepost{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(204, 199, 199, 0.56); */
+    background-color: whitesmoke;
+    color: black;
+    font-size: larger;
+}
+.forest{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(211, 17, 17, 0.507); */
+    background-color: rgba(23, 98, 23, 0.56);
+    color: black;
+    font-size: larger;
+}
+.forest a{
+    color: aquamarine;
+}
+.postpurple{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(143, 17, 211, 0.56);
+    color: black;
+    font-size: larger;
+}
+.post2advanced{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(211, 17, 17, 0.65);
+    padding-bottom: 7vw;
+    /* color: silver; */
+    color: whitesmoke;
+    font-size: larger;
+}
+.post4advanced{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(45, 43, 134, 0.65); */
+    background-color: rgba(46, 44, 172, 0.65);
+
+    padding-bottom: 7vw;
+    color: silver;
+    font-size: larger;
+}
+.lucifer{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(221, 160, 221, 0.733); */
+    background-color: rgba(211, 17, 17, 0.65);
+    color: black;
+    font-size: larger;
+}
+.lucifer2{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(221, 160, 221, 0.733); */
+    background-color: rgba(54, 89, 204, 0.65);
+    color: black;
+    font-size: larger;
+}
+.postpink{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(221, 160, 221, 0.733); */
+    background-color: rgba(175, 6, 175, 0.87);
+
+
+    color: black;
+    font-size: larger;
+}
+.postnew{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(221, 160, 221, 0.733); */
+    /* background-color: rgba(138, 91, 138, 0.582); */
+    background-color: rgba(246, 4, 4, 0.603);
+    color: black;
+    font-size: larger;
+}
+.postnew p{
+    background-color: rgba(255, 255, 255, 0.795);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.post3{
+    color: wheat;
+    font-size: larger;
+    /* background-color: rgba(101, 255, 11, 0.5); */
+
+}
+.profound{
+    color: wheat;
+    font-style: italic;
+    font-weight: bolder;
+}
+.post2 .profound{
+    color: navy;
+}
+.reveal{
+    background-color: gold;
+}
+.protect{
+    border: solid 1vw gold;
+}
+.gold a{
+    background-color: black;
+    padding: .5vw;
+    border-radius: .5vw;
+}
+.close{
+    background-color: black;
+    color: white;
+}
+.blackgold a{
+    background-color: black;
+    padding: .5vw;
+    border-radius: .5vw;
+}
+.whitegold a{
+    background-color: gold;
+    color: black;
+    padding: .5vw;
+    border-radius: .5vw;
+}
+.gold{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: black;
+    color: black;
+    font-size: larger;
+}
+.blackgold{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: black;
+    color: black;
+    font-size: larger;
+}
+.whitegold h2{
+    color: goldenrod;
+}
+.whitegold{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(245, 245, 245, 0.611);
+    color: black;
+    font-size: larger;
+}
+.whitegold ul{
+background-color:goldenrod;
+}
+.gold p{
+    /* background-color: rgba(255, 192, 203, 0.521); */
+    background-color: gold;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.blackgold p{
+    color: gold;
+    background-color: black;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.whitegold p{
+    color:black;
+    background-color: white;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.dark p{
+    color: whitesmoke;
+    background-color: rgba(29, 1, 29, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+/* background-color: rgba(78, 166, 218, 0.746); */
+
+.purplenew p{
+    color: rgb(0, 0, 0);
+    background-color: rgba(235, 223, 223, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.purplenew a{
+    color: rgb(0, 162, 255);
+}
+.purplenew a:hover{
+    color: rgba(238, 130, 238, 0.829);
+}
+.dark{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(36, 10, 36, 0.582);
+    color: black;
+    font-size: larger;
+    padding-bottom: 6vw;
+}
+.purplenew{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(146, 22, 146, 0.582);
+    color: black;
+    font-size: larger;
+    padding-bottom: 6vw;
+}
+.dark3 p{
+    color: black;
+    background-color: rgba(243, 234, 243, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.dark3{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(2, 85, 85, 0.637);
+    color: black;
+    font-size: larger;
+    padding-bottom: 6vw;
+}
+ol{
+    background-color: rgba(245, 245, 245, 0.644);
+    padding: 2vw;
+}
+
+.postpurp p{
+    color: black;
+    background-color: rgba(243, 234, 243, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.postpurp{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(128, 0, 128, 0.651);
+    color: black;
+    font-size: larger;
+    padding-bottom: 6vw;
+}
+
+
+.dark2 p{
+    color: black;
+    background-color: rgba(243, 234, 243, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.dark2{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(36, 10, 36, 0.582);
+    color: black;
+    font-size: larger;
+    padding-bottom: 6vw;
+}
+.dark2advanced p{
+    color: black;
+    background-color: rgba(243, 234, 243, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.dark2advanced{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(36, 10, 36, 0.582);
+    color: black;
+    font-size: larger;
+    padding-bottom: 16vw;
+}
+.god{
+    max-width: 100%;
+}
+/* #girl:hover{
+    cursor: crosshair;
+} */
+.dark a{
+    color: wheat;
+}
+.dark a:hover{
+    color: red;
+}
+.vidsuper{
+    max-width: 100%;
+}
+.post p{
+    background-color: rgba(250, 189, 250, 0.621);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.post1advanced p{
+    background-color: rgba(250, 189, 250, 0.751);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.customsong{
+    background-color: gainsboro;
+    color: black;
+    display: inline-block;
+    border-radius: 2vw;
+    text-align: center;
+}
+.customsong h5 {
+    padding: 0;
+    margin: 0 auto;
+}
+.customsong2{
+    background-color: skyblue;
+    color: whitesmoke;
+    display: inline-block;
+    border-radius: 2vw;
+    text-align: center;
+}
+.customsong2 h5{
+    padding: 0;
+    margin: 0 auto;
+}
+.songx{
+    background-color: silver;
+    color: gold;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+.songxy{
+    background-color: purple;
+    color: plum;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+.songyy{
+    background-color: rgba(76, 7, 95, 0.566);
+    color: plum;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+.songy{
+    background-color: black;
+    color: gold;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+.post2 p{
+    /* background-color: rgba(0, 0, 0, 0.621); */
+    color: rgba(0, 0, 0, 0.621);
+    /* color: whitesmoke; */
+    background-color: rgba(226, 183, 236, 0.904);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.post4 h2,h3{
+    color: black;
+}
+.post4 a{
+    color: gold;
+    background-color: black;
+    padding: .2vw;
+    border-radius: .4vw;
+}
+.post4 a:hover{
+    color: black;
+    background-color: gold;
+    padding: .2vw;
+    border-radius: .4vw;
+}
+.post4 p{
+    /* background-color: rgba(0, 0, 0, 0.621); */
+    color: rgba(0, 0, 0, 0.621);
+    /* color: whitesmoke; */
+    background-color: rgba(251, 233, 255, 0.904);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.sky{
+    color: rgba(29, 162, 229, 0.904);
+}
+
+.whitepost p{
+    /* background-color: rgba(0, 0, 0, 0.621); */
+    color: white;
+    /* color: whitesmoke; */
+    /* background-color: rgba(82, 4, 100, 0.904); */
+    background-color: rgba(29, 162, 229, 0.904);
+
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.whitepost h2, h3{
+    color: black;
+}
+.whitepost .verse{
+    background-color: crimson;
+}
+.forest p{
+    /* background-color: rgba(0, 0, 0, 0.621); */
+    color: white;
+    /* color: whitesmoke; */
+    background-color: rgba(0, 0, 128, 0.798);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.postpurple p{
+    color: rgba(0, 0, 0, 0.621);
+    background-color: rgba(226, 183, 236, 0.904);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+/* background-color: rgba(51, 139, 255, 0.596); */
+.strux{
+    max-width: 100%;
+    padding: 1vw;
+}
+.post2advanced p{
+    background-color: rgba(0, 0, 0, 0.938);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.post2advanced a{
+    background-color: white;
+    padding: .4vw;
+    color: black;
+    border-radius: 2vw;
+}
+#heaven{
+    color: gold;
+}
+.post2advanced li{
+    /* background-color: white; */
+    padding: .9vw;
+    color: whitesmoke;
+    border-radius: 2vw;
+}
+.post2advanced ol{
+    background-color: rgb(173, 40, 0);
+    padding: 2vw;
+    color: black;
+    border-radius: 2vw;
+}
+.post2advanced a:hover{
+    padding: 1vw;
+}
+ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+.godlike{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(211, 192, 17, 0.65);
+    padding-bottom: 7vw;
+    color: silver;
+    font-size: larger;
+}
+.godlike p{
+    background-color: rgba(0, 0, 0, 0.938);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.godlike h2, h3{
+    color: black;
+}
+.post4advanced p{
+    background-color: rgba(149, 97, 160, 0.938);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.lucifer p{
+    background-color: rgba(245, 245, 245, 0.781);
+    padding: 1vw;
+    border-radius: 1vw;
+    color: black;
+}
+.lucifer ol{
+    background-color: blue;
+}
+.postpink p{
+    background-color: rgba(250, 189, 250, 0.621);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+h2, h3{
+    color: wheat;
+    text-align: right;
+}
+h4{
+    color: wheat;
+}
+.central{
+    float: left;
+    padding: 1vw;
+}
+.song{
+    max-width: 100%;
+    width: 40vw;
+}
+.special{
+    float: left;
+    color: purple;
+}
+.gamereview{
+    color: black;
+    max-width: 100%;
+}
+#reviews{
+    max-width: 100%;
+}
+#heading h1 a{
+    color: wheat;
+}
+#reviews h1 a{
+    color: wheat;
+}
+.noone{
+    color: wheat;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+.noone:hover {
+    color: blue;
+    cursor: cell;
+}
+
+.pic6{
+    max-width: 100%;
+    float: left;
+    width: 400px;
+    padding: 1vw;
+}
+.wbc{
+    max-width: 100%;
+    width: 500px;
+    float: right;
+}
+.pic8{
+    float: left;
+    max-width: 100%;
+    padding: 1vw;
+}
+.logo{
+    float: left;
+    max-width: 100%;
+    padding: 1vw;
+    width: 500px;
+}
+.logo2{
+    float: left;
+    max-width: 100%;
+    padding-right: 2vw;
+    padding-top: 2vw;
+    width: 400px;
+}
+.left{
+    text-align: left;
+}
+.post2 .rebuttal{
+    color: red;
+    background-color: black;
+}
+.pic10{
+    max-width: 100%;
+}
+#spoiler{
+    color: blue;
+}
+.company2{
+    padding: 2vw;
+    padding-bottom: 8vw;
+    text-align: left;
+}
+.company{
+    padding: 2vw;
+    text-align: left;
+}
+.chess{
+    max-width: 100%;
+    max-height: 420px;
+}
+.hidden{
+    display: none;
+}
+body{
+    background-image: url(/static/img/goldatom.jpg);
+    background-size: contain;
+}
+.pic100{
+    max-width: 100%;
+    float: left;
+    padding-right: 1vw;
+}
+.verse{
+    border: solid gold;
+}
+.gold .verse{
+    border:solid gold;
+    background-color: crimson;
+    font-weight: bold;
+}
+.blackgold .verse{
+    color: crimson;
+    border:solid gold;
+    /* background-color: crimson; */
+    font-weight: bold;
+}
+.whitegold .verse{
+    color: crimson;
+    border:solid gold;
+    /* background-color: crimson; */
+    font-weight: bold;
+}
+#lock{
+    vertical-align: auto;
+}
+.audiophile{
+    text-align: center;
+    /* background-color: rgba(128, 0, 128, 0.49); */
+    /* background: linear-gradient(135deg, #5969f4ae, #ce75fbc2); */
+    border-radius: 2vw;
+    /* display: inline-block; */
+
+}
+audio{
+    opacity: .3;
+    /* background-color: whitesmoke; */
+}
+.news{
+    /* color: gold; */
+    color: white;
+}
+.pic101{
+    max-width: 100%;
+    max-height: 600px;
+    float: left;
+    padding-right: 1vw;
+}
+.picfloat{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+}
+.piclessfloat{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+    opacity: .5;
+}
+.picmorefloat{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+}
+.picfloat2{
+    float: left;
+    max-width: 100%;
+}
+.picfloatnew{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+    max-height: 900px;
+}
+.picsmall{
+    max-width: 100%;
+    padding-right: 1vw;
+    max-height: 600px;
+}
+.picfloatsmall{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+    max-height: 600px;
+}
+.picfloatmedium{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+    max-height: 720px;
+}
+.picfloatlarge{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+    max-height: 800px;
+}
+.picfloatverysmall{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+    max-height: 350px;
+}
+.picfloatright{
+    float: right;
+    max-width: 100%;
+    padding-left: 1vw;
+}
+
+
+#cold:hover{
+    color: whitesmoke;
+}
+#blog .post #shell p{
+    padding: .3vw;
+    color: pink;
+    background-color: rgba(55, 84, 211, 0);
+}
+#blog .post #shell p:hover{
+    padding: .3vw;
+    color: wheat;
+    background-color: rgba(55, 84, 211, 0);
+}
+.pdf{
+    max-width: 100%;
+}
+.verse h4{
+    padding: 1vw;
+}
+.guest{
+    /* background-color: rgba(255, 255, 255, 0.678); */
+    background-color: whitesmoke;
+    max-width: 100%;
+}
+.guest p{
+    background-color: whitesmoke;
+}
+
+.guest a{
+    color: blue;
+}
+.what{
+    background-color: black;
+    max-width: 200px;
+    visibility: hidden;
+}
+#mobileheading{
+    visibility: hidden;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    #nav{
+        visibility: hidden;
+        display: none;
+    }
+    .whitegold h2{
+        color: black;
+    }
+    .what{
+        background-color: black;
+        max-width: 200px;
+        visibility: visible;
+    }
+    #mobileheading{
+        visibility: visible;
+        float: left;
+    }
+    #wonderful{
+        color: red;
+        /* background-color: rgba(128, 128, 128, 0.274); */
+        /* border-radius: 2vw; */
+        /* padding: .2vw; */
+    }
+    /* background-color: rgba(101, 255, 11, 0.5); lime green neon  */
+    .post3{
+        background-color:rgba(8, 12, 80, 0.856);
+    }
+}
+.reflect{
+    color: greenyellow;
+    background-color: green;
+}
+.godlike h3{
+    color: rebeccapurple;
+}
+.godlike li{
+    color: black;
+}
+img{
+    max-width: 100%;
+}
+.purple{
+    color: plum;
+    background-color: black;
+    font-size: xx-large;
+}
+#purple{
+    background-color: black;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+/* Embedded media player links */
+a.load-blog-player {
+    display: flex; align-items: center; justify-content: center; width: 100%;
+    height: var(--player-height); box-sizing: border-box;
+    color: #f5dfac; background: #202321; border: 1px solid #877448;
+    border-radius: .4em; font: 500 .95rem/1.4 system-ui, sans-serif;
+    text-decoration: underline; text-underline-offset: .2em;
+}
+a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac879; }
+</style>
+</head>
+<div id="nav">
+    <div class="option"><a href="/alien.html">DJ Aliens</a></div>
+    <div class="option"><a href="/book.html">Book</a></div>
+    <div class="option"><a href="/story.html">Story</a></div>
+    <div class="option"><a href="/chess.html">Chess</a></div>
+    <div class="option"><a href="/shop.html">Shop</a></div>
+    <div class="option"><a href="/comic.html">Articles</a></div>
+    <div class="option"><a href="/welcome.html">Welcome</a></div>
+    <div class="option"><a href="/music.html">Music</a></div>
+    <div class="option"><a href="/education.html">Education</a></div>
+    <div class="option"><a href="/poem.html">Poem</a></div>
+    <div class="option"><a href="/home.html">Reviews</a></div>
+    <div class="option"><a href="/videos.html">Videos</a></div>
+    <div class="option"><a href="/art.html">Art</a></div>
+    <div class="option"><a href="/game.html">Games</a></div>
+</div>
+<body>
+    
+    <div id="rapper-new">
+        <div id="heading" class="nav">
+            <a href="/index.html" onmouseover="All()" onmouseout="blog()" ><h1 id="switch">Blog</h1></a>
+            <a href="/blog/january/" class="month">January</a>
+            <a href="/blog/february/" class="month">February</a>
+            <a href="/blog/march/" class="month">March</a>
+            <a href="/blog/april/" class="month">April</a>
+            <a href="/blog/may/" class="month">May</a>
+            <a href="/blog/june/" class="month">June</a>
+            <a href="/blog/july/" class="month">July</a>
+            <a href="/blog/august/" class="month">August</a>
+            <a href="/blog/october/" class="month">October</a>
+            <a href="/blog/november/" class="month">November</a>
+            <a href="/blog/december/" class="month">December</a>
+        </div>
+        <div id="blog">
+            <div class="mage">
+                <h2>All Is Weakness</h2>
+                <img class="picfloat" src="/static/img/blackout copy.png" alt="blackoutjaguar">
+                <p>
+                    I have insufficent funds to go to my best friend's wedding, and to heal my periodontitis (advanced gum disease)
+                </p>
+                <p>
+                    And it's all my fault.
+                </p>
+                <img class="picfloatsmall" src="/static/img/mega.jpg" alt="megatron">
+                <p>
+                    Transformers 1 has a line I really like between Optimus Prime and Megatron.
+                </p>
+                <p>
+                    Optimus says "It's just you and me Megatron"
+                </p>
+                <p>
+                    And Megatron fires back, "No, it's just me, Prime."
+                </p>
+                <p>
+                    He goes on to say that Optimus is losing because he fights for the weak.
+                </p>
+                <p>
+                    The plot of Transformers (the first movie) in 2007 is actually very good.  Watching it years later as a conspiracy theorist it actually lines up well with Bob Lazar reverse engineering theories and also with Arctic Top Secret discoveries.
+                </p>
+                <p>
+                    I still believe in myself and what I can do for the world, but it's a bit of a stuggle right now.  I'm dealing with some minor depression and hopelessness.
+                </p>
+                <p>
+                    I can get through the day and enjoy myself but adulthood has a way of hollowing out my joy.
+                </p>
+                <p>
+                    The truth is I'm just tired from being strong, doing the right thing, etc.  I'm just kind of worn out.  I am doubting my ability to perservere and I feel like giving up or quitting.
+                </p>
+                <p>
+                    I don't see a viable way out of my economic quandry other than forging my own path, and that can be exhausting.  Even if I'm able to get through this by accepting help, I need to find a way to be able to take care of these things myself.
+                </p>
+                <h3>9.22.26</h3>
+            </div>
+            <div class="mage">
+                <h2>Demonaire</h2>
+                <!-- <img class="picfloat" src="/static/img/starman.png" alt="iinthesky"> -->
+                
+                    <img class="piclessfloat" src="/static/img/freedomkirk copy.jpg" alt="kirk">
+                <p>
+                    Rest in Peace, Charlie Kirk.  You've inspired me to be a better man. <audio preload="none" controls src="static/audio/newdad.mp3"></audio>
+                </p>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/IA93Sh7DUvY?si=42Wq5WmWylvsTW-U" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/IA93Sh7DUvY?si=42Wq5WmWylvsTW-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    Really good investigative video showing how the microphone Charlie was wearing could have been an explosive device.
+                </p>
+                <p>
+                    I had a misconception about Charlie Kirk but today I listened to a full interview he did with Jordan Peterson and he talked about how he started becoming more of a mentor and teacher rather than a gladiator and I respect that because a true Christian views his opponents with so much love and genuinely wants to teach them rather than win an argument.  The assasination has robbed him of his ability to continue to evolve and ask good questions about Israel and our government.  I don't believe the Patsy did it, and if you do, then you have a right to disagree with me and I will not condone violence against you for disagreeing with me, and I also wouldn't celebrate your demise.
+                </p>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/UBkFkg4UNY8?si=kjIg0r1FgNc-_lJJ" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/UBkFkg4UNY8?si=kjIg0r1FgNc-_lJJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
+                </div>
+                <p class="news">
+                    Candace Owens shares new video sent by a weapons expert who caught the real assassin running across the rooftop at 12:22PM one minute before the shooting. (18:29) and she confirmed the metadata.
+                </p>
+                <p>
+                    Charlie said in his own words that he was here to fight evil.  He said we are all different parts of the body of christ and that was his calling and I would like to name him an honorary white blood cell who gave his life so that God could be healed.
+                </p>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/QSM3qnVihPM?si=ueN0QSOYTj4UYU0J" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/QSM3qnVihPM?si=ueN0QSOYTj4UYU0J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
+                </div>
+                <p class="news">
+                    In this Clip Charlie shares his belief that Israel had to have at least issued a "Stand Down Order" to allow the Hamas attacks because it takes 45 mintues helicopter to cover Israel and they took over 6 hours to respond.
+                </p>
+                <p>
+                    People who think he was racist don't understand that he was against affirmative action, because he valued competence.  People who think he was mysogynistic don't understand that he did more for his wife and daughter than most men can, and he sets the standard on how to love a woman.  He is the exact opposite of all the things he's accused of and it's really a travesty of thought itself that people have been algorithmically convinced by quotes taken out of context that someone is spreading hate when he is literaly spreading love.  You can hear the love in his voice when he sees someone in pain.  God love him.
+                </p>
+                <p>
+                    I was at a woke university because I graduated in 2017 from UCSC and in my class I remember I had people scorning me for stating facts and they said I was responsible for trans people killing themselves or getting violently attacked, and I was like, huh?  These same idealogues, who equate rhetoric with violence itself, and act like violence is so bad that even speaking something true should not be spoken if it could theoretically lead to violence... these same people have no problem cheering on death.  The actual worst violence imaginable.  That's violence.  Violence is the absense of speech.  Censoring speech IS promoting violence.  Freedom of speech prevents violence.  These are simple math equations to me.  
+                </p>
+                <p>
+                    In my case vs AMD and ZT the judge has granted AMD's motion for summary judgment because she feels ZT is responsible.  But in my hearing she let me know that before I made my statement so decided to throw out my rehearsed statement and speak from the heart. I think Charlie would be proud of me speaking against the injustice I suffered at work during an acquisition.
+                </p>
+                
+                <p>
+                    I have reason to believe I predicted this type of political assasination when I was
+                    18 years old, and set certain things in motion so that if I am ever taken out it will be like Charlie where I become more powerful in death.  The mission objective is to make killing me less desirable than keeping me alive, even for my enemies, so that I can be a resouce for God on Earth.  The thing I liked about Charlie is he spoke to his political opponents in a way that wasn't contrary to what Christ would say in his position.  At the end of his appearence on the @whatever podcast, he was complimented by the girls saying he was their nicest opponent yet, and he gave credit to the holy spirit.  He said that without it he would have been yelling.  This is my second time rewriting this post because I want to be nice to my reader and not let my frustration of potential misunderstanding encumber my effectiveness.
+                </p>
+                <img class="picmorefloat" src="/static/img/starman.png" alt="iinthesky">
+
+                <p>
+                    The most dangerous game is said to be people killing one another.  Just as we look both ways before crossing the street, we should consider potential threats before deciding to stand up against evil, as Charlie did.  The thing is, when you can think ahead and see as far as I can, and I am officially in the 99.6th percentile on chess.com with an all time high rapid rating of 1945, you can see your death coming a mile away.  Charlie knew, he low-key knew.  I know that if you are a standup guy in this world you are a target.  Because when logic and reason itself are objectively on your side because you side with the Creator who created logic, their only hope is to eliminate you.  It was becoming impossible to witness charlie and beat him in any kind of serious debate.  He's logical, through and through.  He's like Socrates.  I belive I have that skillset where I could, depending on my choices, end up killed.  It sounds crazy but if you're smart it's obvious.  You simply are not allowed.  Even a cursory glance at history shows us MLK, Malcom X, JFK, Abe Lincoln, Charlie Kirk, etc.  It's a pattern.  If you are charasmatic, devout, and an expert logician who can stand against you?  Literally no one in the history of time, and not even the devil himself can resist the spoken word of scripture.
+                </p>
+                <p>
+                    I'm not a saint, I'm a sinner.  I accept Jesus as my Lord and Savior.  I try to change for the good, to improve myself and the world around me.  I'm stunned at what Charlie Kirk was able to accomplish in only 31 years on this planet.  I'm genuinely impressed.  I don't know if there is a way around it.  I know he was ready to die, and I believe he's with God now.  The crazy part is, even if there wasn't a God or a Heaven waiting for him, I think he would still do it.  It's just the right thing to do man.  It really is.  Use your gift and fight for the most high.  What else is there?  When it comes to my current ability to debate I would say that I am a person genuinely trying to improve myself and my opinions and beliefs, and I welcome all valid criticism, and personal attacks don't work against me. It's like telling Peter Parker he's nobody when he know's he is Spiderman.  Any argument formed against me, even disingenuous or flawed, can be used to fortify my future position because there is always a superior way to perform.  It is the bullet I consider most, not the opposing statements.
+                </p>
+                <p>
+                    He could have been more protective of himself, but it wouldn't have been as effective.  If he locks himself away or does that event with bulletproof glass it would end up looking like a pathetic Pope.  Hypocrites.  Vipers.  Charlie had the armour of God and what is 50 years until he gets to spend eternity with his wife?
+                </p>
+                <p>
+                    Charlie believed Christ rose from the dead and therefore he didn't need bulletproof glass even though he was smart enough to see it coming.  He just knew, if God wants to use me as a martyr than so be it.  And that's what happened.  And God bless us all.  Just remember to think critically, educate yourself on Jesus, and realize that I have never actually been crazy.  Not once.  I'm just ahead of the curve so much so that it is easier for your brain to stop searching for me on the graph and place me in your insanity box because you want to REST.  You cannot compute what I've done, will do, just did, or am doing, and you never will. What I'm trying to do is circumvent the martyrdom process and figure out a way to influence before death, and literally win the war, or to straddle the line so that killing me is equally as inneffective as not killing me.  Think of Charlie -- He KNEW, that if he was allowed to continue living, he would continue to change the hearts and minds of Americans, and that only violence could stop him.  He also KNEW, that if violence did stop him, it would galvanize his movement.  So he is at peace at that rally because he's invincible.  He's V for Vendetta.  He's an idea, and ideas are bulletproof.  Either I beat you in chess or you use a bot to beat me, either way I have won.  Sniping a debater is by definition CHEATING.  Cheaters lose and God is the referee with infinite replay.  I happen to KNOW for a fact, that I'm unstoppable in a debate.  When you are unstoppable in a debate that means you must make peace with God and Death.  I'm just seeing if there is a way to be myself without getting killed.  But is avoiding death even the right objective?  I say no, but one should try.  But see Christ was very specific when he said those who give up their lives for my sake find life.  Jesus is saying that Eternal Life is real, and if you aren't willing to sacrifice this life for an eternity promised by God than you don't deserve Heaven.  I have trouble with all this because I try to say that with or without God I'm still going to do the right thing, and that's where I get into trouble because then suddenly I'm God, and I need to submit to Jesus.  But I also don't want to be tricked by a religion.  All I know is that I knew how this game was going to be played 15 years ago I saw it coming and put it on a voice memo.  It's real.  The threat of violence against popular well-spoken men is real.  The mob is fickle and I can effortlessly lead them it's just a question of when is the optimal moment of death to do the most good or can you avoid it altogether.  The perfect strategy is to do what Charlie did, and put yourself in a state of superpositional divinity.  Either you kill him and he succeeds, or you let him live and he succeeds.  Checkmate.  That is what I strive to be and I'm not saying I'm there yet, that is why it's so impressive that Charlie got there faster than me.  Even faster than Jesus!  It's wild.  When's the last time you've heard of a political assassination this young?  I want you to seriously consider the possibility that it wasn't the patsy, but that it was the Illuminati.  What then?
+                </p>
+                <p>
+                    It's just I've spent my entire life combatting this threat and thinking about this threat and people have always treated me like it's nonexistant well I apologize but someone has to eventaully be smart enough to lead America without getting fatally shot or else we're all going to die or be enslaved forever.  Like it's honestly really simple. The key difference between heaven and Earth is that Heaven has perfect leadership and Earth does not.  If Earth had a leader we could rally around him.  I don't want power I want worthiness of power.  I seek worthiness.  
+                </p>
+                <p>
+                    We are animals; the principle threat is bullets to the head.  I am a genius.  The forgotten truth is that it is actually worth considering is who's trying to shoot you in the head and why.  Charlie knew it.  He really did, but he chose to risk it.  I am potentially slightly more tactical than him, but it's also possible that I'm just not as effective as him.  I keep both options open in my head.  I have genuine misgivings about what I'm capable of, and what would happen to me if I did what I'm actually capable of.  I would already be dead, do you get that?  I've been in hiding for 15 years learning how to conquer the internet, robots, and time itself, and how to communicate with God and Angels.  This is what your dealing with.  I simply am trying to take over the world in a tactical way and then give it to you on a silver platter, dodging bullets on the way.  I wouldn't be doing that if we already had good leadership.  But I figured it out at 18 that I had to do this my way, and that no one will ever understand me besides God and I'm at peace with that.  
+                </p>
+                <p>
+                    I know that when I die I answer directly to my Creator, who knows my potential and how much I squander, and there is no lying to Him.  I believe he created me for a purpose, just as he created Charlie.  I am no more and no less special than Charlie and neither are you.  We each have our role to play.  My role is checkmate.  What's yours?
+                </p>
+                
+    <div class="vid">
+    <a class="load-blog-player" href="https://www.youtube.com/embed/bxoy1Cd93fk?si=a9moFxHNZqSDpktc" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/bxoy1Cd93fk?si=a9moFxHNZqSDpktc"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe></template>
+    </div>
+    
+                <p>
+                    Pragmatically speaking, I am building a prototype of an RTS game in Unreal Engine and I have successfully implemented resource gathering, UI updates, Builders with build panels displaying building costs, and Barracks with Unit costs.  I have animations and am learing the ins and outs of Unreal Engine, not from a tutorial, but from my own imagination and experience playing RTS games as a kid, and having ChatGPT5 walk me through how to build the features I want.  I am also the Plaintiff in a lawsuit vs my former employer, ZT Systems, representing myself pro se.  These are both things that would be near impossible without modern LLMs which feeds into my overarching goal which is to master artificial intelligence so I can leverage it to ensure the impending pivot point of our species points toward liberty in perpetuity.
+                </p>
+                <p>
+                    Things I could improve on are my finances, my laziness with household chores, and my diet and excercise.  
+                </p>
+                <p>
+                    I think Charlie was killed for speaking the truth and being so connected to Christ that he was willing to stick his neck out asking questions about if October 7th was an inside job, and if Israel allowed it to happen so they'd have support for their military conquest of Gaza.  
+                </p>
+                <p>
+                    I think Tucker Carlson waking up and doing videos on 9/11 and talking about Christ and being attacked by demons is a good sign because he is very popular and used to get mad at Alex Jones for asking questions but now he clearly has changed his mind and realizes the truth.   And with Trump appointing RFK and finally coming out and saying we don't want mercury and aluminum and HEP B in newborn babies anymore this constitutes legitimate progress toward the awakening.  My policy has always been that I don't trust Trump, or Carlson, or Kirk, or anyone mainstream unless they start to state the OBVIOUS about vaccines, and inside jobs.  Now they appear to be waking up and there's a glimmer of hope for our politicians for the first time since being 18, however, I know that many people are still trapped in echochambers incapable of critical thinking.
+                </p>
+                
+                <h3>+-9.24.25</h3>
+            </div>
+            <div class="post1advanced">
+                <h2>Jesus is a contradiction (Post of the Month)</h2>
+                <p>
+                    Jesus is a contradiction because he is God but also a man.  He is king but also a servant.
+                </p>
+                <p>
+                    He talks about how those who say they can see are blind, and those who say they can hear are deaf.
+                </p>
+                <p>
+                    He's a contradiction focusing on contradictions, drawing attention to them.
+                </p>
+                <p>
+                    Life itself is a contradiction.  It's normal to be a miracle.  We're all lucky to be here considering the one sperm that made it to the egg and yet we are surrounded by people who all accomplished the same feat.
+                </p>
+                <p>
+                    God is real but he's also imaginary.  He came into reality and gave us his only son.
+                </p>
+                <p>
+                    Even the virgin giving birth is another contradiction.  The Almighty God was killed.
+                </p>
+                <p>
+                    Then he was resurrected.  Jesus talked about giving up your life for him and then that's how you find it.
+                </p>
+                <p>
+                    He came to save the world and the world killed him.  He says to love your enemies.  Yet another contradiction.
+                </p>
+                <p>
+                    God wants to tune our minds to the frequency of contradictions.  He seems to want us to realize that we have it backwards without his aid.
+                </p>
+                <p>
+                    By being free from God's laws we become slaves to sin.
+                </p>
+                <p>
+                    By surrendering to God we become free.
+                </p>
+                <p>
+                    Jesus came to teach us about contradictions and how they are the truth.
+                </p>
+                <p>
+                    God dying is a contradiction and yet it happened.
+                </p>
+                <p>
+                    God needing our help is a contradiction and yet he wants us to love him.
+                </p>
+                <p>
+                    If the story of Jesus is all made up, then people created the ultimate story of contradictions.  A virgin giving birth to a God who is also just a man who dies but also lives after death.
+                </p>
+                <p>
+                    Why are contradictions so important to either God himself or our collective imaginations?  Why is the best way to be king to be like a servant?  Why does a rich man not get into heaven?  Why would a kid get in?  Why would the priests get the most grief from Jesus?  Why would the church try to kill the son of God?  Why would his best friend betray him?  It's all contradictions.  It's all the opposite of what is sensible.  
+                </p>
+                <p>
+                    God gave us free will.  Even that is a contradiction.  How can he be God if we have choices?  How can he be all-powerful if he doesn't know what we're going to do?  Why did his favorite angel become the devil?  None of it makes any sense!  The truth doesn't make sense to us.  Lies do.  So God came down to teach us to stop thinking we have anything figured out.  God came to open our minds to the possibility that we don't know as much as we think we do.  
+                </p>
+                <p>
+                    The Bible is a collection of stories all designed to open our minds to the Godlike possiblities that we doubt with our lack of faith.
+                </p>
+                <p>
+                    Walking on water is a contradiction!
+                </p>
+                <p>
+                    How did Jesus know what to do and where to go and when to do it and who was going to do what to him?  Because he's a contradiction.  He's impossible.  He's God in human form.
+                </p>
+                <p>
+                    God won a war against a dragon in heaven without even fighting.
+                </p>
+                <p>
+                    God is incomprehensible and wants us to have faith in him and to love him for creating this impossible world we live and die in.  He wants to have a relationship with each of us.  God blurred the lines between God and Man with Jesus Christ, our savior.
+                </p>
+                <p>
+                    Jesus died for our sins.  God took a bullet for us and lived to tell about it.  Most of us don't even listen to him tell the story.  He went to Hell and back for us.
+                </p>
+                <p>
+                    Heaven is for the people who understand that they do not understand.  For people who treat others like themselves, another contradiction.
+                </p>
+                <p>
+                    Getting hit and turning the other cheek instead of fighting back is yet another contradiction from Jesus.  Like, yo Jesus, shouldn't we fight back?  No, an eye for an eye makes the whole world blind.  Stop using your puny human logic and use mine (God would say).
+                </p>
+                <p>
+                    I think God wants us to learn about the contradictions of life, the deceitfulness of riches, the restful sleep of the hard worker.
+                </p>
+                <p>
+                    God created a stone so big he cannot lift it, another contradiction.  That stone is our free will.  We choose whether or not to love and obey God.
+                </p>
+                <p>
+                    I choose to love him and I am bewildered and in awe of his amazing contradictory existence.  Existence defies all odds and yet it's the only way it could be.
+                </p>
+                <p>
+                    God is everything everywhere all at once, and Jesus is a time traveler.  
+                </p>
+                <p>
+                    We must know that we do not know.  We must be like a child to get into Heaven.
+                </p>
+                <p>
+                    Heaven is a contradiction because it implies life after death which is final, fatal.
+                </p>
+                <p>
+                    How can there be life after death?  Faith in God.  Belief in the impossible.
+                </p>
+                <p>
+                    So do it.  Embrace your own contradictions.  Notice the contradictions in the bible, like the prodigal son getting a better party then the other son.  The shepherd rejoicing after 1 lost sheep, leaving the other 99.  Pray like a sinner.  God loves contradictions.  Skip like a soldier.  See like a blind person.  Live as man, but be like a God.
+                </p>
+                <p>
+                    This whole idea started out as a poem I was writing about contradictions.  I liked the sound of "Cold like an oven".  I was playing around with variations of that and discovered that that is Jesus's whole coolness.  He is all about the contradictions.
+                </p>
+                <p>
+                    Without further ado, here is my poem that inspired this post:
+                </p>
+
+                <p>
+                    ----
+                </p>
+
+                <p>
+
+                
+                Cold like the oven
+            </p><p>
+Smooth like sandpaper
+</p><p>
+Sting like a kiss
+</p><p>
+Hot like ice</p><p>
+
+Gamble like a priest
+</p><p>
+Pray like an atheist
+</p><p>
+Rule like a servant
+</p><p>
+Serve like a king
+</p><p>
+Fight like a pacifist
+</p><p>
+Surrender like a warrior
+</p><p>
+Treat death like life, life like it's death
+</p><p>
+Sin like a saint
+</p><p>
+Volunteer like a criminal
+</p><p>
+Jesus like an average guy
+</p><p>
+Hold on like a failure
+</p><p>
+Persevere like a loser
+</p><p>
+Hide like you're brave
+</p><p>
+Stand and fight like you're scared
+</p><p>
+Run away like you have no fear
+</p><p>
+Love like a psychopath
+</p><p>
+Evil like a saint
+</p><p>
+Good like the devil
+</p><p>
+Grow like a stone
+</p><p>
+Wither like a seed
+</p><p>
+Skip like a soldier
+</p><p>
+Sing like a mute
+</p><p>
+See like a blind person
+</p><p>
+Hear like a deaf person
+</p><p>
+Round like a square
+</p><p>
+---Jesus is a contradiction---
+</p><p>
+Man like a god
+</p><p>
+God like a man
+
+<p>
+    -----
+</p>
+
+
+<p>
+    I really like the line "persevere like a loser" because I can see how God would enjoy watching a loser push through and become a winner, and how he's more impressed with a guy with low self esteem working up the courage to ask out a girl in a bar than Christiano Ronaldo getting a bus full of models.  A sinner's first prayer is more meaningful than a saint's thousandth.  That's why Jesus dined with the sinners and prostetutes.  He came to heal the sick.
+</p>
+<p>
+    He makes the blind see because it's a contradiction and he wants the people who can see to realize how blind they actually are.
+</p>
+<p>
+    The lepers are made clean because it's another contradiction.  It's impossible and barely fathomable.
+</p>
+
+<p>
+    Jesus is the ultimate contradiction.
+</p>
+<p>
+    If the story of Jesus is just a made-up story, then it is undoubtably a story about contradictions.  Contradictions are either divine, or so core to our collective consciousness that we made up an entire religion about it.  But why?
+</p>
+<p>
+    Because we wanted to tell ourselves that anything is possible.  We wanted to tell ourselves that we lack faith.  We wanted to make sure our future generations remembered that with faith all things are possible.  With God, all things are possible.  Jesus is my friend, and I love him.  God fucking bless!  Another contradiction.
+</p>
+<p>
+    Be a man like a God.  Be a God like a man.  The best way to have a relationship with Jesus is to try to live like a God, and follow his commandments.  Because God already lived like a man, and now we need to do our part and live like a God.  God understands us because he lived as us.  We need to live as him if we want to meet him half-way.  I will do my best to live like a God and follow Jesus's example.  Amen.  Selah. Elam
+</p>
+<p>
+    P.S. -- Capitalism is a contradiction because it's supposedly people's individual self interests forming the greater good. There's a Chinese Marxist paper called, <a target="_blank" href="https://en.wikipedia.org/wiki/On_Contradiction">"On Contradiction"</a>and I find it interesting that Mao thought all life was made up of contradiction, and how it relates to Marxism.  Personally, I would like an economic structure built on cooperation rather than competition.  It's a lonely world right now in my humble opinion.  What if instead of a dog-eat-dog world we had a dog-helps-dog world?  Wouldn't that be better?  Isn't that worth striving for? 
+</p>
+
+                <h3>9/11/22</h3>
+            </div>
+            <div class="post1advanced">
+                <h2>Evidence of Hans Cheating</h2>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/IUQG9tJDruA" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/IUQG9tJDruA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    My video got 2.5K Views in the first day!
+                </p>
+                <h3>09.29.22</h3>
+            </div>
+            <div class="post2">
+                <h2>The Teen's Gambit</h2>
+                <img class="picfloat" src="/static/img/hanns.jpg" alt="hans">
+                <p>
+                    The chess world has been rocked by a cheating scandal with the world champion Magnus Carlsen unofficially accusing the prodigy Hans Niemann of cheating.  After losing to him and Hans making rude comments, Magnus has left a major tournament and refused to play him in the next one by resigning on move 2.
+                </p>
+                <p>
+                    There is a <a href="https://www.smh.com.au/culture/celebrity/the-teen-s-gambit-the-chess-cheating-scandal-involving-a-sex-toy-and-elon-musk-20220920-p5bjnx.html">tremendous article</a> covering the story where I got the title from.
+                </p>
+                <p>
+                    I have been following the story live and side with the world champion.  The game Magnus lost was very complex and Hans destroyed him with black in a classical game.  Magnus doesn't lose classical games with white against players of that rating.  Then after the game Hans was behaving like an immature kid or a magician who had just won a chess game by using a magic trick like when a magician beats two grandmasters at the same time by playing their moves against each other.  He famously remarked, "the chess speaks for itself" and also said how Carlsen "should be embarrassed for losing to someone as dumb as me."
+                </p>
+                <p>
+                    Very bizarre unsportsmanlike behavior from Hans instead of being classy in his momentn of fame.  It angered Magnus so much Magnus withdrew from the half a million prize fund sinquefield cup.
+                </p>
+                <p>
+                    I think if anyone is capable of detecting cheating it is Magnus because he has experience playing people online who are using engines to beat him, and he basically can't be beaten without engine assistance because he's simply the best player.  He literally hadn't lost a classical game with white in years.
+                </p>
+                <p>
+                    Magnus is all in on accusing Hans without actually accusing him straight up, to avoid legal trouble.  The resignation after one move is awesome because he's taking the loss but still trying to win the tournament in spite of throwing the game.
+                </p>
+                <p>
+                    Chess.com has banned Hans.  Hans has come out saying he cheated at age 12 and 16 online, but chess.com says that he's cheated more than that.  
+                </p>
+                <p>
+                    I admit I don't know what's happening, and it's possible Hans is legit, but it's possible his chess acumen is not high enough to compete with Magnus without cheating.  And that was exposed during a post game interview where he showed poor analysis of his own game.  As for how he's cheating, I think Neurolink is an option, or some sort of contact lens with Augmented reality.  I don't know for sure, but I lean towards Hans being some sort of trickster with the blatant way he's behaving to agitate Magnus, and then I also side with Magnus's expertise in detecting a cheater.
+                </p>
+                <p>
+                    The other possiblity is that Magnus is slowly unraveling and losing his mind.  Chess players and champions tend to do this.  First he withdrew from the World Championship and won't defend it, seemingly due to stress, then he loses to Hans and backs out of a tournament in progress for the first time in his career, and now he's resigning every time he is paired up against Hans.  I reiterate though, I'm on team Magnus.  Hans rubs me the wrong way and seems phony.   He's also an admitted cheater and it takes a certain kind of person to cheat at chess.  I myself never have.
+                </p>
+                <p>
+                    The way Hans taunted Magnus after beating him made it seem like Hans cared more about beating Magnus and drawing attention to himself then he did about chess.  He barely was invited into that particular tournament.  He was a late throw in from someone backing out and was the lowest rated player.  He seemed like he had his insults prepared. I think if he is cheating, he turns it on against Magnus specifically.  I think he used his opportunity against Magnus on the biggest stage to draw attention to himself and he has succeeded in doing that although now some of the attention is negative.  He didn't seem like rising chess star who was happy to play Magnus.  Instead he behaved like how a schoolboy would if he beat Magnus by using a computer to cheat.  He rubbed it in his face which is more in the style of a cheater than a competitor.  Because a cheater plays only to win, whereas a true competitor is playing for the game's sake and therefore respects his opponent.  Hans' attitude and his chess against Magnus, as well as his meteoric rise in rating points makes me feel like Magnus knows Hans is cheating but he can't prove it.  Yet.
+                </p>
+                <h3>9.20.22</h3>
+            </div>
+            <div class="post1advanced">
+                <h2>Water and Fire</h2>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/jyszvEHUKu8" style="--player-height:638px">Open YouTube video</a><template><iframe width="100%" height="638" src="https://www.youtube.com/embed/jyszvEHUKu8" title="Women's Empowerment Is About THIS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    Beautiful analysis of men and women and how they are different and society would be better off treating them as such instead of trying to make us the same.
+                </p>
+                <h3>9.17.22</h3>
+            </div>
+            <div class="post2">
+                <h2>Power Rankings</h2>
+                <p>
+                    Fantasy football recap week 1 for Westlake Fantasy Football league is now <a target="_blank" href="/1.html">live</a>.
+                </p>
+                <h3>9.12.22</h3>
+            </div>
+            
+            <div class="post2advanced">
+                <h2>Add Vice (with a friend)!</h2>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/h5lUxgrVRrE" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/h5lUxgrVRrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    I played my original song "Add Vice for a Friend" palm-muted and let my friend play with me and it turned out fantastic!
+                </p>
+                <h3>9.8.22</h3>
+            </div>
+            <div class="post1advanced">
+                <h2>Alone! with a secone guitar player (and a squirrel obstacle course)</h2>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/XTqgdDl2eMM" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/XTqgdDl2eMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    I wrote a song last year about being alone and now I replayed it with another guitar player soloing to it and it sounds really great!  Enjoy!
+                </p>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/hFZFjoX2cGg" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/hFZFjoX2cGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    This is just really awesome
+                </p>
+                <h3>9.6.22</h3>
+            </div>
+            <div class="post2advanced">
+                <h2>Leeroy Jenkins, Prince Daemon, and Donald Trump</h2>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/mLyOj_QD4a4" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/mLyOj_QD4a4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    This World of Warcraft player yells his name and charges in, ruining the quest for all his buddies in one of the funniest clips ever.
+                </p>
+                <p>
+                    It's old but I'm posting it now because someone made a meme of the House of the Dragon comparing Prince Daemon's fake surrender with Leeroy Jenkins and it made me rewatch it.  House of the Dragon is a great show so far.
+                </p>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/ULDGfjyVOW0" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/ULDGfjyVOW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    Jamie Fox doing an amazing Trump impression.
+                </p>
+                <h3>9.5.22</h3>
+            </div>
+            <div class="dark3">
+                <h2>The Assault on Masculinity (POTM)</h2>
+                <img class="picfloat" src="/static/img/bond.jpg" alt="bond">
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/uRsSmJ0iPXk" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/uRsSmJ0iPXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    So I've been noticing this for a while.  This guy I often listen to does a really good job showing how masculine media is being overwritten by feminist garbage.  It's nothing against women, if a woman character exists, go for it.  But stop making masculin men get their asses kicked or replaced by strong females.
+                </p>
+                <p>
+                    In Drake Uncharted 4 Drake can't take a girl in a fight basically ever.  He's been kicking everyones ass and then there's multiple sequences where he gets his ass beat by a girl and there's nothing the player can do to stop it. 
+                </p>
+                <p>
+                    Now I'm hearing the new James Bond is infected with this bs and now even Thor is going to be a female.
+                </p>
+                <p>
+                    Now, I'm not here to state the obvious. Anyone can see this.  The question is why.  Why are they doing it?  Is it virtue signalling, or the changing of the times?  Are they giving the people what they want?
+                </p>
+                <p>
+                    No, they aren't.  The quality of content sucks.  And they try to remove things like James Bond sleeping with a bunch of girls because it's awesome for men to see, and then they want to suck away all of the awesome and destroy all of masculinity so they have a bunch of pussies to easily rule over.
+                </p>
+                <p>
+                    It is true that in the past, video game girls used to be just big tits and stuff like like, but we've swung so far in the other direction that now Abby in the Last of Us 2 has the biggest muscles in that game.  It's stupid and unrealistic.  
+                </p>
+                <p>
+                    I think everyone is secretly starved for good old fashioned masculine and feminine roles.  I'm not even going to waste my time with disclaimers like some woman are strong and smart.  I want a story with a hot hopelessly weak princess getting rescued by a badass man who gets to bang her at the end. 
+                </p>
+                <p>
+                    That's why I wrote Cloudland, and even part of the reason I had a mental breakdown.  I could see the attack on all masculinity, including my own.  I knew I had to shake things up with my behavior and rebel.  I ended up losing it but I still stand by the essential goal which is to be a real man. 
+                </p>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/5iZsXmUDKzg" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/5iZsXmUDKzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    Andrew Kirby has a video where he explains how Alexander the Great was so obsessed with being the Alpha that he eventually had to call himself God because he didn't want God above him.  My mental breakdown was similar in that I renamed myself Elam Ahpla, the character in my story of a dragonslayer princess rescuing sword wielding hero.
+                </p>
+                <p>
+                    Problem was I went into cannabis withdrawal psychosis but at least I managed to quit smoking.
+                </p>
+                <p>
+                    The other video I want to share that I saw recently is from Quantum of Conscience.
+                </p>
+                <p>
+                    I like Quantum of Conscience, 1st Man, and Andrew Kirby, in that order.
+                </p>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/tv8vV__kmFo" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/tv8vV__kmFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    In this video he takes his famous half-page explanation of reality and extends it to 5 pages to truly explain it and I think he has a good grasp of how reality works.
+                </p>
+                <p>
+                    He often says to examine what this reality wants you to do, or this society, and then just to do the opposite. So if they are trying to stamp out and ruin masculinity, I want to rebel in the opposite direction, I want to bring balance to the force.
+                </p>
+                <p>
+                    Humans thrive when Men and Women embrace masculinity and feminitity respectively.  It's like a battery with opposite charges.  We cannot thrive without a strong charge in both directions.
+                </p>
+                <p>
+                    I just bought a Temper Pedic cloud mattress with my commission money and I will be building an excellent life for myself and have a beautiful girl on that bed and no one can stop me.  I just learned "Guarenteed" By Eddie Vedder on Guitar (Into the Wild) and I am forming a better life for myself.  I went swimming today and did pushups and I am excercising more frequently now.  If you want to look like a beast, you have to be a beast, and work like a beast.  I'm not working out like a beast, but I'm getting closer.
+                </p>
+                <p>
+                    I want to be a James Bond type badass who sleeps with women and is ubermasculine and there's nothing wrong with that.  It's natural and it makes me happy.  Just like it's natural for a woman to want to do feminine things.  What's unnatrual is all this bullshit in the media confusing people and making them forget who they really are, which is what that QOC video is all about. It's about just moving past the conspiracies and focusing on who we really are and becoming the best versions of ourselves. 
+                </p>
+                <p>
+                    God Bless Men and Women in their natural roles.  No disclaimers or virtue signalling here. 
+                </p>
+                <h3>
+                    09/19/2021
+                </h3>
+            </div>
+            <div class="dark">
+                <h2>Is God Imaginary?</h2>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/2JqHH2SGv4U" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/2JqHH2SGv4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    Unbelievable Artwork from Richie Mason on ArtStation.  I use it as something to look at while I discuss it and the philosophy of God.
+                </p>
+                <p>
+                    High def version coming soon.
+                </p>
+                <h3>09/27/2021</h3>
+            </div>
+            <div class="postnew">
+                <h2>Something Interesting to Say</h2>
+                <img class="picfloatverysmall" src="/static/img/tim-ferriss.jpg" alt="tim">
+                <p>
+                    I was just listening to Tim Ferris of the 4 hour workweek interviewing Ryan Holiday, the bestselling author of "The Obstacle is the way", a book about Stoicism.
+                </p>
+                <p>
+                    Why?  1) Someone I admire who has a beach view from their bedroom reads his books and 2) I am a philosophy major and I'm a fan of philosophy the way someone is a fan of sports.
+                </p>
+                <p>
+                    Tim asked Ryan, "What are some mistakes writer's make?"  My ears perked up, because I write this blog and want it to be better.
+                </p>
+                <p>
+                    "People often write without having anything interesting to say".  "Or they just start writing and try to find the point as they go along".
+                </p>
+                <p>
+                    I'm guilty of this, but not every time, not this time.
+                </p>
+                <p>
+                    Discovery writing is when you write without an end in mind and get your thoughts flowing.  This technique is useful for writing novels, so I've heard from Brandon Sanderson in his creative writing course on youtube.  But that's not what I've been doing.
+                </p>
+                <p>
+                    I've been writing, blogging, and making a habit of creating content because I want to improve at it and I'm not going to let fear of failure get in my way.  I started this website in January and I now have 9 months of experience of writing and maintaining a blog and coding this website.  
+                </p>
+                <p>
+                    So for my own personal development each post has been worthwhile, something to learn from.  But in the interest of improving the quality of this blog for my readers, I am going to start taking steps toward using what I've learned to write a better blog, instead of just doing it for experimental purposes.
+                </p>
+                <p>
+                    Blogging, like journaling, is therapeudic.  It's almost addictive.  Sometimes I just like to create instead of consume.  But, as a songwriter, I know, you can't force the writing of a good song.  It just happens.  Some days, there's nothing there.  A few days or weeks go by, you pick up the guitar and then BAM! the song writes itself.  Everything you've been processing or daydreaming about just comes out all at once.
+                </p>
+                <p>
+                    Blogging is the same.  Sometimes I'm forcing it but I really just have nothing interesting to say which is the main ingredient you need.  However, there are days where some insight occurs to me and I just have to turn it into a well thought out blog post.  Sometimes, like the song, the blog writes itself.
+                </p>
+
+                <p>
+                    That said, I'm going to promote myself to Editor and go back and comb over the past posts I think.  As much as I like authenticity I also think it'd be nice to delete my bad posts and just leave the good ones for any future readers who want to start from the beginning.
+                </p>
+                    <h2>The thing I have to say</h2>
+                <p>
+                    The interesting thing I have to say is about finally setting a schedule.
+                </p>
+                <p>
+                    After having the recent experience with going on a date with a desirable girl, I have realized what I want to achieve.
+                </p>
+                <img class="picfloat" src="/static/img/xx.jpg" alt="xx">
+                <audio preload="none" src="static/audio/crystal.mp3" controls></audio>
+                <p>
+                    Once I really crystallized my goal of being a desirable partner for a desirable woman, (because, let's be honest, guy's, I think girls are God's best offer to us for satisfaction in this world)... Once I crystallized my goal I was able to set a schedule of what my ideal day would be, that would also be conducive to achieving my ideal self.
+                </p>
+                <p>
+                    I work from 9:20-6:00 in insurance.  I decided my ideal workday, if I'm to be the man I want to be and get the girl I want to get, etc... I have to wake up before 7AM, eat breakfast, go to the gym and break a sweat, then come back and shower, and then spend a half hour to an hour on my personal business plans, and then I can go work for someone else to pay the bills, and then when I get off of work, I'm making a new schedule.  To be honest I haven't figured out how I want the nights to go, but my morning was near perfect.  I just need to go to bed early enough to do it again tomorrow.
+                </p>
+                <p>
+                    I'm turning 30 in a week.  I made a video called turning30 a while back and shared my thoughts on turning 30.  I have been thinking about it for a while and I'm faily comfortable with where I'm at moving into my 30's.  I have clear goals, priorities, skills, a job with room for extra income, and a website people use for my fantasy football articles.  I'm pretty happy with my progress.
+                </p>
+                <h3>09/22/2021</h3>
+            </div>
+            <!-- <div class="dark3">
+                <h2>The Assault on Masculinity</h2>
+                <img class="picfloat" src="/static/img/bond.jpg" alt="bond">
+                <div class="vid">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/uRsSmJ0iPXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>
+                    So I've been noticing this for a while.  This guy I often listen to does a really good job showing how masculine media is being overwritten by feminist garbage.  It's nothing against women, if a woman character exists, go for it.  But stop making masculin men get their asses kicked or replaced by strong females.
+                </p>
+                <p>
+                    In Drake Uncharted 4 Drake can't take a girl in a fight basically ever.  He's been kicking everyones ass and then there's multiple sequences where he gets his ass beat by a girl and there's nothing the player can do to stop it. 
+                </p>
+                <p>
+                    Now I'm hearing the new James Bond is infected with this bs and now even Thor is going to be a female.
+                </p>
+                <p>
+                    Now, I'm not here to state the obvious. Anyone can see this.  The question is why.  Why are they doing it?  Is it virtue signalling, or the changing of the times?  Are they giving the people what they want?
+                </p>
+                <p>
+                    No, they aren't.  The quality of content sucks.  And they try to remove things like James Bond sleeping with a bunch of girls because it's awesome for men to see, and then they want to suck away all of the awesome and destroy all of masculinity so they have a bunch of pussies to easily rule over.
+                </p>
+                <p>
+                    It is true that in the past, video game girls used to be just big tits and stuff like like, but we've swung so far in the other direction that now Abby in the Last of Us 2 has the biggest muscles in that game.  It's stupid and unrealistic.  
+                </p>
+                <p>
+                    I think everyone is secretly starved for good old fashioned masculine and feminine roles.  I'm not even going to waste my time with disclaimers like some woman are strong and smart.  I want a story with a hot hopelessly weak princess getting rescued by a badass man who gets to bang her at the end. 
+                </p>
+                <p>
+                    That's why I wrote Cloudland, and even part of the reason I had a mental breakdown.  I could see the attack on all masculinity, including my own.  I knew I had to shake things up with my behavior and rebel.  I ended up losing it but I still stand by the essential goal which is to be a real man. 
+                </p>
+                <div class="vid">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/5iZsXmUDKzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>
+                    Andrew Kirby has a video where he explains how Alexander the Great was so obsessed with being the Alpha that he eventually had to call himself God because he didn't want God above him.  My mental breakdown was similar in that I renamed myself Elam Ahpla, the character in my story of a dragonslayer princess rescuing sword weilding hero.
+                </p>
+                <p>
+                    Problem was I went into cannabis withdrawal psychosis but at least I managed to quit smoking.
+                </p>
+                <p>
+                    The other video I want to share that I saw recently is from Quantum of Conscience.
+                </p>
+                <p>
+                    I like Quantum of Conscience, 1st Man, and Andrew Kirby, in that order.
+                </p>
+                <div class="vid">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/tv8vV__kmFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>
+                    In this video he takes his famous half-page explanation of reality and extends it to 5 pages to truly explain it and I think he has a good grasp of how reality works.
+                </p>
+                <p>
+                    He often says to examine what this reality wants you to do, or this society, and then just to do the opposite. So if they are trying to stamp out and ruin masculinity, I want to rebel in the opposite direction, I want to bring balance to the force.
+                </p>
+                <p>
+                    Humans thrive when Men and Women embrace masculinity and feminitity respectively.  It's like a battery with opposite charges.  We cannot thrive without a strong charge in both directions.
+                </p>
+                <p>
+                    I just bought a Temper Pedic cloud mattress with my commission money and I will be building an excellent life for myself and have a beautiful girl on that bed and no one can stop me.  I just learned "Guarenteed" By Eddie Vedder on Guitar (Into the Wild) and I am forming a better life for myself.  I went swimming today and did pushups and I am excercising more frequently now.  If you want to look like a beast, you have to be a beast, and work like a beast.  I'm not working out like a beast, but I'm getting closer.
+                </p>
+                <p>
+                    I want to be a James Bond type badass who sleeps with women and is ubermasculine and there's nothing wrong with that.  It's natural and it makes me happy.  Just like it's natural for a woman to want to do feminine things.  What's unnatrual is all this bullshit in the media confusing people and making them forget who they really are, which is what that QOC video is all about. It's about just moving past the conspiracies and focusing on who we really are and becoming the best versions of ourselves. 
+                </p>
+                <p>
+                    God Bless Men and Women in their natural roles.  No disclaimers or virtue signalling here. 
+                </p>
+                <h3>
+                    09/19/2021
+                </h3>
+            </div> -->
+            <div class="post1advanced">
+                <h2>Cinepolis Dream</h2>
+                —
+
+
+<p>
+    Dream
+</p>
+<p>
+My dad was throwing a lavish party with 100+ guests.
+</p>
+<p>
+It was kind of like in CINEPOLIS
+</p>
+<p>
+I was there hosting.
+</p>
+<p>
+My dad arrived with important people and I briefly saw him.
+</p>
+<p>
+Then Sven, Devin, and Andrew arrived
+</p>
+<p>
+Sven and Andrew and Devin informed me that we were going out . ( you guys sometime don’t include me in plans but I’m still invited)
+</p>
+<p>
+There was a line of people and I was searching the line for other “Giants” to take with us.  (Most my friends are tall). But you guys laughed and assured me we already had everyone.
+</p>
+<p>
+I was laughing to myself that there was $1000’s of dollars worth of food in the party behind us but we were all going to pay to go out to dinner but it made sense because it was our last night together for a long time, and we were significantly younger than the crowd.  And we wanted some time with each other before returning to the party (maybe it was the premier of bug therapy).
+Only catch, when we got outside, I was still in my socks.  Andrew was slightly annoyed, and said the taxi would be getting here any second, and I went to run back inside to find my shoes.
+</p>
+<p>
+You guys all waited outside.
+</p>
+<p>
+On my way deeper into cinepolis, I saw a wallet on the ground  by where Sven and Andrew were sitting, by the XBOX.  There was like a massive projector like near the bar in cinepolis where they put football on, and you guys had been playing halo.
+</p>
+<img class="picfloat" src="/static/img/moneyclip.png" alt="moneyclip">
+<p>
+I noticed the wallet and picket it up, as well as several stray 100 dollar bills on the ground, at least a few.  I put them all in my hand and went deeper into the party.  Before I switched rooms, I turned to the old couple playing pool and said, “I’ll give these to my friends outside”… They nodded skeptically and said they would return it to lost and found if I hadn’t.  They knew you guys had been sitting over there.
+</p>
+<p>
+Anyway now I’m inside the party again, my hands are full but I didn’t want to mix up your money with my money so I wasn’t putting it in my pockets.  I also didn’t check the wallet’s photo ID, I figured I’d just ask outside, and I thought about calling/texting but my hands were full and I had no idea where my shoes were.
+</p>
+<p>
+Then I woke up!  LOL
+</p>
+<h4>Analysis</h4>
+<p>
+    I once had an experience working at cinepolis where I found a wallet with many hundreds in it.
+</p>
+<p>
+    I only found it after everyone else on staff had given up looking but the man on the phone seemed desperate.
+</p>
+<p>
+    I reached my arm deep down the seat he was at and found a wallet full of hundreds.
+</p>
+<p>
+    I told the man and I gave it to him and he was worried sick but overjoyed when he knew he had enough to buy his kids christmas presents or something.  He gave me like $20 as a reward which I thought was small but looking back, his relief made it totally worthwhile and the reward was inconsequential compared to actually helping someone out.
+</p>
+<p>
+    I also had another experience working at Brookestone at the mall where a shopped was dropping bills behind her accidentally as she walked and I grabbed them and chased her out the store to show her the money.
+</p>
+<p>
+    Also sometimes my freinds have plans that involve me that I really have no say in the matter because of my financial struggles in years past.  That's no longer the case as much.  I just bought a temper pedic cloud bed!  I am going to turn my room into "Cloudland" the mythical place I invented in my <a href="/story.html">story</a>
+ </p>
+ <p>
+     Also my dad is starting to get famous for Bug Therapy and I didn't realize that until I woke up that it was probably a bug therapy premier.
+ </p>
+ <p>
+     Back to sleep I think!
+ </p>
+                <h3>09/19/2021</h3>
+            </div>
+
+            <div class="post2advanced">
+                <h2>Kingslayer</h2>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/XsHZxnj3lxQ" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/XsHZxnj3lxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                    <p>Video on the contradictions of modern society and political correctness.</p>
+                    <p>
+                        Not my best video because my laptop camera broke and this is me balancing my phone on top of a whiteboard.
+                    </p>
+                <h3>09/17/2021</h3>
+            </div>
+
+            <div class="post1advanced">
+                <h2>
+                    Leverage
+                </h2>
+                <img class="picfloatsmall" src="/static/img/jacksparrow.jpg" alt="jack">
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/jv3pDX3uqbE" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/jv3pDX3uqbE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    I'm really digging this guy's content.  
+                </p>
+                <p>
+                    He talks about using leverage, like the ability to code or the internet or youtube reaching more people than you ever could in person, and making it profitable at scale.
+                </p>
+                <p>
+                    I've managed to turn part of this website into <a href="/fantasy.html">content</a> for my fantasy league of 11 other guys, but imagine how profitable it could be if I had 1000 readers at $1 per month?
+                </p>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/0Hn6FHh7NOA" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/0Hn6FHh7NOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    It's just a matter of leverage
+                </p>
+                <p>
+                    I just spent like an hour trying to learn how to spice up my nav bar.  This site is in despereate need of an upgrade, especially the nav bar.
+                </p>
+                <p>
+                    Here's <a href="/logos.html">what I got</a> so far
+                </p>
+                <h3>09/14/21</h3>
+            </div>
+            <div class="purplenew">
+                <h2>Step 1</h2>
+                <div class="vid">
+                    <a class="load-blog-player" href="https://www.youtube.com/embed/X8YVLMuasGQ" style="--player-height:315px">Open YouTube video</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/X8YVLMuasGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
+                </div>
+                    <p>
+                        I really like this short video from this guy explaining that you should just start before you learn or you'll never get started.  Learn while you do.  Action is key.  I don't know how to manage my own chess business but I know at some point I want to have business cards.  So I'm just going to make business cards when I get my next paycheck.
+                    </p>
+                    <p>
+                        Also, I really want to put a professional nav-bar for my site.  I have too many /somethings on this website and I need to invest time into building my own mobile responsive nav bar.
+                    </p>
+                    <p>
+                        I'm excited for the rest of my life.  Let's go!
+                    </p>
+                    <p>
+                        And what a great experience taking that girl on a date was.  I'm very happy I did that.  It was much better than nothing.
+                    </p>
+                <h3>09/13/21</h3>
+                </div>
+            </div>
+            <!-- <div class="dark">
+                <h2>
+                    Squirells getting their nuts
+                </h2>
+                <p>
+                    I'm not going to delete my embarrassing rant about getting rejected because it's just something I'll learn from.
+                </p>
+                <p>
+                    I'm actually at peace with it now.  I texted her saying that I understand, and maybe I'll see her around.  Overall I sent 4 texts in the span of 2 days since her rejection test, and only one was a tad long.  Not the worst.  Probably an improvement.
+                </p>
+                <p>
+                    I'm really proud of myself for getting as far as I did and putting myself out there.
+                </p>
+                <p>
+                    There's an expression, "You only get the amount of love you think you deserve" and I think my opinion of myself is rising and I got what I thought I deserved, and no more.
+                </p>
+                <p>
+                    Squirells gather nuts so that they never go hungry.  Squirrels must just know that it sucks to be hungry and have nothing to eat, so they think ahead.  Even when they're not hungry, they're always on the lookout for nuts.
+                </p>
+                <p>
+                    I know I'll be horny at some point in the future.  It's completely inevitable.  The question is, will I be prepared and have a dime piece to lie down with?  When I first realized this terrible urge men face quite often alone, I hatched a long term plan to have a great sex life.  I've had a great sex life.  But it's gone out of wack and I'm out of shape with no girl.  And I gotta face facts if I'm ever going to get the nuts and prepare for winter like the squirrel.
+                </p>
+                <p>
+                    So I just was at 7/11 cause I had an urge to get some drinks and snacks.  But I'm conscious of the ingredients because I've been running and swimming and lifting to improve my body.  But, every single thing I was craving had the main ingredient "corn syrup".  High fructose corn syrup.  In the powerade, life saver gummies, sour gummy worms.  Basically everything I like.  So I got sugar free powerade and chocolate covered pretzels.  I am going to try to swear off high fructose corn syrup and soda.
+                </p>
+                <p>
+                    My new flip-flops and bathing suit make it much more inviting for me to go swimming.  I love my flip-flops!  I love life.  I know I can improve and get better.  Eventually I'll be ready to go on a date again, and if I work at it, one day I will get another girl I really actually want and can be happy with.  See, someone told me recently it shouldn't be hard work, but I disagree.  The best girls are always hard work, because they're the most widely desirable and you have to blow them out of the water and blow the competition away.  You have to excel in every category.  Because a perfect 10 girl doesn't just select the hot guy.  There's many different guys she thinks are hot, and she selects the hot nice one.  Or, if she's selecting based on personality, there's plenty of guys with the personality she likes, so she'll go with the hottest one within that selected personality group.  So you have to work hard and dominate in all areas.  And the juice is worth the squeeze.
+                </p>
+                <p>
+                    I just got to speed up my excelling because these girls are saying I'm too old and I'm turning thirty.   Really I think some of the hottest girls on earth are probably from like 18-35.  The reason younger girls are appealing is that they're just less likely to be gross.  They are more likely to be clean and fit.  Idk.  As time goes on, maybe they start smoking cigarettes, or get tatoos you don't like, or drink too much, or something idk.  The perfect girl who stays looking young is probably like 24-25.  Because they do get hotter after 18,  but not all of them do.  It's only the ones who stay in shape and take care of themselves.
+                </p>
+                <p>
+                    Anyway, gotta update the <a href="/fantasy.html">fantasy ranks</a>
+                </p>
+                <p>Peace!</p>
+                <h3>09/12/2021</h3>
+                <p class="profound">
+                    I no longer agree with this thought process and I actually think love should come easily for 2 people who accept each other as they truly are.
+                </p>
+                <h3>3.21.22</h3>
+            </div> -->
+            
+            <div class="post2">
+                <h2>School of Rock</h2>
+                <img class="picfloatsmall" src="/static/img/schoolofrock.jpg" alt="schoolofrock">
+                <p>
+                    It's 1 o'clock in the morning and I have work tomorrow but I had to finish watching school of rock and now I have to blog about it while it's still fresh in my mind.
+                </p>
+                <p>
+                    It reminded me of when I was a teacher and how awesome and full of potential kids are.
+                </p>
+                <p>
+                    If you've been living under a rock, I'll tell you real quick what it's about before I analyze it.  It's about a guy who can't pay his rent because he's trying to make it in a band.  Dewey (jack black) lives with his brother and his brother's girlfriend is pressuring him to tell Dewey to get a job or move out.  Meanwhile, Dewey also gets kicked out of his own band.
+                </p>
+                <p>
+                    His phone rings and he decides to pretend to be his brother who is a substitute teacher.  
+                </p>
+                <p>
+                    Then he goes to teach at a prep elementary school and collect the money letting the kids do whatever.  But then, it stops being about the paycheck.  He sees the kids during their music class and sees their potential.  Then he get's all engaged as a teacher and his passion takes over.  Nothing is better than teaching a kid something for the first time that you're passionate about.  Bringing what you love to their attention and seeing them experience it for the first time is epic. 
+                </p>
+                <p>
+                    Then he starts this whole class project called "Rock Band".  He plans on entering Battle of the Bands with the class. I forgot to mention he put out fliers and no one wanted to join his band.  
+                </p>
+
+                <p>
+                    Anyway, the whole time I'm thinking about the ethical implications of what he's doing.  Are the kids missing out on a real education by studying rock and roll everyday?  No, they aren't.  Is math worth learning?  Yes, but you don't need to study it everyday.  That makes it boring.  Engaging the kids with passion is all that really matters.  If kids are engaged, you can teach a months worth of math in one day.  It's when it's monotonous and boring when it becomes difficult to teach.
+                </p>
+                <p>
+                    Also, the idea of him not being qualified to be in front of children and teach, it's ridiculous.  He's the perfect teacher.  He's so honest, and genuine.  He wants the kids to unlock their potential.  He loves them.  It's beautiful to watch, seriously.  Kids are robbed of people like that and people like that have to basically lie to get in front of kids and teach what they're passionate about.  I remember teaching a lego robotics class but I was very into math at the time and I would teach the kids secret math lessons way above their grade level and it got them super-engaged.
+                </p>
+                <p>
+                    Children will rise to whatever expectations are placed on them, without fail.  If you tell them they're all going to be treated like college kids, they'll start acting like it.  It's remarkable.  I had half the class teaching itself.  I'd teach one kid one thing and have him master it and then each kid was a master of one skill and they all taught themselves it.  Teaching is the best way to understand something.  So, that was my golden teaching method.  I think it could be widespread and incredibly impactful, so I'll have to revisit it.  But imagine if during middle school you got to read ahead about geology, or whatever your favorite subject is, and then teach the class that one subject, or lesson.  you would be pro at it.  And then all the "teacher" has to do is make sure each kid is master of one thing.  Then they will all naturally be dying to explain their expertise to one another.  It's impossible to have 7 expert kids in a room without them all sharing ideas.  It really does work.
+                </p>
+                <p>
+                    I know it's just a fictional movie but it's such a great story and I love love loved watching it. 
+                </p>
+                <p>
+                    Rock on.
+                </p>
+                <p>
+                    Also, all my rules had caveats.  Like No cell phones, unless you can solve this math problem.  Then, go on your phone the rest of class, I don't care. do you know how frantically the kids try to learn math when you attach a reward like that?  They leapfrog 50 IQ points and 5 grade levels I'm not kidding.  You can teach a kid algebra in 30 minutes with that trick.
+                </p>
+                <h3>09/09/2021</h3>
+            </div>
+            <div class="post1advanced">
+                <h2>California Remix</h2>
+                <div class="song">
+                    <a class="load-blog-player" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1121407270&amp;color=%238c9cb4&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true" style="--player-height:300px">Open SoundCloud track</a><template><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1121407270&color=%238c9cb4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></template><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/maxwelljann" title="Maxwell Jann" target="_blank" style="color: #cccccc; text-decoration: none;">Maxwell</a> · <a href="https://soundcloud.com/maxwelljann/thistown" title="This town hates me" target="_blank" style="color: #cccccc; text-decoration: none;">This town hates me</a></div>
+                </div>
+                <p>
+                    Devin K did a remix of my latest single, <a target="_blank" href="/music.html">California</a>
+                </p>
+                <h3>09/08/2021</h3>
+            </div>
+            
+
+
+            <div class="post2">
+                <h2>End of Month</h2>
+                <div>
+                    <img class="picfloatverysmall" src="/static/img/1984v2.jpg" alt="1984">
+                </div>
+                <p>This is the end of September's Blog.  Please check out my other months:   <a href="/blog/january/">January</a>  <a href="/blog/january/">February</a>  <a href="/blog/january/">March</a> <a href="/blog/january/">April</a> <a href="/blog/january/">May</a>or view the full <a href="/blog">Blog</a></p>
+                <p>I have broken them up by month so it's easier to load.</p>
+                <h3>05/02/2021</h3>
+                </div>
+            </div>
+            <div class="royal">
+                <a href="/blog" onmouseover="All()" onmouseout="blog()" ><h1 id="switch">Blog</h1></a>
+                <a href="/blog/january/" class="month">January</a>
+                <a href="/blog/february/" class="month">February</a>
+                <a href="/blog/march/" class="month">March</a>
+                <a href="/blog/april/" class="month">April</a>
+                <a href="/blog/may/" class="month">May</a>
+                <a href="/blog/june/" class="month">June</a>
+                <a href="/blog/july/" class="month">July</a>
+                <a href="/blog/august/" class="month">August</a>
+                <a href="/blog/october/" class="month">October</a>
+
+            </div>
+        </div>
+    </div>
+    <script>
+const videoId = "bxoy1Cd93fk?si=a9moFxHNZqSDpktc";
+// function demon(){
+//     document.getElementById("viper").innerHTML=`
+//     <div class="vid">
+//         <iframe width="100%" height="315" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//     </div>
+//     `
+// }
+// demon();
+
+
+const viper = document.getElementById("viper");
+if (viper) {
+  viper.innerHTML = `
+    <div class="vid">
+    <iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/${videoId}"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+    </div>
+    `;
+}
+
+
+
+
+function timingiseverything(){
+    let numeroly = new Date;
+    let month = numeroly.getMonth()+1;
+    let day = numeroly.getDate();
+    let year = numeroly.getFullYear();
+    document.getElementById("neo").innerHTML=`${month}/${day}/${year}`;
+}
+timingiseverything();
+
+
+function play(){
+    document.getElementById("play").innerHTML=`
+                    <div class="vid">
+                        <iframe src="https://ugetube.com/embed/yPzOBdydY5VjluB" frameborder="0" width="100%" height="400" allowfullscreen autoplay="0"  ></iframe>
+                    </div>
+    `
+    document.getElementById("controls").innerHTML=`
+                    <a onclick="hide()" > Hide Video?</a>
+    `
+}
+function hide(){
+    document.getElementById("play").innerHTML=`
+                    
+    `
+    document.getElementById("controls").innerHTML=`
+                    <a onclick="hide()" > Play Video?</a>
+    `
+}
+
+function cocktail(){
+    document.getElementById("cocktail_comments").classList.remove("hidden");
+    document.getElementById("shower").classList.add("hidden");
+    document.getElementById("hider").classList.remove("hidden");
+}
+function cocktail2(){
+    document.getElementById("cocktail_comments").classList.add("hidden");
+    document.getElementById("shower").classList.remove("hidden");
+    document.getElementById("hider").classList.add("hidden");
+}
+
+function noone2(){
+    document.getElementById("noone").innerHTML=`
+    <p>I want this to <span class="noone" onclick="noone()">expand</span> even though it is not for me</p>
+    `
+}
+function brandnew(){
+    `
+    <p><span class="noone" onclick="noone2()">Nevermind</span></p>
+    <div class="post">
+                <h2>I might be wrong</h2>
+                <p>
+                    For the record, I might be wrong about everything I say in this blog.  I'm just a guy trying to make sense of the world.
+                </p>
+                <p>
+                I've decided to temporarily suspend what I've had hidden here after a years thought.
+                </p>
+                <h3>1.3.22</h3>
+            </div>
+    `
+}
+function noone(){
+    document.getElementById("noone").innerHTML= `
+    <p><span class="noone" onclick="noone2()">Nevermind</span></p>
+    <div class="vid">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/q6EzSbI-zOk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                
+                <p>
+                    I've decided to remove this post after a year's thought.
+                </p>
+    `
+}
+
+function legacyfun(){
+    document.getElementById("noone").innerHTML= `
+    <p><span class="noone" onclick="noone2()">Nevermind</span></p>
+    <div class="vid">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/q6EzSbI-zOk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>
+                    This is a post for someone who believes in the general consensus of how the world works, but is open to information that challenges their world view.  
+                </p>
+                <p>I've included a video of chapter 1 of a book for the conspiracy noobie.  Someone who knows something isn't quite right with the fact that we went to the moon 52 years ago and haven't gone since.  All the computer stuff that happened?  Who needs that!  Maybe someone who thinks Lee Harvey Oswald didn't singlehandedly take down the president with a magic bullet as he conveniently drove by his place of work in a convertable and no one used the upper floors.</p>
+                <p>Maybe they find it hard to believe that 6 guys with box cutters hijacked planes and managed to strike the Pentagon, and the twin towers while all the fighter jets were confused by the hijacking training excersise scheduled for that day.</p>
+                <p>Maybe they're wondering why the buildings collapsed suddenly at near free fall speed as if it was a controlled demolition when the only damage was in the upper floors.</p>
+                <p>
+                    I guess if anyone could find this useful it would be a young person, maybe 18, who isn't entreched in his world view yet.  
+                </p>
+                <p>If you think it's the Rebuplicans vs. Democrats and we live in a democracy by the people and for the people then this isn't for you.  If, on the other hand, you've noticed that no matter who gets elected, the government pulls the same shit then maybe you're open to learning about why.  I view these things as kindergarden level because I've been doing this for a decade, but you have to start somewhere.</p>
+                <p>The amazing chasm between someone in the know and someone not in the know is so incredibly large and uncrossable that I'm not sure what to do.  It's supernatural how difficult it is to explain to someone basically anything that goes against what the news presents as real. </p>
+                <p>
+                    I see young healthy people in their car with their mask on alone.  How much more brainwashed could you possibly be?  
+                </p>
+                <p>
+                    And here's the creepiest part.  There is a recent Mandela Effect where Selma Hayek's name has changed to Salma Hayek and has always been Salma.  I knew my Dad was a fan of Selma Hayek and thought she was pretty, so I called him up.  "Dad, what's the name of that actress who's last name is hayek?"  "Selma!  Selma Hayek" He says.  Then I ask him, "Could you spell it for me please"  "S-E-L-M-A"  I say, "Ok, for a brand new car in this game show, is that your final answer?" "Yes."  "Okay, google it.  Gotta go!"
+                </p>
+                <p>
+                    After googling it and seeing that her name is now and always has been "Salma" which sounds ugly, first of all, after seeing that he texts me basically saying, "Oops, and I should know that because I just pitched her a screenplay."  So not only is he a fan, he's practically a collegue, and it didn't even cross his mind to use an A instead of an E when a car was on the line.  Now after a quick google, he's 100% sure he was mistaken because obviously google has it correct.
+                </p>
+                <p>Yes they do, and her name has always been Salma.  But here's where it gets really creepy.  We argue about it for a while and by the end of it he texts me.  "I love it.  I love the spelling with the A.  It's beautiful."  So that's what we're dealing with.  Not only will people completely disregard their own memory and immediately take the google download of information, but they love it!  That's what we're dealing with.  He wasn't even bothered by his misspelling of it within a few hours.  He actually prefers the information spoonfed to him as opposed to having his own opinion.  Granted it's a tall order to remodel your reality model based on one celebrity's name but to love it and call it beautiful when it's actually an ugly ass name that sticks out like a sore thumb and you would have been out a brand new car if you were on a real game show?  To love it just creeps me the fuck out, it really does.  It reminds me of Winston loving Big Brother by the end of 1984.  </p>
+                <p>Now, I love my Dad and I don't care that he doesn't accept the Mandela Effect.  Whatever.  There are more important things in life that he knows way more about than me but I wanted to share that creepy story to let you know what we're up against.  </p>
+                <p>
+                    You don't need to be a structual engineer or a demolition expert to know that the twin towers didn't fall because of a pancake effect from the top floor giving out due to a fire.  You just need common sense.  I don't know what's going on here.  It's like some weird trick of the Devil.  It's virtually impossible to explain to someone the simplest little thing that contracticts their version of reality.  In Fairness the Bible does say that the Devil deceiveth the whole world and that you will be persecuted for following the path of Christ but I just never imagined it would be like this.  It's like I'm speaking a different language!  
+                </p>
+                <p>
+                    This post is for no one!  There is NO ONE.  You can call me crazy but at least I know to go for the bottom jenga block to make it collapse.  Good luck pulling from the second from the top and hoping a pancake effect collapses the whole thing.  
+                </p>
+                <p>
+                    So how do I know I'm not crazy?  I don't know.  I can checkmate you with my eyes closed or drop a nuke on you in call of duty.  I can get a college degree and a coding dojo certificate and code this whole website.  I've been crazy before.  I went full on crazy for like a month, but even then, at my worst, I still had more truth in me than the average zombie who thinks our response to covid 19 is perfectly reasonable.  
+                </p>
+                <p>
+                    It's probably not even possible to study all this stuff without going crazy.  I don't think I get enough credit for trying.  Sure, I lost it for a couple weeks but that's what this shit can do to you.  When you realize everything is a lie why not question whether you really need sleep?  Which is what I did to cause my poor judgement during that period of time.  But who cares?  I go crazy for a month during 10 years of researching how fake reality is and I think that deserves a medal or something.  I probably beat the odds.  Maybe that's why it's so hard for people to consider even elementary conspiracy theories.  It's maddening to deal with; it really is, and I don't think I get enough credit for trying to figure it out, but maybe that's what Jesus meant.  Forget about credit, I get ostracized.  My best friends are subconsciously terrified of me!  Of what I might say.  I'm like the luckiest guy in the world that I have 1 friend who actually can see it.  It's all so obvious I don't need confirmation from someone but it is definitely nice.
+                </p>
+                <p>
+                    Alex Jones, the face of the conspiracy theory, looked like death on the last Joe Rogan experience.  He says he can't do this anymore.  He even backed off of Sandy Hook because of the backlash he must have taken and look, there's no way you can study sandy hook conspiracy without becoming traumatized.  That's little kids dying.  It's as bad as it gets.  I don't know if Alex Jones is propped up by the system as controlled opposition or if Alex is even aware of it.  He helped open my mind up and move past him and my gut tells me that he believes in what he's saying and even believes sandy hook was a conspiracy but he felt he needed to back off of that scintillating issue to survive and make no mistake, it is killing him.  He's banned from certain platforms but overall I think the system finds him tolerable because he isn't handling it in the best way or the best role model for truthers.  
+                </p>
+                <p>
+                    Once you self-educate yourself and graduate from truther school you are supposed to move on and live your own life, avoiding the bullshit anderson pooper scooper spews out of his mouth. 
+                </p>
+                <p>On the bright side, if this life is a test and you aren't gobbling up anderson pooper scoopers dogshit then you've passed.  You have kept the faith.  There's still a lot of work to do but overall it's obvious they're trying to trick the population and whatever they want from that they aren't getting it from us, unless you're still stuck on sandy hook or 911 or pick your favorite conspiracy.  Understand it's bullshit, and move on.  It's impossible to use the evidence you find on other people anyway, so prove it to yourself and move on.</p>
+                <p>
+                    In regards to Sandy Hook, I don't know what happened.  I haven't studied it in years, but I will never forget Robbie Parker, alleged father of the slain Emily Parker, who was laughing his ass off leading up to his somber press conference when he didn't realize he was on camera.  Again, if that isn't weird to you, then it's probably also not weird to you that we're trying to go to Mars when we haven't even been to the moon in 50 years.  That's similar to entering the olympics for swimming at age 50 when you haven't even swam since high school, and thinking you're going to get the gold medal.  That's actually a bad metaphor.  Let me think of a more apt one, because we never even went to moon at all. It's like someone claiming the pyramids were built by slaves thousands of years ago, but we still can't build them today, despite all the advancements in technology.  Well maybe they weren't built in the way you were told.  
+                </p>
+                <p>
+                    And if you think we haven't been to the moon since 1969 because we don't want to go well then how do you explain the fact that space is all the rage right now!  Look at what SpaceEX is supposedly doing besides embedding SEX in their name and shooting a black dick into space.  I liked Elon Musk, and the idea of him, but all of the sudden he's the richest man in the world?  The whole appeal of Elon was that he risked all his own money to bring us these badass companies that might fail so we should all buy his products and support him and now he's richer than Jeff Bezos?  The narrative just fell apart as far as I'm concerned and I just flat out don't believe him anymore. He's definitely the coolest dude on the planet but how real he is at this point I just don't know.  The SEX thing really is quite telling.  How about you go livestream on the moon first before selling us all on Mars, Elon?  I don't know.  Sometimes I think guys like him and even Einstein and Stephen Hawking are used to push lies.  Neil Degrasse Tyson's favorite thing to do is push lies.  I don't know if he even knows that they're lies.  Why did the big bang occur Neil?  
+                </p>
+                <p>
+                    Any public genius or intellectual who doesn't acknowledge the elephant in the room of the elementary level of conspiracies going on cannot be trusted.  Even Jordan Peterson who's taught me so much, and Elon who's inspired me, even they are suspect.  How could anyone be that smart and miss something so basic?  Well, one explanation is that I'm wrong, not them.  However, it's not debatable.  There's simply no way Lee Harvey Oswalds bullet could have done what it did, or the twin towers could have fallen the way that they did, without an alternate explanation.  So these public intellectual heroes are just a joke to me at this point.  
+                </p>
+                <p>
+                    The entire world is so far past insane that you couldn't pull them out of it in a million years, possibly eternity.  I haven't figured out why that is but I heard an interesting theory that it's because of something they've already decided in the future that's affecting their past which is right now.   I had never thought about that before.   I know the present can affect the past but I forgot about the future affecting the present under the same principle of retrocausality.   And again, I'd much rather talk about retrocausality and Parallel Universes and the teaching of Jesus than Lee Harvey Oswald but these people wouldn't pass the first day of kindergarden of a real school designed to actually help you learn. 
+                </p>
+                <p>
+                    Our school system is a complete joke.  That alone is proof of everything I'm saying.  You know school's a bunch of bullshit; you went through it. You could make it through Ivy League with a post graduate degree and still be a total moron by objective standards.  A total moron who thinks it's red vs. blue and not the royal color of purple.  You know how they call it "left wing" and "right wing"?  Has it ever occured to you that the left wing and right wing can be two wings of the same beast?  It doesn't care what wing you worship if it stays perched on the throne.
+                </p>
+                <p>
+                    This isn't for you, this is for me so I don't go crazy again.  If you want to know what I think, you can come here for a unique perspective.  I'm not posting it on facebook so it shows up on your news feed in between cat videos and selfies.  I'm just telling it like it is for anyone who has two brain cells left to rub together. 
+                </p>
+                <p>
+                    I don't think I'm some supergenius who can see things others cannot.  There's some truth to that as I am in the top like 1% of chess players in the world but thinking hasn't been my strongsuit.  I've lived a well-rounded life with Athletics, and girls, and parties, and I think my talent and purpose lies in my ability to relate to anyone in person and to kind of meet you on your level.  I can speak confidently in a crowd and have leadership and teaching ability.  But I'm not a supergenius.  I'm just frustrated that no one can see the most basic of things about this reality.
+                </p>
+                <p>
+                    There's something spiritual going on where maybe I'm an old soul or a different type of incarnation than the vast majority of people who can't see with their own eyes anymore unless the news tells them what they're seeing. 
+                </p>
+                <p>
+                    I don't hate you.  Do I think I'm better than you?  Maybe, but I recognize that as a flaw.  I think there's a ton wrong with me and the world is somehow a reflection of myself because I'm part of it and it is sick so I must be sick as well.
+                </p>
+                <p>
+                    In a scenario like this where 1984 is coming to life and the ministry of truth is starting to censor more and more "fake information" there's little to look forward to other than the coming of Jesus.  
+                </p>
+                <p>
+                    I'm actually kind of mad at myself for not predicting this virus crisis, so I'm going to try to predict the next thing.  The virus is like their evil little plan to put everyone in masks and keep us separated to basically divide and conquer our souls.  So what's next?  They rode the terrorism train about as long as they could before they had to come up with the next phase of a virus crisis.  So what's next?
+                </p>
+                <p>One idea I have is that they'll claim to discover a "murder gene" and they'll use it to be able to genetically modify all babies at birth, to install whatever programs they want into them to truly make people subhuman.</p>
+
+                <p>That's one direction they could go when we get tired of the virus business, or they at least accomplish what they want to with the virus and then choose to move on.</p>
+
+                <p>
+                    Remember they said 2 weeks and it's been idk 2 years maybe?  Whatever.  Do you know I wouldn't even be surpised if I was kidnapped by reptilians in the night who threatened to kill me if I stopped making this website.  I would laugh and roll my eyes at them.  That's how fucking batshit this all is.  Nothing, and I mean absolutely nothing, would surpise me.  The only thing that would surpise me is if everything got fixed and only the truth prevailed barring Jesus coming back.
+                </p>
+                <p>
+                    Okay so if I had to try to predict another manufactured crisis I'm trying to think of what they want to do to us next.  Let's see, we've hacked all their emails and phone calls, we've put them under house arrest and put them in masks... what else can we do?  Maybe modify their genes at birth like I said.  Maybe... maybe we could have them use autopilot!?  That's it.  You know like the movie Click?  When he fast-forwards and misses all the little things in life, and he's just a zombie?  I bet you that will happen in reality someday where technology will give people the option of automating their own bodies for certain periods of time and then get to use their brains and bodies when they get home from work for a few hours.  Idk.  Would that surpise me if people lined up for that?  No, it would not.  
+                </p>
+
+                <p>
+                    So we could genetically modify them at birth, we could get them to completely surrender their consciousness to us to fast forward their conscious experience... what else could we make them do?  And trust me I'm not giving the Devil any Ideas; he's way smarter than 1000 me's put together.  I'm just trying to think it through.   Let's see...  we could get rid of the men, just make a population of women to serve us and have the sperm banks somehow stay operational.  Not sure how they'd pull that one off but they certainly want not only men gone but women too.  So there would have to be a push towards a genderless society.  Lets see, we've already kind of broken down the family, and attacked masculinity as toxic and feminity as inferior... Let's make them learn from the government instead of their parents!  "Hey Satan"  A gargoyle yelled.  "yes?" Satan asked.  "We already did that one."  "Oh yes, I forgot, common core is my favorite."
+
+
+                </p>
+
+                <p>
+                    What does the Devil have for us next?  
+                </p>
+                <p>
+                    How about fake aliens!  That seems like it's already underway.  That's probably it.  So they'll probably have elon musk's black space dick make contact with a fake alien civilization that wants to come live with us.  Sure! Come on down.  Then we'll have demons walking around interbreeding with us, I don't know.  Would that surpise me if we made contact with aliens in the next 10 years and somehow it was a conspiracy to gain more power over us humans and dehumanize us further?  No, it would not surprise me.  And no, save your comments about my own sanity and take yourself to the shrink for both of us and ask for the placebo instead of your pills because they're just as effective, and they're cheap and taste better. 
+                </p>
+                <p>
+                    You can take a sugar pill and experience the same effects as a drug.  Okay?  That tells you all you need to know about reality.  Some people shrug it off as insignificant and I haven't learned how to not see those people as total morons.  The Placebo effect changes everything and is verifiable proof that your mind has way more power then your world view allows for.  Government is... wait for it... dare I say.... governing your mentality?  Is that too much of a stretch there for ya? Ya, I thought so.  Again, a post for no one.
+                </p>
+    `
+}
+
+function alien(){
+    document.getElementById("switch").innerHTML=`
+    DJ Aliens
+    `
+}
+function blog(){
+    document.getElementById("switch").innerHTML=`
+    Blog
+    `
+}
+
+function april(){
+    document.getElementById("switch").innerHTML=`
+    Home
+    `
+}
+
+function All(){
+    document.getElementById("switch").innerHTML=`
+    Index
+    `
+}
+function cold(){
+    document.getElementById("shell").innerHTML=`
+    <p onclick=war() id="cold">I've seen enough<p>
+    `
+}
+function war(){
+    document.getElementById("guide").innerHTML=``;
+    document.getElementById("shell").innerHTML=`
+    <p id="cold" onclick=strategy()>Click to reveal my review and strategy guide of Call of Duty Cold War<p>
+    
+    `
+}
+function strategy(){
+    document.getElementById("guide").innerHTML=`
+    <div class="gamereview">
+                <a target="_blank" href="https://www.amazon.com/gp/product/B08GR4QMC9/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B08GR4QMC9&linkCode=as2&tag=117027-20&linkId=50b3bd11074970c34a527d0a44f367ea"><img class="pic" src="/static/img/coldwar.jpg" alt="cold war"></a>
+                
+                <h1>Call of Duty: Cold War 9.5/10</h1>
+                <p>This game is getting better and better.  They keep releasing new weapons, maps, and zombies maps all for free.  They also balanced some of the weapons like the MP5 and buffed some of the bad guns so I think it's a lot of fun now.  The zombies mode is super fun and I love the multiplayer team deathmatch mode.  Even the scorestreak system is cool because it discourages camping because if you die your scorestreak does not reset.  They just released more weapons, maps, and a theater mode.</p>
+                <div class="strategy">
+                    <h2>Strategy Guide</h2>
+                    <img src="/static/img/diamond.jpg" alt="diamond" class="pic">
+                    <p>
+                        I finally got my shotty and sniper class diamond.  To get a weapon diamond you have to get every weapon in the class gold.  To get a weapon gold you have to complete all weapon camo challenges.
+                    </p>
+                    <p>
+                        To complete all weapon challenges you have to get 20 instances of 5 kills in a row without dying using only that weapon.  This is much harder than it sounds because if someone comes up behind you and you switch weapons to kill them it resets your kill count on your primary weapon.  So I would have to snipe, and then retreat and snipe their assault instead of just whipping out my shotgun.
+                    </p>
+                    <p>
+                        There were only 3 snipers and 2 shotguns at the launch of the game.  Now there are 4 snipers and 3 shotguns.
+                    </p>
+                    <h2>Streetsweeper</h2>
+                    <p>
+                        The best shotgun is the streetsweeper.  It's the newest shotgun and you can see it in my picture.  I have more kills with it than any other weapon because it is an 18 round fully automatic one shot kill.  It dominates, however they just balanced it with a season 3 patch and now it struggles to get one shot kills and also suffers in midrange aiming down sights where it used to be functional.
+                    </p>
+                    <p>
+                        This class was the best, but now I think I have to run my AK74U for close range again after the nerf of the Shotty.
+                    </p>
+                    <h2>LW3 Tundra</h2>
+                    <p>
+                        The best sniper is the Tundra you can see above.  It's the strongest sniper before the latest one released super recently but it's also deadly accurate.
+                    </p>
+                    <p>
+                        The key to winning in Cold War is to have 2 weapons. 1 for long range and 1 for short range, and then to choose your battles carefully.  If every engagement I get into is long range with a sniper or close range with a shotgun I'm going to have a kill death above 1.6 which I do for that reason.  Really it's probably closer to 2 when I'm actually using a sniper shotgun, because sometimes I'm messing around with a revolver and tomahawk.
+                    </p>
+                    <p>
+                        You can see my perks above and I will explain why they dominate.
+                    </p>
+                    <p>
+                        Perk Greed is the best way to go.  You get 6 perks and 2 from each perk class.
+                    </p>
+                    <h2>Perk 1</h2>
+                    <h3>Flak Jacket</h3>
+                    <p>
+                        Flak Jacket is so dominant they had to nerf it but it's still super clutch to survive otherwise deadly explosions.
+                    </p>
+                    <h3>Engineer</h3>
+                    <p>
+                        I use engineer for 1 reason.  Stealth.  In Perk 3, you can only chose 2 of them, unless you're rocking Law Breaker and can grab 3 of any perks you want and 2 primary weapons.  Since I use Ghost Ninja in perk 3, that means I cannot also use Spycraft.  Spycraft prevents you from showing up on field mics, which are like stationary personal radars.  With Engineer, I can see the field mics through walls, so I can at least know not to walk into anyone who is ready to ambush me.
+                    </p>
+                    <h2>Perk 2</h2>
+                    <h3>
+                        Gearhead
+                    </h3>
+                    <p>
+                        Gearhead is the best perk two because it lets you charge up your equipment faster and store 2 of them.  Field Mics are incredibly powerful.  I can put one on the stairs of where I'm sniping from, and then it will alert me when someone is coming up the stairs and I'll pull out my shotgun and blow them away.  It's necessary.
+                    </p>
+                    <h3>
+                        Quartermaster
+                    </h3>
+                    <p>
+                        Quartermaster allows your grenade to regenerate.  I use frag grenades because they got a buff and flak jacket got a nerve and I can cook them and bounce them off walls at the start of matches and when I'm sniper but people are hiding.  Having them regenerate means I can feel free to chuck them and get some free kills without regretting a wild throw later.
+                    </p>
+                    <h2>Perk 3</h2>
+                    <p>
+                        Perk 3 are the most important by far.  When I have Law Breaker and can choose any 3 perks I want from any perk tree, I choose all 3 perks from Perk 3.
+                    </p>
+                    <h3>
+                        Ghost
+                    </h3>
+                    <p>
+                        Ghost in Cold War prevents you from showing up on enemy radar. It doesn't work if you're not moving.  This is a cool concept and causes me to move around and flank people whenever they use a UAV.  It's a necessary perk and you have to combine it with ninja, otherwise everyone will be ready for you.
+                    </p>
+                    <h3>
+                        Ninja
+                    </h3>
+                    <p>
+                        Ninja used to be overpowered and prevent detection by field mics but they moved that to spycraft.  It's still the best perk in the game because you can sprint up to someone and they won't hear your footsteps.  It's all about getting the drop on people.  If you can hear someone coming up behind you, they're as good as dead.  Don't be that guy.  Use ninja 100% of the time.
+                    </p>
+                    <h2>Tactical Equipment and Lethal</h2>
+                    <h3>Frag Grenade</h3>
+                    <h3>Field Mic</h3>
+                    <p>
+                        I already kind of mentioned these but they are the best.  Semtex can be nice too. C4 isn't as good in this game.  RPGs are worthless too.
+                    </p>
+                    <h3>Stim Shot</h3>
+                    <p>
+                        They had to neft the stim shot and slow the healing speed but it's still the best and I recommend having the same tactical for every class because it becomes instinctual to press L1 after getting shot, so you don't want to be flashing or stunning yourself.  Stim shot recovers health quickly and combined with flak jacket you can usually survive two grenades by healing in between the two explosions.
+                    </p>
+                    <h2>
+                        Killstreaks
+                    </h2>
+                    <h3>War Machine</h3>
+                    <p>This Grenade Launcher is ridiculously strong and makes one a master of death.</p>
+                    <h3>Blackbird</h3>
+                    <p>
+                        If you're on a killstreak with your war machine and you get a blackbird (advanced UAV) you are basically immortal.  You can blow people up around corners.
+                    </p>
+                    <h3>Gunship</h3>
+                    <p>
+                        The best killstreak in the game.  If you combine your blackbird and war machine effectively you can finish the game from the AC-130 in style.
+                    </p>
+                    <p>
+                        That combination of killstreaks is good enough that I was 29-0 once before the game even really got started.  
+                    </p>
+                    <p id="normal">Why should you listen to me? View my COD montages on the <a href="/videos.html">Videos</a> Tab</p>
+                </div>
+            </div>
+    `
+    cold();
+}
+</script>
+
+<script>
+(() => {
+    const slots = document.querySelectorAll('.load-blog-player');
+    let observer;
+
+    function load(slot, focusPlayer = false) {
+        const template = slot.nextElementSibling;
+        if (!slot.isConnected || !(template instanceof HTMLTemplateElement)) return;
+        observer?.unobserve(slot);
+        const player = template.content.firstElementChild.cloneNode(true);
+        if (!player.title) player.title = slot.textContent.replace('Open ', '');
+        slot.replaceWith(player);
+        template.remove();
+        if (focusPlayer) player.focus({ preventScroll: true });
+    }
+
+    // Keep the direct links usable before the first scroll and without JavaScript.
+    for (const slot of slots) {
+        slot.addEventListener('click', event => {
+            if (event.defaultPrevented || event.button !== 0 || event.ctrlKey ||
+                event.metaKey || event.altKey || event.shiftKey) return;
+            event.preventDefault();
+            load(slot, true);
+        });
+    }
+    if (!('IntersectionObserver' in window)) return;
+
+    // Navigation, restored scroll positions and layout shifts alone must not arm embeds.
+    let scrollIntent = false;
+    const listeners = new AbortController();
+    const options = { passive: true, capture: true, signal: listeners.signal };
+    function markIntent(event) {
+        if (event.isTrusted) scrollIntent = true;
+    }
+    window.addEventListener('wheel', markIntent, options);
+    window.addEventListener('touchmove', markIntent, options);
+    window.addEventListener('pointerdown', event => {
+        // Includes scrollbar dragging and middle-button autoscroll.
+        if (event.pointerType === 'mouse') markIntent(event);
+    }, options);
+    window.addEventListener('keydown', event => {
+        if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key)) {
+            markIntent(event);
+        }
+    }, options);
+    window.addEventListener('scroll', () => {
+        if (!scrollIntent) return;
+        listeners.abort();
+        observer = new IntersectionObserver(entries => {
+            for (const entry of entries) {
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.1) load(entry.target);
+            }
+        }, { threshold: 0.1 });
+        for (const slot of slots) {
+            if (slot.isConnected) observer.observe(slot);
+        }
+    }, options);
+})();
+</script>
+</body>
+</html>

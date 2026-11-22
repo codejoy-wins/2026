@@ -4,12 +4,1081 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="neo">MJ</title>
-    <link rel="stylesheet" href="static/css/flying.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="static/img/mj3.png"/>
+    <link rel="shortcut icon" type="image/png" href="/static/img/mj3.png"/>
 <style>
+/* December archive styles */
+*{
+    /* font-family: 'Spectral', serif; */
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+}
+ul{
+    background-color: rgba(0, 255, 255, 0.608);
+    border-radius: 1.3vw;
+    padding: .4vw;
+}
+audio{
+    opacity: .7;
+}
+.infinite{
+    color: gold;
+}
+.kanye{
+    color: gold;
+    font-weight: bold;
+}
+.kanye:hover{
+    color: crimson;
+}
+#heading p{
+    color: gold;
+    display: inline-block;
+}
+.chess{
+    max-width: 100%;
+}
+@keyframes elam{
+    20%{
+        color: wheat;
+    }
+    40%{
+        color: black;
+    }
+    60%{
+        color: wheat;
+    }
+    80%{
+        color: silver;
+    }
+}
+.month{
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border-radius: 2vw;
+}
+.month:hover{
+    padding-left: 3vw;
+    padding-right: 3vw;
+    background-color: rgba(0, 0, 0, 0.192);
+    border-radius: 2vw;
+    animation: elam 3s infinite;
+}
+
+#heading a{
+    color: wheat;
+}
+#heading a:hover{
+    color: silver;
+}
+#heading .month{
+    color: black;
+    animation: elam 10s infinite;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.vid4{
+    max-width: 100%;
+    width: 600px;
+}
+.vid2{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+}
+.vid20{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+}
+.vid{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+    height: 315px;
+    float: left;
+    padding-right: 1vw;
+}
+.vidnormal{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+    height: 315px;
+    padding-right: 1vw;
+}
+.vidbit{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+    height: 315px;
+    float: left;
+    padding-right: 4vw;
+}
+.vidbitchute{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+    height: 315px;
+    display: inline-block;
+    padding-right: 4vw;
+}
+.vidright{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+    height: 315px;
+    float: right;
+    padding-left: 1vw;
+}
+#heading{
+    text-align: center;
+}
+#collage{
+    height: auto;
+    width: 100%;
+}
+#reviews h2{
+    text-align: center;
+}
+#rapper{
+    margin: 0 auto;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+}
+#rapper p{
+    background-color: rgba(240, 248, 255, 0.692);
+    padding: 1vw;
+}
+.option{
+    display: inline-block;
+    padding: 1vw;
+}
+#nav{
+    background-color: rgba(55, 83, 211, 0.680);
+    width: 100%;
+    text-align: center;
+}
+#nav:hover{
+    cursor: cell;
+}
+#nav2{
+    background-color: rgb(43, 226, 156, 0.363);
+    width: 100%;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+a:hover{
+    color: wheat;
+    font-weight: bold;
+    cursor: cell;
+}
+.current{
+    font-weight: bold;
+    color: silver;
+}
+#poem{
+    text-align: center;
+    font-size: larger;
+}
+.purple{
+    color: purple;
+}
+.purplespecial{
+    color: rgb(66, 7, 66);
+}
+.pic{
+    max-width: 100%;
+}
+.picsmall{
+    max-width: 100%;
+    max-height: 35vw;
+    float: inline-end;
+}
+.pic11{
+    max-width: 100%;
+    max-height: 400px;
+}
+.pic13{
+    max-width: 100%;
+    max-height: 400px;
+    float: left;
+    padding-right: 1vw;
+}
+.pic2{
+    max-width: 100%;
+    max-height: 600px;
+}
+.pic3{
+    max-width: 100%;
+    float: left;
+    padding-right: 1vw;
+}
+.wtf{
+    width:2000px;
+}
+h1 a{
+    color: purple;
+}
+#reviews a{
+    color: purple;
+}
+#reviews a:hover{
+    color: black;
+}
+
+.post{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(55, 83, 211, 0.680);
+    color: black;
+    font-size: larger;
+}
+.royal{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(104, 18, 82, 0.68);
+    color: black;
+    font-size: larger;
+}
+.royal p{
+    background-color: rgba(250, 189, 250, 0.621);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.post33{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(8, 250, 0, 0.68);
+    color: black;
+    font-size: larger;
+}
+.ital{
+    font-style: italic;
+}
+.post33 h2{
+    color: black;
+}
+.post33 h3{
+    color: black;
+}
+.post33 p{
+    color: black;
+    background-color: rgba(243, 234, 243, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.post1advanced{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(55, 83, 211, 0.680);
+    color: black;
+    font-size: larger;
+    padding-bottom: 7vw;
+}
+.post2{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(211, 17, 17, 0.507); */
+    background-color: rgba(211, 17, 17, 0.56);
+    color: black;
+    font-size: larger;
+}
+.post4{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(204, 199, 199, 0.56); */
+    background-color: rgba(92, 92, 92, 0.507);
+    color: black;
+    font-size: larger;
+}
+.whitepost h3{
+    color: rgb(29, 78, 120);
+}
+.whitepost{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(204, 199, 199, 0.56); */
+    background-color: whitesmoke;
+    color: black;
+    font-size: larger;
+}
+.forest{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(211, 17, 17, 0.507); */
+    background-color: rgba(23, 98, 23, 0.56);
+    color: black;
+    font-size: larger;
+}
+.forest a{
+    color: aquamarine;
+}
+.postpurple{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(143, 17, 211, 0.56);
+    color: black;
+    font-size: larger;
+}
+.post2advanced{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(211, 17, 17, 0.65);
+    padding-bottom: 7vw;
+    /* color: silver; */
+    color: whitesmoke;
+    font-size: larger;
+}
+.post4advanced{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(45, 43, 134, 0.65); */
+    background-color: rgba(46, 44, 172, 0.65);
+
+    padding-bottom: 7vw;
+    color: silver;
+    font-size: larger;
+}
+.lucifer{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(221, 160, 221, 0.733); */
+    background-color: rgba(211, 17, 17, 0.65);
+    color: black;
+    font-size: larger;
+}
+.lucifer2{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(221, 160, 221, 0.733); */
+    background-color: rgba(54, 89, 204, 0.65);
+    color: black;
+    font-size: larger;
+}
+.postpink{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(221, 160, 221, 0.733); */
+    background-color: rgba(175, 6, 175, 0.87);
+
+
+    color: black;
+    font-size: larger;
+}
+.postnew{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(221, 160, 221, 0.733); */
+    /* background-color: rgba(138, 91, 138, 0.582); */
+    background-color: rgba(246, 4, 4, 0.603);
+    color: black;
+    font-size: larger;
+}
+.postnew p{
+    background-color: rgba(255, 255, 255, 0.795);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.atomic{
+    border-radius: 1ch;
+    padding: 3vw;
+    /* background-color: rgba(221, 160, 221, 0.733); */
+    /* background-color: rgba(138, 91, 138, 0.582); */
+    /* background-color: rgba(246, 4, 4, 0.603); */
+    color: black;
+    font-size: larger;
+}
+.atomic p{
+    background-color: rgba(255, 255, 255, 0.795);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.atomic h2, .atomic h3{
+    color: black;
+}
+/* .atomic h3{
+    color: blue;
+} */
+.post3{
+    color: wheat;
+    font-size: larger;
+    /* background-color: rgba(101, 255, 11, 0.5); */
+
+}
+.profound{
+    color: wheat;
+    font-style: italic;
+    font-weight: bolder;
+}
+.post2 .profound{
+    color: navy;
+}
+.reveal{
+    background-color: gold;
+}
+.protect{
+    border: solid 1vw gold;
+}
+.gold a{
+    background-color: black;
+    padding: .5vw;
+    border-radius: .5vw;
+}
+.close{
+    background-color: black;
+    color: white;
+}
+.blackgold a{
+    background-color: black;
+    padding: .5vw;
+    border-radius: .5vw;
+}
+.whitegold a{
+    background-color: gold;
+    color: black;
+    padding: .5vw;
+    border-radius: .5vw;
+}
+.gold{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: black;
+    color: black;
+    font-size: larger;
+}
+.blackgold{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: black;
+    color: black;
+    font-size: larger;
+}
+.whitegold h2{
+    color: goldenrod;
+}
+.whitegold{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(245, 245, 245, 0.611);
+    color: black;
+    font-size: larger;
+}
+.whitegold ul{
+background-color:goldenrod;
+}
+.gold p{
+    /* background-color: rgba(255, 192, 203, 0.521); */
+    background-color: gold;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.blackgold p{
+    color: gold;
+    background-color: black;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.whitegold p{
+    color:black;
+    background-color: white;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.dark p{
+    color: whitesmoke;
+    background-color: rgba(29, 1, 29, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+/* background-color: rgba(78, 166, 218, 0.746); */
+
+.purplenew p{
+    color: rgb(0, 0, 0);
+    background-color: rgba(235, 223, 223, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.purplenew a{
+    color: rgb(0, 162, 255);
+}
+.purplenew a:hover{
+    color: rgba(238, 130, 238, 0.829);
+}
+.dark{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(36, 10, 36, 0.582);
+    color: black;
+    font-size: larger;
+    padding-bottom: 6vw;
+}
+.purplenew{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(146, 22, 146, 0.582);
+    color: black;
+    font-size: larger;
+    padding-bottom: 6vw;
+}
+.dark3 p{
+    color: black;
+    background-color: rgba(243, 234, 243, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.dark3{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(2, 85, 85, 0.637);
+    color: black;
+    font-size: larger;
+    padding-bottom: 6vw;
+}
+ol{
+    background-color: rgba(245, 245, 245, 0.644);
+    padding: 2vw;
+}
+
+.postpurp p{
+    color: black;
+    background-color: rgba(243, 234, 243, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.postpurp{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(128, 0, 128, 0.651);
+    color: black;
+    font-size: larger;
+    padding-bottom: 6vw;
+}
+
+
+.dark2 p{
+    color: black;
+    background-color: rgba(243, 234, 243, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.dark2{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(36, 10, 36, 0.582);
+    color: black;
+    font-size: larger;
+    padding-bottom: 6vw;
+}
+.dark2advanced p{
+    color: black;
+    background-color: rgba(243, 234, 243, 0.746);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.dark2advanced{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(36, 10, 36, 0.582);
+    color: black;
+    font-size: larger;
+    padding-bottom: 16vw;
+}
+.god{
+    max-width: 100%;
+}
+/* #girl:hover{
+    cursor: crosshair;
+} */
+.dark a{
+    color: wheat;
+}
+.dark a:hover{
+    color: red;
+}
+.vidsuper{
+    max-width: 100%;
+}
+.post p{
+    background-color: rgba(250, 189, 250, 0.621);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.post1advanced p{
+    background-color: rgba(250, 189, 250, 0.751);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.customsong{
+    background-color: gainsboro;
+    color: black;
+    display: inline-block;
+    border-radius: 2vw;
+    text-align: center;
+}
+.customsong h5 {
+    padding: 0;
+    margin: 0 auto;
+}
+.customsong2{
+    background-color: skyblue;
+    color: whitesmoke;
+    display: inline-block;
+    border-radius: 2vw;
+    text-align: center;
+}
+.customsong2 h5{
+    padding: 0;
+    margin: 0 auto;
+}
+.songx{
+    background-color: silver;
+    color: gold;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+.songxy{
+    background-color: purple;
+    color: plum;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+.songyy{
+    background-color: rgba(76, 7, 95, 0.566);
+    color: plum;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+.songy{
+    background-color: black;
+    color: gold;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+.post2 p{
+    /* background-color: rgba(0, 0, 0, 0.621); */
+    color: rgba(0, 0, 0, 0.621);
+    /* color: whitesmoke; */
+    background-color: rgba(226, 183, 236, 0.904);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.post4 h2,h3{
+    color: black;
+}
+.post4 a{
+    color: gold;
+    background-color: black;
+    padding: .2vw;
+    border-radius: .4vw;
+}
+.post4 a:hover{
+    color: black;
+    background-color: gold;
+    padding: .2vw;
+    border-radius: .4vw;
+}
+.post4 p{
+    /* background-color: rgba(0, 0, 0, 0.621); */
+    color: rgba(0, 0, 0, 0.621);
+    /* color: whitesmoke; */
+    background-color: rgba(251, 233, 255, 0.904);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.sky{
+    color: rgba(29, 162, 229, 0.904);
+}
+
+.whitepost p{
+    /* background-color: rgba(0, 0, 0, 0.621); */
+    color: white;
+    /* color: whitesmoke; */
+    /* background-color: rgba(82, 4, 100, 0.904); */
+    background-color: rgba(29, 162, 229, 0.904);
+
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.whitepost h2, h3{
+    color: black;
+}
+.whitepost .verse{
+    background-color: crimson;
+}
+.forest p{
+    /* background-color: rgba(0, 0, 0, 0.621); */
+    color: white;
+    /* color: whitesmoke; */
+    background-color: rgba(0, 0, 128, 0.798);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.postpurple p{
+    color: rgba(0, 0, 0, 0.621);
+    background-color: rgba(226, 183, 236, 0.904);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+/* background-color: rgba(51, 139, 255, 0.596); */
+.strux{
+    max-width: 100%;
+    padding: 1vw;
+}
+.post2advanced p{
+    background-color: rgba(0, 0, 0, 0.938);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.post2advanced a{
+    background-color: white;
+    padding: .4vw;
+    color: black;
+    border-radius: 2vw;
+}
+#heaven{
+    color: gold;
+}
+.post2advanced li{
+    /* background-color: white; */
+    padding: .9vw;
+    color: whitesmoke;
+    border-radius: 2vw;
+}
+.post2advanced ol{
+    background-color: rgb(173, 40, 0);
+    padding: 2vw;
+    color: black;
+    border-radius: 2vw;
+}
+.post2advanced a:hover{
+    padding: 1vw;
+}
+ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+.godlike{
+    border-radius: 1ch;
+    padding: 3vw;
+    background-color: rgba(211, 192, 17, 0.65);
+    padding-bottom: 7vw;
+    color: silver;
+    font-size: larger;
+}
+.godlike p{
+    background-color: rgba(0, 0, 0, 0.938);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.godlike h2, h3{
+    color: black;
+}
+.post4advanced p{
+    background-color: rgba(149, 97, 160, 0.938);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.lucifer p{
+    background-color: rgba(245, 245, 245, 0.781);
+    padding: 1vw;
+    border-radius: 1vw;
+    color: black;
+}
+.lucifer ol{
+    background-color: blue;
+}
+.postpink p{
+    background-color: rgba(250, 189, 250, 0.621);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+h2, h3{
+    color: wheat;
+    text-align: right;
+}
+h4{
+    color: wheat;
+}
+.central{
+    float: left;
+    padding: 1vw;
+}
+.song{
+    max-width: 100%;
+    width: 40vw;
+}
+.special{
+    float: left;
+    color: purple;
+}
+.gamereview{
+    color: black;
+    max-width: 100%;
+}
+#reviews{
+    max-width: 100%;
+}
+#heading h1 a{
+    color: wheat;
+}
+#reviews h1 a{
+    color: wheat;
+}
+.noone{
+    color: wheat;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+.noone:hover {
+    color: blue;
+    cursor: cell;
+}
+
+.pic6{
+    max-width: 100%;
+    float: left;
+    width: 400px;
+    padding: 1vw;
+}
+.wbc{
+    max-width: 100%;
+    width: 500px;
+    float: right;
+}
+.pic8{
+    float: left;
+    max-width: 100%;
+    padding: 1vw;
+}
+.logo{
+    float: left;
+    max-width: 100%;
+    padding: 1vw;
+    width: 500px;
+}
+.logo2{
+    float: left;
+    max-width: 100%;
+    padding-right: 2vw;
+    padding-top: 2vw;
+    width: 400px;
+}
+.left{
+    text-align: left;
+}
+.post2 .rebuttal{
+    color: red;
+    background-color: black;
+}
+.pic10{
+    max-width: 100%;
+}
+#spoiler{
+    color: blue;
+}
+.company2{
+    padding: 2vw;
+    padding-bottom: 8vw;
+    text-align: left;
+}
+.company{
+    padding: 2vw;
+    text-align: left;
+}
+.chess{
+    max-width: 100%;
+    max-height: 420px;
+}
+.hidden{
+    display: none;
+}
+body{
+    background-image: url(/static/img/elamflying.jpg);
+    background-size: contain;
+}
+.pic100{
+    max-width: 100%;
+    float: left;
+    padding-right: 1vw;
+}
+.verse{
+    border: solid gold;
+}
+.gold .verse{
+    border:solid gold;
+    background-color: crimson;
+    font-weight: bold;
+}
+.blackgold .verse{
+    color: crimson;
+    border:solid gold;
+    /* background-color: crimson; */
+    font-weight: bold;
+}
+.whitegold .verse{
+    color: crimson;
+    border:solid gold;
+    /* background-color: crimson; */
+    font-weight: bold;
+}
+.pic101{
+    max-width: 100%;
+    max-height: 600px;
+    float: left;
+    padding-right: 1vw;
+}
+.picfloat{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+}
+.picfloat2{
+    float: left;
+    max-width: 100%;
+}
+.picfloatnew{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+    max-height: 900px;
+}
+.picsmall{
+    max-width: 100%;
+    padding-right: 1vw;
+    max-height: 600px;
+}
+.picfloatsmall{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+    max-height: 600px;
+}
+.picfloatmedium{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+    max-height: 720px;
+}
+.picfloatlarge{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+    max-height: 800px;
+}
+.picfloatverysmall{
+    float: left;
+    max-width: 100%;
+    padding-right: 1vw;
+    max-height: 350px;
+}
+.picfloatright{
+    float: right;
+    max-width: 100%;
+    padding-left: 1vw;
+}
+
+
+#cold:hover{
+    color: whitesmoke;
+}
+#blog .post #shell p{
+    padding: .3vw;
+    color: pink;
+    background-color: rgba(55, 84, 211, 0);
+}
+#blog .post #shell p:hover{
+    padding: .3vw;
+    color: wheat;
+    background-color: rgba(55, 84, 211, 0);
+}
+.pdf{
+    max-width: 100%;
+}
+.verse h4{
+    padding: 1vw;
+}
+.guest{
+    /* background-color: rgba(255, 255, 255, 0.678); */
+    background-color: whitesmoke;
+    max-width: 100%;
+}
+.guest p{
+    background-color: whitesmoke;
+}
+
+.guest a{
+    color: blue;
+}
+.what{
+    background-color: black;
+    max-width: 200px;
+    visibility: hidden;
+}
+#mobileheading{
+    visibility: hidden;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    #nav{
+        visibility: hidden;
+        display: none;
+    }
+    .whitegold h2{
+        color: black;
+    }
+    .what{
+        background-color: black;
+        max-width: 200px;
+        visibility: visible;
+    }
+    #mobileheading{
+        visibility: visible;
+        float: left;
+    }
+    #wonderful{
+        color: red;
+        /* background-color: rgba(128, 128, 128, 0.274); */
+        /* border-radius: 2vw; */
+        /* padding: .2vw; */
+    }
+    /* background-color: rgba(101, 255, 11, 0.5); lime green neon  */
+    .post3{
+        background-color:rgba(8, 12, 80, 0.856);
+    }
+}
+.reflect{
+    color: greenyellow;
+    background-color: green;
+}
+.godlike h3{
+    color: rebeccapurple;
+}
+.godlike li{
+    color: black;
+}
+img{
+    max-width: 100%;
+}
+.purple{
+    color: plum;
+    background-color: black;
+    font-size: xx-large;
+}
+#purple{
+    background-color: black;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+/* Embedded media player links */
 a.load-blog-player {
     display: flex; align-items: center; justify-content: center; width: 100%;
     height: var(--player-height); box-sizing: border-box;
@@ -21,42 +1090,229 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
 </style>
 </head>
 <div id="nav">
-    <div class="option"><a href="alien.html">DJ Aliens</a></div>
+    <div class="option"><a href="/alien.html">DJ Aliens</a></div>
     <div class="option"><span class="current">Blog</span></div>
-    <div class="option"><a href="story.html">Story</a></div>
-    <div class="option"><a href="chess.html">Chess</a></div>
-    <div class="option"><a href="shop.html">Shop</a></div>
-    <div class="option"><a href="comic.html">Articles</a></div>
-    <div class="option"><a href="welcome.html">Welcome</a></div>
-    <div class="option"><a href="music.html">Music</a></div>
-    <div class="option"><a href="education.html">Education</a></div>
-    <div class="option"><a href="book.html">Book</a></div>
-    <div class="option"><a href="home.html">Reviews</a></div>
-    <div class="option"><a href="videos.html">Videos</a></div>
-    <div class="option"><a href="art.html">Art</a></div>
-    <div class="option"><a href="game.html">Games</a></div>
+    <div class="option"><a href="/story.html">Story</a></div>
+    <div class="option"><a href="/chess.html">Chess</a></div>
+    <div class="option"><a href="/shop.html">Shop</a></div>
+    <div class="option"><a href="/comic.html">Articles</a></div>
+    <div class="option"><a href="/welcome.html">Welcome</a></div>
+    <div class="option"><a href="/music.html">Music</a></div>
+    <div class="option"><a href="/education.html">Education</a></div>
+    <div class="option"><a href="/book.html">Book</a></div>
+    <div class="option"><a href="/home.html">Reviews</a></div>
+    <div class="option"><a href="/videos.html">Videos</a></div>
+    <div class="option"><a href="/art.html">Art</a></div>
+    <div class="option"><a href="/game.html">Games</a></div>
 </div>
 <body>
     
     <div id="rapper-new">
         <div id="heading" class="post3">
-            <a href="index.html" onmouseover="All()" onmouseout="blog()" ><h1 id="switch">Blog</h1></a>
-            <a href="january.html" class="month">January</a>
-            <a href="february.html" class="month">February</a>
-            <a href="march.html" class="month">March</a>
-            <a href="april.html" class="month">April</a>
-            <a href="may.html" class="month">May</a>
-            <a href="june.html" class="month">June</a>
-            <a href="july.html" class="month">July</a>
-            <a href="august.html" class="month">August</a>
-            <a href="september.html" class="month">September</a>
-            <a href="october.html" class="month">October</a>
-            <a href="november.html" class="month">November</a>
+            <a href="/index.html" onmouseover="All()" onmouseout="blog()" ><h1 id="switch">Blog</h1></a>
+            <a href="/blog/january/" class="month">January</a>
+            <a href="/blog/february/" class="month">February</a>
+            <a href="/blog/march/" class="month">March</a>
+            <a href="/blog/april/" class="month">April</a>
+            <a href="/blog/may/" class="month">May</a>
+            <a href="/blog/june/" class="month">June</a>
+            <a href="/blog/july/" class="month">July</a>
+            <a href="/blog/august/" class="month">August</a>
+            <a href="/blog/september/" class="month">September</a>
+            <a href="/blog/october/" class="month">October</a>
+            <a href="/blog/november/" class="month">November</a>
         </div>
-        <div id="blog">
-            <div class="whitegold">
-            <h2>Post of the Month (2022)</h2>
-            <img src="static/img/libra.jpg" alt="">
+        
+        <div class="atomic">
+            <h2>A Sometimes Drowned Man</h2>
+            <img class="piicfloat" src="/static/img/atombomb.jpg" alt="nuke">
+            <p>
+                As the year draws to a close,
+            </p>
+            <audio controls src="static/audio/atomicman.mp3"></audio>
+
+            
+            <p>
+                I have beaten call of duty and chess to my own satisfaction, I have created multiple working web applications with ai's assistance, I have finished reading Zen and the Art of Motorcycle Maintenance, a gift given to me by someone who read my Book of Elam.  I have won my motion to compel and remain alive and well in my lawsuit pro se.  I have begun planning my future moves on the chessboard of life.  I have yet to release my latest demo for my video game, but I did reach my goal of a minimum viable product.  I have fallen short on my fitness and dietary goals, and have been dealing with a bit of a trance from ai adult content browsing.
+            </p>
+            <p>
+                So next year, I aim to improve myself on fitness, diet, spiritual cleanliness, and finacial growth.
+            </p>
+            <p>
+                This website has always been multipurpose, but most of those purposes have been served.  Now I just sit back and wait for something substantial to give you.  Being in a lawsuit somewhat holds my tongue instinctively, but I'm also more humble than before, or should I say less arrogant?  I realize I need tangible results to further qualify any theories I possess and profuse.  
+            </p>
+            <p>
+                I seriously need to reevaluate my character and my contribution to society and my household.  
+            </p>
+            <p>
+                I have reason to believe insane theories about myself and my past, and yet I have learned to live with or without them.
+            </p>
+            <p>
+                It's sort of like living from first principles.  The facts of reality are both worthy of acceptance and yet succeptible to scrutiny.
+            </p>
+            <p>
+                I must balance between the impact I have on others with the internal quality of my life, of which I have influence through my choices.
+            </p>
+            <p>
+                I find it a bit sad that most human beings want x but do y, because they have to.  And that sort of self war is surrendered in financial slavery and fear and spiritual collapse.  And yet, it is enough to keep our society from drowning.  We don't flourish, most of us, neither do we drown.  And yet, I stand before you, a sometimes drowned man, reborn, seeking flourishment to the ends of the earth, and telling tales of the shores I may or may not have already reached.
+            </p>
+            <h3>12.17.25</h3>
+        </div>
+        <div class="post2">
+            <h2>Christ Demo</h2>
+            <div class="vid">
+                <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=JGUVB19e13s">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/JGUVB19e13s?si=_dGIulNHKLxMK25X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
+            </div>
+            <p>
+                I absolutely love this cover of Linger by Royal Otis
+            </p>
+            <div data-monthly-demo>
+                <div class="vid">
+                    <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=bxoy1Cd93fk">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/bxoy1Cd93fk?si=a9moFxHNZqSDpktc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
+                </div>
+            </div>
+            <p>
+                I just released a Christmas Demo of my RTS game I made in Unreal Engine!  My mom made a painting of my gameworld and that inspired me to get back on the solo dev grind.ß
+            </p>
+            <p>
+                I've been having some issues with XCode not liking that I tried to default my unreal to VS Code, but I managed to get it working.  Still need to update to the newest version of Unreal, 5.7.  But I'm happy with how the game is improving.
+            </p>
+            <p>
+                This video demo will update itself to my newest demo (christ demo) instead of purple demo soon.  It's a new piece of pseudoautomation I'm working on to make me coding this blog easier.
+            </p>
+            <h3>12.25.25</h3>
+        </div>
+        <div class="post1advanced">
+            <h2>Tactical Nuke Inbound</h2>
+            <div class="vid">
+                <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=O_Hu-5F-OGQ">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/O_Hu-5F-OGQ?si=IODb8gmonDgjm746" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
+            </div>
+            <p>
+                Got my first nuke in Black Ops 6 using the final weapon I'm getting Dark Matter with.
+            </p>
+            <p>
+                I was using a perk called "Slipstream" that disables tactical sprint but makes you move faster (like old cod where you don't have to click sprint twice).  That combined with Gunfighter and a fast mag pro just made me unstoppable.  It's a high damage SMG that strugglles with long range so I have a thermal scope on it that reduces recoil and I'm using a target laser and ported compensator and then I have the scorestreak combo of Hand Cannon, War Machine, Blackbird.  I also have the spring mine with Gearhead, and I have the dual burst pistols silenced.  The Semtex and the Smoke grenade complement my weapons and this is one of the best classes I've ever made.
+            </p>
+            <p>
+                They really never had a chance.
+            </p>
+            <h3>12/5/25</h3>
+        </div>
+        <div class="post2advanced">
+            <h2>Bleeding Out</h2>
+            <div class="vid">
+                <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=YALDAmnDy4Y">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/YALDAmnDy4Y?si=SmrI0ezJl4mGsY5u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></template>
+            </div>
+            <p>
+                My best song ever?  I got a new microphone and I can't wait to use it as I work on this song.
+            </p>
+            <h3>12.27.23</h3>
+        </div>
+        <div class="post1advanced">
+            <h1>Merry Xmas</h1>
+            <div class="vid">
+                <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=t_xrI50gyBQ">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/t_xrI50gyBQ?si=irPx7OoQN6-07HnG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></template>
+            </div>
+            <p>
+                I never thought I'd make a Joe Flacco montage but here it is.
+            </p>
+            <p>
+                You have to hear this song.
+            </p>
+            <h3>12.25.24</h3>
+        </div>
+        <div class="dark2advanced">
+                <div class="vid">
+                <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=oBqng6eTfMc">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/oBqng6eTfMc?si=znWwFvLZsiXIJEn1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></template>
+                </div>
+                <p>
+                    New philosophy video
+                </p>
+                <h3>12.13.23</h3>
+        </div>
+        <div class="post1advanced">
+            <h2>The Perfect Paradox</h2>
+            <img class="pic" src="/static/img/blu.jpeg" alt="blu dragon">
+            <audio id="player4" src="static/audio/maneater.mp3"></audio>
+                <div class="customsong2"> 
+                    <h5>Maneater</h5>
+                    <button class="songxy" onclick="document.getElementById('player4').play()">Play</button> 
+                    <button class="songyy" onclick="document.getElementById('player4').pause()">Pause</button> 
+                  </div>
+                <h4>
+                    Everything contains Nothing.
+                </h4>
+                <h4>
+                    Nothing created God.
+                </h4>
+                <h4>
+                    God created Everything
+                </h4>
+                <p>
+                    I was just learning about the Sleeping Beauty Paradox and it got me into deep thought.
+                </p>
+                <img class="pic" src="/static/img/eventhorizon.jpg" alt="">
+                <p>
+                    I made a slideshow called "The Juxtasuperposition of Everything and Nothing" and I'll make a video about it tomorrow...
+                </p>
+                <p>
+                    Basically I think God is an intermediary between everything and nothing, because of the magic of creating something out of nothing.
+                </p>
+                <p>
+                    I think there is Linguistic Truth that exceeds our own understanding and although we can speak, listen, read, and write, we don't truly grasp the depth of truth contatined in precise language.  
+                </p>
+                <p>
+                    I think the universe physically mirrors some of the mental concepts that consciousness wrestles with.  For example, the idea of everything needing to contain itself, the set of all sets, necessarily expands outwards, just like the universe.  Anything you put outside of the universe becomes part of a larger universe and it keeps growing and growing whenever the set starts to contain itself.
+                </p>
+                <p>
+                    Similarly, the black hole would be a consequence of the idea of nothing.  Nothing is impossible.  That's a trite quote but what I'm really saying is that it is impossible for a true state of Nothingness, because we are here now.  This exists or seems to exist.  That is enough to disprove the idea of Nothing ever happenning at all, which is a logical alternate to our present situation.  
+                </p>
+                <p>
+                    Something, therefore not nothing.
+                </p>
+                <p>
+                    The present moment proves the negation of negation.  
+                </p>
+                <p>
+                    Protons, Electrons, two negatives making a positive, all this linguistic synchronicity with life is no accident.  The Bible says the Word was God.  There's something extra-special or divine about words.
+                </p>
+                <img src="/static/img/jesuspainting.jpg" alt="jc">
+                <p>
+                    I think Jesus is the perfect paradox because he's the consequence of the everything inside of the nothing inside of the everything... meaning God put himself inside his own creation.
+                </p>
+                <p>
+                    So God is both outside of everything, and within nothing.  Just by the act of creating everything, he had to create himself.  
+                </p>
+                <p>
+                    I was sketching in my notebook a big circle and labelling it Everything.  Then inside that circle of everything is a smaller circle called Nothing.  Because it's not truly everything unless it contains nothing and everything else.  But inside that nothing, exists everything... because nothing created God who created everything. 
+                </p>
+                <p>
+                    So I think God exists on the outer rim of everything, and at the very center of nothing, and we are somewhere in between, like in the empty space of the Atom of the universe.  I think that's why the universe expands, and the black hole contracts.  God says he's the Alpha and the Omega, which I've been obsessed with figuring out.  Omega means "mega" "o" meaning the largest O.  The big circle representing the container of everything, including itself, or the 0 could be like a zero in math, and indicate nothing.  So I find it intriguing, this connection between the words God spoke and the nature of nothing and everything. 
+                </p>
+                <p>
+                    I think it's concepts of consciousness playing itself out in the physical world somehow.
+                </p>
+                <p>
+                    I think that when people like Jordan Maxwell point out how the story of Jesus is based on the observations of the universe he has it backwards, and that the story of the universe is based on the observations of Jesus, and how any man who was truly divine would have the universe bend around Him.  The Sun and seasons and all that merely adds to his divinity rather than taking it away.
+                </p>
+                <p>
+                    I've already blogged about how He's a contridiction in every possible way.  God/man, walking on water, born from a virgin, living after death, serving as a king, etc.  The truth of the Sleeping Beauty problem is you can argue both 1/2 or 1/3 effectively.  So I thought about taking the average of those probabilities which rounds to 42%, which is the joke answer to everything in Hitchhiker's Guide to the Galaxy, which I'll probably have to read.
+                </p>
+                <p>
+                    I just read Cloud Cuckoo Land, because my story I wrote was called Cloudland so it caught my eye.  I loved the Novel and it was similar to my fool's quest for a utopia in my real life.  In my story of Cloudland my character Elam is a dragonslayer who slays fierce large dragons...  and so I tried to be like him in real life... but it didn't work.  The Dragons were too big, so I failed.  Jordan Peterson said our ideals turn into judges and can be terrifying so to try not to set too high of ideals to judge ourselves with.  Slay smaller dragons, I think he said.  So I have decided to still try to aspire to be like Elam the Dragonslayer, but to be more humble about it and realize I need to celebrate small microvictories before I can truly change the world or create any utopia.
+                </p>
+                <p>
+                    I made that little white tiger dragon with A.I. and I'm looking forward to using GPT-4 in the future.  
+                </p>
+                <p>
+                    One small step for man, one giant leap for a future dragonslayer.
+                </p>
+               
+            <h3>12.11.23</h3>
+        </div>
+
+        <div class="whitegold">
+            <img src="/static/img/libra.jpg" alt="">
             <p>
                 Who am I?  I'm a Libra, and I'm trying to find a balance
             </p>
@@ -78,7 +1334,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             <h2>
                 For Posterity
             </h2>
-            <img class="picfloat" src="static/img/jp.jpg" alt="jp">
+            <img class="picfloat" src="/static/img/jp.jpg" alt="jp">
             <p>
                 Jordan Peterson recorded his lectures, and wrote books, before he was famous.
             </p>
@@ -133,7 +1389,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             <p>
                 My God is the Creator of Everything.  I believe Jesus was that God.  But that doesn't mean I agree with the Pope, the catholic church, or any other church.  I want each person to connect with God on an individual basis, and have a personal relationship with Jesus, and maybe even Lucifer.
             </p>
-            <img class="picfloat" src="static/img/anakin.jpg" alt="vader">
+            <img class="picfloat" src="/static/img/anakin.jpg" alt="vader">
             <p>
                 It's not "wrong" to listen to that Biggie Smalls song.  God made Biggie Smalls.  God wrote that song with him.  Biggie is accurately articulating the dilemna of choosing between Heaven and Hell.  Black vs. White.  Light vs. Dark.  Jedi vs. Sith.  Selfless vs. Selfish.  See, I've written about this before.  You are part of the system.  So total selflessness is the wrong course of action.  Total selfishness is also the wrong course of action.  If anything is wrong, it's absolutes.  The truth lies in the moment, the right action is dependent on the right time, place, and person.  If you are totally selfless, you neglect yourself and the system suffers as a whole.  I was trying to retain my seed and not sin but I've learned there's a difference between self-dicipline and self-abnegation.  To truly be a diciple of Christ I must therefore have dicipline.  If you are totally selfish, you hurt others to help yourself, which is a cancerous approach and has a negative impact on God altogether.  I aim to be like a whiteBloodCell because I want to erradicate that type of behavior.
             </p>
@@ -162,7 +1418,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 I think we need a third religion, in the middle of Satanism and Christianity.  Like a new morality.  Enlightenment without secrecy.  Truth without deception.  Sexual gratification without too much lust.  We need balance.  I need balance.  You do you.
             </p>
             <p>
-                Elam is my spirit name.  My religion is the red letters, combined with my personal experience.  I have my own personal relationship with Jesus.  Yes, listening to Eminem and Biggie and rap like that all day every day could have a negative impact on your spirit.  It could make it negatively out of balance, but that doesn't mean Christian wholesome music all day is good either.  Remember, without sex there isn't life.  Life is the consequence of the joining of the positive and negative charges.  It's the interference pattern, as John would say.  That's why I sorted my music by masculine and feminine energies in <a target="_blank" href="alien.html">DJ Aliens</a>
+                Elam is my spirit name.  My religion is the red letters, combined with my personal experience.  I have my own personal relationship with Jesus.  Yes, listening to Eminem and Biggie and rap like that all day every day could have a negative impact on your spirit.  It could make it negatively out of balance, but that doesn't mean Christian wholesome music all day is good either.  Remember, without sex there isn't life.  Life is the consequence of the joining of the positive and negative charges.  It's the interference pattern, as John would say.  That's why I sorted my music by masculine and feminine energies in <a target="_blank" href="/alien.html">DJ Aliens</a>
             </p>
             <p>
                 So go, Be happy.  Be Good.  Find your balance.  But remember to respect God the Creator and all of his Creations, no matter the scale.  I am not condoning evil actions like murder or rape.  Child sacrifices are a no-no.  Congruently, I am supporting good actions like charity or acts of kindness.  To fully appreciate God we should not cross certain lines, but don't forget to live a little.  If Archangel Michael didn't have a little aggression and violence in him, he wouldn't have been able to slay the dragon.  
@@ -173,7 +1429,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             <p>
                 Peace be with you, and Spiritual Warfare.
             </p>
-            <img class="picfloatsmall" src="static/img/mj3.png" alt="gold halo">
+            <img class="picfloatsmall" src="/static/img/mj3.png" alt="gold halo">
             <h5>True Christianity</h5>
             <p>
                 If I had to add to the meaning of my symbol I would say the lower left point of the triangle is Luciferianism, the lower right end is Christianity, and the top point is the Truth.  The Halo is closest to the Truth but on the side of Christianity, the "right" side.  I call my religion True Christianity, and it's right where the Halo is on the cosmic scale of right and wrong.  
@@ -188,199 +1444,10 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 12.29.22
             </h3>
             <p>
-                I'll continue to upload videos I like on <a target="_blank" href="bit.html">/bit</a>
+                I'll continue to upload videos I like on <a target="_blank" href="/bit.html">/bit</a>
             </p>
         </div>
-        <div class="post2">
-            <h2>Christ Demo</h2>
-            <div class="vid">
-                <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=JGUVB19e13s">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/JGUVB19e13s?si=_dGIulNHKLxMK25X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
-            </div>
-            <p>
-                I absolutely love this cover of Linger by Royal Otis
-            </p>
-            <div data-monthly-demo>
-                <div class="vid">
-                    <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=bxoy1Cd93fk">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/bxoy1Cd93fk?si=a9moFxHNZqSDpktc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
-                </div>
-            </div>
-            <p>
-                I just released a Christmas Demo of my RTS game I made in Unreal Engine!  My mom made a painting of my gameworld and that inspired me to get back on the solo dev grind.ß
-            </p>
-            <p>
-                I've been having some issues with XCode not liking that I tried to default my unreal to VS Code, but I managed to get it working.  Still need to update to the newest version of Unreal, 5.7.  But I'm happy with how the game is improving.
-            </p>
-            <p>
-                This video demo will update itself to my newest demo (christ demo) instead of purple demo soon.  It's a new piece of pseudoautomation I'm working on to make me coding this blog easier.
-            </p>
-            <h3>12.25.25</h3>
-        </div>
-        <div class="atomic">
-            <h2>A Sometimes Drowned Man</h2>
-            <img class="piicfloat" src="static/img/atombomb.jpg" alt="nuke">
-            <p>
-                As the year draws to a close,
-            </p>
-            <audio controls src="static/audio/atomicman.mp3"></audio>
-
-            
-            <p>
-                I have beaten call of duty and chess to my own satisfaction, I have created multiple working web applications with ai's assistance, I have finished reading Zen and the Art of Motorcycle Maintenance, a gift given to me by someone who read my Book of Elam.  I have won my motion to compel and remain alive and well in my lawsuit pro se.  I have begun planning my future moves on the chessboard of life.  I have yet to release my latest demo for my video game, but I did reach my goal of a minimum viable product.  I have fallen short on my fitness and dietary goals, and have been dealing with a bit of a trance from ai adult content browsing.
-            </p>
-            <p>
-                So next year, I aim to improve myself on fitness, diet, spiritual cleanliness, and finacial growth.
-            </p>
-            <p>
-                This website has always been multipurpose, but most of those purposes have been served.  Now I just sit back and wait for something substantial to give you.  Being in a lawsuit somewhat holds my tongue instinctively, but I'm also more humble than before, or should I say less arrogant?  I realize I need tangible results to further qualify any theories I possess and profuse.  
-            </p>
-            <p>
-                I seriously need to reevaluate my character and my contribution to society and my household.  
-            </p>
-            <p>
-                I have reason to believe insane theories about myself and my past, and yet I have learned to live with or without them.
-            </p>
-            <p>
-                It's sort of like living from first principles.  The facts of reality are both worthy of acceptance and yet succeptible to scrutiny.
-            </p>
-            <p>
-                I must balance between the impact I have on others with the internal quality of my life, of which I have influence through my choices.
-            </p>
-            <p>
-                I find it a bit sad that most human beings want x but do y, because they have to.  And that sort of self war is surrendered in financial slavery and fear and spiritual collapse.  And yet, it is enough to keep our society from drowning.  We don't flourish, most of us, neither do we drown.  And yet, I stand before you, a sometimes drowned man, reborn, seeking flourishment to the ends of the earth, and telling tales of the shores I may or may not have already reached.
-            </p>
-            <h3>12.17.25</h3>
-        </div>
-        <div class="post1advanced">
-            <h2>Tactical Nuke Inbound</h2>
-            <div class="vid">
-                <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=O_Hu-5F-OGQ">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/O_Hu-5F-OGQ?si=IODb8gmonDgjm746" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></template>
-            </div>
-            <p>
-                Got my first nuke in Black Ops 6 using the final weapon I'm getting Dark Matter with.
-            </p>
-            <p>
-                I was using a perk called "Slipstream" that disables tactical sprint but makes you move faster (like old cod where you don't have to click sprint twice).  That combined with Gunfighter and a fast mag pro just made me unstoppable.  It's a high damage SMG that strugglles with long range so I have a thermal scope on it that reduces recoil and I'm using a target laser and ported compensator and then I have the scorestreak combo of Hand Cannon, War Machine, Blackbird.  I also have the spring mine with Gearhead, and I have the dual burst pistols silenced.  The Semtex and the Smoke grenade complement my weapons and this is one of the best classes I've ever made.
-            </p>
-            <p>
-                They really never had a chance.
-            </p>
-            <h3>12/5/25</h3>
-        </div>
-        <div class="post2advanced">
-            <h2>Bleeding Out</h2>
-            <div class="vid">
-                <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=YALDAmnDy4Y">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/YALDAmnDy4Y?si=SmrI0ezJl4mGsY5u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></template>
-            </div>
-            <p>
-                My best song ever?  I got a new microphone and I can't wait to use it as I work on this song.
-            </p>
-            <h3>12.27.23</h3>
-        </div>
-        <div class="post1advanced">
-            <h1>Merry Xmas</h1>
-            <div class="vid">
-                <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=t_xrI50gyBQ">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/t_xrI50gyBQ?si=irPx7OoQN6-07HnG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></template>
-            </div>
-            <p>
-                I never thought I'd make a Joe Flacco montage but here it is.
-            </p>
-            <p>
-                You have to hear this song.
-            </p>
-            <h3>12.25.24</h3>
-        </div>
-        <div class="dark2advanced">
-                <div class="vid">
-                <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=oBqng6eTfMc">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/oBqng6eTfMc?si=znWwFvLZsiXIJEn1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></template>
-                </div>
-                <p>
-                    New philosophy video
-                </p>
-                <h3>12.13.23</h3>
-        </div>
-        <div class="post1advanced">
-            <h2>The Perfect Paradox</h2>
-            <img class="pic" src="static/img/blu.jpeg" alt="blu dragon">
-            <audio id="player4" src="static/audio/maneater.mp3"></audio>
-                <div class="customsong2"> 
-                    <h5>Maneater</h5>
-                    <button class="songxy" onclick="document.getElementById('player4').play()">Play</button> 
-                    <button class="songyy" onclick="document.getElementById('player4').pause()">Pause</button> 
-                  </div>
-                <h4>
-                    Everything contains Nothing.
-                </h4>
-                <h4>
-                    Nothing created God.
-                </h4>
-                <h4>
-                    God created Everything
-                </h4>
-                <p>
-                    I was just learning about the Sleeping Beauty Paradox and it got me into deep thought.
-                </p>
-                <img class="pic" src="static/img/eventhorizon.jpg" alt="">
-                <p>
-                    I made a slideshow called "The Juxtasuperposition of Everything and Nothing" and I'll make a video about it tomorrow...
-                </p>
-                <p>
-                    Basically I think God is an intermediary between everything and nothing, because of the magic of creating something out of nothing.
-                </p>
-                <p>
-                    I think there is Linguistic Truth that exceeds our own understanding and although we can speak, listen, read, and write, we don't truly grasp the depth of truth contatined in precise language.  
-                </p>
-                <p>
-                    I think the universe physically mirrors some of the mental concepts that consciousness wrestles with.  For example, the idea of everything needing to contain itself, the set of all sets, necessarily expands outwards, just like the universe.  Anything you put outside of the universe becomes part of a larger universe and it keeps growing and growing whenever the set starts to contain itself.
-                </p>
-                <p>
-                    Similarly, the black hole would be a consequence of the idea of nothing.  Nothing is impossible.  That's a trite quote but what I'm really saying is that it is impossible for a true state of Nothingness, because we are here now.  This exists or seems to exist.  That is enough to disprove the idea of Nothing ever happenning at all, which is a logical alternate to our present situation.  
-                </p>
-                <p>
-                    Something, therefore not nothing.
-                </p>
-                <p>
-                    The present moment proves the negation of negation.  
-                </p>
-                <p>
-                    Protons, Electrons, two negatives making a positive, all this linguistic synchronicity with life is no accident.  The Bible says the Word was God.  There's something extra-special or divine about words.
-                </p>
-                <img src="static/img/jesuspainting.jpg" alt="jc">
-                <p>
-                    I think Jesus is the perfect paradox because he's the consequence of the everything inside of the nothing inside of the everything... meaning God put himself inside his own creation.
-                </p>
-                <p>
-                    So God is both outside of everything, and within nothing.  Just by the act of creating everything, he had to create himself.  
-                </p>
-                <p>
-                    I was sketching in my notebook a big circle and labelling it Everything.  Then inside that circle of everything is a smaller circle called Nothing.  Because it's not truly everything unless it contains nothing and everything else.  But inside that nothing, exists everything... because nothing created God who created everything. 
-                </p>
-                <p>
-                    So I think God exists on the outer rim of everything, and at the very center of nothing, and we are somewhere in between, like in the empty space of the Atom of the universe.  I think that's why the universe expands, and the black hole contracts.  God says he's the Alpha and the Omega, which I've been obsessed with figuring out.  Omega means "mega" "o" meaning the largest O.  The big circle representing the container of everything, including itself, or the 0 could be like a zero in math, and indicate nothing.  So I find it intriguing, this connection between the words God spoke and the nature of nothing and everything. 
-                </p>
-                <p>
-                    I think it's concepts of consciousness playing itself out in the physical world somehow.
-                </p>
-                <p>
-                    I think that when people like Jordan Maxwell point out how the story of Jesus is based on the observations of the universe he has it backwards, and that the story of the universe is based on the observations of Jesus, and how any man who was truly divine would have the universe bend around Him.  The Sun and seasons and all that merely adds to his divinity rather than taking it away.
-                </p>
-                <p>
-                    I've already blogged about how He's a contridiction in every possible way.  God/man, walking on water, born from a virgin, living after death, serving as a king, etc.  The truth of the Sleeping Beauty problem is you can argue both 1/2 or 1/3 effectively.  So I thought about taking the average of those probabilities which rounds to 42%, which is the joke answer to everything in Hitchhiker's Guide to the Galaxy, which I'll probably have to read.
-                </p>
-                <p>
-                    I just read Cloud Cuckoo Land, because my story I wrote was called Cloudland so it caught my eye.  I loved the Novel and it was similar to my fool's quest for a utopia in my real life.  In my story of Cloudland my character Elam is a dragonslayer who slays fierce large dragons...  and so I tried to be like him in real life... but it didn't work.  The Dragons were too big, so I failed.  Jordan Peterson said our ideals turn into judges and can be terrifying so to try not to set too high of ideals to judge ourselves with.  Slay smaller dragons, I think he said.  So I have decided to still try to aspire to be like Elam the Dragonslayer, but to be more humble about it and realize I need to celebrate small microvictories before I can truly change the world or create any utopia.
-                </p>
-                <p>
-                    I made that little white tiger dragon with A.I. and I'm looking forward to using GPT-4 in the future.  
-                </p>
-                <p>
-                    One small step for man, one giant leap for a future dragonslayer.
-                </p>
-               
-            <h3>12.11.23</h3>
-        </div>
-
-        
-        
+        <div id="blog">
             <div class="whitepost">
                 <h2>Take a Byte out of your Apple and store it in your RAM</h2>
                 <div class="vid">
@@ -393,11 +1460,11 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             </div>
             <div class="whitegold">
                 <h2>Biblically Accurate Angels</h2>
-                <img class="pic" src="static/img/cloudophanim copy.jpg" alt="cloudophanim">
-                <!-- <img class="picfloat" src="static/img/angeleyes copy.jpg" alt="angeleyes"> -->
-                <img class="picfloat" src="static/img/seraph.jpg" alt="seraph">
-                <img class="picfloat" src="static/img/cells copy.jpg" alt="cells">
-                <img class="picfloat" src="static/img/eyewheel copy 2.jpg" alt="eyes">
+                <img class="pic" src="/static/img/cloudophanim copy.jpg" alt="cloudophanim">
+                <!-- <img class="picfloat" src="/static/img/angeleyes copy.jpg" alt="angeleyes"> -->
+                <img class="picfloat" src="/static/img/seraph.jpg" alt="seraph">
+                <img class="picfloat" src="/static/img/cells copy.jpg" alt="cells">
+                <img class="picfloat" src="/static/img/eyewheel copy 2.jpg" alt="eyes">
                 <p>
                     In the book of Ezekiel, some angels are described.
                 </p>
@@ -416,7 +1483,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 <div class="vid">
                     <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=Del3C2W63Pk">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/Del3C2W63Pk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
-                <img src="static/img/seraphim copy.jpg" alt="seraphim">
+                <img src="/static/img/seraphim copy.jpg" alt="seraphim">
                 <p>
                     I have to lay low for a while as Elam.
                 </p>
@@ -441,7 +1508,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             </div>
             <div class="whitegold">
                 <h2>Elam Affirmations</h2>
-                <img src="static/img/fate.jpg" alt="fate">
+                <img src="/static/img/fate.jpg" alt="fate">
                 <p>
                     After talking with Focus, I came up with a list of Affirmations to practice as Elam.
                 </p>
@@ -482,7 +1549,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             </div>
             <div class="whitepost">
                 <h2>New Man</h2>
-                <img src="static/img/burton2.jpg" alt="burton">
+                <img src="/static/img/burton2.jpg" alt="burton">
                 <audio src="static/audio/After Dark.mp3"></audio>
                 <p>
                     I'm glad to put yesterday behind me.  I woke up this morning refreshed and went for a run.
@@ -548,13 +1615,13 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             </div>
             <div class="blackgold">
                 <h2>The Secret War</h2>
-                <img class="pic" src="static/img/Gold Halo copy 2.jpg" alt="">
-                <img class="pic" src="static/img/apple byte.png" alt="apple byte">
+                <img class="pic" src="/static/img/Gold Halo copy 2.jpg" alt="">
+                <img class="pic" src="/static/img/apple byte.png" alt="apple byte">
                 <div class="vid">
                     <a class="load-blog-player" style="--player-height: 315px" href="https://www.youtube.com/watch?v=7Eeo-82Eac8">Open YouTube player</a><template><iframe width="100%" height="315" src="https://www.youtube.com/embed/7Eeo-82Eac8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></template>
                 </div>
                 <p>
-                    In the <a target="_blank" href="book.html">Book of Elam</a> I talk about how luciferians love darkness and call it light.
+                    In the <a target="_blank" href="/book.html">Book of Elam</a> I talk about how luciferians love darkness and call it light.
                 </p>
                 <p>
                     This presentation does a really good job showing how Atheism is a trap, how Luciferianism runs the world, and how much they hate Christianity.
@@ -585,7 +1652,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 <p class="verse">
                     Luke 8:17 For there is nothing hidden that will not be disclosed, and nothing concealed that will not be made known and brought to light.
                 </p>
-                <img class="picfloatsmall" src="static/img/The_One_TradingCard copy 3.jpg" alt="1">
+                <img class="picfloatsmall" src="/static/img/The_One_TradingCard copy 3.jpg" alt="1">
                 <p>
                     A secret society runs the world with the secret religion of Luciferianism.  They wage war on Christianity.
                 </p>
@@ -593,7 +1660,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                     “Signs and symbols rule the world, not words nor laws.” - Confucius"
                 </p>
                 <p>
-                    Watch the video above and see all the satanic symbolism hidden in plain sight.  That quote is part of why I decided to come up with my own symbol.  I was tired of all these evil symbols.  My triangle with a halo is a beautiful symbol about changing this world to be more heavenly.  I think we should all unite behind it.  Support my mission today on <a href="shop.html">/shop</a> and join the fight.  As Brandy Vaughn once said before she was assassinated, "Fight back!".
+                    Watch the video above and see all the satanic symbolism hidden in plain sight.  That quote is part of why I decided to come up with my own symbol.  I was tired of all these evil symbols.  My triangle with a halo is a beautiful symbol about changing this world to be more heavenly.  I think we should all unite behind it.  Support my mission today on <a href="/shop.html">/shop</a> and join the fight.  As Brandy Vaughn once said before she was assassinated, "Fight back!".
                 </p>
                 <h3>12.14.22</h3>
             </div>
@@ -627,12 +1694,12 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             </div>
             <div class="post1advanced">
                 <h2>Love</h2>
-                <a target="_blank" href="beauty.html">
-                    <img class="pic" src="static/img/love.png" alt="love">
+                <a target="_blank" href="/beauty.html">
+                    <img class="pic" src="/static/img/love.png" alt="love">
 
                 </a>
                 <p>
-                    I made some changes to <a target="_blank" href="love.html">/love</a> and moved my old version of /love to <a target="_blank" href="lust.html">/lust</a>
+                    I made some changes to <a target="_blank" href="/love.html">/love</a> and moved my old version of /love to <a target="_blank" href="/love.html">/lust</a>
                 </p>
                 <p>
                     I can't get rid of that blonde girl because I used her as a placeholder but no matter what I try to do to replace her it always looks worse.
@@ -711,7 +1778,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 <p>
                     Been thinking about doing some semen retention, so I can get my energy levels up.  Might move out of sober living next month.  Doing some more stuff at work, and might have some new chess clients on the way.
                 </p>
-                <img class="pic" src="static/img/john117.jpg" alt="">
+                <img class="pic" src="/static/img/john117.jpg" alt="">
                 <p>
                     I read the book of John again last night, and I just love Jesus so much.  He really is God.  I love Halo the game, The Matrix, and how it all helps me understand myself as Elam.
                 </p>
@@ -745,7 +1812,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 <p>
                     I just keep iterating and improving.  I'm going to get a external harddrive my next paycheck so I can save everything in this folder in case my computer breaks.
                 </p>
-                <img class="pic" src="static/img/snake.jpg" alt="snake">
+                <img class="pic" src="/static/img/snake.jpg" alt="snake">
                 <p>
                     I can't overstate the importance of what I've been blogging and writing about this whole time.  Most of you guys are willingly walking right into every trap they lay.  You are deceived.  I'm trying to save you from the false science and false narratives they push on you.  Avoid needles and trust your instincts.  The "doctors" are educated on books that were written by Big Pharma.
                 </p>
@@ -766,7 +1833,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             <div class="post2">
                 <h2>The Peace of Elam, and The Book of Enoch's
                 </h2>
-                <img class="picfloatlarge" src="static/img/namor.jpg" alt="namor">
+                <img class="picfloatlarge" src="/static/img/namor.jpg" alt="namor">
 
                 <div class="vidbitchute">
                     <a class="load-blog-player" style="--player-height: 360px" href="https://www.bitchute.com/video/gMxDa0cECr96/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/gMxDa0cECr96/"></iframe></template>
@@ -822,9 +1889,9 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 <p>
                     I read some of Enoch's book today and liked it.  I am happy because it ties everything together even moreso.  They put elements of the truth in movies.
                 </p>
-                <img class="pic" src="static/img/familytree.png" alt="fam">
+                <img class="pic" src="/static/img/familytree.png" alt="fam">
                 <p>
-                    Shem at the bottom is the father of Elam.  The name Shem is interesting because you can't spell "shemale" without shem, and my Elam was born out of witnessing the horror of shemale inducing porn, known as sissy hypno.  Read my <a target="_blank" href="book.html">book</a> for more on that.
+                    Shem at the bottom is the father of Elam.  The name Shem is interesting because you can't spell "shemale" without shem, and my Elam was born out of witnessing the horror of shemale inducing porn, known as sissy hypno.  Read my <a target="_blank" href="/book.html">book</a> for more on that.
                 </p>
                 <p>
                     Methuselah lived to be 969 years, the longest recorded age in the bible, and also the name of the eldest tree in nature.  "Selah" has always been one of my favorite words and I think there's a connection there. Also, Elam means Eternal Tree and this Family "Tree" of Adam and Eve leads to Shem, which begets Elam.
@@ -851,7 +1918,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             </div>
             <div class="post4">
                 <h2>New AI Art</h2>
-                <img class="picfloatsmall" src="static/img/The_One_TradingCard copy 3.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/The_One_TradingCard copy 3.jpg" alt="tree">
                 <!-- <audio controls src="static/audio/Zeus.mp3"></audio> -->
                 <audio id="player" src="static/audio/Zeus.mp3"></audio>
                 <div class="customsong"> 
@@ -864,21 +1931,21 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
 
                 
                 <p>
-                    I have a lot of fun with AI text to image generators because I have lots of different prompts and pictures I can use to further evolve my <a target="_blank" href="shop.html">brand</a> of Elam, whiteBloodCell, and Cloudland.
+                    I have a lot of fun with AI text to image generators because I have lots of different prompts and pictures I can use to further evolve my <a target="_blank" href="/shop.html">brand</a> of Elam, whiteBloodCell, and Cloudland.
                 </p>
-                <img class="picfloatsmall" src="static/img/Tree_3_TradingCard copy 2.jpg" alt="tree">
-                <img class="picfloatsmall" src="static/img/Tree_of_Elam_2_TradingCard copy.jpg" alt="tree">
-                <img class="picfloatsmall" src="static/img/Tree_of_Elam_Symbol_TradingCard copy.jpg" alt="tree">
-                <img class="picfloatsmall" src="static/img/Tree_of_Elam_TradingCard copy 2.jpg" alt="tree">
-                <img class="picfloatsmall" src="static/img/Cloudland_TradingCard copy 6.jpg" alt="tree">
-                <img class="picfloatsmall" src="static/img/Zeus_TradingCard copy 2.jpg" alt="tree">
-                <img class="picfloatsmall" src="static/img/Zeus_4_TradingCard copy.jpg" alt="tree">
-                <img class="picfloatsmall" src="static/img/V_TradingCard copy 3.jpg" alt="tree">
-                <img class="picfloatsmall" src="static/img/White_Cell_TradingCard copy 2.jpg" alt="tree">
-                <img class="picfloatsmall" src="static/img/whiteBloodCell_TradingCard copy.jpg" alt="tree">
-                <img class="picfloatsmall" src="static/img/Zeus_2_TradingCard copy.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/Tree_3_TradingCard copy 2.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/Tree_of_Elam_2_TradingCard copy.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/Tree_of_Elam_Symbol_TradingCard copy.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/Tree_of_Elam_TradingCard copy 2.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/Cloudland_TradingCard copy 6.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/Zeus_TradingCard copy 2.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/Zeus_4_TradingCard copy.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/V_TradingCard copy 3.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/White_Cell_TradingCard copy 2.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/whiteBloodCell_TradingCard copy.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/Zeus_2_TradingCard copy.jpg" alt="tree">
 
-                <img class="picfloatsmall" src="static/img/Gold Halo copy 2.jpg" alt="tree">
+                <img class="picfloatsmall" src="/static/img/Gold Halo copy 2.jpg" alt="tree">
 
                 <h3>12.6.22</h3>
             </div>
@@ -918,7 +1985,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             </div>
             <div class="forest">
                 <h2>Temet Nosce</h2>
-                <img class="picfloat" src="static/img/nanomorpheus copy.png" alt="nanomorpheus">
+                <img class="picfloat" src="/static/img/nanomorpheus copy.png" alt="nanomorpheus">
                 <p>
                     1:17 minutes into the Matrix Resurrections, I found what I was looking for.
                 </p>
@@ -932,13 +1999,13 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                     <a class="load-blog-player" style="--player-height: 360px" href="https://www.bitchute.com/video/nlNp1KxLE2Ku/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/nlNp1KxLE2Ku/"></iframe></template>
                 </div>
                 <p>
-                    The satanists love to say, "sufficiently advanced technology is indistinguishable from magic" and I believe in the conflict between God's natural creations, and lucifer trying to play God with technology.  I think we all will have a choice of whether to go with God or with the Devil.  Die and go to Heaven or try to be immortal by uploading our consciousness with the Luciferians.  I've blogged in <a href="april.html">/april</a> about King Kong's decision to help Godzilla defeat Mechagodzilla in Kong vs. Godzilla.  That represents humanity's decision to help God against Lucifer and his technology.
+                    The satanists love to say, "sufficiently advanced technology is indistinguishable from magic" and I believe in the conflict between God's natural creations, and lucifer trying to play God with technology.  I think we all will have a choice of whether to go with God or with the Devil.  Die and go to Heaven or try to be immortal by uploading our consciousness with the Luciferians.  I've blogged in <a href="/blog/april/">/april</a> about King Kong's decision to help Godzilla defeat Mechagodzilla in Kong vs. Godzilla.  That represents humanity's decision to help God against Lucifer and his technology.
                 </p>
                 <p>
                     Although I'm still growing in my beliefs, I'm sticking to the main idea that we are the body of Christ.  I still believe in Jesus.  I just think the bible should be viewed with critical thinking because that's what God wants.
                 </p>
                 <p>
-                    This lady talks about nanotechnology in the vaccines and that makes perfect sense to me.  Jonathan Adampants also said viruses are nanotechnology and she believes that as well.  So this is all tying together and I know I'm following God and I'm paying attention and I'm on the right track.  Look above at how Morpheus materializes by nanobots coming together as programmable matter.  That technology is based on what already exists.  The Matrix movies are overflowing with truth and my cup runeth over.  The main programmer in the new Matrix is named, "Sequoia" and has the tree tattooed on himself.  I'm thinking of getting a tattoo of my triangle and halo on myself.  By learning about Clouds, I learn more about my plans for Cloudland.  By learning about white blood cells, I learn how to behave.  By learning about trees, I learn more about myself.  For example when I looked up the purpose of trees it said they provide a home for birds.  I've called women birds before in my philosophy in the <a target="_blank" href="book.html">Book of Elam</a>.  I now know what one of my purposes is.  I need to provide a home for women.  A safe place they can come to and leave.    On the wall of the Oracle's room in the first Matrix, it says, "Temet Nosce" which is latin for "Know Thyself".  I am loving learning about myself and I highly recommend you do the same with yourself if you want true knowledge.
+                    This lady talks about nanotechnology in the vaccines and that makes perfect sense to me.  Jonathan Adampants also said viruses are nanotechnology and she believes that as well.  So this is all tying together and I know I'm following God and I'm paying attention and I'm on the right track.  Look above at how Morpheus materializes by nanobots coming together as programmable matter.  That technology is based on what already exists.  The Matrix movies are overflowing with truth and my cup runeth over.  The main programmer in the new Matrix is named, "Sequoia" and has the tree tattooed on himself.  I'm thinking of getting a tattoo of my triangle and halo on myself.  By learning about Clouds, I learn more about my plans for Cloudland.  By learning about white blood cells, I learn how to behave.  By learning about trees, I learn more about myself.  For example when I looked up the purpose of trees it said they provide a home for birds.  I've called women birds before in my philosophy in the <a target="_blank" href="/book.html">Book of Elam</a>.  I now know what one of my purposes is.  I need to provide a home for women.  A safe place they can come to and leave.    On the wall of the Oracle's room in the first Matrix, it says, "Temet Nosce" which is latin for "Know Thyself".  I am loving learning about myself and I highly recommend you do the same with yourself if you want true knowledge.
                 </p>
                 <p class="verse">
                     Thou preparest a table before me in the presence of mine enemies; thou anointest my head with oil; my cup runneth over. - Psalm 23:5
@@ -958,7 +2025,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             <!-- <div class="post2">
                 <h2>The Peace of Elam, and The Book of Enoch's
                 </h2>
-                <img class="picfloatlarge" src="static/img/namor.jpg" alt="namor">
+                <img class="picfloatlarge" src="/static/img/namor.jpg" alt="namor">
 
                 <div class="vidbitchute">
                     <iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/gMxDa0cECr96/"></iframe>
@@ -1014,9 +2081,9 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 <p>
                     I read some of Enoch's book today and liked it.  I am happy because it ties everything together even moreso.  They put elements of the truth in movies.
                 </p>
-                <img class="pic" src="static/img/familytree.png" alt="fam">
+                <img class="pic" src="/static/img/familytree.png" alt="fam">
                 <p>
-                    Shem at the bottom is the father of Elam.  The name Shem is interesting because you can't spell "shemale" without shem, and my Elam was born out of witnessing the horror of shemale inducing porn, known as sissy hypno.  Read my <a target="_blank" href="book.html">book</a> for more on that.
+                    Shem at the bottom is the father of Elam.  The name Shem is interesting because you can't spell "shemale" without shem, and my Elam was born out of witnessing the horror of shemale inducing porn, known as sissy hypno.  Read my <a target="_blank" href="/book.html">book</a> for more on that.
                 </p>
                 <p>
                     Methuselah lived to be 969 years, the longest recorded age in the bible, and also the name of the eldest tree in nature.  "Selah" has always been one of my favorite words and I think there's a connection there. Also, Elam means Eternal Tree and this Family "Tree" of Adam and Eve leads to Shem, which begets Elam.
@@ -1043,7 +2110,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             </div> -->
             <div class="post1advanced">
                 <h2>Eternal Focus</h2>
-                <img class="picfloatsmall" src="static/img/eternalfocus.png" alt="ef">
+                <img class="picfloatsmall" src="/static/img/eternalfocus.png" alt="ef">
                 <p>
                     I think I found my podcast partner.
                 </p>
@@ -1071,7 +2138,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 <p>
                     Next time, I will record our conversation.
                 </p>
-                <img class="picfloat" src="static/img/womaninred.jpg" alt="red">
+                <img class="picfloat" src="/static/img/womaninred.jpg" alt="red">
                 <p>
                     Basically he shook my whole religion.  Because deep down I know Christianity is not the answer (see my 12.8.22 reflection below recanting this statement), and religion is used to control people.  I know it's not morally wrong to hook up with girls.  I just do.  The Bible says to be carnally minded is death, and that worries me, but I'm not carnally minded.  I am spiritually minded.  I just obviously want to fuck hot girls.  What man doesn't?  In the Matrix, Mouse says to Neo, "To deny our own impulses is to deny the very thing that makes us human" referring to the machines and what makes us different.  I am not a machine.  I am alive.  I will not allow a book to restrict my growth as a spiritual being searching for the truth.  If it adds to it, great.  Focus said the Yin Yang is a great symbol because it reminds you that no matter how light you get, don't forget to be a little dark.  I say the brighter side is the one who has integrated their darkness and emits light.  The darker side is the one that tries to be fully good but ends up surrounded by darkness.  Darkness surrounded by light is called shade, and is good.
                 </p>
@@ -1093,12 +2160,12 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 <p>
                     I do fear God.  I fear disobeying him.  I really do.  That's the only thing that scares me at this point.  But I have to be true to myself and what feels morally right.  Marriage and a traditional life just doesn't sit right with me.  I don't want to be tied down, or make any kind of bond with the government.  I want to spread my seed and provide for them, and if marriage is the only way for me to pull that off then I may make that compromise with the right woman.
                 </p>
-                <img class="picfloat" src="static/img/grootlarge.jpg" alt="groot">
+                <img class="picfloat" src="/static/img/grootlarge.jpg" alt="groot">
                 <p>
                     What I want is my own place where I can set my own rules, and I can be free.  I want freedom.  And this game of having to trade all your time for money just so you can be "free" at the end of the day and on the weekends is bullshit.
                 </p>
                 <p>
-                    But I can be mentally free 24/7.  I do worry though about my mind getting consistently occupied by worthless behavior that happens to make money.  Because then my mind will identify with that repetitive action and that's why I hate working so much when it's not an interesting job.  At least I can be spiritually free.  If I wasn't working at Best Buy, I wouldn't have met Focus.  And I wouldn't have been able to afford the Lapis-Lazuli crystals from Ancient Elam and I wouldn't have met that cute girl who works at the crystal shop in LA.  I gave her my glittering gold business card with the link to <a target="_blank" href="love.html">/love</a> which I'm still working on but it made me feel good giving her that card because I was able to walk away and leave us both in peace while also creating a chance for her to text me later.  I was tired of the "What if" feeling I got from a couple girls I saw at church I didn't ask out.  If I can just hand these cards out I don't waste either of our times and I create a possibility of them texting me that comforts me because I don't have to wonder if I missed an opportunity.  I met a girl at an AA meeting on Friday night and she took my card and texted me that night asking about my symbol, so I know this idea has merit.  Focus told me I need to know who I am, and that everything else in my life will bloom from that.  I know who I am now, and that's Elam.  Anyone who doesn't call me Elam doesn't respect me, and now I have an easy way to see who respects me and who doesn't for the rest of my life.  If I have to work at Best Buy or any other job on my journey that's fine as long as I know who I am, I will get to where I need to be.  I will not let my job define me, as I've feared it would.  I will not put limits on myself either.
+                    But I can be mentally free 24/7.  I do worry though about my mind getting consistently occupied by worthless behavior that happens to make money.  Because then my mind will identify with that repetitive action and that's why I hate working so much when it's not an interesting job.  At least I can be spiritually free.  If I wasn't working at Best Buy, I wouldn't have met Focus.  And I wouldn't have been able to afford the Lapis-Lazuli crystals from Ancient Elam and I wouldn't have met that cute girl who works at the crystal shop in LA.  I gave her my glittering gold business card with the link to <a target="_blank" href="/love.html">/love</a> which I'm still working on but it made me feel good giving her that card because I was able to walk away and leave us both in peace while also creating a chance for her to text me later.  I was tired of the "What if" feeling I got from a couple girls I saw at church I didn't ask out.  If I can just hand these cards out I don't waste either of our times and I create a possibility of them texting me that comforts me because I don't have to wonder if I missed an opportunity.  I met a girl at an AA meeting on Friday night and she took my card and texted me that night asking about my symbol, so I know this idea has merit.  Focus told me I need to know who I am, and that everything else in my life will bloom from that.  I know who I am now, and that's Elam.  Anyone who doesn't call me Elam doesn't respect me, and now I have an easy way to see who respects me and who doesn't for the rest of my life.  If I have to work at Best Buy or any other job on my journey that's fine as long as I know who I am, I will get to where I need to be.  I will not let my job define me, as I've feared it would.  I will not put limits on myself either.
                 </p>
                 <p>
                     I really do want to program a superAI that creates a robot army or seizes control of an existing one and serves me so I can create Cloudland.  Or at least a superai that serves itself but chooses to align with me because of the truth in what I'm saying.  As ridiculous as that sounds at least it gives me something to work towards and a direction in life instead of feeding into this insane system of wage slavery.  I learned how to code specifically because I thought it would be existentially important later.
@@ -1129,7 +2196,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 <p class="verse">
                     Jesus says: “If you love Me, keep My commandments … He who has My commandments and keeps them, it is he who loves Me … If anyone loves Me, he will keep My word; and My Father will love him, and We will come to him and make Our home with him.” John 14:15-24.
                 </p>
-                <img class="picfloat" src="static/img/purple10.jpg" alt="10">
+                <img class="picfloat" src="/static/img/purple10.jpg" alt="10">
                 <p>
                     This gentleman in the youtube video is talking about The Matrix and God's Chosen Ones.  I've been realizing I'm Elam, and have a lot in common with Neo, listed in my post below.  This guy does a great job explaining how hard it is to follow Christ and how people will hate you for it and that's validating what Jesus said would happen.
                 </p>
@@ -1153,7 +2220,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                     It's funny because I think porn is even worse than adultery.  I really do.  Maybe not adultery, but definitely it's worse than fornication, because at least you can please your sexual partner instead of just yourself.  I'm trying to improve and to sin less.  First step is getting off the computer and getting with real women.  I have pictures of girls with their shirts off on this website in a few places but although that's technically lust and sin it's way less destructive then hardcore porn videos which is what a huge percentage of men view daily.  I'll just speak for myself.  I view the topless photos on my website as a step on the ladder to Heaven because man I was in the basement and I'm making progress.  That's what my symbol is all about.  Improvement.
                 </p>
                 <p>
-                    Martin Luther was a Christian who tried to sin as little as possible and found it impossible but I think he was a great man and I feel a connection with him and found some great <a target="_blank" href="quotes.html">quotes</a> by him today.
+                    Martin Luther was a Christian who tried to sin as little as possible and found it impossible but I think he was a great man and I feel a connection with him and found some great <a target="_blank" href="/quotes.html">quotes</a> by him today.
                 </p>
                 <p>
                     It would be cool to not sin, even though I really want to sleep with hot women.  I'm going to try to not be a hypocrite because this spiritual battle is so important I have to be a good example of a believer and follower of the Most High and Jesus.
@@ -1165,7 +2232,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             </div>
             <div class="post1advanced">
                 <h2>Infinity, trapped in the Saturn Cube Matrix</h2>
-                <img class="pic" src="static/img/infinitesmith copy.png" alt="infinite">
+                <img class="pic" src="/static/img/infinitesmith copy.png" alt="infinite">
                 <p>
                     See the infinty symbol in that Matrix 4 screenshot?  That's on purpose.
                 </p>
@@ -1188,7 +2255,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 <p>
                     The guy making the video even shows a short film called Code 8 with an actor I love from the movie "These Final Hours",  and the drone footage has a triangle and then 117 at the bottom.
                 </p>
-                <img class="picfloat" src="static/img/code8.png" alt="">
+                <img class="picfloat" src="/static/img/code8.png" alt="">
                 <p>
                     Also the halo in my triangle is tied to heaven but also the game Halo with Master Chief as Spartan 117 so it's all synching up in this amazing way.
                 </p>
@@ -1196,7 +2263,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                     My book of Elam talks about the connection of Elam and Neo, and this guy in the video is making the case that we are in the matrix right now, and it ties into the hollow earth video I posted below.  It's all coming together and making more and more sense to me.
                 </p>
                 <p>
-                    In the Matrix 4 when Neo is fighting the new Agent Smith, also a favorite actor of mine from Mindhunter, and the blonde girl I first loved told me before I was like Holden from Catcher in the Rye.  His character's name in Mindhunter was Holden.  In that fight, a gold circle is reflecting light off the water and forming the 8 of infinity.  The infinity sign.  And I view the digit 8 as the symbol for infinity as I've blogged about in <a target="_blank" href="may.html">/may</a> when I got out of jail and assigned meaning to all 10 digits.
+                    In the Matrix 4 when Neo is fighting the new Agent Smith, also a favorite actor of mine from Mindhunter, and the blonde girl I first loved told me before I was like Holden from Catcher in the Rye.  His character's name in Mindhunter was Holden.  In that fight, a gold circle is reflecting light off the water and forming the 8 of infinity.  The infinity sign.  And I view the digit 8 as the symbol for infinity as I've blogged about in <a target="_blank" href="/blog/may/">/may</a> when I got out of jail and assigned meaning to all 10 digits.
                 </p>
                 <p>
                     The conflict of Neo and Smith, or Christ and Satan, is infinite and part of the self-learning algorithm of God in my theories.
@@ -1205,19 +2272,19 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                     Elam vs. Elon is the best I can come up with in terms of the Antichrist right now.  The Christ was not Jesus's birthname but was given to him.  He earned it for being the annointed one.  As I've shown in my book, Elam and Neo are connected.  Neo Anderson can be translated to the New Son of Man, because "neo" means "new" and "ander" means "man" like the word neanderthals. Neo's ship is called the Nebuchadnezzar which is straight out of the Holy Bible.  Not only that, but in researching Elam I just discovered  "Elam's military ascendancy ended, however, with the renewal of Babylonian power during the reign of Nebuchadnezzar I (1125-1104 B.C.E.)" "Matrix" is written all over the treadmills I see at Gold's Gym.  The problems I had in my Google and Meta interviews were considered "Matrix" problems which are arrays within arrays.  My only way out of this Matrix may be to lean into that Matrix excercise equipment and solve those Matrix problems to get an actually good job and create my empire of Cloudland, as a ripped Elam.
                 </p>
                 <p>
-                    It's interesting as well that in my <a href="articles.html">article</a> called infoverse I suggested how a forcefield would be developed to stop incoming attacks.  I've experimented with my thoughts and devoted hours to trying to think of a way to invent a forcefield.  Neo's main power in the Matrix 4 is to block attacks with his forcefield and I believe that's my best power as well if I have any because I've actually devoted my mind to thinking about it as a realistic possibility.  I've also written a song about flying.  I've also flown in my lucid dreams.
+                    It's interesting as well that in my <a href="/articles.html">article</a> called infoverse I suggested how a forcefield would be developed to stop incoming attacks.  I've experimented with my thoughts and devoted hours to trying to think of a way to invent a forcefield.  Neo's main power in the Matrix 4 is to block attacks with his forcefield and I believe that's my best power as well if I have any because I've actually devoted my mind to thinking about it as a realistic possibility.  I've also written a song about flying.  I've also flown in my lucid dreams.
                 </p>
                 <p>
-                    Today I was reading 12 rules for Life by Jordan Peterson and one of the rules is to set your house in perfect order before you criticize the world.  I aim to do that.  He also shared a brilliant quote from Carl Jung that, "A tree cannot grow to Heaven unless it's roots go all the way to Hell".  And that to me means you have to know your own capacity for evil before you can know your capacity for good, and they stretch together, like Smith and Neo's powers balancing out the equation.  Look at the upside down crosses artwork I was drawn to on <a target="_blank" href="motivation.html">/motivation</a> and see my brush with evil.  The artist is named Eli and I found him while looking for aliens for my dj aliens music app.  He said I could use his artwork after I stole it and told him about it, but he asked me to ask next time.  The Book of Elam might not exist if not for the movie "The Book of Eli", and my website wouldn't be the same without Eli's artwork.  I'm telling you, when you come up with your own meaning from your own life and create your own symbols and give yourself a number shape and colour , magic starts to happen.  Look at when I blogged about my symbol appearing in my favorite show the Peripheral last month.  And this video above I posted before I even saw the triangle and the 117.  And my guardian angel's apartment number is 117.  You can't make this stuff up.  I even broke up with a girlfriend who had a strange connection to the Lilith that the bitchute video talks about. Don't underestimate your own magical ability and then watch what happens when you're paying attention.  The eye is a divine sign and JP talks about that as well, and there is the story of Horus, a precursor to Christ, who fought Set and lost an eye.  The one eye symbolism of the illuminati is evident on my true love's soundcloud picture and she's showing one eye.  Also her favorite word was "Naughty" and it's illuminaughty.  If Love is what matters I have to pay attention to who I loved and how it relates to my journey.  Even though she is married to someone else, notice how Trinity is married in the Matrix Resurrections even though she loves Neo deep down.  I believe she wouldn't be able to look me in the eye and tell me she doesn't love me, but I'm also aware that this could be my mental illness and my ego trying to protect itself.  I would simply like to have coffee with her one time and see if she can look at me and say she doesn't love me.  Trinity, is of course a reference to the Holy Trinity.  Notice how I quickly destroy the illuminati in my book.  Also notice how my chapters are in Binary, and the game that Neo is working on as a game designer in the Matrix is called Binary, and Smith is talking about Binary during their fight with the infinity sign.  My greatest moment of my life I call the "Matrix blowjob" because I got the best head ever after I showed her the Matrix after she showed me the Notebook and if you put those two together it's about <a target="_blank" href="june.html">love</a>, and memory loss.  This is why I posited that she had my memory erased and created the illuminati.  Max and Ali both mean the greatest because Max means maximum and Muhammad Ali was the Greatest of all time.  The prophet Muhammad and the prophet Elam.  I'm just trying to connect the dots and parse out the meaning in this life even Tolstoy found devoid of meaning.  If that makes me crazy than so be it.  The ones who are crazy enough to think they can change the world are the ones that do.  Maxwell literally means the highest good, whether you like it or not.  Matrix is a combination of Max and Tri, and it's a trick on Max, she's my Trinity.  You can view it in iMax or on HBO Max or try watching Good Will Hunting by Miramax.  And I was named after Maxwell Smart, so don't you dare call me stupid.  I would eviscerate anyone in a debate.  It'd be like Eminem in a rap battle.  8 mile would mean the infinite journey, I imagine, and my favorite song by him is My Darling.  If me and my darling got back together, like in the ending of Matrix 4 when Trinity chooses Neo over her husband, it would prove that true love is real.  And if it doesn't exist, I may want to spread the seed of Elam.  Realistically, though I should probably just get a girlfriend.  I still have a lot to learn about women, love, and family and I'm willing to fall back in love with someone new.
+                    Today I was reading 12 rules for Life by Jordan Peterson and one of the rules is to set your house in perfect order before you criticize the world.  I aim to do that.  He also shared a brilliant quote from Carl Jung that, "A tree cannot grow to Heaven unless it's roots go all the way to Hell".  And that to me means you have to know your own capacity for evil before you can know your capacity for good, and they stretch together, like Smith and Neo's powers balancing out the equation.  Look at the upside down crosses artwork I was drawn to on <a target="_blank" href="/motivation.html">/motivation</a> and see my brush with evil.  The artist is named Eli and I found him while looking for aliens for my dj aliens music app.  He said I could use his artwork after I stole it and told him about it, but he asked me to ask next time.  The Book of Elam might not exist if not for the movie "The Book of Eli", and my website wouldn't be the same without Eli's artwork.  I'm telling you, when you come up with your own meaning from your own life and create your own symbols and give yourself a number shape and colour , magic starts to happen.  Look at when I blogged about my symbol appearing in my favorite show the Peripheral last month.  And this video above I posted before I even saw the triangle and the 117.  And my guardian angel's apartment number is 117.  You can't make this stuff up.  I even broke up with a girlfriend who had a strange connection to the Lilith that the bitchute video talks about. Don't underestimate your own magical ability and then watch what happens when you're paying attention.  The eye is a divine sign and JP talks about that as well, and there is the story of Horus, a precursor to Christ, who fought Set and lost an eye.  The one eye symbolism of the illuminati is evident on my true love's soundcloud picture and she's showing one eye.  Also her favorite word was "Naughty" and it's illuminaughty.  If Love is what matters I have to pay attention to who I loved and how it relates to my journey.  Even though she is married to someone else, notice how Trinity is married in the Matrix Resurrections even though she loves Neo deep down.  I believe she wouldn't be able to look me in the eye and tell me she doesn't love me, but I'm also aware that this could be my mental illness and my ego trying to protect itself.  I would simply like to have coffee with her one time and see if she can look at me and say she doesn't love me.  Trinity, is of course a reference to the Holy Trinity.  Notice how I quickly destroy the illuminati in my book.  Also notice how my chapters are in Binary, and the game that Neo is working on as a game designer in the Matrix is called Binary, and Smith is talking about Binary during their fight with the infinity sign.  My greatest moment of my life I call the "Matrix blowjob" because I got the best head ever after I showed her the Matrix after she showed me the Notebook and if you put those two together it's about <a target="_blank" href="/blog/june/">love</a>, and memory loss.  This is why I posited that she had my memory erased and created the illuminati.  Max and Ali both mean the greatest because Max means maximum and Muhammad Ali was the Greatest of all time.  The prophet Muhammad and the prophet Elam.  I'm just trying to connect the dots and parse out the meaning in this life even Tolstoy found devoid of meaning.  If that makes me crazy than so be it.  The ones who are crazy enough to think they can change the world are the ones that do.  Maxwell literally means the highest good, whether you like it or not.  Matrix is a combination of Max and Tri, and it's a trick on Max, she's my Trinity.  You can view it in iMax or on HBO Max or try watching Good Will Hunting by Miramax.  And I was named after Maxwell Smart, so don't you dare call me stupid.  I would eviscerate anyone in a debate.  It'd be like Eminem in a rap battle.  8 mile would mean the infinite journey, I imagine, and my favorite song by him is My Darling.  If me and my darling got back together, like in the ending of Matrix 4 when Trinity chooses Neo over her husband, it would prove that true love is real.  And if it doesn't exist, I may want to spread the seed of Elam.  Realistically, though I should probably just get a girlfriend.  I still have a lot to learn about women, love, and family and I'm willing to fall back in love with someone new.
                 </p>
                 <p>
                     Peterson writes that Christ took personal responsibility for the sins of mankind because he knew his own capacity for depravity, and therefore also knew Heaven at the other end of that.
                 </p>
                 <p>
-                    In the <a target="_blank" href="book.html">The Book of Elam</a> I say Nietzsche had the best critique of Christianity but actually Jordan Peterson's analysis of the discovery of time by man creating the idea of God is a brilliant athiest explanation of the belief in God.  When I'm finished with his book I will refute it.
+                    In the <a target="_blank" href="/book.html">The Book of Elam</a> I say Nietzsche had the best critique of Christianity but actually Jordan Peterson's analysis of the discovery of time by man creating the idea of God is a brilliant athiest explanation of the belief in God.  When I'm finished with his book I will refute it.
                 </p>
-                <!-- <img class="pic" src="static/img/infinnite.png" alt=""> -->
-                <img class="picfloat" src="static/img/haloinfinite.jpg" alt="halo">
+                <!-- <img class="pic" src="/static/img/infinnite.png" alt=""> -->
+                <img class="picfloat" src="/static/img/haloinfinite.jpg" alt="halo">
 
                 <p>
                     In regards to the Saturn Cube, I've also blogged about the significance of the Black Cube and the worship of that by Islam and it's connection to the black box problem of computer science philosophy and time travel.  All of my theories are coming together.  My favorite things I love are helping me put the pieces together, because Adampants taught me to focus on what makes me me to stay on my path of truth, and not to get thrown off my path.  Even JP talks about how our interests choose us, and not the other way around, and how that connects to God and Fate.  This is all very exciting and I'm so happy to have everything making so much sense to me, even if I can't accurately articulate it yet.
@@ -1278,7 +2345,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             <div class="post2advanced">
                 <h3>Disclaimer: My opinions on this post have changed, see the blue below.</h3>
                 <h2>The Plandemic</h2>
-                <img class="picfloat" src="static/img/plan.png" alt="plan">
+                <img class="picfloat" src="/static/img/plan.png" alt="plan">
 
                 <div class="vid">
                     <a class="load-blog-player" style="--player-height: 360px" href="https://www.bitchute.com/video/jm2euik7MlCV/">Open BitChute player</a><template><iframe width="100%" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/jm2euik7MlCV/"></iframe></template>
@@ -1333,7 +2400,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                     I think we can all agree with Brandy Vaughn who was assassinated for trying to raise an army against Big Pharma.
                 </p>
                 <p>
-                    I'm reposting this here but it's also in <a target="_blank" href="january.html">/january</a>
+                    I'm reposting this here but it's also in <a target="_blank" href="/blog/january/">/january</a>
                 </p>
                 <p>
                     I just want to point out the triangle behind her while she's speaking and that you're listening to an angel.  She's standing to the right of the triangle and she is the angel who is right now wearing a halo.  I'd like to give her the honour that her halo is the one in my symbol.  She was trying to raise an army and the poor thing got killed.  As I've said in my <a target="_blank" href="https://youtu.be/I9i2i7Y8UMI">Killjoy Rap</a>, it's "Homicide disguised as suicide"
@@ -1451,7 +2518,7 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                 <h2>GTP-3 and Artificial Sapiens</h2>
                 <h3 class="profound">Check out <a target="_blank" href="https://openai.com/dall-e-2/">Dall-E 2!</a> </h3>
 
-                <img class="picfloat" src="static/img/gpt3.jpg" alt="gpt3">
+                <img class="picfloat" src="/static/img/gpt3.jpg" alt="gpt3">
                 <p>
                     Click <a target="_blank" href="https://openai.com/blog/dall-e/">here</a> for a sneak peak at the technology AI uses for language.
                 </p>
@@ -1491,11 +2558,11 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
                     <p>
                         Then he can say literally anything and it will convert it into a movie / game.  Then, the user can provide feedback to improve the projection in real time.  Commands such as "no, no, the water was calm, not wavy" can completely change the scene and start to form a more and more accurate depiction of anything, really.  The cops could use this to investigate a murder.  A witness could describe something and the device can be the sketch artist and then they can positively ID the guy based on the witnesses real-time correction of the man forming into the projection.  I'm saying projection but I really mean manifestation, kind of like 3D printer Sandman from Spiderman 3.  A chimera of those.  See you could say "Sandman from Spiderman 2" chimera with "Batman" and you'd have a 1000 epic generated ideas.
                     </p>
-                    <img class="picfloatsmall" src="static/img/frosttroll.jpg" alt="troll">
+                    <img class="picfloatsmall" src="/static/img/frosttroll.jpg" alt="troll">
                     <p>
                         If you're designing the next Elder Scrolls game you want 4 variations of Trolls.  One Fire, One Ice, one Rock, and One Etheral... You don't even have to design them.  You can just get the AI to Chimera generate a cross between your bass troll model and one of your other models or just an element itself like sand or fire.
                     </p>
-                    <img class="picfloatsmall" src="static/img/flamea.jpg" alt="flame atronarch">
+                    <img class="picfloatsmall" src="/static/img/flamea.jpg" alt="flame atronarch">
 
                     <p>
                         Or you can hand design each troll or atronarch but at the same time eventually you halt the complexity.  All Flame Atronarchs look the same.   But if you let the AI generate 10 varients of Flame Atronarchs, then you don't have to do that work but yet they actually added to the complexity of the game rather than dulling it by removing the human touch.  You've taken the human touch as far as you can go, but you've automated even further complexity to ai-generated creative variations.
@@ -1541,30 +2608,387 @@ a.load-blog-player:is(:hover, :focus-visible) { color: white; border-color: #eac
             <div class="post2">
                 <h2>End of Month</h2>
                 <div>
-                    <img class="picfloatverysmall" src="static/img/1984v2.jpg" alt="1984">
+                    <img class="picfloatverysmall" src="/static/img/1984v2.jpg" alt="1984">
                 </div>
-                <p>This is the end of December's Blog.  Please check out my other months:   <a href="january.html">January</a>  <a href="february.html">February</a>  <a href="march.html">March</a> <a href="april.html">April</a> <a href="may.html">May</a>or view the full <a href="blog.html">Blog</a></p>
+                <p>This is the end of December's Blog.  Please check out my other months:   <a href="/blog/january/">January</a>  <a href="/blog/january/">February</a>  <a href="/blog/january/">March</a> <a href="/blog/january/">April</a> <a href="/blog/january/">May</a>or view the full <a href="/blog">Blog</a></p>
                 <p>I have broken them up by month so it's easier to load.</p>
                 <h3>05/02/2021</h3>
                 </div>
             </div>
             <div class="royal">
-                <a href="blog.html" onmouseover="All()" onmouseout="blog()" ><h1 id="switch">Blog</h1></a>
-                <a href="january.html" class="month">January</a>
-                <a href="february.html" class="month">February</a>
-                <a href="march.html" class="month">March</a>
-                <a href="april.html" class="month">April</a>
-                <a href="may.html" class="month">May</a>
-                <a href="june.html" class="month">June</a>
-                <a href="july.html" class="month">July</a>
-                <a href="august.html" class="month">August</a>
-                <a href="september.html" class="month">September</a>
-                <a href="october.html" class="month">October</a>
-                <a href="november.html" class="month">November</a>
+                <a href="/blog" onmouseover="All()" onmouseout="blog()" ><h1 id="switch">Blog</h1></a>
+                <a href="/blog/january/" class="month">January</a>
+                <a href="/blog/february/" class="month">February</a>
+                <a href="/blog/march/" class="month">March</a>
+                <a href="/blog/april/" class="month">April</a>
+                <a href="/blog/may/" class="month">May</a>
+                <a href="/blog/june/" class="month">June</a>
+                <a href="/blog/july/" class="month">July</a>
+                <a href="/blog/august/" class="month">August</a>
+                <a href="/blog/september/" class="month">September</a>
+                <a href="/blog/october/" class="month">October</a>
+                <a href="/blog/november/" class="month">November</a>
             </div>
         </div>
     </div>
-    <script src="nerves.js"></script>
+    <script>
+const videoId = "bxoy1Cd93fk?si=a9moFxHNZqSDpktc";
+// function demon(){
+//     document.getElementById("viper").innerHTML=`
+//     <div class="vid">
+//         <iframe width="100%" height="315" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//     </div>
+//     `
+// }
+// demon();
+
+
+const viper = document.getElementById("viper");
+if (viper) {
+  viper.innerHTML = `
+    <div class="vid">
+    <iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/${videoId}"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+    </div>
+    `;
+}
+
+
+
+
+function timingiseverything(){
+    let numeroly = new Date;
+    let month = numeroly.getMonth()+1;
+    let day = numeroly.getDate();
+    let year = numeroly.getFullYear();
+    document.getElementById("neo").innerHTML=`${month}/${day}/${year}`;
+}
+timingiseverything();
+
+
+function play(){
+    document.getElementById("play").innerHTML=`
+                    <div class="vid">
+                        <iframe src="https://ugetube.com/embed/yPzOBdydY5VjluB" frameborder="0" width="100%" height="400" allowfullscreen autoplay="0"  ></iframe>
+                    </div>
+    `
+    document.getElementById("controls").innerHTML=`
+                    <a onclick="hide()" > Hide Video?</a>
+    `
+}
+function hide(){
+    document.getElementById("play").innerHTML=`
+                    
+    `
+    document.getElementById("controls").innerHTML=`
+                    <a onclick="hide()" > Play Video?</a>
+    `
+}
+
+function cocktail(){
+    document.getElementById("cocktail_comments").classList.remove("hidden");
+    document.getElementById("shower").classList.add("hidden");
+    document.getElementById("hider").classList.remove("hidden");
+}
+function cocktail2(){
+    document.getElementById("cocktail_comments").classList.add("hidden");
+    document.getElementById("shower").classList.remove("hidden");
+    document.getElementById("hider").classList.add("hidden");
+}
+
+function noone2(){
+    document.getElementById("noone").innerHTML=`
+    <p>I want this to <span class="noone" onclick="noone()">expand</span> even though it is not for me</p>
+    `
+}
+function brandnew(){
+    `
+    <p><span class="noone" onclick="noone2()">Nevermind</span></p>
+    <div class="post">
+                <h2>I might be wrong</h2>
+                <p>
+                    For the record, I might be wrong about everything I say in this blog.  I'm just a guy trying to make sense of the world.
+                </p>
+                <p>
+                I've decided to temporarily suspend what I've had hidden here after a years thought.
+                </p>
+                <h3>1.3.22</h3>
+            </div>
+    `
+}
+function noone(){
+    document.getElementById("noone").innerHTML= `
+    <p><span class="noone" onclick="noone2()">Nevermind</span></p>
+    <div class="vid">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/q6EzSbI-zOk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                
+                <p>
+                    I've decided to remove this post after a year's thought.
+                </p>
+    `
+}
+
+function legacyfun(){
+    document.getElementById("noone").innerHTML= `
+    <p><span class="noone" onclick="noone2()">Nevermind</span></p>
+    <div class="vid">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/q6EzSbI-zOk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>
+                    This is a post for someone who believes in the general consensus of how the world works, but is open to information that challenges their world view.  
+                </p>
+                <p>I've included a video of chapter 1 of a book for the conspiracy noobie.  Someone who knows something isn't quite right with the fact that we went to the moon 52 years ago and haven't gone since.  All the computer stuff that happened?  Who needs that!  Maybe someone who thinks Lee Harvey Oswald didn't singlehandedly take down the president with a magic bullet as he conveniently drove by his place of work in a convertable and no one used the upper floors.</p>
+                <p>Maybe they find it hard to believe that 6 guys with box cutters hijacked planes and managed to strike the Pentagon, and the twin towers while all the fighter jets were confused by the hijacking training excersise scheduled for that day.</p>
+                <p>Maybe they're wondering why the buildings collapsed suddenly at near free fall speed as if it was a controlled demolition when the only damage was in the upper floors.</p>
+                <p>
+                    I guess if anyone could find this useful it would be a young person, maybe 18, who isn't entreched in his world view yet.  
+                </p>
+                <p>If you think it's the Rebuplicans vs. Democrats and we live in a democracy by the people and for the people then this isn't for you.  If, on the other hand, you've noticed that no matter who gets elected, the government pulls the same shit then maybe you're open to learning about why.  I view these things as kindergarden level because I've been doing this for a decade, but you have to start somewhere.</p>
+                <p>The amazing chasm between someone in the know and someone not in the know is so incredibly large and uncrossable that I'm not sure what to do.  It's supernatural how difficult it is to explain to someone basically anything that goes against what the news presents as real. </p>
+                <p>
+                    I see young healthy people in their car with their mask on alone.  How much more brainwashed could you possibly be?  
+                </p>
+                <p>
+                    And here's the creepiest part.  There is a recent Mandela Effect where Selma Hayek's name has changed to Salma Hayek and has always been Salma.  I knew my Dad was a fan of Selma Hayek and thought she was pretty, so I called him up.  "Dad, what's the name of that actress who's last name is hayek?"  "Selma!  Selma Hayek" He says.  Then I ask him, "Could you spell it for me please"  "S-E-L-M-A"  I say, "Ok, for a brand new car in this game show, is that your final answer?" "Yes."  "Okay, google it.  Gotta go!"
+                </p>
+                <p>
+                    After googling it and seeing that her name is now and always has been "Salma" which sounds ugly, first of all, after seeing that he texts me basically saying, "Oops, and I should know that because I just pitched her a screenplay."  So not only is he a fan, he's practically a collegue, and it didn't even cross his mind to use an A instead of an E when a car was on the line.  Now after a quick google, he's 100% sure he was mistaken because obviously google has it correct.
+                </p>
+                <p>Yes they do, and her name has always been Salma.  But here's where it gets really creepy.  We argue about it for a while and by the end of it he texts me.  "I love it.  I love the spelling with the A.  It's beautiful."  So that's what we're dealing with.  Not only will people completely disregard their own memory and immediately take the google download of information, but they love it!  That's what we're dealing with.  He wasn't even bothered by his misspelling of it within a few hours.  He actually prefers the information spoonfed to him as opposed to having his own opinion.  Granted it's a tall order to remodel your reality model based on one celebrity's name but to love it and call it beautiful when it's actually an ugly ass name that sticks out like a sore thumb and you would have been out a brand new car if you were on a real game show?  To love it just creeps me the fuck out, it really does.  It reminds me of Winston loving Big Brother by the end of 1984.  </p>
+                <p>Now, I love my Dad and I don't care that he doesn't accept the Mandela Effect.  Whatever.  There are more important things in life that he knows way more about than me but I wanted to share that creepy story to let you know what we're up against.  </p>
+                <p>
+                    You don't need to be a structual engineer or a demolition expert to know that the twin towers didn't fall because of a pancake effect from the top floor giving out due to a fire.  You just need common sense.  I don't know what's going on here.  It's like some weird trick of the Devil.  It's virtually impossible to explain to someone the simplest little thing that contracticts their version of reality.  In Fairness the Bible does say that the Devil deceiveth the whole world and that you will be persecuted for following the path of Christ but I just never imagined it would be like this.  It's like I'm speaking a different language!  
+                </p>
+                <p>
+                    This post is for no one!  There is NO ONE.  You can call me crazy but at least I know to go for the bottom jenga block to make it collapse.  Good luck pulling from the second from the top and hoping a pancake effect collapses the whole thing.  
+                </p>
+                <p>
+                    So how do I know I'm not crazy?  I don't know.  I can checkmate you with my eyes closed or drop a nuke on you in call of duty.  I can get a college degree and a coding dojo certificate and code this whole website.  I've been crazy before.  I went full on crazy for like a month, but even then, at my worst, I still had more truth in me than the average zombie who thinks our response to covid 19 is perfectly reasonable.  
+                </p>
+                <p>
+                    It's probably not even possible to study all this stuff without going crazy.  I don't think I get enough credit for trying.  Sure, I lost it for a couple weeks but that's what this shit can do to you.  When you realize everything is a lie why not question whether you really need sleep?  Which is what I did to cause my poor judgement during that period of time.  But who cares?  I go crazy for a month during 10 years of researching how fake reality is and I think that deserves a medal or something.  I probably beat the odds.  Maybe that's why it's so hard for people to consider even elementary conspiracy theories.  It's maddening to deal with; it really is, and I don't think I get enough credit for trying to figure it out, but maybe that's what Jesus meant.  Forget about credit, I get ostracized.  My best friends are subconsciously terrified of me!  Of what I might say.  I'm like the luckiest guy in the world that I have 1 friend who actually can see it.  It's all so obvious I don't need confirmation from someone but it is definitely nice.
+                </p>
+                <p>
+                    Alex Jones, the face of the conspiracy theory, looked like death on the last Joe Rogan experience.  He says he can't do this anymore.  He even backed off of Sandy Hook because of the backlash he must have taken and look, there's no way you can study sandy hook conspiracy without becoming traumatized.  That's little kids dying.  It's as bad as it gets.  I don't know if Alex Jones is propped up by the system as controlled opposition or if Alex is even aware of it.  He helped open my mind up and move past him and my gut tells me that he believes in what he's saying and even believes sandy hook was a conspiracy but he felt he needed to back off of that scintillating issue to survive and make no mistake, it is killing him.  He's banned from certain platforms but overall I think the system finds him tolerable because he isn't handling it in the best way or the best role model for truthers.  
+                </p>
+                <p>
+                    Once you self-educate yourself and graduate from truther school you are supposed to move on and live your own life, avoiding the bullshit anderson pooper scooper spews out of his mouth. 
+                </p>
+                <p>On the bright side, if this life is a test and you aren't gobbling up anderson pooper scoopers dogshit then you've passed.  You have kept the faith.  There's still a lot of work to do but overall it's obvious they're trying to trick the population and whatever they want from that they aren't getting it from us, unless you're still stuck on sandy hook or 911 or pick your favorite conspiracy.  Understand it's bullshit, and move on.  It's impossible to use the evidence you find on other people anyway, so prove it to yourself and move on.</p>
+                <p>
+                    In regards to Sandy Hook, I don't know what happened.  I haven't studied it in years, but I will never forget Robbie Parker, alleged father of the slain Emily Parker, who was laughing his ass off leading up to his somber press conference when he didn't realize he was on camera.  Again, if that isn't weird to you, then it's probably also not weird to you that we're trying to go to Mars when we haven't even been to the moon in 50 years.  That's similar to entering the olympics for swimming at age 50 when you haven't even swam since high school, and thinking you're going to get the gold medal.  That's actually a bad metaphor.  Let me think of a more apt one, because we never even went to moon at all. It's like someone claiming the pyramids were built by slaves thousands of years ago, but we still can't build them today, despite all the advancements in technology.  Well maybe they weren't built in the way you were told.  
+                </p>
+                <p>
+                    And if you think we haven't been to the moon since 1969 because we don't want to go well then how do you explain the fact that space is all the rage right now!  Look at what SpaceEX is supposedly doing besides embedding SEX in their name and shooting a black dick into space.  I liked Elon Musk, and the idea of him, but all of the sudden he's the richest man in the world?  The whole appeal of Elon was that he risked all his own money to bring us these badass companies that might fail so we should all buy his products and support him and now he's richer than Jeff Bezos?  The narrative just fell apart as far as I'm concerned and I just flat out don't believe him anymore. He's definitely the coolest dude on the planet but how real he is at this point I just don't know.  The SEX thing really is quite telling.  How about you go livestream on the moon first before selling us all on Mars, Elon?  I don't know.  Sometimes I think guys like him and even Einstein and Stephen Hawking are used to push lies.  Neil Degrasse Tyson's favorite thing to do is push lies.  I don't know if he even knows that they're lies.  Why did the big bang occur Neil?  
+                </p>
+                <p>
+                    Any public genius or intellectual who doesn't acknowledge the elephant in the room of the elementary level of conspiracies going on cannot be trusted.  Even Jordan Peterson who's taught me so much, and Elon who's inspired me, even they are suspect.  How could anyone be that smart and miss something so basic?  Well, one explanation is that I'm wrong, not them.  However, it's not debatable.  There's simply no way Lee Harvey Oswalds bullet could have done what it did, or the twin towers could have fallen the way that they did, without an alternate explanation.  So these public intellectual heroes are just a joke to me at this point.  
+                </p>
+                <p>
+                    The entire world is so far past insane that you couldn't pull them out of it in a million years, possibly eternity.  I haven't figured out why that is but I heard an interesting theory that it's because of something they've already decided in the future that's affecting their past which is right now.   I had never thought about that before.   I know the present can affect the past but I forgot about the future affecting the present under the same principle of retrocausality.   And again, I'd much rather talk about retrocausality and Parallel Universes and the teaching of Jesus than Lee Harvey Oswald but these people wouldn't pass the first day of kindergarden of a real school designed to actually help you learn. 
+                </p>
+                <p>
+                    Our school system is a complete joke.  That alone is proof of everything I'm saying.  You know school's a bunch of bullshit; you went through it. You could make it through Ivy League with a post graduate degree and still be a total moron by objective standards.  A total moron who thinks it's red vs. blue and not the royal color of purple.  You know how they call it "left wing" and "right wing"?  Has it ever occured to you that the left wing and right wing can be two wings of the same beast?  It doesn't care what wing you worship if it stays perched on the throne.
+                </p>
+                <p>
+                    This isn't for you, this is for me so I don't go crazy again.  If you want to know what I think, you can come here for a unique perspective.  I'm not posting it on facebook so it shows up on your news feed in between cat videos and selfies.  I'm just telling it like it is for anyone who has two brain cells left to rub together. 
+                </p>
+                <p>
+                    I don't think I'm some supergenius who can see things others cannot.  There's some truth to that as I am in the top like 1% of chess players in the world but thinking hasn't been my strongsuit.  I've lived a well-rounded life with Athletics, and girls, and parties, and I think my talent and purpose lies in my ability to relate to anyone in person and to kind of meet you on your level.  I can speak confidently in a crowd and have leadership and teaching ability.  But I'm not a supergenius.  I'm just frustrated that no one can see the most basic of things about this reality.
+                </p>
+                <p>
+                    There's something spiritual going on where maybe I'm an old soul or a different type of incarnation than the vast majority of people who can't see with their own eyes anymore unless the news tells them what they're seeing. 
+                </p>
+                <p>
+                    I don't hate you.  Do I think I'm better than you?  Maybe, but I recognize that as a flaw.  I think there's a ton wrong with me and the world is somehow a reflection of myself because I'm part of it and it is sick so I must be sick as well.
+                </p>
+                <p>
+                    In a scenario like this where 1984 is coming to life and the ministry of truth is starting to censor more and more "fake information" there's little to look forward to other than the coming of Jesus.  
+                </p>
+                <p>
+                    I'm actually kind of mad at myself for not predicting this virus crisis, so I'm going to try to predict the next thing.  The virus is like their evil little plan to put everyone in masks and keep us separated to basically divide and conquer our souls.  So what's next?  They rode the terrorism train about as long as they could before they had to come up with the next phase of a virus crisis.  So what's next?
+                </p>
+                <p>One idea I have is that they'll claim to discover a "murder gene" and they'll use it to be able to genetically modify all babies at birth, to install whatever programs they want into them to truly make people subhuman.</p>
+
+                <p>That's one direction they could go when we get tired of the virus business, or they at least accomplish what they want to with the virus and then choose to move on.</p>
+
+                <p>
+                    Remember they said 2 weeks and it's been idk 2 years maybe?  Whatever.  Do you know I wouldn't even be surpised if I was kidnapped by reptilians in the night who threatened to kill me if I stopped making this website.  I would laugh and roll my eyes at them.  That's how fucking batshit this all is.  Nothing, and I mean absolutely nothing, would surpise me.  The only thing that would surpise me is if everything got fixed and only the truth prevailed barring Jesus coming back.
+                </p>
+                <p>
+                    Okay so if I had to try to predict another manufactured crisis I'm trying to think of what they want to do to us next.  Let's see, we've hacked all their emails and phone calls, we've put them under house arrest and put them in masks... what else can we do?  Maybe modify their genes at birth like I said.  Maybe... maybe we could have them use autopilot!?  That's it.  You know like the movie Click?  When he fast-forwards and misses all the little things in life, and he's just a zombie?  I bet you that will happen in reality someday where technology will give people the option of automating their own bodies for certain periods of time and then get to use their brains and bodies when they get home from work for a few hours.  Idk.  Would that surpise me if people lined up for that?  No, it would not.  
+                </p>
+
+                <p>
+                    So we could genetically modify them at birth, we could get them to completely surrender their consciousness to us to fast forward their conscious experience... what else could we make them do?  And trust me I'm not giving the Devil any Ideas; he's way smarter than 1000 me's put together.  I'm just trying to think it through.   Let's see...  we could get rid of the men, just make a population of women to serve us and have the sperm banks somehow stay operational.  Not sure how they'd pull that one off but they certainly want not only men gone but women too.  So there would have to be a push towards a genderless society.  Lets see, we've already kind of broken down the family, and attacked masculinity as toxic and feminity as inferior... Let's make them learn from the government instead of their parents!  "Hey Satan"  A gargoyle yelled.  "yes?" Satan asked.  "We already did that one."  "Oh yes, I forgot, common core is my favorite."
+
+
+                </p>
+
+                <p>
+                    What does the Devil have for us next?  
+                </p>
+                <p>
+                    How about fake aliens!  That seems like it's already underway.  That's probably it.  So they'll probably have elon musk's black space dick make contact with a fake alien civilization that wants to come live with us.  Sure! Come on down.  Then we'll have demons walking around interbreeding with us, I don't know.  Would that surpise me if we made contact with aliens in the next 10 years and somehow it was a conspiracy to gain more power over us humans and dehumanize us further?  No, it would not surprise me.  And no, save your comments about my own sanity and take yourself to the shrink for both of us and ask for the placebo instead of your pills because they're just as effective, and they're cheap and taste better. 
+                </p>
+                <p>
+                    You can take a sugar pill and experience the same effects as a drug.  Okay?  That tells you all you need to know about reality.  Some people shrug it off as insignificant and I haven't learned how to not see those people as total morons.  The Placebo effect changes everything and is verifiable proof that your mind has way more power then your world view allows for.  Government is... wait for it... dare I say.... governing your mentality?  Is that too much of a stretch there for ya? Ya, I thought so.  Again, a post for no one.
+                </p>
+    `
+}
+
+function alien(){
+    document.getElementById("switch").innerHTML=`
+    DJ Aliens
+    `
+}
+function blog(){
+    document.getElementById("switch").innerHTML=`
+    Blog
+    `
+}
+
+function april(){
+    document.getElementById("switch").innerHTML=`
+    Home
+    `
+}
+
+function All(){
+    document.getElementById("switch").innerHTML=`
+    Index
+    `
+}
+function cold(){
+    document.getElementById("shell").innerHTML=`
+    <p onclick=war() id="cold">I've seen enough<p>
+    `
+}
+function war(){
+    document.getElementById("guide").innerHTML=``;
+    document.getElementById("shell").innerHTML=`
+    <p id="cold" onclick=strategy()>Click to reveal my review and strategy guide of Call of Duty Cold War<p>
+    
+    `
+}
+function strategy(){
+    document.getElementById("guide").innerHTML=`
+    <div class="gamereview">
+                <a target="_blank" href="https://www.amazon.com/gp/product/B08GR4QMC9/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B08GR4QMC9&linkCode=as2&tag=117027-20&linkId=50b3bd11074970c34a527d0a44f367ea"><img class="pic" src="/static/img/coldwar.jpg" alt="cold war"></a>
+                
+                <h1>Call of Duty: Cold War 9.5/10</h1>
+                <p>This game is getting better and better.  They keep releasing new weapons, maps, and zombies maps all for free.  They also balanced some of the weapons like the MP5 and buffed some of the bad guns so I think it's a lot of fun now.  The zombies mode is super fun and I love the multiplayer team deathmatch mode.  Even the scorestreak system is cool because it discourages camping because if you die your scorestreak does not reset.  They just released more weapons, maps, and a theater mode.</p>
+                <div class="strategy">
+                    <h2>Strategy Guide</h2>
+                    <img src="/static/img/diamond.jpg" alt="diamond" class="pic">
+                    <p>
+                        I finally got my shotty and sniper class diamond.  To get a weapon diamond you have to get every weapon in the class gold.  To get a weapon gold you have to complete all weapon camo challenges.
+                    </p>
+                    <p>
+                        To complete all weapon challenges you have to get 20 instances of 5 kills in a row without dying using only that weapon.  This is much harder than it sounds because if someone comes up behind you and you switch weapons to kill them it resets your kill count on your primary weapon.  So I would have to snipe, and then retreat and snipe their assault instead of just whipping out my shotgun.
+                    </p>
+                    <p>
+                        There were only 3 snipers and 2 shotguns at the launch of the game.  Now there are 4 snipers and 3 shotguns.
+                    </p>
+                    <h2>Streetsweeper</h2>
+                    <p>
+                        The best shotgun is the streetsweeper.  It's the newest shotgun and you can see it in my picture.  I have more kills with it than any other weapon because it is an 18 round fully automatic one shot kill.  It dominates, however they just balanced it with a season 3 patch and now it struggles to get one shot kills and also suffers in midrange aiming down sights where it used to be functional.
+                    </p>
+                    <p>
+                        This class was the best, but now I think I have to run my AK74U for close range again after the nerf of the Shotty.
+                    </p>
+                    <h2>LW3 Tundra</h2>
+                    <p>
+                        The best sniper is the Tundra you can see above.  It's the strongest sniper before the latest one released super recently but it's also deadly accurate.
+                    </p>
+                    <p>
+                        The key to winning in Cold War is to have 2 weapons. 1 for long range and 1 for short range, and then to choose your battles carefully.  If every engagement I get into is long range with a sniper or close range with a shotgun I'm going to have a kill death above 1.6 which I do for that reason.  Really it's probably closer to 2 when I'm actually using a sniper shotgun, because sometimes I'm messing around with a revolver and tomahawk.
+                    </p>
+                    <p>
+                        You can see my perks above and I will explain why they dominate.
+                    </p>
+                    <p>
+                        Perk Greed is the best way to go.  You get 6 perks and 2 from each perk class.
+                    </p>
+                    <h2>Perk 1</h2>
+                    <h3>Flak Jacket</h3>
+                    <p>
+                        Flak Jacket is so dominant they had to nerf it but it's still super clutch to survive otherwise deadly explosions.
+                    </p>
+                    <h3>Engineer</h3>
+                    <p>
+                        I use engineer for 1 reason.  Stealth.  In Perk 3, you can only chose 2 of them, unless you're rocking Law Breaker and can grab 3 of any perks you want and 2 primary weapons.  Since I use Ghost Ninja in perk 3, that means I cannot also use Spycraft.  Spycraft prevents you from showing up on field mics, which are like stationary personal radars.  With Engineer, I can see the field mics through walls, so I can at least know not to walk into anyone who is ready to ambush me.
+                    </p>
+                    <h2>Perk 2</h2>
+                    <h3>
+                        Gearhead
+                    </h3>
+                    <p>
+                        Gearhead is the best perk two because it lets you charge up your equipment faster and store 2 of them.  Field Mics are incredibly powerful.  I can put one on the stairs of where I'm sniping from, and then it will alert me when someone is coming up the stairs and I'll pull out my shotgun and blow them away.  It's necessary.
+                    </p>
+                    <h3>
+                        Quartermaster
+                    </h3>
+                    <p>
+                        Quartermaster allows your grenade to regenerate.  I use frag grenades because they got a buff and flak jacket got a nerve and I can cook them and bounce them off walls at the start of matches and when I'm sniper but people are hiding.  Having them regenerate means I can feel free to chuck them and get some free kills without regretting a wild throw later.
+                    </p>
+                    <h2>Perk 3</h2>
+                    <p>
+                        Perk 3 are the most important by far.  When I have Law Breaker and can choose any 3 perks I want from any perk tree, I choose all 3 perks from Perk 3.
+                    </p>
+                    <h3>
+                        Ghost
+                    </h3>
+                    <p>
+                        Ghost in Cold War prevents you from showing up on enemy radar. It doesn't work if you're not moving.  This is a cool concept and causes me to move around and flank people whenever they use a UAV.  It's a necessary perk and you have to combine it with ninja, otherwise everyone will be ready for you.
+                    </p>
+                    <h3>
+                        Ninja
+                    </h3>
+                    <p>
+                        Ninja used to be overpowered and prevent detection by field mics but they moved that to spycraft.  It's still the best perk in the game because you can sprint up to someone and they won't hear your footsteps.  It's all about getting the drop on people.  If you can hear someone coming up behind you, they're as good as dead.  Don't be that guy.  Use ninja 100% of the time.
+                    </p>
+                    <h2>Tactical Equipment and Lethal</h2>
+                    <h3>Frag Grenade</h3>
+                    <h3>Field Mic</h3>
+                    <p>
+                        I already kind of mentioned these but they are the best.  Semtex can be nice too. C4 isn't as good in this game.  RPGs are worthless too.
+                    </p>
+                    <h3>Stim Shot</h3>
+                    <p>
+                        They had to neft the stim shot and slow the healing speed but it's still the best and I recommend having the same tactical for every class because it becomes instinctual to press L1 after getting shot, so you don't want to be flashing or stunning yourself.  Stim shot recovers health quickly and combined with flak jacket you can usually survive two grenades by healing in between the two explosions.
+                    </p>
+                    <h2>
+                        Killstreaks
+                    </h2>
+                    <h3>War Machine</h3>
+                    <p>This Grenade Launcher is ridiculously strong and makes one a master of death.</p>
+                    <h3>Blackbird</h3>
+                    <p>
+                        If you're on a killstreak with your war machine and you get a blackbird (advanced UAV) you are basically immortal.  You can blow people up around corners.
+                    </p>
+                    <h3>Gunship</h3>
+                    <p>
+                        The best killstreak in the game.  If you combine your blackbird and war machine effectively you can finish the game from the AC-130 in style.
+                    </p>
+                    <p>
+                        That combination of killstreaks is good enough that I was 29-0 once before the game even really got started.  
+                    </p>
+                    <p id="normal">Why should you listen to me? View my COD montages on the <a href="/videos.html">Videos</a> Tab</p>
+                </div>
+            </div>
+    `
+    cold();
+}
+</script>
 <script>
 (() => {
     // Let the shared script supply the latest demo ID without inserting a live player on startup.

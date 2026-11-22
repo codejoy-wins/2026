@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
          { title: "Blog",
          description: "A dynamically styled blog that automatically displays all my blog posts from that month", 
          imageUrl: "static/img/blogexamplenew.png",
-         linkURL:"blog.html",
+         linkURL:"/blog",
          videoembed:"",
          date:"2020+",
          },
