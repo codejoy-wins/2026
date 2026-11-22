@@ -112,6 +112,16 @@ if (state.items.length === 0) {
     tarot: pickTarot(),
     dateAdded: Date.now(),
   });
+  state.items.push({
+    id: crypto.randomUUID(),
+    src: "/static/img/rainbowwbc.png",
+    title: "Dream Weaver",
+    tags: ["Lifestyle"],
+    notes: "Elam the Dreamweaver.",
+    favorite: true,
+    tarot: pickTarot(),
+    dateAdded: Date.now(),
+  });
   saveState();
 }
 
