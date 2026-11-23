@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
          description: "A single-page web application that uses artificial intelligence and a pokemon API to let you pick a team of any 6 pokemon and challenge Mewthree to a battle.  Currently back online after buying more API tokens and switching model to 4o-mini. May add image generation next.", 
         //  imageUrl: "static/img/mewthree.png",
          imageUrl: "static/img/Mewthree’s Psychic Battle Awakening copy.png",
-         linkURL:"pokedex.html",
+         linkURL:"mewthree.html",
          videoembed:"",
          date:"2024+",
          },

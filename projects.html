@@ -92,11 +92,11 @@
    For a complete book cover, use static/img/bookcover.png; the bundled cover-only screenshot crop serves as fallback. */
 const projects = {
 featured:[
+ {title:'Mewthree',tag:'AI · Interactive game',image:'static/img/Mewthree’s Psychic Battle Awakening copy.png',description:'Build a team of six Pokémon and challenge Mewthree in an AI-powered battle experience. A mix of game mechanics, generative responses, and original presentation.',links:[['Challenge Mewthree','mewthree.html']]},
+
  {title:'Cyberprophet Numerology',tag:'New · Mathematical explorer',image:'static/img/newnumerologypic.webp',imageStyle:'screenshot',description:'A fast, ad-free gematria calculator with multiple mathematical ciphers, letter-by-letter breakdowns, phrase comparisons, history, and shareable results. An original Cyberprophet interface built for exploring numbers in language.',links:[['Launch Numerology','numerology.html']]},
  {title:'Cyberprophet Astrology',tag:'New · Celestial explorer',image:'static/img/newastrologypic.webp',imageStyle:'screenshot',description:'Enter a birthdate and instantly explore zodiac placements, a celestial chart, planetary aspects, and traditional interpretations. Birth time and location are optional for additional chart details; uncertainty is identified when inputs are missing.',links:[['Launch Astrology','astrology.html']]},
  {title:'Cyberprophet Chess',tag:'Live · Chess and design',image:'static/img/newchesspic.webp',imageStyle:'screenshot',description:'A continually evolving chess page featuring recent games, interactive boards, and the concept for an original Cyberprophet chess set. Where competitive chess meets creative design.',links:[['Explore Chess','chess.html']]},
- {title:'Mewthree',tag:'AI · Interactive game',image:'static/img/Mewthree’s Psychic Battle Awakening copy.png',description:'Build a team of six Pokémon and challenge Mewthree in an AI-powered battle experience. A mix of game mechanics, generative responses, and original presentation.',links:[['Challenge Mewthree','mewthree.html']]},
- {title:'OneDate',tag:'AI · Companion app',image:'static/img/onedatev2.png',description:'A companion to Mewthree in the AI app family: enter two locations and generate creative date ideas. A functional experiment in conversational planning, with geographic precision still open for improvement.',links:[['Try OneDate','onedate.html']]},
  {title:'Visual Board',tag:'Creative tool · Interactive gallery',image:'static/img/rainbowwbc.png',symbol:'◈',description:'An interactive gallery for images, captions, tags, notes, and visual ideas. Designed to make a collection of art feel more like an explorable creative space.',links:[['Open Visual Board','visual/index.html']]}
 ],
 worlds:[
@@ -117,7 +117,9 @@ archive:[
  {title:'Facebook Clone',tag:'2020 · Full-stack prototype',image:'static/img/fakebook.png',description:'A Django/Python social application supporting accounts, custom walls, personalized colors, and user posts. The original deployment is offline; a demo remains.',videos:[['Video demonstration','https://www.youtube.com/embed/cGj6XZNMmQc']]},
  {title:'LuckyBid',tag:'2019 · Full-stack prototype',image:'static/img/luckybid.png',description:'A full-stack raffle-bidding application with user accounts and an interactive bidding flow. Preserved through a video demo.',videos:[['Video demonstration','https://www.youtube.com/embed/qEnke76S4pw']]},
  {title:'Meme Creator',tag:'2022 · Prototype',image:'static/img/meme.jpg',description:'An early image-and-caption tool with room for modernized editing and exporting features.',links:[['Try Meme Creator','meme.html']]},
- {title:'Cards',tag:'2023 · Battle prototype',image:'static/img/mew.jpg',description:'An earlier Pokémon-inspired turn-based battle experiment with predefined enemies and move selection.',links:[['Play Cards','cards.html']]}
+ {title:'Cards',tag:'2023 · Battle prototype',image:'static/img/mew.jpg',description:'An earlier Pokémon-inspired turn-based battle experiment with predefined enemies and move selection.',links:[['Play Cards','cards.html']]},
+ {title:'OneDate',tag:'AI · Companion app',image:'static/img/onedatev2.png',description:'A companion to Mewthree in the AI app family: enter two locations and generate creative date ideas. A functional experiment in conversational planning, with geographic precision still open for improvement.',links:[['Try OneDate','onedate.html']]},
+
 ]};
 function makeCard(p,i,section){
  const article=document.createElement('article');article.className='project-item';
