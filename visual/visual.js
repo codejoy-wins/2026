@@ -42,6 +42,41 @@ let mode = "grid";
 let playing = false;
 let playTimer = null;
 let cursorIndex = 0;
+let viewerItems = [];
+let favoritesOnly = false;
+const intervals = [12000, 8000, 5000, 4000, 2800, 2000, 1500, 1000, 750, 500, 250];
+const speedKey = LS_KEY + ".slideInterval";
+let intervalMs = 2800;
+try {
+  const saved = Number(localStorage.getItem(speedKey));
+  if (intervals.includes(saved)) intervalMs = saved;
+} catch { /* Playback still works without storage. */ }
+const speedInputs = document.querySelectorAll(".tempo-slider");
+function displaySpeed() {
+  const label = (intervalMs / 1000) + " s / image";
+  for (const input of speedInputs) {
+    input.value = intervals.indexOf(intervalMs);
+    input.previousElementSibling.value = label;
+    input.setAttribute("aria-valuetext", label);
+  }
+}
+displaySpeed();
+for (const input of speedInputs) {
+  input.addEventListener("input", () => {
+    intervalMs = intervals[Number(input.value)];
+    displaySpeed();
+    if (playing) play();
+  });
+  input.addEventListener("change", () => {
+    try { localStorage.setItem(speedKey, String(intervalMs)); } catch { /* optional preference */ }
+  });
+}
+const favoriteFilter = document.getElementById("favoritesOnly");
+favoriteFilter.addEventListener("click", () => {
+  favoritesOnly = !favoritesOnly;
+  favoriteFilter.setAttribute("aria-pressed", String(favoritesOnly));
+  renderGrid();
+});
 
 /* ---------- Tarot dataset ---------- */
 const TAROT_DECK = [
@@ -224,11 +259,11 @@ els.editModal.addEventListener("close",()=>{
 window.addEventListener("keydown",(e)=>{
   const el=document.activeElement;
   if(el && (el.tagName==="INPUT" || el.tagName==="TEXTAREA" || el.isContentEditable)) return;
-  if(els.focusModal.open){
+  if(els.focusModal.open && !els.editModal.open){
     if(e.key==="Escape") return closeFocus();
     if(e.key==="ArrowLeft") return stepFocus(-1);
     if(e.key==="ArrowRight") return stepFocus(1);
-    if(e.key===" "){ e.preventDefault(); return togglePlay(); }
+    if(e.key===" " && el?.tagName!=="BUTTON"){ e.preventDefault(); return togglePlay(); }
     if(e.key.toLowerCase()==="f") return toggleFavorite();
     if(e.key.toLowerCase()==="e") return openEdit();
   }
@@ -238,9 +273,11 @@ window.addEventListener("keydown",(e)=>{
 function renderAll(){ renderAffirmations(); renderGrid(); }
 
 function handleModeChange(){
-  if(mode==="grid") stopPlay();
-  else if(mode==="focus"){ if(state.items.length) openFocusByIndex(0); }
-  else if(mode==="slideshow"){ if(state.items.length){ openFocusByIndex(0); play(); } }
+  if (mode === "grid") return stopPlay();
+  viewerItems = filteredItems();
+  if (!viewerItems.length) return resetMode();
+  openFocusByIndex(0);
+  if (mode === "slideshow") play();
 }
 
 function renderAffirmations(){
@@ -251,17 +288,21 @@ function renderAffirmations(){
     </span>`).join("");
 }
 
-function renderGrid(){
+function filteredItems(){
   const q=els.searchInput?.value?.trim().toLowerCase()||"";
   const filter=(els.filterSelect?.value||"").toLowerCase();
-  const items=state.items.filter(it=>{
+  return state.items.filter(it=>{
     const hay=`${(it.title||"")} ${(it.tags||[]).join(" ")} ${(it.notes||"")}`.toLowerCase();
     const passQ=!q||hay.includes(q);
     const passF=!filter||(it.tags||[]).map(t=>t.toLowerCase()).includes(filter);
-    return passQ&&passF;
+    return passQ && passF && (!favoritesOnly || it.favorite);
   });
 
-  els.grid.innerHTML=items.map((it,i)=>cardTemplate(it,i)).join("");
+}
+function renderGrid(){
+  const items = filteredItems();
+  document.querySelectorAll('.seg:not([data-mode="grid"])').forEach(button => button.disabled = !items.length);
+  els.grid.innerHTML=items.map((it,i)=>cardTemplate(it,i)).join("") || '<p class="empty">No cards in this view.</p>';
   // Automatically detect portrait images
 els.grid.querySelectorAll(".card-front img").forEach(img => {
   const checkOrientation = () => {
@@ -306,6 +347,7 @@ els.grid.querySelectorAll(".card-front img").forEach(img => {
       favBtn.setAttribute("aria-pressed", real.favorite);
       favBtn.textContent = real.favorite ? "★" : "☆";
       saveState();
+      if (favoritesOnly) renderGrid();
     });
 
     // Click caption to edit without flipping the card
@@ -377,13 +419,16 @@ function cardTemplate(it,i){
 
 /* ---------- Focus / slideshow ---------- */
 function openFocus(id){
-  const idx=state.items.findIndex(x=>x.id===id);
+  viewerItems = filteredItems();
+  const idx=viewerItems.findIndex(x=>x.id===id);
   if(idx===-1) return;
   openFocusByIndex(idx);
 }
 function openFocusByIndex(idx){
-  cursorIndex=clamp(idx,0,state.items.length-1);
-  const item=state.items[cursorIndex];
+  cursorIndex=clamp(idx,0,viewerItems.length-1);
+  const item=currentItem();
+  if (!item) return;
+  els.playBtn.disabled = viewerItems.length < 2;
   els.focusImg.src=item.src;
   els.focusCaption.textContent=item.title||"";
   els.toggleFavBtn.classList.toggle("on", !!item.favorite);
@@ -394,8 +439,15 @@ function openFocusByIndex(idx){
   if(!els.focusModal.open) els.focusModal.showModal();
 }
 function closeFocus(){ stopPlay(); els.focusModal.close(); }
-function stepFocus(d){ const n=(cursorIndex+d+state.items.length)%state.items.length; openFocusByIndex(n); }
-function play(){ playing=true; els.playBtn.textContent="⏸ Pause"; playTimer=setInterval(()=>stepFocus(1),2800); }
+function stepFocus(d){ const n=(cursorIndex+d+viewerItems.length)%viewerItems.length; openFocusByIndex(n); }
+function resetMode(){
+  mode = "grid";
+  els.segs.forEach(button => button.classList.toggle("active", button.dataset.mode === mode));
+}
+els.focusModal.addEventListener("close", () => { if (!els.focusModal.open) { stopPlay(); resetMode(); } });
+document.addEventListener("visibilitychange", () => { if (document.hidden) stopPlay(); });
+function play(){ clearInterval(playTimer); if (viewerItems.length < 2 || !els.focusModal.open) return;
+  playing=true; els.playBtn.textContent="⏸ Pause"; playTimer=setInterval(()=>stepFocus(1),intervalMs); }
 function stopPlay(){ playing=false; els.playBtn.textContent="▶ Play"; if(playTimer) clearInterval(playTimer); playTimer=null; }
 function togglePlay(){ playing?stopPlay():play(); }
 function toggleFavorite(){
@@ -409,17 +461,19 @@ function toggleFavorite(){
 }
 function openEdit(){
   const it=currentItem(); if(!it)return;
+  stopPlay();
   els.editForm.elements.title.value=it.title||"";
   els.editForm.elements.tags.value=(it.tags||[]).join(", ");
   els.editForm.elements.notes.value=it.notes||"";
   els.editModal.returnValue=""; els.editModal.showModal();
 }
 function openEditById(id){
-  const idx=state.items.findIndex(x=>x.id===id);
+  viewerItems = filteredItems();
+  const idx=viewerItems.findIndex(x=>x.id===id);
   if(idx===-1)return;
   openFocusByIndex(idx); openEdit();
 }
-function currentItem(){ return state.items[cursorIndex]||null; }
+function currentItem(){ return viewerItems[cursorIndex]||null; }
 
 /* ---------- Add files (compression) ---------- */
 async function addFiles(files){

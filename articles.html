@@ -7,7 +7,7 @@
 *{box-sizing:border-box}body{margin:0;background:var(--night);color:var(--paper);font:16px/1.55 system-ui,sans-serif}
 a{color:inherit;text-underline-offset:.22em}button,summary{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #bd8135;outline-offset:3px}
 .wrap{width:min(1180px,92%);margin:auto}header,.mast,.rail-head,footer{display:flex;align-items:center;justify-content:space-between;gap:16px}
-header{min-height:62px;border-bottom:1px solid #ffffff29}.brand{display:flex;align-items:center;gap:10px;font-weight:600;text-decoration:none}.brand img{width:30px;height:30px;object-fit:contain}header details{position:relative}summary{padding:.5em 0}.menu{position:absolute;z-index:3;right:0;top:100%;width:220px;max-height:65vh;overflow:auto;padding:12px;background:#1b2a34;border:1px solid #827658}.menu a{display:block;padding:5px 10px}
+header{min-height:62px;border-bottom:1px solid #ffffff29}.brand{display:flex;align-items:center;gap:10px;font-weight:600;text-decoration:none}.brand img{width:30px;height:30px;object-fit:contain}
 .mast{align-items:baseline;padding:clamp(18px,3vw,40px) 0 18px}.mast h1{font:normal clamp(3rem,7vw,6.5rem)/.98 var(--serif);letter-spacing:-.065em;margin:0}.mast p{margin:0;color:var(--gold);font:italic 1rem var(--serif)}
 .picker{display:flex;overflow-x:auto;gap:1.1rem;scrollbar-width:thin;scrollbar-color:#8f805e var(--night);padding:4px 4px 7px;border-top:1px solid #ffffff30}
 .picker a{display:block;flex:none;padding:.65em 0 .5em;text-decoration:none;color:#c5c9c7;border-bottom:2px solid transparent;font-size:.92rem}.picker a:hover,.picker a[aria-current]{color:#ffe2ad;border-bottom-color:var(--gold)}
@@ -20,21 +20,15 @@ article{scroll-margin-top:1rem}article[hidden]{display:none}.spread{display:grid
 footer{padding:20px 0 32px;font-size:.85rem;color:#d3c9b6}
 @media(max-width:720px){.spread{display:flex;flex-direction:column}.plate{position:static;align-self:stretch;padding:12px}.plate img{height:clamp(130px,24vh,205px)}.sheet{padding:22px 18px}.wrap{width:94%}.mast{align-items:flex-end}.picker{gap:1rem}.reader{margin-top:10px}}
 @media print{header,.picker,footer,.mast,.plate{display:none}body,.reader{background:white;color:black}.wrap,.prose{width:100%;max-width:none}.spread{display:block}.sheet{padding:0}}
-</style></head>
-<body><div class="wrap"><header><a class="brand" href="index.html"><img src="static/img/mj3.png" alt="">Max Jann</a><details><summary>Site menu</summary><nav class="menu" aria-label="Site"><a href="alien.html">DJ Aliens</a>
-<a href="/blog">Blog</a>
-<a href="story.html">Story</a>
-<a href="chess.html">Chess</a>
-<a href="web.html">Web Development</a>
-<a href="contact.html">Contact</a>
-<a href="welcome.html">Welcome</a>
-<a href="music.html">Music</a>
-<a href="education.html">Education</a>
-<a href="poem.html">Poem</a>
-<a href="home.html">Reviews</a>
-<a href="videos.html">Videos</a>
-<a href="art.html">Art</a>
-<a href="game.html">Game Design</a></nav></details></header>
+</style>
+<link rel="stylesheet" href="/static/css/jann-nav.css">
+<script src="/static/js/components.js" defer></script>
+</head>
+<body><div class="wrap"><header><a class="brand" href="index.html"><img src="static/img/mj3.png" alt="">Max Jann</a>
+<jann-nav theme="water">
+  <a href="/projects">Explore projects</a>
+</jann-nav>
+</header>
 <main><div class="mast"><h1>Articles</h1><p>Maxwell Jann</p></div>
 <nav class="picker" aria-label="Choose an article"><a href="#infoverse">Infoverse</a>
 <a href="#cybergeneology">Cybergeneology</a>

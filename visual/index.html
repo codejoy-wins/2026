@@ -13,7 +13,7 @@
     <div class="brand">
       <a href="/index.html"><span class="logo"><img class="pic" src="/static/img/tinyblue.png" alt="change"></span></a>
       <!-- <span class="logo">△</span> -->
-      <h1>Visual <small>— Add Photos to make cards, click the card to flip it over and reveal your tarot</small></h1>
+      <h1>Visual <small>Vision board</small></h1>
     </div>
 
     <div class="controls">
@@ -25,30 +25,9 @@
       <button id="addUrlBtn" class="btn">🔗 Add via URL</button>
 
       <div class="field">
-        <input id="affirmInput" placeholder="Add an affirmation… (e.g., 'Ship my solo game ✨')" />
+        <input id="affirmInput" placeholder="Add an affirmation… ✨" />
         <button id="addAffirmBtn" class="btn btn-light">➕</button>
       </div>
-
-      <div class="field">
-        <input id="searchInput" placeholder="Search tags/captions…" />
-      </div>
-
-      <select id="filterSelect" class="pill">
-        <option value="">All</option>
-        <option>Game Dev</option>
-        <option>Legal</option>
-        <option>Lifestyle</option>
-        <option>Wealth</option>
-        <option>Health</option>
-      </select>
-
-      <div class="segmented">
-        <button data-mode="grid" class="seg active">🧱 Grid</button>
-        <button data-mode="focus" class="seg">🎯 Focus</button>
-        <button data-mode="slideshow" class="seg">🎞️ Slide</button>
-      </div>
-
-      <button id="shuffleBtn" class="btn">🔀 Shuffle</button>
 
       <div class="menu">
         <button id="exportBtn" class="btn btn-light">⤴️ Save</button>
@@ -60,15 +39,39 @@
       </div>
     </div>
   </header>
-
   <main>
+    <section class="board-controls" aria-label="Board controls">
+      <div class="field">
+        <input aria-label="Search cards" id="searchInput" placeholder="Search tags/captions…" />
+      </div>
+
+      <select aria-label="Filter by tag" id="filterSelect" class="pill">
+        <option value="">All</option>
+        <option>Game Dev</option>
+        <option>Legal</option>
+        <option>Lifestyle</option>
+        <option>Wealth</option>
+        <option>Health</option>
+      </select>
+
+      <button id="favoritesOnly" class="btn" aria-pressed="false">☆ Favorites only</button>
+      <div class="segmented">
+        <button data-mode="grid" class="seg active">🧱 Grid</button>
+        <button data-mode="focus" class="seg">🎯 Focus</button>
+        <button data-mode="slideshow" class="seg">🎞 Slideshow</button>
+      </div>
+
+      <button id="shuffleBtn" class="btn">🔀 Shuffle</button>
+
+      <label class="tempo">Playback speed <output for="boardTempo">2.8 s / image</output><input id="boardTempo" class="tempo-slider" type="range" min="0" max="10" step="1" value="4"></label>
+    </section>
     <!-- Affirmations -->
     <section id="affirmations" class="affirmations" aria-label="Affirmations"></section>
 
     <!-- Drop zone -->
     <section id="dropzone" class="dropzone" aria-label="Drop images here">
       <p>Drag & drop images here or use “Add Photo / Add via URL” ↑</p>
-      <p class="hint">Tips: tag images like <em>Game Dev</em>, <em>Legal</em>, <em>Lifestyle</em> to organize your vision 🌱</p>
+      <p class="hint">Flip a card to reveal its tarot. Star images to build a favorites slideshow.</p>
     </section>
 
     <!-- Grid -->
@@ -76,7 +79,7 @@
   </main>
 
   <!-- Focus Modal -->
-  <dialog id="focusModal">
+  <dialog id="focusModal" aria-label="Image viewer">
     <div class="focus-wrap">
       <button id="closeFocus" class="icon-btn" title="Close (Esc)">✖</button>
       <button id="prevBtn" class="icon-btn nav left" title="Prev (←)">◀</button>
@@ -93,6 +96,7 @@
       <button id="nextBtn" class="icon-btn nav right" title="Next (→)">▶</button>
 
       <div class="focus-tools">
+        <label class="tempo">Playback speed <output for="viewerTempo">2.8 s / image</output><input id="viewerTempo" class="tempo-slider" type="range" min="0" max="10" step="1" value="4"></label>
         <button id="toggleFavBtn" class="btn">⭐ Favorite</button>
         <button id="editBtn" class="btn">✏️ Edit</button>
         <button id="playBtn" class="btn">▶ Play</button>

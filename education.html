@@ -20,19 +20,16 @@
     @media(max-width:900px){.degree{grid-template-columns:60px 1fr;gap:24px}.degree-aside{grid-column:2;max-width:500px}.introduction{gap:30px}.nav{gap:18px}.closing{align-items:flex-start;flex-direction:column}}
     @media(max-width:650px){.wrap{width:calc(100% - 36px)}.header-inner{padding:16px 0;flex-wrap:wrap;gap:8px}.nav{width:100%;justify-content:space-between;gap:12px;font-size:12px}.brand img{width:26px;height:26px}.hero{padding-top:28px}.hero-top{display:block;margin-bottom:24px}.hero-top>p{margin:20px 0 0;font-size:18px;max-width:360px}.landscape figcaption{font-size:10px;gap:12px}.introduction{display:block;padding:34px 0}.introduction p{margin-top:20px;font-size:16px}.jump-links{gap:22px;margin-bottom:30px}.degree{grid-template-columns:1fr;gap:12px;padding-bottom:30px}.number{font-size:34px}.degree h2{font-size:36px}.degree-aside{grid-column:auto;padding-left:20px}.cards{grid-template-columns:1fr;gap:20px}.card{padding:26px}.closing{margin-top:40px}.actions{width:100%}.button{flex:1}.more-links{right:0}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-    @media print{body{background:white;color:black;font-size:11pt}.nav,.skip,.jump-links,.actions,.text-link,footer{display:none}.wrap{width:100%}.hero{padding-top:10px}h1{font-size:36pt}.landscape{max-width:640px;margin:auto}.introduction,.degree,.cards{display:block}.card{background:white;border:1px solid #ccc;margin:20px 0;break-inside:avoid}.degree-aside{border:0;padding:0}.eyebrow,.points,.accent,.card p,.degree p,.introduction p,.hero-top>p,.points-label{color:#333}.status code,.degree-aside strong{color:black}}
+    @media print{body{background:white;color:black;font-size:11pt}jann-nav,.skip,.jump-links,.actions,.text-link,footer{display:none}.wrap{width:100%}.hero{padding-top:10px}h1{font-size:36pt}.landscape{max-width:640px;margin:auto}.introduction,.degree,.cards{display:block}.card{background:white;border:1px solid #ccc;margin:20px 0;break-inside:avoid}.degree-aside{border:0;padding:0}.eyebrow,.points,.accent,.card p,.degree p,.introduction p,.hero-top>p,.points-label{color:#333}.status code,.degree-aside strong{color:black}}
   </style>
+<link rel="stylesheet" href="/static/css/jann-nav.css">
+<script defer src="/static/js/components.js"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header" id="top"><div class="wrap header-inner">
     <a class="brand" href="index.html"><img src="static/img/mj3.png" width="32" height="32" alt="">MAXWELL JANN</a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="projects.html">Projects</a><a href="story.html">Stories</a><a href="articles.html">Articles</a><a href="education.html" aria-current="page">Education</a>
-      <details class="more"><summary>Explore</summary><div class="more-links">
-        <a href="index.html">Home</a><a href="chess.html">Chess</a><a href="resume.html">Resume</a><a href="web.html">Web Development</a><a href="art.html">Art</a><a href="music.html">Music</a><a href="game.html">Game Design</a><a href="alien.html">DJ Alien</a><a href="welcome.html">Welcome</a><a href="poem.html">Poem</a><a href="home.html">Reviews</a><a href="videos.html">Videos</a>
-      </div></details>
-    </nav>
+    <jann-nav theme="solas"><a href="/projects.html">Explore projects</a></jann-nav>
   </div></header>
   <main id="main" class="wrap">
     <section class="hero" aria-labelledby="title">

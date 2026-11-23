@@ -8,7 +8,6 @@
 .wrap{width:min(1200px,92%);margin:auto}a,button,summary{font:inherit;color:inherit}a{text-underline-offset:4px}button,summary{cursor:pointer}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #ffe2a2;outline-offset:4px}
 header,footer,.heading,.dialog-head,.watchlinks{display:flex;justify-content:space-between;align-items:center;gap:14px}
 header{height:62px;border-bottom:1px solid var(--line)}.brand{display:flex;gap:9px;align-items:center;text-decoration:none;font-weight:640}.brand img{width:28px;height:28px;object-fit:contain}
-header details{position:relative}summary{padding:6px}.menu{position:absolute;right:0;top:100%;z-index:3;background:#182130;border:1px solid var(--line);padding:12px;width:190px;max-height:65vh;overflow:auto}.menu a{display:block;padding:4px 8px}
 .hero{margin:24px 0 30px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);position:relative;isolation:isolate;background:radial-gradient(ellipse at 15% 40%,#343146,#181d2b 60%,#111621);border:1px solid var(--line)}
 .hero::after{content:"";height:2px;position:absolute;inset:auto 0 -1px;background:linear-gradient(90deg,#cca284,#d8bd81,#77a791,#849fc8,#a390bc,#d8bd81);opacity:.85}
 .art{display:grid;place-items:center;min-width:0;padding:clamp(10px,1.7vw,24px);background:radial-gradient(ellipse,#484051 0%,transparent 71%)}.art img{width:100%;height:clamp(320px,36vw,450px);object-fit:contain;filter:drop-shadow(0 9px 19px #0006)}
@@ -20,20 +19,13 @@ h1{font-size:clamp(3.2rem,6.7vw,6.2rem);line-height:.95;letter-spacing:-.065em;m
 .panel h3{font-size:1.65rem}.meta{margin:5px 0 12px}.list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}.list li{border-top:1px solid var(--line);padding:11px 0}.film{display:flex;align-items:center;gap:12px;text-decoration:none;min-height:40px}.film::before{content:'▶';font:11px system-ui;color:var(--gold);border:1px solid #897b6377;border-radius:50%;width:27px;height:27px;flex:none;display:grid;place-items:center}.film:hover{color:#f6d69d}.note{color:var(--muted);font-size:.9rem}.panel{margin-bottom:30px}footer{padding:18px 0 33px;border-top:1px solid var(--line)}
 dialog{background:#141c28;color:var(--ivory);border:1px solid #867864;width:min(900px,94vw);max-height:92dvh;padding:clamp(12px,2vw,24px);overflow:auto}dialog::backdrop{background:#050911ed}.dialog-head{margin-bottom:14px}.dialog-head h2{font-size:clamp(1.35rem,3vw,2rem)}.dialog-head button{background:none;border:1px solid var(--line);padding:6px 12px}.screens iframe{display:block;width:100%;aspect-ratio:16/9;background:#080a0d;border:0;margin-bottom:12px}.screens.pair iframe{max-height:32vh}.watchlinks{justify-content:flex-start;flex-wrap:wrap;color:var(--gold);font-size:.88rem}
 @media(max-width:680px){.wrap{width:94%}.hero{grid-template-columns:1fr;margin-top:14px}.art img{height:clamp(220px,36svh,330px)}.copy{padding:6px 20px 23px}.epigraph{max-width:100%}h1{font-size:3.3rem}.feature{margin-top:15px}.picker{gap:18px}.list{grid-template-columns:1fr}.heading{align-items:baseline}.heading>a{white-space:nowrap}}
-</style></head><body><div class="wrap">
-<header><a class="brand" href="index.html"><img src="static/img/mj3.png" alt="">Max Jann</a><details><summary>Site menu</summary><nav class="menu" aria-label="Site"><a href="alien.html">DJ Aliens</a>
-<a href="/blog">Blog</a>
-<a href="story.html">Story</a>
-<a href="chess.html">Chess</a>
-<a href="web.html">Web Development</a>
-<a href="contact.html">Contact</a>
-<a href="welcome.html">Welcome</a>
-<a href="music.html">Music</a>
-<a href="education.html">Education</a>
-<a href="poem.html">Poem</a>
-<a href="home.html">Reviews</a>
-<a href="art.html">Art</a>
-<a href="game.html">Games</a></nav></details></header>
+</style>
+<link rel="stylesheet" href="/static/css/jann-nav.css">
+<script src="/static/js/components.js" defer></script>
+</head><body><div class="wrap">
+<header><a class="brand" href="index.html"><img src="static/img/mj3.png" alt="">Max Jann</a>
+<jann-nav theme="water"><a href="/projects">Explore projects</a></jann-nav>
+</header>
 <main><section class="hero"><a class="art" href="static/img/rainbowwbc.png" aria-label="Open the full Rainbow White Blood Cell artwork"><img src="static/img/rainbowwbc.png" fetchpriority="high" alt="Rainbow White Blood Cell artwork"></a><div class="copy"><p class="kicker">Codejoy</p><h1>Videos</h1><p class="epigraph">A white blood cell of God saving the world.</p><a class="feature" data-film="Everything You Know is Brown" data-embed="https://www.youtube.com/embed/Fzqplr2nZfc" href="https://www.youtube.com/watch?v=Fzqplr2nZfc">▶ Watch Everything You Know is Brown</a></div></section>
 <div class="heading"><h2>The archive</h2><a href="https://www.youtube.com/@Cloudland117">Codejoy on YouTube ↗</a></div>
 <nav class="picker" aria-label="Video categories"><a href="#philosophy">Philosophy</a>
