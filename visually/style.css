@@ -644,3 +644,113 @@ dialog{
     padding-bottom: 3rem;
   }
 }
+/* Creation tools live in the header; browsing and playback share the board rail. */
+.topbar {
+  position:relative; padding:1.2rem max(1rem,calc((100% - 1200px)/2));
+  background:linear-gradient(115deg,#161d30,#141522 60%,#292234);
+  border-bottom:1px solid #514350;
+}
+.brand h1 {font:normal clamp(1.8rem,4vw,3rem)/1 Georgia,serif;color:#f7ead2}
+.brand small {display:block;margin-top:.38rem;font:600 .67rem/1.2 system-ui;letter-spacing:.17em;text-transform:uppercase;color:#e6c795}
+.controls,.board-controls,.focus-tools {display:flex;align-items:center;flex-wrap:wrap;gap:.55rem}
+.menu {display:flex;flex-wrap:wrap;gap:.35rem}
+.board-controls {
+  padding:1rem;margin-bottom:1rem;border:1px solid #343c51;border-radius:16px;
+  background:linear-gradient(125deg,#191e30,#111725);box-shadow:0 8px 25px #04081244;
+}
+.tempo {display:grid;grid-template-columns:auto auto;gap:.15rem .75rem;align-items:center;
+  min-width:10rem;max-width:100%;font:600 .82rem/1.4 system-ui;color:#f0e7d9}
+.tempo output {justify-self:end;color:#e6c795;font-variant-numeric:tabular-nums}
+.tempo input {grid-column:1/-1;width:100%;margin:0;height:26px;accent-color:#e6ba73;cursor:pointer}
+.board-controls .tempo {flex:1 1 11rem}
+#favoritesOnly[aria-pressed=true],.seg.active {color:#ffdf9c;border-color:#ac8547;background:#312a23}
+.btn:disabled,.seg:disabled {opacity:.5;cursor:default}
+.empty {grid-column:1/-1;text-align:center;color:#c1c9dc}
+.focus-tools {position:sticky;bottom:0;background:#111722;padding:.7rem;border-radius:12px;border:1px solid #3c4051}
+.focus-tools .tempo {margin-right:auto}
+#closeFocus {position:sticky;top:0;z-index:2}
+#focusFigure img {height:clamp(10rem,52dvh,42rem)}
+#focusCaption {font:normal 1.25rem/1.4 Georgia,serif;color:#f2e2c6}
+#focusFigure .notes:empty,#focusFigure .tags:empty {display:none}
+@media(max-width:700px){
+  .controls,.board-controls{width:100%}
+  .field,.field input {min-width:0;max-width:100%}
+  .field input {width:100%}
+  .controls .field,.board-controls .field {flex:1 1 12rem}
+  .board-controls {padding:.7rem}
+  .board-controls .tempo,.focus-tools .tempo {flex-basis:100%}
+  .focus-wrap {width:min(100%,96vw);margin:0;padding:.6rem}
+  .focus-tools {justify-content:center}
+  .grid {grid-template-columns:repeat(auto-fill,minmax(min(100%,155px),1fr))}
+}
+
+/* A moving spectrum frames the primary action while the label stays legible. */
+.btn.visual-upload {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 750;
+  border: 2px solid transparent;
+  background: linear-gradient(120deg, #381642, #171a35 60%, #123443) padding-box,
+    linear-gradient(105deg, #ff487e, #ffad45, #ecfc65, #49ffc1, #60cbff, #b17aff, #ff487e) border-box;
+  background-size: 100% 100%, 200% 100%;
+  box-shadow: -4px 1px 14px #fc367254, 4px 1px 14px #37dfff59;
+  animation: upload-spectrum 4s ease-in-out infinite alternate;
+}
+@keyframes upload-spectrum {
+  to { background-position: 0 0, 100% 0; }
+}
+.visual-upload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.visual-upload:focus-within, .tempo-slider:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+.tempo input.tempo-slider {
+  --spectrum: linear-gradient(90deg, #ff464f, #ff9937, #ffe554, #61ef85, #40dcf2, #577aff, #ac66ff);
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.tempo-slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 8px;
+  background: var(--spectrum);
+}
+.tempo-slider::-moz-range-track {
+  height: 8px;
+  border-radius: 8px;
+  background: var(--spectrum);
+}
+.tempo-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: -6px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #171a35;
+  box-shadow: 0 0 0 1px #111827;
+}
+.tempo-slider::-moz-range-thumb {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #171a35;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn.visual-upload { animation: none; }
+}
+@media (forced-colors: active) {
+  .tempo input.tempo-slider, .tempo-slider::-webkit-slider-thumb { appearance: auto; }
+  .btn.visual-upload { border-color: ButtonText; }
+}

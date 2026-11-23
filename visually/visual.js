@@ -42,62 +42,161 @@ let mode = "grid";
 let playing = false;
 let playTimer = null;
 let cursorIndex = 0;
+let viewerItems = [];
+let favoritesOnly = false;
+const intervals = [12000, 8000, 5000, 4000, 2800, 2000, 1500, 1000, 750, 500, 250];
+const speedKey = LS_KEY + ".slideInterval";
+let intervalMs = 2800;
+try {
+  const saved = Number(localStorage.getItem(speedKey));
+  if (intervals.includes(saved)) intervalMs = saved;
+} catch { /* Playback still works without storage. */ }
+const speedInputs = document.querySelectorAll(".tempo-slider");
+function displaySpeed() {
+  const label = (intervalMs / 1000) + " s / image";
+  for (const input of speedInputs) {
+    input.value = intervals.indexOf(intervalMs);
+    input.previousElementSibling.value = label;
+    input.setAttribute("aria-valuetext", label);
+  }
+}
+displaySpeed();
+for (const input of speedInputs) {
+  input.addEventListener("input", () => {
+    intervalMs = intervals[Number(input.value)];
+    displaySpeed();
+    if (playing) play();
+  });
+  input.addEventListener("change", () => {
+    try { localStorage.setItem(speedKey, String(intervalMs)); } catch { /* optional preference */ }
+  });
+}
+const favoriteFilter = document.getElementById("favoritesOnly");
+favoriteFilter.addEventListener("click", () => {
+  favoritesOnly = !favoritesOnly;
+  favoriteFilter.setAttribute("aria-pressed", String(favoritesOnly));
+  renderGrid();
+});
 
 /* ---------- Tarot dataset ---------- */
-const TAROT_DECK = [
-  { name: "The Fool", meaning: "A new journey begins. Trust the unknown." },
-  { name: "The Magician", meaning: "You have the tools to manifest your vision." },
-  { name: "The High Priestess", meaning: "Listen to your inner wisdom." },
-  { name: "The Empress", meaning: "Creativity and abundance are blossoming." },
-  { name: "The Emperor", meaning: "Take control; build your empire." },
-  { name: "The Hierophant", meaning: "Spiritual guidance lights your path." },
-  { name: "The Lovers", meaning: "A meaningful choice is before you." },
-  { name: "The Chariot", meaning: "Drive and focus will carry you to victory." },
-  { name: "Strength", meaning: "Courage within will tame the storm." },
-  { name: "The Hermit", meaning: "Reflection will reveal the truth." },
-  { name: "Wheel of Fortune", meaning: "Change spins in your favor." },
-  { name: "Justice", meaning: "Balance and fairness restore order." },
-  { name: "The Hanged Man", meaning: "Shift perspective; surrender to growth." },
-  { name: "Death", meaning: "Transformation clears the path ahead." },
-  { name: "Temperance", meaning: "Patience brings harmony." },
-  { name: "The Devil", meaning: "Free yourself from illusions." },
-  { name: "The Tower", meaning: "Old structures fall to reveal truth." },
-  { name: "The Star", meaning: "Hope renews your faith in destiny." },
-  { name: "The Moon", meaning: "Dreams and intuition guide you." },
-  { name: "The Sun", meaning: "Joy and clarity illuminate your path." },
-  { name: "Judgement", meaning: "Awakening leads to purpose." },
-  { name: "The World", meaning: "Fulfillment — a cycle complete." },
-  { name: "Two of Wands", meaning: "Your vision will soon manifest in reality." },
-  { name: "Nine of Swords", meaning: "Release worry; dawn follows the night." },
-  { name: "Ace of Cups", meaning: "New emotional beginnings overflow." },
-  { name: "Ten of Pentacles", meaning: "Legacy and prosperity are building." },
-  { name: "Ace of Stars", meaning: "A cosmic spark ignites — the universe answers your signal." },
-  { name: "Knight of Stars", meaning: "A bold leap into the unknown unlocks improbable luck." },
-  { name: "The Architect", meaning: "Build not just things — build worlds. Vision becomes structure." },
-  { name: "Queen of Circuits", meaning: "Your intuition merges with logic; genius flows effortlessly." },
-  { name: "King of Circuits", meaning: "You command complexity with calm precision." },
-  { name: "Page of Data", meaning: "A new idea arrives disguised as curiosity. Follow it." },
-  { name: "The Algorithm", meaning: "Patterns reveal themselves — the truth is in the iteration." },
-  { name: "Seven of Light", meaning: "Your inner clarity dissolves confusion and fear." },
-  { name: "Four of Shadow", meaning: "Face the hidden self — power returns when nothing is denied." },
-  { name: "The Nexus", meaning: "All your paths converge. A major connection forms." },
-  { name: "Two of Ether", meaning: "Invisible forces work in your favor — trust your timing." },
-  { name: "Nine of Clockwork", meaning: "Every small action accumulates; momentum becomes destiny." },
-  { name: "Ten of Circuits", meaning: "Completion of a long build — systems are stable and strong." },
-  { name: "The Prototype", meaning: "Create a rough version now — perfection comes later." },
-  { name: "The Dreamweaver", meaning: "Your imagination is a portal; reality begins with imagery." },
-  { name: "Ace of Ether", meaning: "A silent shift changes everything — inspiration arrives sudden and clean." },
-  { name: "The Glitch", meaning: "A disruption reveals a new path you couldn't see before." },
-  { name: "Six of Stars", meaning: "Your talent becomes visible — recognition follows creation." },
-  { name: "Eight of Data", meaning: "Study, iteration, and practice combine into mastery." },
-  { name: "Queen of Shadows", meaning: "You transform pain into wisdom and power." },
-  { name: "The Beacon", meaning: "Someone — or something — is guiding you subtly toward success." },
-  { name: "Five of Clockwork", meaning: "Not everything needs force; sometimes the mechanism fixes itself." },
-  { name: "The Spark", meaning: "Your idea is valid — act now, momentum is in your favor." },
-  { name: "Knight of Ether", meaning: "Move lightly, adapt quickly — flexibility wins the day." },
-  { name: "The Oracle of Code", meaning: "The answer is already within the system — inspect the details." },
-  { name: "The Celestial Gate", meaning: "A threshold approaches — crossing it changes who you are." },
+// const TAROT_DECK = [
+//   { name: "The Fool", meaning: "A new journey begins. Trust the unknown." },
+//   { name: "The Magician", meaning: "You have the tools to manifest your vision." },
+//   { name: "The High Priestess", meaning: "Listen to your inner wisdom." },
+//   { name: "The Empress", meaning: "Creativity and abundance are blossoming." },
+//   { name: "The Emperor", meaning: "Take control; build your empire." },
+//   { name: "The Hierophant", meaning: "Spiritual guidance lights your path." },
+//   { name: "The Lovers", meaning: "A meaningful choice is before you." },
+//   { name: "The Chariot", meaning: "Drive and focus will carry you to victory." },
+//   { name: "Strength", meaning: "Courage within will tame the storm." },
+//   { name: "The Hermit", meaning: "Reflection will reveal the truth." },
+//   { name: "Wheel of Fortune", meaning: "Change spins in your favor." },
+//   { name: "Justice", meaning: "Balance and fairness restore order." },
+//   { name: "The Hanged Man", meaning: "Shift perspective; surrender to growth." },
+//   { name: "Death", meaning: "Transformation clears the path ahead." },
+//   { name: "Temperance", meaning: "Patience brings harmony." },
+//   { name: "The Devil", meaning: "Free yourself from illusions." },
+//   { name: "The Tower", meaning: "Old structures fall to reveal truth." },
+//   { name: "The Star", meaning: "Hope renews your faith in destiny." },
+//   { name: "The Moon", meaning: "Dreams and intuition guide you." },
+//   { name: "The Sun", meaning: "Joy and clarity illuminate your path." },
+//   { name: "Judgement", meaning: "Awakening leads to purpose." },
+//   { name: "The World", meaning: "Fulfillment — a cycle complete." },
+//   { name: "Two of Wands", meaning: "Your vision will soon manifest in reality." },
+//   { name: "Nine of Swords", meaning: "Release worry; dawn follows the night." },
+//   { name: "Ace of Cups", meaning: "New emotional beginnings overflow." },
+//   { name: "Ten of Pentacles", meaning: "Legacy and prosperity are building." },
+//   { name: "Ace of Stars", meaning: "A cosmic spark ignites — the universe answers your signal." },
+//   { name: "Knight of Stars", meaning: "A bold leap into the unknown unlocks improbable luck." },
+//   { name: "The Architect", meaning: "Build not just things — build worlds. Vision becomes structure." },
+//   { name: "Queen of Circuits", meaning: "Your intuition merges with logic; genius flows effortlessly." },
+//   { name: "King of Circuits", meaning: "You command complexity with calm precision." },
+//   { name: "Page of Data", meaning: "A new idea arrives disguised as curiosity. Follow it." },
+//   { name: "The Algorithm", meaning: "Patterns reveal themselves — the truth is in the iteration." },
+//   { name: "Seven of Light", meaning: "Your inner clarity dissolves confusion and fear." },
+//   { name: "Four of Shadow", meaning: "Face the hidden self — power returns when nothing is denied." },
+//   { name: "The Nexus", meaning: "All your paths converge. A major connection forms." },
+//   { name: "Two of Ether", meaning: "Invisible forces work in your favor — trust your timing." },
+//   { name: "Nine of Clockwork", meaning: "Every small action accumulates; momentum becomes destiny." },
+//   { name: "Ten of Circuits", meaning: "Completion of a long build — systems are stable and strong." },
+//   { name: "The Prototype", meaning: "Create a rough version now — perfection comes later." },
+//   { name: "The Dreamweaver", meaning: "Your imagination is a portal; reality begins with imagery." },
+//   { name: "Ace of Ether", meaning: "A silent shift changes everything — inspiration arrives sudden and clean." },
+//   { name: "The Glitch", meaning: "A disruption reveals a new path you couldn't see before." },
+//   { name: "Six of Stars", meaning: "Your talent becomes visible — recognition follows creation." },
+//   { name: "Eight of Data", meaning: "Study, iteration, and practice combine into mastery." },
+//   { name: "Queen of Shadows", meaning: "You transform pain into wisdom and power." },
+//   { name: "The Beacon", meaning: "Someone — or something — is guiding you subtly toward success." },
+//   { name: "Five of Clockwork", meaning: "Not everything needs force; sometimes the mechanism fixes itself." },
+//   { name: "The Spark", meaning: "Your idea is valid — act now, momentum is in your favor." },
+//   { name: "Knight of Ether", meaning: "Move lightly, adapt quickly — flexibility wins the day." },
+//   { name: "The Oracle of Code", meaning: "The answer is already within the system — inspect the details." },
+//   { name: "The Celestial Gate", meaning: "A threshold approaches — crossing it changes who you are." },
 
+// ];
+
+/* ---------- The Visual Arcana ---------- */
+const TAROT_DECK = [
+  { name: "The Fool", meaning: "What would you try if you were allowed to be a beginner?" },
+  { name: "The Magician", meaning: "Look again at what is already on your workbench. Two ordinary tools can do an extraordinary thing together." },
+  { name: "The High Priestess", meaning: "Some part of this image caught your eye before you knew why. Give it a second look." },
+  { name: "The Empress", meaning: "Something flourishes in your care. Give it room to grow in a shape you never planned." },
+  { name: "The Emperor", meaning: "Set one boundary that lets something you love thrive inside it." },
+  { name: "The Hierophant", meaning: "Remember who taught you the first step. What part of their teaching do you still carry?" },
+  { name: "The Lovers", meaning: "Two good futures ask different things of you. Which promise are you willing to keep?" },
+  { name: "The Chariot", meaning: "You can want two things fiercely. Decide which one gets to steer today." },
+  { name: "Strength", meaning: "Something frightened has trusted you enough to come close. Be gentle with it." },
+  { name: "The Hermit", meaning: "Take this wish somewhere quiet. See how it sounds in your own voice." },
+  { name: "Wheel of Fortune", meaning: "Circumstances turn. What could you do from this particular spot on the wheel?" },
+  { name: "Justice", meaning: "Tell the story from the other chair. Which details would you want remembered?" },
+  { name: "The Hanged Man", meaning: "Look at the life around this image from the viewpoint of someone passing through it." },
+  { name: "Death", meaning: "You can love a chapter and still write its last line." },
+  { name: "Temperance", meaning: "Adjust the mixture a drop at a time. Pay attention to the moment it tastes right." },
+  { name: "The Devil", meaning: "An old bargain still collects its price. Do you remember what you wanted when you made it?" },
+  { name: "The Tower", meaning: "When a plan comes apart, notice what you reach to save. That belongs in the next one." },
+  { name: "The Star", meaning: "Keep one small light where you can find it on a hard night." },
+  { name: "The Moon", meaning: "In half-light, a coat on a chair can look like a stranger. Let your eyes adjust." },
+  { name: "The Sun", meaning: "Here is something you would still love if nobody ever saw you doing it." },
+  { name: "Judgement", meaning: "An old calling sounds different now. You get to answer with the voice you have today." },
+  { name: "The World", meaning: "Stand inside a wish you once looked at from a distance. Take in the view." },
+
+  { name: "Two of Wands", meaning: "Imagine an ordinary Tuesday in each future. Which one would you like to wake up in?" },
+  { name: "Nine of Swords", meaning: "A worry gets louder after midnight. Write down the part you can actually check in daylight." },
+  { name: "Ace of Cups", meaning: "Something moved you enough to keep this image. Let yourself feel it for a moment." },
+  { name: "Ten of Pentacles", meaning: "Picture someone inheriting what you build. What would you want it to give them?" },
+
+  { name: "Ace of Stars", meaning: "One bright detail gives the whole picture its pull. Follow that detail." },
+  { name: "Knight of Stars", meaning: "Set a course by the thing you admire from afar. The first mile is yours to travel." },
+  { name: "The Architect", meaning: "Walk through your imagined world as its first guest. Where would you put the door?" },
+  { name: "Queen of Circuits", meaning: "A system can work perfectly and still leave someone out. She notices who has trouble getting in." },
+  { name: "King of Circuits", meaning: "Find the one connection holding everything together. Give it the care its importance deserves." },
+  { name: "Page of Data", meaning: "Ask the question everyone else seems to understand. Someone else may be glad you did." },
+  { name: "The Algorithm", meaning: "Trace an ordinary day from start to finish. Which repeated step keeps producing the same ending?" },
+  { name: "Seven of Light", meaning: "Turn the prism. A gift you thought was one thing may hold several colors." },
+  { name: "Four of Shadow", meaning: "Name one thing this dream would cost you. You can still want it with your eyes open." },
+  { name: "The Nexus", meaning: "Two interests you kept in separate rooms have started a conversation. Let them finish." },
+  { name: "Two of Ether", meaning: "Someone comes to mind when you see this. What have you been meaning to tell them?" },
+  { name: "Nine of Clockwork", meaning: "Yesterday this took both hands. Today one hand knows what to do. Count that as progress." },
+  { name: "Ten of Circuits", meaning: "Hand your creation to someone new. Watch what they discover without your help." },
+  { name: "The Prototype", meaning: "Make the version you could hold, hear, or play with by tonight." },
+  { name: "The Dreamweaver", meaning: "Borrow one detail from this image and one from a memory. What scene do they make together?" },
+  { name: "Ace of Ether", meaning: "Catch the thought in its first strange wording. You can make it elegant later." },
+  { name: "The Glitch", meaning: "Something went wrong in an interesting way. Save a copy before you fix it." },
+  { name: "Six of Stars", meaning: "Imagine the moment you get there. Who do you turn to first?" },
+  { name: "Eight of Data", meaning: "Find two attempts you made months apart. Your eye may finally catch what your hands have learned." },
+  { name: "Queen of Shadows", meaning: "Give the part of yourself you usually edit out one honest line." },
+  { name: "The Beacon", meaning: "Leave a light where you once needed directions. Someone is making that crossing for the first time." },
+  { name: "Five of Clockwork", meaning: "One gear is grinding. Ease the pressure long enough to find what caught between the teeth." },
+  { name: "The Spark", meaning: "Which part made you lean forward? Start there while the feeling is fresh." },
+  { name: "Knight of Ether", meaning: "Carry your purpose lightly enough to change routes when a better opening appears." },
+  { name: "The Oracle of Code", meaning: "Look where the plan meets the world. What actually happened on the very first try?" },
+  { name: "The Celestial Gate", meaning: "Some doors open from your side. What small act would count as stepping through?" },
+
+  // Originals from Max Jann's world
+  { name: "The Delta Halo", meaning: "The same symbol keeps finding its way into your work. What have you been signing all along?" },
+  { name: "The Amethyst Coder", meaning: "Slip one playful detail into a serious creation. Let someone discover it for themselves." },
+  { name: "Cywiz", meaning: "Picture the elder you hope to become. What would he thank you for practicing today?" },
+  { name: "The Immortal Game", meaning: "Somewhere in a long game is one move worth replaying. Which moment would you save?" }
 ];
 
 /* ---------- Seed (first run) ---------- */
@@ -224,11 +323,11 @@ els.editModal.addEventListener("close",()=>{
 window.addEventListener("keydown",(e)=>{
   const el=document.activeElement;
   if(el && (el.tagName==="INPUT" || el.tagName==="TEXTAREA" || el.isContentEditable)) return;
-  if(els.focusModal.open){
+  if(els.focusModal.open && !els.editModal.open){
     if(e.key==="Escape") return closeFocus();
     if(e.key==="ArrowLeft") return stepFocus(-1);
     if(e.key==="ArrowRight") return stepFocus(1);
-    if(e.key===" "){ e.preventDefault(); return togglePlay(); }
+    if(e.key===" " && el?.tagName!=="BUTTON"){ e.preventDefault(); return togglePlay(); }
     if(e.key.toLowerCase()==="f") return toggleFavorite();
     if(e.key.toLowerCase()==="e") return openEdit();
   }
@@ -238,9 +337,11 @@ window.addEventListener("keydown",(e)=>{
 function renderAll(){ renderAffirmations(); renderGrid(); }
 
 function handleModeChange(){
-  if(mode==="grid") stopPlay();
-  else if(mode==="focus"){ if(state.items.length) openFocusByIndex(0); }
-  else if(mode==="slideshow"){ if(state.items.length){ openFocusByIndex(0); play(); } }
+  if (mode === "grid") return stopPlay();
+  viewerItems = filteredItems();
+  if (!viewerItems.length) return resetMode();
+  openFocusByIndex(0);
+  if (mode === "slideshow") play();
 }
 
 function renderAffirmations(){
@@ -251,17 +352,21 @@ function renderAffirmations(){
     </span>`).join("");
 }
 
-function renderGrid(){
+function filteredItems(){
   const q=els.searchInput?.value?.trim().toLowerCase()||"";
   const filter=(els.filterSelect?.value||"").toLowerCase();
-  const items=state.items.filter(it=>{
+  return state.items.filter(it=>{
     const hay=`${(it.title||"")} ${(it.tags||[]).join(" ")} ${(it.notes||"")}`.toLowerCase();
     const passQ=!q||hay.includes(q);
     const passF=!filter||(it.tags||[]).map(t=>t.toLowerCase()).includes(filter);
-    return passQ&&passF;
+    return passQ && passF && (!favoritesOnly || it.favorite);
   });
 
-  els.grid.innerHTML=items.map((it,i)=>cardTemplate(it,i)).join("");
+}
+function renderGrid(){
+  const items = filteredItems();
+  document.querySelectorAll('.seg:not([data-mode="grid"])').forEach(button => button.disabled = !items.length);
+  els.grid.innerHTML=items.map((it,i)=>cardTemplate(it,i)).join("") || '<p class="empty">No cards in this view.</p>';
   // Automatically detect portrait images
 els.grid.querySelectorAll(".card-front img").forEach(img => {
   const checkOrientation = () => {
@@ -306,6 +411,7 @@ els.grid.querySelectorAll(".card-front img").forEach(img => {
       favBtn.setAttribute("aria-pressed", real.favorite);
       favBtn.textContent = real.favorite ? "★" : "☆";
       saveState();
+      if (favoritesOnly) renderGrid();
     });
 
     // Click caption to edit without flipping the card
@@ -354,8 +460,8 @@ function cardTemplate(it,i){
 
     // choose gold or purple
   const backImg = Math.random() < 0.5
-    ? "/static/img/cywiz.png"
-    : "/static/img/cywiz-purple.png";
+    ? "/static/img/elwiz.png"
+    : "/static/img/cyam.png";
 
   const back = `
     <div class="card-back" style="background-image: url('${backImg}')">
@@ -377,13 +483,16 @@ function cardTemplate(it,i){
 
 /* ---------- Focus / slideshow ---------- */
 function openFocus(id){
-  const idx=state.items.findIndex(x=>x.id===id);
+  viewerItems = filteredItems();
+  const idx=viewerItems.findIndex(x=>x.id===id);
   if(idx===-1) return;
   openFocusByIndex(idx);
 }
 function openFocusByIndex(idx){
-  cursorIndex=clamp(idx,0,state.items.length-1);
-  const item=state.items[cursorIndex];
+  cursorIndex=clamp(idx,0,viewerItems.length-1);
+  const item=currentItem();
+  if (!item) return;
+  els.playBtn.disabled = viewerItems.length < 2;
   els.focusImg.src=item.src;
   els.focusCaption.textContent=item.title||"";
   els.toggleFavBtn.classList.toggle("on", !!item.favorite);
@@ -394,8 +503,15 @@ function openFocusByIndex(idx){
   if(!els.focusModal.open) els.focusModal.showModal();
 }
 function closeFocus(){ stopPlay(); els.focusModal.close(); }
-function stepFocus(d){ const n=(cursorIndex+d+state.items.length)%state.items.length; openFocusByIndex(n); }
-function play(){ playing=true; els.playBtn.textContent="⏸ Pause"; playTimer=setInterval(()=>stepFocus(1),2800); }
+function stepFocus(d){ const n=(cursorIndex+d+viewerItems.length)%viewerItems.length; openFocusByIndex(n); }
+function resetMode(){
+  mode = "grid";
+  els.segs.forEach(button => button.classList.toggle("active", button.dataset.mode === mode));
+}
+els.focusModal.addEventListener("close", () => { if (!els.focusModal.open) { stopPlay(); resetMode(); } });
+document.addEventListener("visibilitychange", () => { if (document.hidden) stopPlay(); });
+function play(){ clearInterval(playTimer); if (viewerItems.length < 2 || !els.focusModal.open) return;
+  playing=true; els.playBtn.textContent="⏸ Pause"; playTimer=setInterval(()=>stepFocus(1),intervalMs); }
 function stopPlay(){ playing=false; els.playBtn.textContent="▶ Play"; if(playTimer) clearInterval(playTimer); playTimer=null; }
 function togglePlay(){ playing?stopPlay():play(); }
 function toggleFavorite(){
@@ -409,17 +525,19 @@ function toggleFavorite(){
 }
 function openEdit(){
   const it=currentItem(); if(!it)return;
+  stopPlay();
   els.editForm.elements.title.value=it.title||"";
   els.editForm.elements.tags.value=(it.tags||[]).join(", ");
   els.editForm.elements.notes.value=it.notes||"";
   els.editModal.returnValue=""; els.editModal.showModal();
 }
 function openEditById(id){
-  const idx=state.items.findIndex(x=>x.id===id);
+  viewerItems = filteredItems();
+  const idx=viewerItems.findIndex(x=>x.id===id);
   if(idx===-1)return;
   openFocusByIndex(idx); openEdit();
 }
-function currentItem(){ return state.items[cursorIndex]||null; }
+function currentItem(){ return viewerItems[cursorIndex]||null; }
 
 /* ---------- Add files (compression) ---------- */
 async function addFiles(files){

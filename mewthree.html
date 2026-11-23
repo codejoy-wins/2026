@@ -1,48 +1,38 @@
-<!-- epic win -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mewthree v4</title>
-    <link rel="stylesheet" href="static/css/mewthree.css">
-    <link rel="shortcut icon" type="image/png" href="static/img/mj3.png"/>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11101b">
+  <title>Mewthree Arena · Max Jann</title>
+  <link rel="icon" href="/static/img/mj3.png">
+  <link rel="stylesheet" href="/static/css/mewthree.css">
+  <script src="/mewthree.js" defer></script>
 </head>
 <body>
-    <a href="index.html">
-        <h1>Mewthree</h1>
-    </a>
-    <p id="instructions">
-        Choose any 6 pokemon and get an a.i. summary of your team by Mewthree!
-    </p>
-    <div class="formal">
-        <input type="text" id="pokemonInput" placeholder="Enter Pokémon Name">
-        <button onclick="getPokemon()">Find That Pokémon!</button>
+<header><a class="brand" href="/index.html"><img src="/static/img/mj3.png" alt=""> Max Jann</a><a href="#archive">Battle log ↘</a></header>
+<main>
+  <section class="poster" aria-labelledby="title">
+    <img class="portrait" src="/static/img/Mewthree’s Psychic Battle Awakening copy.png" alt="Mewthree gathering psychic energy" fetchpriority="high">
+    <div class="intro"><span class="kicker"><i></i> Psychic arena</span><h1 id="title">Mewthree</h1>
+      <p>Bring up to six Pokémon. Mewthree reads your lineup and answers your challenge.</p>
+      <a class="cta" href="#builder">Build your team ↓</a>
     </div>
-
-    <div id="pokemonInfo" class="results">
-        Gather your team here.
-    </div>
-
-    <div id="teamDisplay" class="team">
-    </div>
-    <div id="brick" class="formal">
-        <button id="mew" onclick="simp()"><div id="mewtwo">Challenge Mewthree to a fight!</div></button>
-    </div>
-    <div id="magica">
-        <p>GPT Response will go here. Trying to upgrade user experience</p>
-    </div>
-    <div id="mewthree">
-        <img class="picmain" src="static/img/Mewthree’s Psychic Battle Awakening copy.png" alt="mewthree">
-    </div>
-    <!-- <div class="information">
-        <p>I cut off responses at 220 characters to try to combat timeout errors</p>
-    </div> -->
-    <div class="footer">
-        <audio controls src="static/audio/mewthreeRap1.m4a"></audio>
-        &copy; Jann Software 2026 v2
-    </div>
-    <script src="mewthree.js"></script>
+  </section>
+  <div class="workbench" id="builder">
+    <section class="recruit panel"><h2>Recruit a Pokémon</h2>
+      <form id="search"><label for="query">Name or Pokédex number</label><div class="entry"><input id="query" placeholder="e.g. Gengar or 94" required maxlength="80" autocomplete="off" autocapitalize="none"><button class="primary" id="add">Recruit</button></div></form>
+      <p class="label">Quick picks</p><div id="picks" class="picks"><button>Lucario</button><button>Gengar</button><button>Dragonite</button><button>Umbreon</button></div>
+      <p id="note" class="status" role="status"></p>
+    </section>
+    <section class="squad panel"><div class="heading"><h2>Your team</h2><span id="count"></span></div>
+      <ol id="team"></ol><p id="coverage"></p><button class="challenge" id="challenge" disabled>Challenge Mewthree <span aria-hidden="true">↗</span></button>
+    </section>
+  </div>
+  <section class="panel archive" id="archive"><div class="heading"><h2>Battle log</h2><span>Last 3 encounters</span></div>
+    <p id="battleStatus" role="status"></p><div id="records"></div>
+  </section>
+  <footer><div><span class="kicker">Arena soundtrack</span><h2>Mewthree Rap</h2><small>Max Jann</small></div><audio controls preload="none" aria-label="Mewthree Rap" src="/static/audio/mewthreeRap1.m4a"></audio></footer>
+</main>
 </body>
 </html>
