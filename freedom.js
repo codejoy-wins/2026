@@ -1553,6 +1553,6 @@ populate();
 function hello(magic){
     console.log(`hello ${magic}`);
     document.getElementById(magic).innerHTML=`
-    <audio controls src="static/audio/${manobj[magic].song}.mp3"></audio>
+    <audio controls src="/static/audio/${manobj[magic].song}.mp3"></audio>
     `
 }

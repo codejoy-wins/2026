@@ -1568,7 +1568,7 @@ const newman= ()=>{
     // change song
     document.getElementById("master").innerHTML=`
             <audio id="music" onended="playlist()">
-                <source src="static/audio/${manobj[k].song}.mp3" type="audio/mpeg">
+                <source src="/static/audio/${manobj[k].song}.mp3" type="audio/mpeg">
             </audio>
     `;
     // play song
@@ -1629,7 +1629,7 @@ const newwoman = ()=>{
     x = "playing";
     document.getElementById("master").innerHTML=`
             <audio id="music" onended="playlist()">
-                <source src="static/audio/${womanobj[k].song}.mp3" type="audio/mpeg">
+                <source src="/static/audio/${womanobj[k].song}.mp3" type="audio/mpeg">
             </audio>
     `;
     document.getElementById("music").play();

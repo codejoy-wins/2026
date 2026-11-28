@@ -464,7 +464,7 @@ function randosong(){
     console.log(`xxx is ${x}`);
     
     document.getElementById("introsong").innerHTML=`
-    <audio id="player" onended="randosong()" src="static/audio/${x}.mp3"></audio>
+    <audio id="player" onended="randosong()" src="/static/audio/${x}.mp3"></audio>
     `
     document.getElementById("descsong2").innerHTML=`
     <p>${y}</p>
