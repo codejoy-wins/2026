@@ -1190,7 +1190,13 @@ ul a{
     color: rgb(0, 55, 0);
 
     /* background-color: rgba(245, 245, 245, 0.777); */
-    background-color: rgba(245, 245, 245, 0.7);
+    /* background-color: rgba(245, 245, 245, 0.7); */
+    /* background-color: rgba(194, 163, 6, 0.7); */
+    background-color: rgba(194, 163, 6, 0.8);
+    /* background-color: rgba(194, 163, 6, .9); */
+
+
+
 
 }
 .spxi:hover{
